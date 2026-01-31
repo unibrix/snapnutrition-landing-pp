@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="system">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy Policy - SnapNutrition AI | Free Calorie Tracker</title>
     <meta name="description" content="Privacy Policy for SnapNutrition AI - the best free AI calorie tracker. No account required, no data collection, all data stays on your device.">
     <link rel="stylesheet" href="styles.css">
+    <script>document.documentElement.setAttribute('data-theme',localStorage.getItem('snapnutrition_theme')||'system')</script>
     <link rel="canonical" href="https://snapnutritionai.app/privacy.html">
 
     <!-- Open Graph -->
@@ -72,6 +73,14 @@
     </script>
 </head>
 <body>
+    <div class="theme-toggle">
+        <div class="theme-toggle-group" role="radiogroup" aria-label="Theme">
+            <button type="button" data-theme-value="light" role="radio" aria-checked="false" aria-label="Light theme"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg></button>
+            <button type="button" data-theme-value="dark" role="radio" aria-checked="false" aria-label="Dark theme"><svg viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button>
+            <button type="button" data-theme-value="system" role="radio" aria-checked="true" aria-label="System theme"><svg class="icon-desktop" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><path d="M8 21h8M12 17v4"/></svg><svg class="icon-mobile" viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><path d="M12 18h.01"/></svg></button>
+        </div>
+    </div>
+
     <!-- Cookie Consent Banner -->
     <div id="cookie-banner" class="cookie-banner" style="display: none;">
         <div class="cookie-content">
@@ -163,6 +172,8 @@
         <p class="copyright">&copy; <span id="year"></span> SnapNutrition AI. All rights reserved.</p>
         <p class="powered-by">Powered by <a href="https://unibrix.com" target="_blank" rel="noopener">Unibrix</a></p>
     </footer>
+
+    <script src="theme.js"></script>
 
     <!-- Cookie Consent & Analytics Script -->
     <script>

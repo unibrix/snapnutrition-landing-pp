@@ -1,16 +1,65 @@
 /* SnapNutrition AI Landing Page Styles */
 
 :root {
+    color-scheme: light;
     --green-primary: #34C759;
     --green-muted: #6B9E7B;
     --purple-muted: #8B6B9B;
-    --gradient-start: #5D8A6B;
-    --gradient-end: #7B5B8B;
+    --gradient-start: #197e42;
+    --gradient-end: #7c4f9e;
     --text-dark: #1a1a1a;
     --text-muted: #666;
     --bg-light: #f8f9fa;
+    --bg-white: #ffffff;
     --card-bg: #ffffff;
     --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    --faq-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    --footer-bg: #1a1a1a;
+}
+
+/* Dark theme variables — duplicated below for the system/media-query case.
+   Pure CSS has no way to share declarations between a normal selector and
+   one scoped inside @media, so the repetition is intentional. */
+html[data-theme="dark"] {
+    --green-primary: #30D158;
+    --green-muted: #6B9E7B;
+    --purple-muted: #A78BBA;
+    --gradient-start: #0d4c32;
+    --gradient-end: #402a55;
+    --text-dark: #f0f0f0;
+    --text-muted: #a0a0a0;
+    --bg-light: #1c1c1e;
+    --bg-white: #2c2c2e;
+    --card-bg: #2c2c2e;
+    --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    --faq-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    --footer-bg: #111111;
+    color-scheme: dark;
+}
+
+/* System theme: follow OS preference (see duplication note above) */
+@media (prefers-color-scheme: dark) {
+    html[data-theme="system"] {
+        --green-primary: #30D158;
+        --green-muted: #6B9E7B;
+        --purple-muted: #A78BBA;
+        --gradient-start: #0d4c32;
+        --gradient-end: #402a55;
+        --text-dark: #f0f0f0;
+        --text-muted: #a0a0a0;
+        --bg-light: #1c1c1e;
+        --bg-white: #2c2c2e;
+        --card-bg: #2c2c2e;
+        --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        --faq-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        --footer-bg: #111111;
+        color-scheme: dark;
+    }
+}
+
+/* Forced light theme */
+html[data-theme="light"] {
+    color-scheme: light;
 }
 
 * {
@@ -273,7 +322,7 @@ img {
 /* Intro Section */
 .intro {
     padding: 3rem 2rem;
-    background: white;
+    background: var(--bg-white);
     text-align: center;
 }
 
@@ -337,7 +386,7 @@ img {
 /* Features Section */
 .features {
     padding: 5rem 2rem;
-    background: white;
+    background: var(--bg-white);
 }
 
 .features h2 {
@@ -469,10 +518,10 @@ img {
 }
 
 .faq-item {
-    background: white;
+    background: var(--card-bg);
     border-radius: 12px;
     margin-bottom: 1rem;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    box-shadow: var(--faq-shadow);
     overflow: hidden;
 }
 
@@ -579,8 +628,8 @@ img {
 /* Footer */
 footer {
     padding: 3rem 2rem;
-    background: var(--text-dark);
-    color: white;
+    background: var(--footer-bg);
+    color: #f0f0f0;
     text-align: center;
 }
 
@@ -664,6 +713,69 @@ footer .powered-by {
 
 .back-link:hover {
     text-decoration: underline;
+}
+
+/* Theme Toggle */
+.theme-toggle {
+    position: fixed;
+    top: 0.75rem;
+    right: 0.75rem;
+    z-index: 100;
+}
+
+.theme-toggle-group {
+    display: inline-flex;
+    background: rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-radius: 999px;
+    padding: 2px;
+    gap: 2px;
+}
+
+.theme-toggle-group button {
+    background: none;
+    border: none;
+    padding: 5px 7px;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: background 0.2s ease, opacity 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.4;
+}
+
+.theme-toggle-group button:hover {
+    opacity: 0.7;
+}
+
+.theme-toggle-group button.active {
+    background: rgba(255, 255, 255, 0.15);
+    opacity: 1;
+}
+
+.theme-toggle-group svg {
+    width: 14px;
+    height: 14px;
+    fill: none;
+    stroke: #f0f0f0;
+    stroke-width: 1.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.theme-toggle-group .icon-mobile {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .theme-toggle-group .icon-desktop {
+        display: none;
+    }
+    .theme-toggle-group .icon-mobile {
+        display: block;
+    }
 }
 
 /* Responsive */
