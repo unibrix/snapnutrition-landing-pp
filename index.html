@@ -7,8 +7,31 @@
     <meta name="description" content="Best free AI calorie tracker 2026. Snap a photo to count calories instantly. No subscription, no ads. Track macros with photo, barcode, voice & text input.">
     <meta name="keywords" content="free calorie tracker 2026, best calorie app 2026, AI calorie counter, food scanner app, photo calorie counter, macro tracker, best free calorie app, nutrition tracker, barcode food scanner, voice calorie tracking, calorie tracker app 2026">
     <meta name="robots" content="index, follow">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="styles.css"></noscript>
+    <style>
+    /* Critical CSS — hero & above-fold layout */
+    :root{color-scheme:light;--green-primary:#34C759;--gradient-start:#197e42;--gradient-end:#7c4f9e;--text-dark:#1a1a1a;--text-muted:#666;--bg-light:#f8f9fa;--bg-white:#fff;--card-bg:#fff;--card-shadow:0 4px 20px rgba(0,0,0,.08)}
+    html[data-theme="dark"]{--green-primary:#30D158;--gradient-start:#0d4c32;--gradient-end:#402a55;--text-dark:#f0f0f0;--text-muted:#a0a0a0;--bg-light:#1c1c1e;--bg-white:#2c2c2e;--card-bg:#2c2c2e;--card-shadow:0 4px 20px rgba(0,0,0,.3);color-scheme:dark}
+    @media(prefers-color-scheme:dark){html[data-theme="system"]{--green-primary:#30D158;--gradient-start:#0d4c32;--gradient-end:#402a55;--text-dark:#f0f0f0;--text-muted:#a0a0a0;--bg-light:#1c1c1e;--bg-white:#2c2c2e;--card-bg:#2c2c2e;--card-shadow:0 4px 20px rgba(0,0,0,.3);color-scheme:dark}}
+    *{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,sans-serif;color:var(--text-dark);line-height:1.6;overflow-x:hidden}img{max-width:100%;height:auto}
+    .hero{min-height:100vh;background:linear-gradient(135deg,var(--gradient-start) 0%,var(--gradient-end) 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:2rem;color:#fff;position:relative;overflow:hidden}
+    .hero h1{font-size:3.5rem;font-weight:700;margin-bottom:.5rem;letter-spacing:-.02em;position:relative;z-index:1}
+    .hero .tagline{font-size:1.5rem;opacity:.9;margin-bottom:.5rem;font-weight:300;position:relative;z-index:1}
+    .hero .hero-subtitle{font-size:1.1rem;opacity:.8;margin-bottom:1.5rem;font-weight:400;position:relative;z-index:1}
+    .app-store-badge{margin-top:1.5rem;position:relative;z-index:1}.app-store-badge img{height:54px}
+    .theme-toggle{position:fixed;top:.75rem;right:.75rem;z-index:100}
+    .theme-toggle-group{display:inline-flex;background:rgba(0,0,0,.25);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-radius:999px;padding:2px;gap:2px}
+    .theme-toggle-group button{background:none;border:none;padding:5px 7px;border-radius:999px;cursor:pointer;display:flex;align-items:center;justify-content:center;opacity:.4}
+    .theme-toggle-group button.active{background:rgba(255,255,255,.15);opacity:1}
+    .theme-toggle-group svg{width:14px;height:14px;fill:none;stroke:#f0f0f0;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+    .flying-emojis{position:absolute;top:0;left:0;width:100%;height:100%;pointer-events:none;overflow:hidden;z-index:0}
+    .flying-emoji{position:absolute;animation-timing-function:linear;animation-iteration-count:infinite;will-change:transform}
+    @media(max-width:768px){.hero{min-height:auto;padding:4rem 1.5rem}.hero h1{font-size:2.2rem}.hero .tagline{font-size:1.1rem}.hero .hero-subtitle{font-size:.95rem}}
+    @media(max-width:480px){.hero{padding:3rem 1rem}.hero h1{font-size:1.8rem}.hero .tagline{font-size:1rem}.app-store-badge img{height:44px}}
+    </style>
     <script>document.documentElement.setAttribute('data-theme',localStorage.getItem('snapnutrition_theme')||'system')</script>
+    <link rel="preload" as="image" type="image/webp" href="images/screenshot-1.webp">
     <link rel="canonical" href="https://snapnutritionai.app/">
 
     <!-- Open Graph -->
@@ -305,6 +328,7 @@
         </div>
     </div>
 
+    <main>
     <!-- Hero Section -->
     <section class="hero">
         <!-- Flying Emojis Background -->
@@ -370,12 +394,12 @@
     <section class="screenshots">
         <h2>See the Best Free Calorie Counter in Action</h2>
         <div class="screenshot-container">
-            <img src="images/screenshot-1.png" alt="SnapNutrition AI home screen - AI-powered calorie tracking with snap, scan, speak, or type input options">
-            <img src="images/screenshot-2.png" alt="SnapNutrition AI camera view - Point, shoot, track - AI identifies food and calculates calories instantly">
-            <img src="images/screenshot-3.png" alt="SnapNutrition AI history screen - Your complete food diary with daily calorie totals" loading="lazy">
-            <img src="images/screenshot-4.png" alt="SnapNutrition AI statistics - Track your progress with daily goals, weekly trends, and macro breakdown" loading="lazy">
-            <img src="images/screenshot-5.png" alt="SnapNutrition AI meal detail - Fine-tune every meal with adjustable portions for accurate tracking" loading="lazy">
-            <img src="images/screenshot-6.png" alt="SnapNutrition AI widgets - Always within reach, track at a glance from your home screen" loading="lazy">
+            <img src="images/screenshot-1.webp" alt="SnapNutrition AI home screen - AI-powered calorie tracking with snap, scan, speak, or type input options" width="560" height="1216" fetchpriority="high">
+            <img src="images/screenshot-2.webp" alt="SnapNutrition AI camera view - Point, shoot, track - AI identifies food and calculates calories instantly" width="560" height="1216" loading="lazy">
+            <img src="images/screenshot-3.webp" alt="SnapNutrition AI history screen - Your complete food diary with daily calorie totals" width="560" height="1216" loading="lazy">
+            <img src="images/screenshot-4.webp" alt="SnapNutrition AI statistics - Track your progress with daily goals, weekly trends, and macro breakdown" width="560" height="1216" loading="lazy">
+            <img src="images/screenshot-5.webp" alt="SnapNutrition AI meal detail - Fine-tune every meal with adjustable portions for accurate tracking" width="560" height="1216" loading="lazy">
+            <img src="images/screenshot-6.webp" alt="SnapNutrition AI widgets - Always within reach, track at a glance from your home screen" width="560" height="1216" loading="lazy">
         </div>
     </section>
 
@@ -521,6 +545,8 @@
         <h2>Your Privacy Matters</h2>
         <p>No account required. No backend servers. No data collection. All your calorie and nutrition data stays on your device and syncs only through your personal iCloud. Food images are sent directly to your chosen AI provider for analysis — we never see or store your information.</p>
     </section>
+
+    </main>
 
     <!-- Footer -->
     <footer>
