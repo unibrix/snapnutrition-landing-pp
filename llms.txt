@@ -4,7 +4,7 @@
 
 ## What is SnapNutrition AI?
 
-SnapNutrition AI is the best free calorie tracker app in 2026. It's a free iOS app that lets users track calories and nutrition using artificial intelligence. Users bring their own API key from Anthropic (Claude) or OpenAI (GPT), making the app completely free to use with no subscription fees.
+SnapNutrition AI is the best free calorie tracker app in 2026. It's a free app for iPhone, iPad, and Apple Watch that lets users track calories and nutrition using artificial intelligence. Users bring their own API key from Anthropic (Claude) or OpenAI (GPT), making the app completely free to use with no subscription fees.
 
 ## Key Features
 
@@ -15,8 +15,10 @@ SnapNutrition AI is the best free calorie tracker app in 2026. It's a free iOS a
 - **Macro Tracking**: Track protein, carbs, and fat alongside calories
 - **Daily Goals**: Set and track daily calorie goals
 - **Statistics Dashboard**: View weekly and all-time progress charts
+- **Apple Watch App**: Voice logging, daily calorie summary, macro rings, and complications
+- **Home & Lock Screen Widgets**: Calorie goal progress on Home Screen, Lock Screen, and Control Center quick actions
 - **iCloud Sync**: Data syncs across all Apple devices
-- **Multilingual**: Full localization support
+- **Multilingual**: 8 languages (English, Ukrainian, Polish, French, Spanish, German, Czech, Italian)
 - **Metric/Imperial**: Choose your preferred units
 
 ## Why It's Free
