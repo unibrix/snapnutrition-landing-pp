@@ -1,12 +1,18 @@
 # SnapNutrition AI
 
-The best free AI calorie tracker for iOS. No subscription, no ads, no limits.
+The best free AI calorie tracker for iPhone, iPad, and Apple Watch. No subscription, no ads, no limits.
+
+<p align="center">
+  <a href="https://apps.apple.com/us/app/snapnutrition-ai/id6757797704">
+    <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" height="54" alt="Download on the App Store">
+  </a>
+</p>
 
 ## What is SnapNutrition AI?
 
-SnapNutrition AI lets you track calories and nutrition instantly using AI. Simply snap a photo of your food, scan a barcode, type, or speak — and get instant calorie and macro estimates.
+SnapNutrition AI lets you track calories and nutrition instantly using AI. Simply snap a photo of your food, scan a barcode, type, or speak — and get instant calorie and macro estimates. Log calories from your wrist with the Apple Watch app, or track at a glance with Home Screen, Lock Screen, and Control Center widgets.
 
-**Completely free.** You bring your own API key (Anthropic or OpenAI) and pay only for what you use — typically just pennies per scan.
+**Completely free.** You bring your own API key (Anthropic Claude or OpenAI GPT) and pay only for what you use — typically just pennies per scan.
 
 ## Features
 
@@ -17,20 +23,24 @@ SnapNutrition AI lets you track calories and nutrition instantly using AI. Simpl
 - **Macro Tracking** — Track protein, carbs, and fat
 - **Daily Goals** — Set and monitor calorie targets
 - **Statistics** — View daily, weekly, and all-time progress
-- **iCloud Sync** — Seamless sync across Apple devices
-- **Privacy First** — No account required, all data stays on your device
+- **Apple Watch App** — Voice logging, daily calorie summary, macro rings, and complications
+- **Widgets** — Home Screen, Lock Screen, and Control Center quick actions for calorie tracking at a glance
+- **iCloud Sync** — Seamless sync across all Apple devices
+- **8 Languages** — English, Ukrainian, Polish, French, Spanish, German, Czech, Italian
+- **Privacy First** — No account required, no backend servers, all data stays on your device
 
 ## Screenshots
 
 <p align="center">
-  <img src="images/screenshot-home.png" width="250" alt="SnapNutrition AI Home Screen">
-  <img src="images/screenshot-scan.png" width="250" alt="SnapNutrition AI Scan Results">
-  <img src="images/screenshot-stats.png" width="250" alt="SnapNutrition AI Statistics">
+  <img src="images/screenshot-1.webp" width="250" alt="SnapNutrition AI — AI-powered calorie tracking with scan, photo, barcode, voice, and text input">
+  <img src="images/screenshot-2.webp" width="250" alt="SnapNutrition AI — AI identifies food and calculates calories instantly">
+  <img src="images/screenshot-3.webp" width="250" alt="SnapNutrition AI — Complete food diary with daily calorie totals">
+  <img src="images/screenshot-4.webp" width="250" alt="SnapNutrition AI — Track progress with daily goals, weekly trends, and macro breakdown">
 </p>
 
 ## Download
 
-Coming soon to the App Store.
+<a href="https://apps.apple.com/us/app/snapnutrition-ai/id6757797704">Download SnapNutrition AI on the App Store</a> — requires iOS 17.0+ / watchOS 10.0+.
 
 ## Links
 
@@ -39,7 +49,7 @@ Coming soon to the App Store.
 
 ## Why Free?
 
-Unlike other calorie trackers that charge $5-15/month, SnapNutrition AI has no subscription fees. You use your own AI API key and pay only for actual usage — a few cents per day for most users.
+Unlike other calorie trackers that charge $5–15/month, SnapNutrition AI has no subscription fees. You use your own AI API key (Anthropic or OpenAI) and pay only for actual usage — a few cents per day for most users.
 
 ---
 
