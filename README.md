@@ -1,6 +1,6 @@
 # SnapNutrition AI
 
-The best free AI calorie tracker for iPhone, iPad, and Apple Watch. No subscription, no ads, no limits.
+The best free AI calorie tracker for iPhone, iPad, and Apple Watch. No subscription, no ads, no limits. BYOK (Bring Your Own Key) — use your own Anthropic or OpenAI API key and pay only for what you use.
 
 <p align="center">
   <a href="https://apps.apple.com/us/app/snapnutrition-ai/id6757797704">
@@ -33,7 +33,6 @@ SnapNutrition AI lets you track calories and nutrition instantly using AI. Simpl
 
 <p align="center">
   <img src="images/screenshot-1.webp" width="250" alt="SnapNutrition AI — AI-powered calorie tracking with scan, photo, barcode, voice, and text input">
-  <img src="images/screenshot-2.webp" width="250" alt="SnapNutrition AI — AI identifies food and calculates calories instantly">
   <img src="images/screenshot-3.webp" width="250" alt="SnapNutrition AI — Complete food diary with daily calorie totals">
   <img src="images/screenshot-4.webp" width="250" alt="SnapNutrition AI — Track progress with daily goals, weekly trends, and macro breakdown">
 </p>
