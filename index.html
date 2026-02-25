@@ -359,7 +359,7 @@
         <p class="hero-subtitle">No subscription. No ads. No account needed. Track calories, macros, and nutrition with AI.</p>
 
         <a href="https://apps.apple.com/us/app/snapnutrition-ai/id6757797704" class="app-store-badge" aria-label="Download SnapNutrition AI on the App Store">
-            <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download SnapNutrition AI - Best Free Calorie Counter on the App Store">
+            <img src="images/download-on-the-app-store.svg?v=2" alt="Download SnapNutrition AI - Best Free Calorie Counter on the App Store">
         </a>
     </section>
 
@@ -571,7 +571,33 @@
         <p class="powered-by">Powered by <a href="https://unibrix.com" target="_blank" rel="noopener">Unibrix</a></p>
     </footer>
 
-    <script src="theme.js?v=2"></script>
+    <script>
+    (function() {
+        var THEME_KEY = 'snapnutrition_theme';
+        var html = document.documentElement;
+        var buttons = document.querySelectorAll('.theme-toggle-group button');
+
+        function applyTheme(theme) {
+            html.setAttribute('data-theme', theme);
+            buttons.forEach(function(btn) {
+                var isActive = btn.getAttribute('data-theme-value') === theme;
+                btn.classList.toggle('active', isActive);
+                btn.setAttribute('aria-checked', isActive ? 'true' : 'false');
+            });
+        }
+
+        var saved = localStorage.getItem(THEME_KEY) || 'system';
+        applyTheme(saved);
+
+        buttons.forEach(function(btn) {
+            btn.addEventListener('click', function() {
+                var theme = btn.getAttribute('data-theme-value');
+                localStorage.setItem(THEME_KEY, theme);
+                applyTheme(theme);
+            });
+        });
+    })();
+    </script>
 
     <!-- Cookie Consent & Analytics Script -->
     <script>
