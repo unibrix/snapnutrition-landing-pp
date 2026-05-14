@@ -500,6 +500,16 @@ img {
     opacity: 0.9;
 }
 
+.privacy-highlight a {
+    color: var(--green-primary);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+.privacy-highlight a:hover {
+    opacity: 0.8;
+}
+
 /* FAQ Section */
 .faq {
     padding: 5rem 2rem;
