@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy Policy - SnapNutrition AI | Free Calorie Tracker</title>
-    <meta name="description" content="Privacy Policy for SnapNutrition AI - the best free AI calorie tracker. No account required, no data collection, all data stays on your device.">
+    <meta name="description" content="Privacy Policy for SnapNutrition AI. BYOK mode operates with no backend; optional Auto Mode subscription uses a minimal Cloudflare proxy with no food-photo storage. No account required.">
     <link rel="stylesheet" href="styles.css">
     <script>document.documentElement.setAttribute('data-theme',localStorage.getItem('snapnutrition_theme')||'system')</script>
     <link rel="canonical" href="https://snapnutritionai.app/privacy.html">
 
     <!-- Open Graph -->
     <meta property="og:title" content="Privacy Policy - SnapNutrition AI">
-    <meta property="og:description" content="Privacy Policy for SnapNutrition AI. No account required, no data collection, all data stays on your device.">
+    <meta property="og:description" content="Privacy Policy for SnapNutrition AI. BYOK mode operates with no backend; optional Auto Mode subscription uses a minimal Cloudflare proxy with no food-photo storage.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://snapnutritionai.app/privacy.html">
     <meta property="og:site_name" content="SnapNutrition AI">
@@ -96,71 +96,134 @@
         <a href="index.html" class="back-link">&larr; Back to Home</a>
 
         <h1>Privacy Policy</h1>
-        <p class="last-updated">Last updated: January 24, 2025</p>
+        <p class="last-updated">Last updated: May 14, 2026</p>
 
-        <p>SnapNutrition AI ("we", "our", or "the app") is committed to protecting your privacy. This Privacy Policy explains how your information is collected, used, and disclosed when you use our free AI calorie tracker mobile application.</p>
+        <p>SnapNutrition AI ("we", "our", or "the app") is committed to protecting your privacy. This Privacy Policy explains what information we and our service providers handle when you use our iOS application, the snapnutritionai.app website, and related services.</p>
+
+        <h2>The Two Usage Modes</h2>
+        <p>SnapNutrition AI offers two ways to use the app. Your data flow differs between them, so this policy describes both:</p>
+        <ul>
+            <li><strong>BYOK (Bring Your Own Key)</strong> — the free, default option. You provide your own Anthropic or OpenAI API key, which is stored only on your device. Scan requests go directly from your device to the AI provider; we operate no backend and never see your data.</li>
+            <li><strong>Auto Mode</strong> — an optional auto-renewing subscription ($2.99/month or $29.99/year, billed by Apple, includes a 3-day free trial). Scan requests pass through a minimal Cloudflare-hosted proxy we operate, which verifies your Apple subscription, runs an Apple App Attest device-integrity check, applies a fair-use daily scan limit, and forwards the request to OpenAI. We never store your food photos. We do log a small amount of anonymized telemetry per scan (see "Auto Mode Telemetry" below).</li>
+        </ul>
 
         <h2>Information We Collect</h2>
-        <p>SnapNutrition AI is designed with privacy in mind. We do not require account registration or login.</p>
+        <p>SnapNutrition AI does not require account registration or login.</p>
 
-        <p><strong>Data stored locally on your device:</strong></p>
+        <p><strong>Stored locally on your device only:</strong></p>
         <ul>
             <li>Food scan history and meal logs</li>
-            <li>Daily calorie goals and preferences</li>
-            <li>App settings (language, measurement units)</li>
-            <li>Your AI API keys (stored securely in device keychain)</li>
+            <li>Daily calorie goals and macro targets</li>
+            <li>App settings (language, measurement units, theme)</li>
+            <li>In BYOK mode: your Anthropic / OpenAI API key (stored in the iOS Keychain with hardware-level encryption)</li>
+            <li>In Auto Mode: a randomly generated user identifier ("appAccountToken") used by Apple StoreKit and by our proxy to verify your subscription</li>
         </ul>
 
-        <h2>Data Processing</h2>
-        <p>When you scan food using the app, the following occurs:</p>
+        <p><strong>Stored in your personal iCloud (only if you enable iCloud sync):</strong> the same scan history, goals, and settings, synced across your Apple devices via Apple's CloudKit. This sync is operated by Apple, not by us, and is subject to <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple's Privacy Policy</a>.</p>
+
+        <h2>BYOK Mode — Data Processing</h2>
+        <p>When you scan food in BYOK mode:</p>
         <ul>
-            <li>Images or text descriptions of food are sent directly to third-party AI service providers (Anthropic or OpenAI, depending on your configuration) for nutritional analysis</li>
-            <li>This data is transmitted directly from your device to the AI provider using your personal API key</li>
-            <li>We do not have access to this data, as it does not pass through our servers</li>
+            <li>Images or text descriptions of food are sent directly from your device to Anthropic or OpenAI (whichever you configured) for nutritional analysis, using your own API key.</li>
+            <li>The request does not pass through any server operated by us.</li>
+            <li>We have no visibility into the content or metadata of the request.</li>
         </ul>
 
-        <h2>Third-Party Services</h2>
-        <p>The app uses the following third-party services for AI-powered food analysis:</p>
+        <h2>Auto Mode — Data Processing</h2>
+        <p>When you scan food in Auto Mode, the following occurs:</p>
         <ul>
-            <li><strong>Anthropic (Claude)</strong> - <a href="https://www.anthropic.com/privacy" target="_blank" rel="noopener">Privacy Policy</a></li>
-            <li><strong>OpenAI</strong> - <a href="https://openai.com/privacy" target="_blank" rel="noopener">Privacy Policy</a></li>
+            <li>Your device sends the scan request to our Cloudflare Workers proxy at <code>api.snapnutritionai.app</code>.</li>
+            <li>The proxy verifies your active Apple subscription using a cryptographically signed receipt (JWS) issued by Apple StoreKit. We do not store the receipt content beyond the request lifetime.</li>
+            <li>The proxy verifies your device's authenticity using Apple App Attest. To enable this, your device's App Attest public key (one per install) is stored in our Cloudflare KV store. We never receive your device's private key.</li>
+            <li>The proxy applies a daily fair-use scan limit using a per-user counter (stored in a Cloudflare Durable Object, reset every 24 hours UTC).</li>
+            <li>The proxy forwards your food photo or text description to OpenAI's GPT-4 vision model for analysis. The photo passes through the proxy in memory; we do not write food photos to disk or persist them in any store.</li>
+            <li>The proxy returns OpenAI's response to your device.</li>
         </ul>
-        <p>Your use of these services is subject to their respective privacy policies. We encourage you to review them.</p>
 
-        <h2>iCloud Sync</h2>
-        <p>If you have iCloud enabled, your app data (food logs, goals, and settings) may be synced across your Apple devices using your personal iCloud account. This sync is handled entirely by Apple's iCloud service and is subject to <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple's Privacy Policy</a>.</p>
+        <h2>Auto Mode — Telemetry</h2>
+        <p>For each Auto Mode scan request, we log one anonymized data point to Cloudflare Workers Analytics Engine (a time-series telemetry service) for rate-limit enforcement and operational health monitoring:</p>
+        <ul>
+            <li>The pseudonymous user identifier ("appAccountToken" — a UUID generated on your device, not linked to any personal information)</li>
+            <li>The scan type (photo, voice, text, or barcode)</li>
+            <li>The lifecycle state (trial / paid)</li>
+            <li>The current daily scan count and the request latency</li>
+        </ul>
+        <p>This telemetry does not contain food content, food photos, request bodies, API responses, or any data you provided. It is automatically purged from Cloudflare after 90 days. It is used solely to operate the rate-limit cap and to detect abuse patterns (e.g. unusual scan rates from a single account).</p>
+
+        <h2>Subscription Billing</h2>
+        <p>If you subscribe to Auto Mode, all payment processing is handled by Apple via the App Store. Apple charges your Apple ID, deducts its standard commission, and pays us net revenue. We never receive your credit-card number, billing address, or other Apple ID account details. Apple's handling of this data is governed by the <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple Privacy Policy</a>.</p>
+        <p>To manage or cancel an Auto Mode subscription, use the App Store's subscription management (Settings → [your name] → Subscriptions on iOS).</p>
+
+        <h2>Barcode Lookups</h2>
+        <p>When you scan a packaged-food barcode, the barcode number is sent to the <a href="https://world.openfoodfacts.org/" target="_blank" rel="noopener">Open Food Facts</a> public database (operated by a non-profit) to retrieve product nutrition information. Only the barcode digits are transmitted — no other data. Open Food Facts has its own <a href="https://world.openfoodfacts.org/privacy-policy" target="_blank" rel="noopener">privacy policy</a>.</p>
+
+        <h2>Third-Party Service Providers</h2>
+        <p>Depending on the mode you use, the following third parties may process your data on our behalf or directly:</p>
+        <ul>
+            <li><strong>Anthropic (Claude)</strong> — BYOK mode AI provider — <a href="https://www.anthropic.com/privacy" target="_blank" rel="noopener">Privacy Policy</a></li>
+            <li><strong>OpenAI</strong> — BYOK mode AI provider and Auto Mode AI provider — <a href="https://openai.com/privacy" target="_blank" rel="noopener">Privacy Policy</a></li>
+            <li><strong>Cloudflare</strong> — Auto Mode proxy and telemetry (sub-processor we operate; data subject to <a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener">Cloudflare's Privacy Policy</a>)</li>
+            <li><strong>Apple</strong> — App Store subscription billing, App Attest device integrity, optional iCloud sync — <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Privacy Policy</a></li>
+            <li><strong>Open Food Facts</strong> — barcode → nutrition lookup — <a href="https://world.openfoodfacts.org/privacy-policy" target="_blank" rel="noopener">Privacy Policy</a></li>
+            <li><strong>Google Analytics</strong> — website analytics on this site only (not in the app); requires your cookie consent and respects "Do Not Track"</li>
+        </ul>
 
         <h2>Data We Do Not Collect</h2>
-        <p>We want to be clear about what we do NOT collect:</p>
         <ul>
-            <li>We do not collect personal identification information</li>
-            <li>We do not require account creation or login</li>
-            <li>We do not have backend servers that store your data</li>
-            <li>We do not collect analytics or usage data</li>
-            <li>We do not share, sell, or transfer your data to third parties (except as described above for AI analysis)</li>
-            <li>We do not use cookies or tracking technologies</li>
+            <li>We never ask for your name, email, phone number, address, or any other identifying information.</li>
+            <li>We do not require account creation or login.</li>
+            <li>We do not store your food photos or analysis results on our servers.</li>
+            <li>In BYOK mode, no app data ever passes through our infrastructure.</li>
+            <li>We do not sell, rent, or trade any data to third parties for advertising or any other purpose.</li>
+            <li>We do not use cookies or tracking technologies in the iOS app.</li>
         </ul>
 
-        <h2>Data Security</h2>
-        <p>Your data is stored locally on your device using iOS standard secure storage mechanisms. API keys are stored in the iOS Keychain, which provides hardware-level encryption. All communications with AI service providers are encrypted using HTTPS/TLS.</p>
-
-        <h2>Data Retention</h2>
-        <p>All data is stored locally on your device and/or in your personal iCloud account. You can delete your data at any time by:</p>
+        <h2>Data Retention and Your Control</h2>
+        <p>All meal data is stored locally on your device and/or in your personal iCloud account, and you can delete it at any time by:</p>
         <ul>
             <li>Deleting individual food entries within the app</li>
             <li>Clearing all app data through iOS Settings</li>
             <li>Uninstalling the app</li>
         </ul>
+        <p>For Auto Mode infrastructure data: the App Attest public key and per-user rate-limit counter persist as long as your subscription is active and are automatically purged within 90 days after cancellation. Analytics Engine telemetry is automatically purged 90 days after creation.</p>
+
+        <h2>European Users (GDPR)</h2>
+        <p>If you are in the European Economic Area, United Kingdom, or Switzerland, you have the following rights under the General Data Protection Regulation regarding personal data we process about you (limited to Auto Mode infrastructure data; BYOK mode involves no processing by us):</p>
+        <ul>
+            <li><strong>Right of access</strong> — request a copy of the data we hold</li>
+            <li><strong>Right to rectification</strong> — request correction of inaccurate data</li>
+            <li><strong>Right to erasure</strong> — request deletion of your data (effectively achieved by cancelling Auto Mode; complete purge follows within 90 days)</li>
+            <li><strong>Right to restrict or object to processing</strong></li>
+            <li><strong>Right to data portability</strong></li>
+            <li><strong>Right to lodge a complaint</strong> with your national data-protection authority</li>
+        </ul>
+        <p>The legal basis for our Auto Mode processing is the performance of a contract (Apple StoreKit subscription) under GDPR Article 6(1)(b). To exercise any right above, email <a href="mailto:privacy@snapnutritionai.app">privacy@snapnutritionai.app</a> with your appAccountToken (visible in the app's Settings) — we'll respond within 30 days.</p>
+
+        <h2>California Users (CCPA / CPRA)</h2>
+        <p>If you are a California resident, you have the following rights under the California Consumer Privacy Act and California Privacy Rights Act regarding personal information we process:</p>
+        <ul>
+            <li>Right to know what categories of personal information we collect and how we use them</li>
+            <li>Right to delete personal information we hold (subject to legal exceptions)</li>
+            <li>Right to correct inaccurate personal information</li>
+            <li>Right to opt out of any "sale" or "sharing" of personal information — we do not sell or share personal information, so this opt-out is effectively always active for our users</li>
+            <li>Right to non-discrimination for exercising these rights</li>
+        </ul>
+        <p>To exercise these rights, email <a href="mailto:privacy@snapnutritionai.app">privacy@snapnutritionai.app</a>.</p>
+
+        <h2>Data Security</h2>
+        <p>API keys are stored in the iOS Keychain with hardware-level encryption. All communications with AI service providers and our proxy are encrypted using HTTPS/TLS. The Cloudflare proxy stores App Attest public keys and rate-limit counters in Cloudflare-hosted, encrypted-at-rest storage. We never have access to your device's App Attest private key, your Apple ID payment details, or your iCloud-synced data.</p>
 
         <h2>Children's Privacy</h2>
-        <p>The app is not directed at children under the age of 13. We do not knowingly collect information from children under 13.</p>
+        <p>The app is not directed at children under the age of 13 in the United States, or under the age of 16 in the European Economic Area. We do not knowingly collect information from children below these ages. If you believe we have inadvertently received such information, please contact us and we will delete it.</p>
 
         <h2>Changes to This Policy</h2>
-        <p>We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last updated" date.</p>
+        <p>We may update this Privacy Policy from time to time, particularly as the app evolves. We will post the new Privacy Policy on this page and update the "Last updated" date at the top. Material changes will also be surfaced in the app's "What's New" screen.</p>
 
         <h2>Contact Us</h2>
-        <p>If you have any questions about this Privacy Policy, please contact us at:</p>
+        <p>If you have any questions about this Privacy Policy or wish to exercise any rights described above, please email:</p>
         <p><a href="mailto:privacy@snapnutritionai.app">privacy@snapnutritionai.app</a></p>
+        <p>For product or billing questions, see our general support address:</p>
+        <p><a href="mailto:support@snapnutritionai.app">support@snapnutritionai.app</a></p>
     </div>
 
     <footer>
