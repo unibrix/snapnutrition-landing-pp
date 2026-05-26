@@ -1,0 +1,49 @@
+name: Markdown mirrors
+
+# Regenerates the .md mirror of every HTML page so they can never drift.
+# The HTML is the single source of truth; this derives the Markdown from it.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "**.html"
+      - "scripts/html_to_md.py"
+      - ".github/workflows/markdown-mirror.yml"
+  workflow_dispatch:
+
+# Needed so the workflow can commit the regenerated .md files back.
+permissions:
+  contents: write
+
+concurrency:
+  group: markdown-mirror-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: pip install "beautifulsoup4>=4.12,<5" "markdownify>=0.13,<2"
+
+      - name: Generate Markdown mirrors
+        run: python scripts/html_to_md.py
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add ./*.html.md
+          if git diff --cached --quiet; then
+            echo "Markdown mirrors already up to date."
+          else
+            git commit -m "chore: regenerate Markdown mirrors [skip ci]"
+            git push
+          fi

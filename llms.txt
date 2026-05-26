@@ -36,8 +36,8 @@ Unlike calorie tracker apps that charge $5-15/month for subscriptions, SnapNutri
 
 ## Links
 
-- Homepage: https://snapnutritionai.app/
-- Privacy Policy: https://snapnutritionai.app/privacy.html
+- Homepage: https://snapnutritionai.app/ (Markdown: https://snapnutritionai.app/index.html.md)
+- Privacy Policy: https://snapnutritionai.app/privacy.html (Markdown: https://snapnutritionai.app/privacy.html.md)
 
 ## Common Questions
 
