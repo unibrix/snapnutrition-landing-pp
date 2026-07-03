@@ -912,6 +912,182 @@ footer .powered-by {
     }
 }
 
+/* Note boxes (accuracy note, health disclaimer) */
+.accuracy-note {
+    padding: 3rem 2rem 0;
+    background: var(--bg-light);
+}
+
+.accuracy-note h2 {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 1.25rem;
+}
+
+.disclaimer {
+    padding: 2rem;
+    background: var(--bg-white);
+}
+
+.note-box {
+    max-width: 800px;
+    margin: 0 auto;
+    background: var(--card-bg);
+    border-left: 4px solid var(--green-primary);
+    border-radius: 8px;
+    padding: 1rem 1.25rem;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    box-shadow: var(--faq-shadow);
+}
+
+.note-box a {
+    color: var(--gradient-end);
+}
+
+/* Learn More internal links */
+.learn-more {
+    padding: 4rem 2rem;
+    background: var(--bg-white);
+}
+
+.learn-more h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.learn-more-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr));
+    gap: 1.5rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.learn-more-card {
+    display: block;
+    background: var(--bg-light);
+    border-radius: 16px;
+    padding: 1.5rem;
+    text-decoration: none;
+    color: var(--text-dark);
+    box-shadow: var(--faq-shadow);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.learn-more-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--card-shadow);
+}
+
+.learn-more-card h3 {
+    margin-bottom: 0.5rem;
+    color: var(--gradient-end);
+}
+
+.learn-more-card p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+/* Article pages (byok-calorie-tracker, ai-calorie-counter-accuracy, myfitnesspal-alternative) */
+.article-page {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+}
+
+.article-page h1 {
+    font-size: 2.25rem;
+    line-height: 1.25;
+    margin-bottom: 0.5rem;
+}
+
+.article-page .subtitle {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    margin-bottom: 2rem;
+}
+
+.article-page h2 {
+    font-size: 1.5rem;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--gradient-end);
+}
+
+.article-page h3 {
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.article-page p,
+.article-page ul,
+.article-page ol {
+    margin-bottom: 1rem;
+    color: var(--text-dark);
+}
+
+.article-page ul,
+.article-page ol {
+    padding-left: 1.5rem;
+}
+
+.article-page li {
+    margin-bottom: 0.5rem;
+}
+
+.article-page a {
+    color: var(--gradient-end);
+}
+
+.article-page .faq-list {
+    margin-top: 1rem;
+}
+
+.article-page .last-updated {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+/* Comparison table */
+.comparison-table-wrap {
+    overflow-x: auto;
+    margin: 1.5rem 0;
+    -webkit-overflow-scrolling: touch;
+}
+
+.comparison-table {
+    border-collapse: collapse;
+    width: 100%;
+    min-width: 720px;
+    font-size: 0.92rem;
+}
+
+.comparison-table th,
+.comparison-table td {
+    border: 1px solid rgba(128, 128, 128, 0.25);
+    padding: 0.6rem 0.75rem;
+    text-align: left;
+    vertical-align: top;
+}
+
+.comparison-table thead th {
+    background: var(--bg-light);
+}
+
+.comparison-table tbody th[scope="row"] {
+    background: var(--bg-light);
+    white-space: nowrap;
+}
+
+/* CTA block on article pages */
+.cta-block {
+    text-align: center;
+    margin: 2.5rem 0 1rem;
+}
+
 @media (max-width: 480px) {
     .hero {
         padding: 3rem 1rem;

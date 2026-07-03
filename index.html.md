@@ -10,7 +10,7 @@ No mandatory subscription. No ads. No account needed. Track calories, macros, an
 
 [![Download SnapNutrition AI - Best Free Calorie Counter on the App Store](https://snapnutritionai.app/images/download-on-the-app-store.svg?v=2)](https://apps.apple.com/us/app/snapnutrition-ai/id6757797704)
 
-Looking for a **free calorie tracker** that doesn't lock features behind a subscription? SnapNutrition AI is a **free AI food diary and calorie counter app** for **iPhone, iPad, and Apple Watch**. Snap a photo, scan a barcode, speak, or type — and get instant calorie, protein, carb, and fat estimates powered by AI. Log calories from your wrist with the **Apple Watch app**, or track at a glance with **Home Screen, Lock Screen, and Control Center widgets**. No mandatory monthly fee. No ads. No account required. Perfect for **weight loss**, muscle gain, or simply eating healthier in 2026. Unlike apps like MyFitnessPal or Lose It! that charge $5–15/month for AI features, SnapNutrition AI lets you bring your own API key and pay only pennies per scan — or pick the optional **Auto Mode** subscription ($2.99/month or $29.99/year) if you'd rather skip API-key setup. This is the **best free diet app** and **food tracker** for iOS users who value privacy and flexibility.
+Looking for a **free calorie tracker** that doesn't lock features behind a subscription? SnapNutrition AI is a **free AI food diary and calorie counter app** for **iPhone, iPad, and Apple Watch**. Snap a photo, scan a barcode, speak, or type — and get instant calorie, protein, carb, and fat estimates powered by AI. Log calories from your wrist with the **Apple Watch app**, or track at a glance with **Home Screen, Lock Screen, and Control Center widgets**. No mandatory monthly fee. No ads. No account required. Perfect for **weight loss**, muscle gain, or simply eating healthier in 2026. Unlike apps like MyFitnessPal or Lose It! that charge $5–15/month for AI features, SnapNutrition AI lets you bring your own API key and pay only pennies per scan — or pick the optional **Auto Mode** subscription ($2.99/month or $29.99/year) if you'd rather skip API-key setup. [BYOK (Bring Your Own Key)](https://snapnutritionai.app/byok-calorie-tracker.html.md) simply means you use your own OpenAI or Anthropic API key, so SnapNutrition AI needs no account system and no mandatory AI subscription. This is the **best free diet app** and **food tracker** for iOS users who value privacy and flexibility.
 
 ## See the Best Free Calorie Counter in Action
 
@@ -87,6 +87,10 @@ Use the free calorie tracker in your preferred language with full localization s
 
 Switch between measurement systems based on your preference — grams or ounces, your choice.
 
+## A Note on Accuracy
+
+AI calorie estimates are best used for fast, consistent food logging, not laboratory-grade nutrition measurement. Portion size, hidden oils, and mixed dishes can affect results, so SnapNutrition AI lets you edit portions and combine photo, barcode, voice, and text input. Learn more about [how accurate AI calorie counters really are](https://snapnutritionai.app/ai-calorie-counter-accuracy.html.md).
+
 ## Frequently Asked Questions
 
 ### Is SnapNutrition AI really free?
@@ -103,7 +107,7 @@ SnapNutrition AI is the best free AI calorie tracker in 2026 because it offers A
 
 ### How accurate is AI calorie counting?
 
-AI calorie estimates are typically within 30% accuracy based on portion sizes and preparation methods. SnapNutrition AI displays this disclaimer and allows you to manually adjust portions and ingredients for better accuracy.
+AI calorie estimates are typically within 10-30% accuracy depending on portion sizes and preparation methods. SnapNutrition AI displays this disclaimer and allows you to manually adjust portions and ingredients for better accuracy. Read more about [what AI calorie counters can and can't do](https://snapnutritionai.app/ai-calorie-counter-accuracy.html.md).
 
 ### Is my data private?
 
@@ -119,11 +123,11 @@ Yes, SnapNutrition AI is excellent for weight loss. Set a daily calorie goal, tr
 
 ### How does SnapNutrition AI compare to MyFitnessPal?
 
-SnapNutrition AI is free with no mandatory subscription (BYOK with your own API key), while MyFitnessPal Premium costs $19.99/month ($240/year). SnapNutrition AI offers AI photo scanning, requires no account, and has no ads. MyFitnessPal has a larger food database (20M+ foods) and exercise tracking, but locks AI features behind a paywall.
+SnapNutrition AI is free with no mandatory subscription (BYOK with your own API key), while MyFitnessPal Premium costs $19.99/month or $79.99/year. SnapNutrition AI offers AI photo scanning, requires no account, and has no ads. MyFitnessPal has a larger food database (20M+ foods) and exercise tracking, but locks AI features behind a paywall. See our full [MyFitnessPal alternative comparison](https://snapnutritionai.app/myfitnesspal-alternative.html.md).
 
 ### What is BYOK (Bring Your Own Key)?
 
-BYOK stands for Bring Your Own Key. Rather than requiring a subscription, SnapNutrition AI lets you use your own API key from Anthropic or OpenAI. You pay the AI provider directly for usage — typically $0.01-0.03 per food scan. This model makes the app free to use while giving you access to the latest AI models. (For users who'd rather skip the API-key setup, an optional Auto Mode subscription is also available.)
+BYOK stands for Bring Your Own Key. Rather than requiring a subscription, SnapNutrition AI lets you use your own API key from Anthropic or OpenAI. You pay the AI provider directly for usage — typically $0.01-0.03 per food scan. This model makes the app free to use while giving you access to the latest AI models. (For users who'd rather skip the API-key setup, an optional Auto Mode subscription is also available.) Read our full guide to the [BYOK calorie tracker](https://snapnutritionai.app/byok-calorie-tracker.html.md) model.
 
 ### Does SnapNutrition AI work for keto, vegan, or other diets?
 
@@ -132,6 +136,18 @@ Yes, SnapNutrition AI tracks all macronutrients (protein, carbs, fat) and total 
 ### Can I use SnapNutrition AI on iPhone, iPad, and Apple Watch?
 
 Yes, SnapNutrition AI is available on iPhone, iPad, and Apple Watch with iCloud sync across all your Apple devices. The Watch app lets you log calories by voice and view your daily progress right from your wrist. An Android version is not yet available.
+
+## Learn More About AI Calorie Tracking
+
+[### BYOK Calorie Tracker
+
+What Bring Your Own Key means, what it costs per day, and why it can beat subscriptions.](https://snapnutritionai.app/byok-calorie-tracker.html.md)
+[### AI Calorie Counter Accuracy
+
+What photo food scanners can and can't do — common failure modes and how to get better results.](https://snapnutritionai.app/ai-calorie-counter-accuracy.html.md)
+[### MyFitnessPal Alternative
+
+An honest comparison of SnapNutrition AI, MyFitnessPal, Cronometer, Lose It!, and Cal AI.](https://snapnutritionai.app/myfitnesspal-alternative.html.md)
 
 ## Your Privacy Matters
 
@@ -142,3 +158,5 @@ No account required. Your meal logs, goals, and history stay on your device and 
 **Auto Mode (optional subscription, $2.99/month or $29.99/year with a 3-day free trial):** Requests pass through a minimal Cloudflare-hosted proxy that verifies your Apple subscription, runs Apple App Attest for device integrity, and enforces a fair-use daily scan limit. Food photos are forwarded to OpenAI for analysis and not stored on our side. We log anonymized per-scan telemetry (timestamp, scan type, daily count) for rate-limit enforcement only — no personal identifiers, no food content.
 
 Full details in our [Privacy Policy](https://snapnutritionai.app/privacy.html.md).
+
+SnapNutrition AI is for general food logging and wellness support. It is not medical advice and should not replace guidance from a doctor or registered dietitian.

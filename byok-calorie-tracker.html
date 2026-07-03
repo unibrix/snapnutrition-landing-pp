@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="system">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BYOK Calorie Tracker for iPhone: Use Your Own OpenAI or Anthropic Key</title>
+    <meta name="description" content="What BYOK (Bring Your Own Key) means in a calorie tracker, what it costs per day, the privacy benefits and honest tradeoffs, and how SnapNutrition AI implements it on iPhone, iPad, and Apple Watch.">
+    <meta name="robots" content="index, follow">
+    <link rel="stylesheet" href="styles.css?v=4">
+    <script>document.documentElement.setAttribute('data-theme',localStorage.getItem('snapnutrition_theme')||'system')</script>
+    <link rel="canonical" href="https://snapnutritionai.app/byok-calorie-tracker.html">
+    <link rel="alternate" type="text/markdown" href="https://snapnutritionai.app/byok-calorie-tracker.html.md" title="Markdown version for AI agents">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="BYOK Calorie Tracker for iPhone: Use Your Own OpenAI or Anthropic Key">
+    <meta property="og:description" content="What Bring Your Own Key means in a calorie tracker, what it costs per day, privacy benefits, and honest tradeoffs.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://snapnutritionai.app/byok-calorie-tracker.html">
+    <meta property="og:image" content="https://snapnutritionai.app/images/og-image.png">
+    <meta property="og:site_name" content="SnapNutrition AI">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="BYOK Calorie Tracker for iPhone">
+    <meta name="twitter:description" content="What Bring Your Own Key means in a calorie tracker, what it costs per day, and the honest tradeoffs.">
+    <meta name="twitter:image" content="https://snapnutritionai.app/images/og-image.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.png?v=2">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png?v=2">
+
+    <!-- Google Analytics 4 with Consent Mode -->
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+        'analytics_storage': 'denied',
+        'ad_storage': 'denied',
+        'wait_for_update': 500
+    });
+    gtag('js', new Date());
+    gtag('config', 'G-JJFTFWZEQ2');
+    </script>
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "WebPage",
+                "@id": "https://snapnutritionai.app/byok-calorie-tracker.html",
+                "name": "BYOK Calorie Tracker for iPhone: Use Your Own OpenAI or Anthropic Key",
+                "description": "What BYOK (Bring Your Own Key) means in a calorie tracker, what it costs per day, the privacy benefits and honest tradeoffs.",
+                "url": "https://snapnutritionai.app/byok-calorie-tracker.html",
+                "inLanguage": "en",
+                "dateModified": "2026-07-03",
+                "isPartOf": {
+                    "@type": "WebSite",
+                    "name": "SnapNutrition AI",
+                    "url": "https://snapnutritionai.app"
+                },
+                "about": {
+                    "@id": "https://snapnutritionai.app/#app"
+                }
+            },
+            {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://snapnutritionai.app/"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "BYOK Calorie Tracker",
+                        "item": "https://snapnutritionai.app/byok-calorie-tracker.html"
+                    }
+                ]
+            },
+            {
+                "@type": "FAQPage",
+                "mainEntity": [
+                    {
+                        "@type": "Question",
+                        "name": "Is BYOK safe?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Yes, when implemented properly. In SnapNutrition AI your API key is stored only on your device in the iOS Keychain with hardware-level encryption, and scan requests go directly from your device to Anthropic or OpenAI over HTTPS. You can set spending limits in the provider console and revoke or rotate the key at any time. Both OpenAI and Anthropic state that API data is not used to train their models by default."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Which API keys work with SnapNutrition AI?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "An OpenAI key (created at platform.openai.com) or an Anthropic key (created at console.anthropic.com). Both providers offer prepaid credits, so a small $5 top-up typically lasts for months of food scans."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "How much does BYOK calorie tracking cost per day?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "A photo food scan typically costs about $0.01-0.03 in API usage depending on the model. Logging three meals a day usually works out to roughly $0.03-0.09 per day, or about $1-3 per month — compared to $5-20 per month for typical calorie tracker subscriptions. Provider prices change, so check current API pricing."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Is Auto Mode required?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "No. Auto Mode is an optional subscription ($2.99/month or $29.99/year with a 3-day free trial) for people who don't want to create or manage an API key. BYOK mode remains fully functional and free forever."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Does SnapNutrition AI see my food photos?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "In BYOK mode, no — photos go directly from your device to your chosen AI provider; SnapNutrition AI operates no backend and never sees your data. In optional Auto Mode, requests pass through a minimal Cloudflare-hosted proxy that verifies your subscription and forwards the photo to OpenAI; food photos are never stored."
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+    </script>
+</head>
+<body>
+    <div class="theme-toggle">
+        <div class="theme-toggle-group" role="radiogroup" aria-label="Theme">
+            <button type="button" data-theme-value="light" role="radio" aria-checked="false" aria-label="Light theme"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg></button>
+            <button type="button" data-theme-value="dark" role="radio" aria-checked="false" aria-label="Dark theme"><svg viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button>
+            <button type="button" data-theme-value="system" role="radio" aria-checked="true" aria-label="System theme"><svg class="icon-desktop" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><path d="M8 21h8M12 17v4"/></svg><svg class="icon-mobile" viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><path d="M12 18h.01"/></svg></button>
+        </div>
+    </div>
+
+    <!-- Cookie Consent Banner -->
+    <div id="cookie-banner" class="cookie-banner" style="display: none;">
+        <div class="cookie-content">
+            <p>We use cookies for analytics to improve your experience. No personal data is collected.</p>
+            <div class="cookie-buttons">
+                <button id="cookie-accept" class="cookie-btn accept">Accept</button>
+                <button id="cookie-reject" class="cookie-btn reject">Reject</button>
+            </div>
+        </div>
+    </div>
+
+    <main class="article-page">
+        <a href="index.html" class="back-link">&larr; Back to Home</a>
+
+        <h1>BYOK Calorie Tracker for iPhone</h1>
+        <p class="subtitle">What "Bring Your Own Key" means in a calorie tracker, what it actually costs, and the honest tradeoffs.</p>
+        <p class="last-updated">Last updated: July 3, 2026</p>
+
+        <h2>What does BYOK mean in a calorie tracker?</h2>
+        <p>BYOK stands for <strong>Bring Your Own Key</strong>. Instead of paying the app a monthly subscription that covers its AI costs (plus margin), you create your own API key with an AI provider — OpenAI or Anthropic — and paste it into the app once. Every food scan then runs on your own key, and you pay the provider directly for exactly what you use.</p>
+        <p>In practice: you take a photo of your meal, the app sends it straight from your iPhone to the AI provider using your key, and the provider returns calorie and macro estimates. The app developer is not in the middle of that transaction.</p>
+
+        <h2>Why BYOK can be cheaper than a subscription</h2>
+        <p>A photo food scan typically costs about <strong>$0.01–0.03 in API usage</strong>, depending on the model. Logging three meals a day works out to roughly $0.03–0.09 per day — about <strong>$1–3 per month</strong>. Compare that to typical calorie tracker subscriptions of $5–20 per month (MyFitnessPal Premium, for example, is $19.99/month or $79.99/year as of July 2026).</p>
+        <p>Both OpenAI and Anthropic use prepaid credits for personal accounts, so a small $5 top-up usually lasts months. If you stop tracking for a while, you pay nothing — there is no subscription quietly renewing in the background.</p>
+        <p>One honest caveat: API prices are set by the providers and can change. The pennies-per-scan range above reflects mainstream vision models in mid-2026.</p>
+
+        <h2>The privacy angle</h2>
+        <p>BYOK is not just about cost. Because your key lives on your device and requests go directly to the provider, a BYOK calorie tracker doesn't need an account system, a user database, or a backend that sees your food photos. In SnapNutrition AI's BYOK mode:</p>
+        <ul>
+            <li>No account or registration — there is nothing to sign up for</li>
+            <li>Your API key is stored only in the iOS Keychain, with hardware-level encryption</li>
+            <li>Food photos and descriptions go from your device to Anthropic or OpenAI — we operate no backend and never see your data</li>
+            <li>Meal history stays on your device, with optional sync through your personal iCloud</li>
+            <li>Both OpenAI and Anthropic state that API data is not used for model training by default</li>
+        </ul>
+        <p>Note that this applies to <em>BYOK mode</em>. SnapNutrition AI's optional Auto Mode routes requests through a minimal Cloudflare proxy (needed to verify your subscription); food photos are forwarded to OpenAI and never stored. The <a href="privacy.html">Privacy Policy</a> describes both flows in detail.</p>
+
+        <h2>The tradeoffs, honestly</h2>
+        <p>BYOK is not for everyone. The real downsides:</p>
+        <ul>
+            <li><strong>Setup friction.</strong> You need to create an account with OpenAI or Anthropic, add a few dollars of credit, and paste the key into the app. It takes about five minutes, but it is more work than tapping "Start free trial".</li>
+            <li><strong>Provider costs vary.</strong> API pricing changes over time and differs by model. Your cost per scan is not fixed the way a subscription price is.</li>
+            <li><strong>Model availability can change.</strong> Providers retire old models and launch new ones; occasionally an app update is needed to track that.</li>
+            <li><strong>You manage the key.</strong> If you revoke it or run out of credits, scans stop working until you fix it. (Spending limits in the provider console make runaway costs effectively impossible.)</li>
+        </ul>
+        <p>If none of that appeals to you, the honest answer is that a conventional subscription app — or SnapNutrition AI's optional Auto Mode — will feel simpler.</p>
+
+        <h2>How SnapNutrition AI implements BYOK</h2>
+        <p>SnapNutrition AI is a free AI calorie tracker for <strong>iPhone, iPad, and Apple Watch</strong> built around the BYOK model:</p>
+        <ul>
+            <li>Works with both <strong>OpenAI and Anthropic</strong> keys — your choice</li>
+            <li>Log food by <strong>photo, barcode, voice, or text</strong>; edit portions and ingredients after any scan</li>
+            <li>Apple Watch app plus Home Screen, Lock Screen, and Control Center widgets</li>
+            <li>No ads, no account, no mandatory subscription</li>
+            <li>Optional <strong>Auto Mode</strong> ($2.99/month or $29.99/year, 3-day free trial) for people who don't want to manage an API key</li>
+        </ul>
+        <p>BYOK is a small but growing pattern — a handful of other trackers (such as Fud AI and MacroPhase) have adopted it too, which we take as a good sign: it means the model works and users want it. SnapNutrition AI's angle is combining BYOK with multi-input logging (photo, barcode, voice, text), Apple Watch support, and a no-account, privacy-first design.</p>
+
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-list">
+            <details class="faq-item">
+                <summary>Is BYOK safe?</summary>
+                <p>Yes, when implemented properly. In SnapNutrition AI your API key is stored only on your device in the iOS Keychain with hardware-level encryption, and scan requests go directly from your device to Anthropic or OpenAI over HTTPS. You can set spending limits in the provider console and revoke or rotate the key at any time.</p>
+            </details>
+            <details class="faq-item">
+                <summary>Which API keys work?</summary>
+                <p>An OpenAI key (created at platform.openai.com) or an Anthropic key (created at console.anthropic.com). Both providers offer prepaid credits, so a $5 top-up typically lasts for months of food scans.</p>
+            </details>
+            <details class="faq-item">
+                <summary>How much does BYOK cost per day?</summary>
+                <p>A photo scan typically costs about $0.01–0.03 in API usage. Three meals a day is roughly $0.03–0.09 per day, or about $1–3 per month. Provider prices change, so check current API pricing — but it is consistently far below typical $5–20/month tracker subscriptions.</p>
+            </details>
+            <details class="faq-item">
+                <summary>Is Auto Mode required?</summary>
+                <p>No. Auto Mode is an optional subscription ($2.99/month or $29.99/year with a 3-day free trial) for people who don't want to create or manage an API key. BYOK mode is fully functional and free forever.</p>
+            </details>
+            <details class="faq-item">
+                <summary>Does SnapNutrition AI see my food photos?</summary>
+                <p>In BYOK mode, no — photos go directly from your device to your chosen AI provider; we operate no backend. In optional Auto Mode, requests pass through a minimal Cloudflare-hosted proxy that verifies your subscription and forwards the photo to OpenAI; food photos are never stored. Details in the <a href="privacy.html">Privacy Policy</a>.</p>
+            </details>
+        </div>
+
+        <div class="cta-block">
+            <a href="https://apps.apple.com/us/app/snapnutrition-ai/id6757797704" class="app-store-badge" aria-label="Download SnapNutrition AI on the App Store">
+                <img src="images/download-on-the-app-store.svg?v=2" alt="Download SnapNutrition AI on the App Store">
+            </a>
+        </div>
+
+        <h2>Related reading</h2>
+        <ul>
+            <li><a href="ai-calorie-counter-accuracy.html">How accurate are AI calorie counters?</a></li>
+            <li><a href="myfitnesspal-alternative.html">MyFitnessPal alternative for iPhone: honest comparison</a></li>
+            <li><a href="index.html">SnapNutrition AI homepage</a></li>
+        </ul>
+
+        <p class="note-box">SnapNutrition AI is for general food logging and wellness support. It is not medical advice and should not replace guidance from a doctor or registered dietitian.</p>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="links">
+            <a href="index.html">Home</a>
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="#" id="cookie-settings">Cookie Settings</a>
+        </div>
+        <p class="copyright">&copy; <span id="year"></span> SnapNutrition AI. All rights reserved.</p>
+        <p class="powered-by">Powered by <a href="https://unibrix.com" target="_blank" rel="noopener">Unibrix</a></p>
+    </footer>
+
+    <script>
+    (function() {
+        var THEME_KEY = 'snapnutrition_theme';
+        var html = document.documentElement;
+        var buttons = document.querySelectorAll('.theme-toggle-group button');
+
+        function applyTheme(theme) {
+            html.setAttribute('data-theme', theme);
+            buttons.forEach(function(btn) {
+                var isActive = btn.getAttribute('data-theme-value') === theme;
+                btn.classList.toggle('active', isActive);
+                btn.setAttribute('aria-checked', isActive ? 'true' : 'false');
+            });
+        }
+
+        var saved = localStorage.getItem(THEME_KEY) || 'system';
+        applyTheme(saved);
+
+        buttons.forEach(function(btn) {
+            btn.addEventListener('click', function() {
+                var theme = btn.getAttribute('data-theme-value');
+                localStorage.setItem(THEME_KEY, theme);
+                applyTheme(theme);
+            });
+        });
+    })();
+    </script>
+
+    <!-- Cookie Consent & Analytics Script -->
+    <script>
+    (function() {
+        const CONSENT_KEY = 'snapnutrition_cookie_consent';
+        const GA_ID = 'G-JJFTFWZEQ2';
+
+        function getConsent() {
+            return localStorage.getItem(CONSENT_KEY);
+        }
+
+        function setConsent(status) {
+            localStorage.setItem(CONSENT_KEY, status);
+        }
+
+        function loadGA() {
+            if (document.getElementById('ga-script')) return;
+            const script = document.createElement('script');
+            script.id = 'ga-script';
+            script.async = true;
+            script.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
+            document.head.appendChild(script);
+        }
+
+        function updateConsent(granted) {
+            if (granted) {
+                gtag('consent', 'update', { 'analytics_storage': 'granted' });
+                loadGA();
+            } else {
+                gtag('consent', 'update', { 'analytics_storage': 'denied' });
+            }
+        }
+
+        function showBanner(show) {
+            document.getElementById('cookie-banner').style.display = show ? 'flex' : 'none';
+        }
+
+        function init() {
+            const consent = getConsent();
+            if (consent === null) {
+                showBanner(true);
+            } else if (consent === 'accepted') {
+                updateConsent(true);
+            }
+        }
+
+        document.getElementById('cookie-accept').addEventListener('click', function() {
+            setConsent('accepted');
+            updateConsent(true);
+            showBanner(false);
+        });
+
+        document.getElementById('cookie-reject').addEventListener('click', function() {
+            setConsent('rejected');
+            updateConsent(false);
+            showBanner(false);
+        });
+
+        document.getElementById('cookie-settings').addEventListener('click', function(e) {
+            e.preventDefault();
+            showBanner(true);
+        });
+
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // App Store clicks -> GA4 event (mark "app_store_click" as a key event in GA4 admin)
+        document.querySelectorAll('a[href*="apps.apple.com"]').forEach(function(link) {
+            link.addEventListener('click', function() {
+                gtag('event', 'app_store_click', { 'link_url': link.href });
+            });
+        });
+
+        init();
+    })();
+    </script>
+</body>
+</html>

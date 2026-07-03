@@ -2,13 +2,31 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
         <loc>https://snapnutritionai.app/</loc>
-        <lastmod>2026-02-01</lastmod>
+        <lastmod>2026-07-03</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
+        <loc>https://snapnutritionai.app/byok-calorie-tracker.html</loc>
+        <lastmod>2026-07-03</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://snapnutritionai.app/ai-calorie-counter-accuracy.html</loc>
+        <lastmod>2026-07-03</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://snapnutritionai.app/myfitnesspal-alternative.html</loc>
+        <lastmod>2026-07-03</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
         <loc>https://snapnutritionai.app/privacy.html</loc>
-        <lastmod>2026-02-01</lastmod>
+        <lastmod>2026-05-14</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
     </url>
