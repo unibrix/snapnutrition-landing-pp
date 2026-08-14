@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BYOK Calorie Tracker for iPhone: Use Your Own OpenAI or Anthropic Key</title>
+    <title>BYOK Calorie Tracker for iPhone: Use Your Own Gemini, OpenAI or Anthropic Key</title>
     <meta name="description" content="What BYOK (Bring Your Own Key) means in a calorie tracker, what it costs per day, the privacy benefits and honest tradeoffs, and how SnapNutrition AI implements it on iPhone, iPad, and Apple Watch.">
     <meta name="robots" content="index, follow">
     <link rel="stylesheet" href="styles.css?v=4">
@@ -12,7 +12,7 @@
     <link rel="alternate" type="text/markdown" href="https://snapnutritionai.app/byok-calorie-tracker.html.md" title="Markdown version for AI agents">
 
     <!-- Open Graph -->
-    <meta property="og:title" content="BYOK Calorie Tracker for iPhone: Use Your Own OpenAI or Anthropic Key">
+    <meta property="og:title" content="BYOK Calorie Tracker for iPhone: Use Your Own Gemini, OpenAI or Anthropic Key">
     <meta property="og:description" content="What Bring Your Own Key means in a calorie tracker, what it costs per day, privacy benefits, and honest tradeoffs.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://snapnutritionai.app/byok-calorie-tracker.html">
@@ -50,11 +50,11 @@
             {
                 "@type": "WebPage",
                 "@id": "https://snapnutritionai.app/byok-calorie-tracker.html",
-                "name": "BYOK Calorie Tracker for iPhone: Use Your Own OpenAI or Anthropic Key",
+                "name": "BYOK Calorie Tracker for iPhone: Use Your Own Gemini, OpenAI or Anthropic Key",
                 "description": "What BYOK (Bring Your Own Key) means in a calorie tracker, what it costs per day, the privacy benefits and honest tradeoffs.",
                 "url": "https://snapnutritionai.app/byok-calorie-tracker.html",
                 "inLanguage": "en",
-                "dateModified": "2026-07-03",
+                "dateModified": "2026-08-14",
                 "isPartOf": {
                     "@type": "WebSite",
                     "name": "SnapNutrition AI",
@@ -89,7 +89,7 @@
                         "name": "Is BYOK safe?",
                         "acceptedAnswer": {
                             "@type": "Answer",
-                            "text": "Yes, when implemented properly. In SnapNutrition AI your API key is stored only on your device in the iOS Keychain with hardware-level encryption, and scan requests go directly from your device to Anthropic or OpenAI over HTTPS. You can set spending limits in the provider console and revoke or rotate the key at any time. Both OpenAI and Anthropic state that API data is not used to train their models by default."
+                            "text": "Yes, when implemented properly. In SnapNutrition AI your API key is stored only on your device in the iOS Keychain with hardware-level encryption, and scan requests go directly from your device to your chosen provider over HTTPS. You can set spending limits in the provider console and revoke or rotate the key at any time. OpenAI and Anthropic both state that API data is not used to train their models by default."
                         }
                     },
                     {
@@ -97,7 +97,15 @@
                         "name": "Which API keys work with SnapNutrition AI?",
                         "acceptedAnswer": {
                             "@type": "Answer",
-                            "text": "An OpenAI key (created at platform.openai.com) or an Anthropic key (created at console.anthropic.com). Both providers offer prepaid credits, so a small $5 top-up typically lasts for months of food scans."
+                            "text": "Four providers: Google Gemini (aistudio.google.com), OpenAI (platform.openai.com), Anthropic (console.anthropic.com), and OpenRouter (openrouter.ai). Gemini and OpenRouter offer a free tier, so you can start without entering payment details. OpenAI and Anthropic use prepaid credits, where a small $5 top-up typically lasts for months of food scans."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Can a BYOK calorie tracker be completely free?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Yes. On Google Gemini's or OpenRouter's free API tier you pay nothing — no subscription to the app and no payment details with the provider. The constraint is a rate cap (requests per minute and per day) rather than a bill, and normal food logging of three or four meals a day sits well inside it. Free tiers are a commercial decision the providers can revise, but as of August 2026 both offer one."
                         }
                     },
                     {
@@ -155,32 +163,33 @@
 
         <h1>BYOK Calorie Tracker for iPhone</h1>
         <p class="subtitle">What "Bring Your Own Key" means in a calorie tracker, what it actually costs, and the honest tradeoffs.</p>
-        <p class="last-updated">Last updated: July 3, 2026</p>
+        <p class="last-updated">Last updated: August 14, 2026</p>
 
         <h2>What does BYOK mean in a calorie tracker?</h2>
-        <p>BYOK stands for <strong>Bring Your Own Key</strong>. Instead of paying the app a monthly subscription that covers its AI costs (plus margin), you create your own API key with an AI provider — OpenAI or Anthropic — and paste it into the app once. Every food scan then runs on your own key, and you pay the provider directly for exactly what you use.</p>
+        <p>BYOK stands for <strong>Bring Your Own Key</strong>. Instead of paying the app a monthly subscription that covers its AI costs (plus margin), you create your own API key with an AI provider — Google Gemini, OpenAI, Anthropic, or OpenRouter — and paste it into the app once. Every food scan then runs on your own key, and you pay the provider directly for exactly what you use. On a provider with a free tier, that can be nothing at all.</p>
         <p>In practice: you take a photo of your meal, the app sends it straight from your iPhone to the AI provider using your key, and the provider returns calorie and macro estimates. The app developer is not in the middle of that transaction.</p>
 
         <h2>Why BYOK can be cheaper than a subscription</h2>
         <p>A photo food scan typically costs about <strong>$0.01–0.03 in API usage</strong>, depending on the model. Logging three meals a day works out to roughly $0.03–0.09 per day — about <strong>$1–3 per month</strong>. Compare that to typical calorie tracker subscriptions of $5–20 per month (MyFitnessPal Premium, for example, is $19.99/month or $79.99/year as of July 2026).</p>
-        <p>Both OpenAI and Anthropic use prepaid credits for personal accounts, so a small $5 top-up usually lasts months. If you stop tracking for a while, you pay nothing — there is no subscription quietly renewing in the background.</p>
-        <p>One honest caveat: API prices are set by the providers and can change. The pennies-per-scan range above reflects mainstream vision models in mid-2026.</p>
+        <p>OpenAI and Anthropic use prepaid credits for personal accounts, so a small $5 top-up usually lasts months. If you stop tracking for a while, you pay nothing — there is no subscription quietly renewing in the background.</p>
+        <p><strong>And it can be genuinely free.</strong> Google Gemini and OpenRouter both offer a free API tier. Create a key, paste it in, and scan without ever entering payment details. Free tiers come with rate limits — a cap on requests per minute and per day — which is why they suit food logging so well: three or four meals a day is nowhere near the ceiling. SnapNutrition AI marks which providers have a free tier while you're picking one, so you don't need to research it first.</p>
+        <p>One honest caveat: API prices and free-tier limits are set by the providers and can change. The pennies-per-scan range above reflects mainstream vision models in mid-2026, and free tiers are a commercial decision the providers can revise.</p>
 
         <h2>The privacy angle</h2>
         <p>BYOK is not just about cost. Because your key lives on your device and requests go directly to the provider, a BYOK calorie tracker doesn't need an account system, a user database, or a backend that sees your food photos. In SnapNutrition AI's BYOK mode:</p>
         <ul>
             <li>No account or registration — there is nothing to sign up for</li>
             <li>Your API key is stored only in the iOS Keychain, with hardware-level encryption</li>
-            <li>Food photos and descriptions go from your device to Anthropic or OpenAI — we operate no backend and never see your data</li>
-            <li>Meal history stays on your device, with optional sync through your personal iCloud</li>
-            <li>Both OpenAI and Anthropic state that API data is not used for model training by default</li>
+            <li>Food photos and descriptions go from your device to whichever provider you configured — we operate no backend and never see your data</li>
+            <li>Meal history stays on your device, with optional sync through your personal iCloud, and exports to JSON or CSV whenever you want it</li>
+            <li>OpenAI and Anthropic both state that API data is not used for model training by default. Free tiers can differ here — Google's free Gemini tier is the notable exception, where prompts may be reviewed to improve their products. If that matters to you, use a paid tier or a different provider.</li>
         </ul>
         <p>Note that this applies to <em>BYOK mode</em>. SnapNutrition AI's optional Auto Mode routes requests through a minimal Cloudflare proxy (needed to verify your subscription); food photos are forwarded to OpenAI and never stored. The <a href="privacy.html">Privacy Policy</a> describes both flows in detail.</p>
 
         <h2>The tradeoffs, honestly</h2>
         <p>BYOK is not for everyone. The real downsides:</p>
         <ul>
-            <li><strong>Setup friction.</strong> You need to create an account with OpenAI or Anthropic, add a few dollars of credit, and paste the key into the app. It takes about five minutes, but it is more work than tapping "Start free trial".</li>
+            <li><strong>Setup friction.</strong> You need to create an account with a provider, add a few dollars of credit (or pick a free-tier provider and skip that part), and paste the key into the app. It takes about five minutes, but it is more work than tapping "Start free trial".</li>
             <li><strong>Provider costs vary.</strong> API pricing changes over time and differs by model. Your cost per scan is not fixed the way a subscription price is.</li>
             <li><strong>Model availability can change.</strong> Providers retire old models and launch new ones; occasionally an app update is needed to track that.</li>
             <li><strong>You manage the key.</strong> If you revoke it or run out of credits, scans stop working until you fix it. (Spending limits in the provider console make runaway costs effectively impossible.)</li>
@@ -190,8 +199,8 @@
         <h2>How SnapNutrition AI implements BYOK</h2>
         <p>SnapNutrition AI is a free AI calorie tracker for <strong>iPhone, iPad, and Apple Watch</strong> built around the BYOK model:</p>
         <ul>
-            <li>Works with both <strong>OpenAI and Anthropic</strong> keys — your choice</li>
-            <li>Log food by <strong>photo, barcode, voice, or text</strong>; edit portions and ingredients after any scan</li>
+            <li>Works with <strong>Google Gemini, OpenAI, Anthropic, and OpenRouter</strong> keys — your choice, switchable at any time, and each provider's key is stored in its own Keychain slot so swapping doesn't lose the others</li>
+            <li>Log food by <strong>photo, barcode, voice, text, or manual entry</strong> — or share a photo in from another app; edit portions and ingredients after any scan</li>
             <li>Apple Watch app plus Home Screen, Lock Screen, and Control Center widgets</li>
             <li>No ads, no account, no mandatory subscription</li>
             <li>Optional <strong>Auto Mode</strong> ($2.99/month or $29.99/year, 3-day free trial) for people who don't want to manage an API key</li>
@@ -202,11 +211,15 @@
         <div class="faq-list">
             <details class="faq-item">
                 <summary>Is BYOK safe?</summary>
-                <p>Yes, when implemented properly. In SnapNutrition AI your API key is stored only on your device in the iOS Keychain with hardware-level encryption, and scan requests go directly from your device to Anthropic or OpenAI over HTTPS. You can set spending limits in the provider console and revoke or rotate the key at any time.</p>
+                <p>Yes, when implemented properly. In SnapNutrition AI your API key is stored only on your device in the iOS Keychain with hardware-level encryption, and scan requests go directly from your device to your chosen provider over HTTPS. You can set spending limits in the provider console and revoke or rotate the key at any time.</p>
             </details>
             <details class="faq-item">
                 <summary>Which API keys work?</summary>
-                <p>An OpenAI key (created at platform.openai.com) or an Anthropic key (created at console.anthropic.com). Both providers offer prepaid credits, so a $5 top-up typically lasts for months of food scans.</p>
+                <p>Four providers: Google Gemini (aistudio.google.com), OpenAI (platform.openai.com), Anthropic (console.anthropic.com), and OpenRouter (openrouter.ai). Gemini and OpenRouter have a free tier, so you can start without payment details at all. OpenAI and Anthropic use prepaid credits, where a $5 top-up typically lasts for months of food scans.</p>
+            </details>
+            <details class="faq-item">
+                <summary>Can a BYOK calorie tracker be completely free?</summary>
+                <p>Yes. On Google Gemini's or OpenRouter's free API tier you pay nothing — no subscription to the app, no payment details with the provider. The limit is a rate cap (requests per minute and per day) rather than a bill, and normal food logging of three or four meals a day sits well inside it. Free tiers are the providers' commercial decision and can change, but as of August 2026 both offer one.</p>
             </details>
             <details class="faq-item">
                 <summary>How much does BYOK cost per day?</summary>
@@ -232,6 +245,7 @@
         <ul>
             <li><a href="ai-calorie-counter-accuracy.html">How accurate are AI calorie counters?</a></li>
             <li><a href="myfitnesspal-alternative.html">MyFitnessPal alternative for iPhone: honest comparison</a></li>
+            <li><a href="cal-ai-alternative.html">Cal AI alternative: the same photo scanning without a subscription</a></li>
             <li><a href="index.html">SnapNutrition AI homepage</a></li>
         </ul>
 
