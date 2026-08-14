@@ -24,7 +24,7 @@ Five popular iPhone calorie trackers, compared on the things people actually ask
 
 | App | AI photo scan | Price model (July 2026) | Account required | Ads | Barcode scanner | Apple Watch | Privacy / BYOK | Best for |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| SnapNutrition AI | Yes — photo, plus voice and text | Free with your own API key (~$1–3/mo in API usage); optional Auto Mode $2.99/mo or $29.99/yr | No | No | Yes, free | Yes, incl. voice logging | BYOK — no account, no backend in BYOK mode, data on device/iCloud | iPhone users who want AI logging without a subscription, and privacy-minded trackers |
+| SnapNutrition AI | Yes — photo, plus voice and text | Free with your own API key (~$1–3/mo in API usage, or $0 on a free-tier key); optional Auto Mode $2.99/mo or $29.99/yr | No | No | Yes, free | Yes, incl. voice logging | BYOK — no account, no backend in BYOK mode, data on device/iCloud | iPhone users who want AI logging without a subscription, and privacy-minded trackers |
 | MyFitnessPal | Premium only (meal scan) | Free tier with ads; Premium $19.99/mo or $79.99/yr; Premium+ $24.99/mo or $99.99/yr | Yes | Yes (free tier) | Premium only | Yes | Account-based; data tied to your profile | Largest food database (20M+), exercise and community features, Android support |
 | Cronometer | No — focused on verified database entries | Free tier with ads; Gold $10.99/mo or $59.88/yr | Yes | Yes (free tier) | Yes, free | Yes | Account-based | Micronutrient depth and data accuracy — the dietitian's favorite |
 | Lose It! | Yes (Snap It) | Free tier; Premium ~$39.99/yr | Yes | Yes (free tier) | Yes (some features Premium) | Yes | Account-based | Cheapest conventional premium; simple weight-loss focus |
@@ -34,7 +34,7 @@ Prices and feature tiers checked July 2026 from public pricing pages. Subscripti
 
 ## Where SnapNutrition AI fits
 
-[SnapNutrition AI](https://snapnutritionai.app/index.html.md) takes a different approach from every app in the table: instead of a subscription that covers AI costs plus margin, it uses [BYOK (Bring Your Own Key)](https://snapnutritionai.app/byok-calorie-tracker.html.md) — you plug in your own OpenAI or Anthropic API key and pay the provider directly, typically $0.01–0.03 per scan. That means:
+[SnapNutrition AI](https://snapnutritionai.app/index.html.md) takes a different approach from every app in the table: instead of a subscription that covers AI costs plus margin, it uses [BYOK (Bring Your Own Key)](https://snapnutritionai.app/byok-calorie-tracker.html.md) — you plug in your own API key from Google Gemini, OpenAI, Anthropic, or OpenRouter and pay the provider directly, typically $0.01–0.03 per scan — or nothing on a free-tier key. That means:
 
 - **No mandatory subscription** — AI photo, voice, and text logging are free with your key
 - **No ads, no account** — nothing to sign up for, no profile to build
@@ -66,7 +66,7 @@ The most common reasons: ads on the free tier, the barcode scanner and AI featur
 
 ### Is SnapNutrition AI really free if it uses AI?
 
-Yes — through the [BYOK model](https://snapnutritionai.app/byok-calorie-tracker.html.md). You create your own OpenAI or Anthropic API key and pay the provider directly, typically $0.01–0.03 per scan (around $1–3/month for three meals a day). The app charges nothing. An optional Auto Mode subscription ($2.99/month or $29.99/year) exists for people who prefer to skip the setup.
+Yes — through the [BYOK model](https://snapnutritionai.app/byok-calorie-tracker.html.md). You create your own API key with Google Gemini, OpenAI, Anthropic, or OpenRouter and pay the provider directly, typically $0.01–0.03 per scan (around $1–3/month for three meals a day) — or nothing at all on Gemini's or OpenRouter's free tier. The app charges nothing. An optional Auto Mode subscription ($2.99/month or $29.99/year) exists for people who prefer to skip the setup.
 
 ### What does MyFitnessPal do better?
 
@@ -76,8 +76,9 @@ A much larger crowd-sourced food database (20M+ foods), exercise tracking, recip
 
 ## Related reading
 
-- [BYOK calorie tracker: use your own OpenAI or Anthropic key](https://snapnutritionai.app/byok-calorie-tracker.html.md)
+- [BYOK calorie tracker: use your own Gemini, OpenAI or Anthropic key](https://snapnutritionai.app/byok-calorie-tracker.html.md)
 - [How accurate are AI calorie counters?](https://snapnutritionai.app/ai-calorie-counter-accuracy.html.md)
+- [Cal AI alternative: the same photo scanning without a subscription](https://snapnutritionai.app/cal-ai-alternative.html.md)
 - [SnapNutrition AI homepage](https://snapnutritionai.app/index.html.md)
 
 SnapNutrition AI is for general food logging and wellness support. It is not medical advice and should not replace guidance from a doctor or registered dietitian.

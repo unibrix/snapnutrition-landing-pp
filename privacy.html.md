@@ -4,7 +4,7 @@
 
 # Privacy Policy
 
-Last updated: May 14, 2026
+Last updated: August 14, 2026
 
 SnapNutrition AI ("we", "our", or "the app") is committed to protecting your privacy. This Privacy Policy explains what information we and our service providers handle when you use our iOS application, the snapnutritionai.app website, and related services.
 
@@ -12,7 +12,7 @@ SnapNutrition AI ("we", "our", or "the app") is committed to protecting your pri
 
 SnapNutrition AI offers two ways to use the app. Your data flow differs between them, so this policy describes both:
 
-- **BYOK (Bring Your Own Key)** — the free, default option. You provide your own Anthropic or OpenAI API key, which is stored only on your device. Scan requests go directly from your device to the AI provider; we operate no backend and never see your data.
+- **BYOK (Bring Your Own Key)** — the free, default option. You provide your own API key for one of four AI providers — Google Gemini, OpenAI, Anthropic, or OpenRouter — which is stored only on your device. Scan requests go directly from your device to the AI provider; we operate no backend and never see your data.
 - **Auto Mode** — an optional auto-renewing subscription ($2.99/month or $29.99/year, billed by Apple, includes a 3-day free trial). Scan requests pass through a minimal Cloudflare-hosted proxy we operate, which verifies your Apple subscription, runs an Apple App Attest device-integrity check, applies a fair-use daily scan limit, and forwards the request to OpenAI. We never store your food photos. We do log a small amount of anonymized telemetry per scan (see "Auto Mode Telemetry" below).
 
 ## Information We Collect
@@ -24,7 +24,7 @@ SnapNutrition AI does not require account registration or login.
 - Food scan history and meal logs
 - Daily calorie goals and macro targets
 - App settings (language, measurement units, theme)
-- In BYOK mode: your Anthropic / OpenAI API key (stored in the iOS Keychain with hardware-level encryption)
+- In BYOK mode: your API key for each AI provider you have configured (stored in the iOS Keychain with hardware-level encryption)
 - In Auto Mode: a randomly generated user identifier ("appAccountToken") used by Apple StoreKit and by our proxy to verify your subscription
 
 **Stored in your personal iCloud (only if you enable iCloud sync):** the same scan history, goals, and settings, synced across your Apple devices via Apple's CloudKit. This sync is operated by Apple, not by us, and is subject to [Apple's Privacy Policy](https://www.apple.com/legal/privacy/).
@@ -33,7 +33,8 @@ SnapNutrition AI does not require account registration or login.
 
 When you scan food in BYOK mode:
 
-- Images or text descriptions of food are sent directly from your device to Anthropic or OpenAI (whichever you configured) for nutritional analysis, using your own API key.
+- Images or text descriptions of food are sent directly from your device to whichever AI provider you configured — Google, OpenAI, Anthropic, or OpenRouter — for nutritional analysis, using your own API key.
+- Each provider processes that data under its own privacy policy and terms, which apply directly between you and them. Free API tiers may carry different data-handling terms than paid ones; Google's free Gemini tier, for example, permits human review of prompts to improve their products.
 - The request does not pass through any server operated by us.
 - We have no visibility into the content or metadata of the request.
 
@@ -73,7 +74,9 @@ When you scan a packaged-food barcode, the barcode number is sent to the [Open F
 
 Depending on the mode you use, the following third parties may process your data on our behalf or directly:
 
+- **Google (Gemini)** — BYOK mode AI provider — [Privacy Policy](https://policies.google.com/privacy)
 - **Anthropic (Claude)** — BYOK mode AI provider — [Privacy Policy](https://www.anthropic.com/privacy)
+- **OpenRouter** — BYOK mode AI provider (routes to the upstream model you select) — [Privacy Policy](https://openrouter.ai/privacy)
 - **OpenAI** — BYOK mode AI provider and Auto Mode AI provider — [Privacy Policy](https://openai.com/privacy)
 - **Cloudflare** — Auto Mode proxy and telemetry (sub-processor we operate; data subject to [Cloudflare's Privacy Policy](https://www.cloudflare.com/privacypolicy/))
 - **Apple** — App Store subscription billing, App Attest device integrity, optional iCloud sync — [Privacy Policy](https://www.apple.com/legal/privacy/)

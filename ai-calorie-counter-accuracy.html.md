@@ -72,8 +72,9 @@ Not inherently — careful manual entry with a food scale beats any photo estima
 
 ## Related reading
 
-- [BYOK calorie tracker: use your own OpenAI or Anthropic key](https://snapnutritionai.app/byok-calorie-tracker.html.md)
+- [BYOK calorie tracker: use your own Gemini, OpenAI or Anthropic key](https://snapnutritionai.app/byok-calorie-tracker.html.md)
 - [MyFitnessPal alternative for iPhone: honest comparison](https://snapnutritionai.app/myfitnesspal-alternative.html.md)
+- [Cal AI alternative: the same photo scanning without a subscription](https://snapnutritionai.app/cal-ai-alternative.html.md)
 - [SnapNutrition AI homepage](https://snapnutritionai.app/index.html.md)
 
 SnapNutrition AI is for general food logging and wellness support. It is not medical advice and should not replace guidance from a doctor or registered dietitian.
