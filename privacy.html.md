@@ -1,10 +1,10 @@
-<!-- AUTO-GENERATED from privacy.html. Do not edit by hand; edit the HTML and let .github/workflows/markdown-mirror.yml regenerate this. -->
+<!-- AUTO-GENERATED from privacy.html. Do not edit by hand; edit the HTML and run python scripts/html_to_md.py. -->
 
 > **Markdown version** of [https://snapnutritionai.app/privacy.html](https://snapnutritionai.app/privacy.html) — a clean, agent-friendly mirror of the HTML page.
 
 # Privacy Policy
 
-Last updated: August 14, 2026
+Last updated: August 18, 2026
 
 SnapNutrition AI ("we", "our", or "the app") is committed to protecting your privacy. This Privacy Policy explains what information we and our service providers handle when you use our iOS application, the snapnutritionai.app website, and related services.
 
@@ -13,7 +13,7 @@ SnapNutrition AI ("we", "our", or "the app") is committed to protecting your pri
 SnapNutrition AI offers two ways to use the app. Your data flow differs between them, so this policy describes both:
 
 - **BYOK (Bring Your Own Key)** — the free, default option. You provide your own API key for one of four AI providers — Google Gemini, OpenAI, Anthropic, or OpenRouter — which is stored only on your device. Scan requests go directly from your device to the AI provider; we operate no backend and never see your data.
-- **Auto Mode** — an optional auto-renewing subscription ($2.99/month or $29.99/year, billed by Apple, includes a 3-day free trial). Scan requests pass through a minimal Cloudflare-hosted proxy we operate, which verifies your Apple subscription, runs an Apple App Attest device-integrity check, applies a fair-use daily scan limit, and forwards the request to OpenAI. We never store your food photos. We do log a small amount of anonymized telemetry per scan (see "Auto Mode Telemetry" below).
+- **Auto Mode** — an optional auto-renewing subscription ($2.99/month or $29.99/year, billed by Apple, includes a 3-day free trial). Scan requests pass through a minimal Cloudflare-hosted proxy we operate, which verifies your Apple subscription, runs an Apple App Attest device-integrity check, applies a fair-use daily scan limit, and forwards the request to OpenAI. We never store your food photos. We log a small amount of pseudonymous operational telemetry per scan (see "Auto Mode Telemetry" below).
 
 ## Information We Collect
 
@@ -51,14 +51,14 @@ When you scan food in Auto Mode, the following occurs:
 
 ## Auto Mode — Telemetry
 
-For each Auto Mode scan request, we log one anonymized data point to Cloudflare Workers Analytics Engine (a time-series telemetry service) for rate-limit enforcement and operational health monitoring:
+For each Auto Mode scan request, we log one pseudonymous data point to Cloudflare Workers Analytics Engine (a time-series telemetry service) for rate-limit enforcement and operational health monitoring:
 
 - The pseudonymous user identifier ("appAccountToken" — a UUID generated on your device, not linked to any personal information)
 - The scan type (photo, voice, text, or barcode)
 - The lifecycle state (trial / paid)
 - The current daily scan count and the request latency
 
-This telemetry does not contain food content, food photos, request bodies, API responses, or any data you provided. It is automatically purged from Cloudflare after 90 days. It is used solely to operate the rate-limit cap and to detect abuse patterns (e.g. unusual scan rates from a single account).
+This telemetry does not contain food content, food photos, request bodies, API responses, your name, or your email address. It is automatically purged from Cloudflare after 90 days. It is used solely to operate the rate-limit cap and to detect abuse patterns (e.g. unusual scan rates from a single account).
 
 ## Subscription Billing
 
@@ -81,7 +81,15 @@ Depending on the mode you use, the following third parties may process your data
 - **Cloudflare** — Auto Mode proxy and telemetry (sub-processor we operate; data subject to [Cloudflare's Privacy Policy](https://www.cloudflare.com/privacypolicy/))
 - **Apple** — App Store subscription billing, App Attest device integrity, optional iCloud sync — [Privacy Policy](https://www.apple.com/legal/privacy/)
 - **Open Food Facts** — barcode → nutrition lookup — [Privacy Policy](https://world.openfoodfacts.org/privacy-policy)
-- **Google Analytics** — website analytics on this site only (not in the app); requires your cookie consent and respects "Do Not Track"
+- **Google Analytics** — optional website analytics on this site only (not in the app) — [Google Privacy Policy](https://policies.google.com/privacy)
+
+## Website Analytics and Consent
+
+Google Analytics is not loaded until you select “Accept” in the analytics banner. If your browser sends a Do Not Track signal, analytics remains disabled regardless of any earlier choice. Your preference is stored in your browser's local storage under `snapnutrition_cookie_consent`.
+
+When you consent, Google Analytics may process the page viewed, referring page, timestamp, browser and device characteristics, screen size, approximate location derived from the network request, and clicks on App Store download links. We do not send Google Analytics your name, email address, food diary, food photos, or SnapNutrition app identifier.
+
+You can change your choice through “Cookie Settings” in the footer. Rejecting after a previous acceptance immediately disables future analytics events and reloads the page without the Google Analytics script.
 
 ## Data We Do Not Collect
 
@@ -104,7 +112,7 @@ For Auto Mode infrastructure data: the App Attest public key and per-user rate-l
 
 ## European Users (GDPR)
 
-If you are in the European Economic Area, United Kingdom, or Switzerland, you have the following rights under the General Data Protection Regulation regarding personal data we process about you (limited to Auto Mode infrastructure data; BYOK mode involves no processing by us):
+If you are in the European Economic Area, United Kingdom, or Switzerland, you have the following rights under the General Data Protection Regulation regarding personal data we process about you (limited to Auto Mode infrastructure data and website analytics you consent to; BYOK app mode involves no processing by us):
 
 - **Right of access** — request a copy of the data we hold
 - **Right to rectification** — request correction of inaccurate data
@@ -113,7 +121,7 @@ If you are in the European Economic Area, United Kingdom, or Switzerland, you ha
 - **Right to data portability**
 - **Right to lodge a complaint** with your national data-protection authority
 
-The legal basis for our Auto Mode processing is the performance of a contract (Apple StoreKit subscription) under GDPR Article 6(1)(b). To exercise any right above, email [privacy@snapnutritionai.app](mailto:privacy@snapnutritionai.app) with your appAccountToken (visible in the app's Settings) — we'll respond within 30 days.
+The legal basis for Auto Mode processing is the performance of a contract (Apple StoreKit subscription) under GDPR Article 6(1)(b). The legal basis for optional website analytics is your consent under GDPR Article 6(1)(a), which you can withdraw at any time through Cookie Settings. To exercise any right above, email [privacy@snapnutritionai.app](mailto:privacy@snapnutritionai.app); include your appAccountToken (visible in the app's Settings) only when your request concerns Auto Mode — we'll respond within 30 days.
 
 ## California Users (CCPA / CPRA)
 

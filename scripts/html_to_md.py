@@ -4,7 +4,7 @@
 For every top-level ``*.html`` file this writes a sibling ``<name>.html.md``
 that mirrors the page's main content (the convention from the llms.txt spec:
 append ``.md`` to the page URL). The HTML is the single source of truth; these
-files are regenerated in CI on every push, so they cannot drift.
+files are regenerated locally and checked in CI, so stale or missing mirrors fail validation.
 
 Usage:
     python scripts/html_to_md.py            # regenerate all pages
@@ -127,7 +127,7 @@ def convert(html_path: Path, base: str) -> str:
     url = page_url(base, html_path.name)
     header = (
         f"<!-- AUTO-GENERATED from {html_path.name}. Do not edit by hand; "
-        f"edit the HTML and let .github/workflows/markdown-mirror.yml regenerate this. -->\n\n"
+        f"edit the HTML and run python scripts/html_to_md.py. -->\n\n"
         f"> **Markdown version** of [{url}]({url}) — a clean, agent-friendly "
         f"mirror of the HTML page.\n\n"
     )

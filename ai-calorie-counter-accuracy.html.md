@@ -1,4 +1,4 @@
-<!-- AUTO-GENERATED from ai-calorie-counter-accuracy.html. Do not edit by hand; edit the HTML and let .github/workflows/markdown-mirror.yml regenerate this. -->
+<!-- AUTO-GENERATED from ai-calorie-counter-accuracy.html. Do not edit by hand; edit the HTML and run python scripts/html_to_md.py. -->
 
 > **Markdown version** of [https://snapnutritionai.app/ai-calorie-counter-accuracy.html](https://snapnutritionai.app/ai-calorie-counter-accuracy.html) — a clean, agent-friendly mirror of the HTML page.
 
@@ -6,7 +6,7 @@
 
 What photo food scanners can and can't do — an honest guide from an app that makes one.
 
-Last updated: July 3, 2026
+Last updated: August 18, 2026
 
 ## The short answer
 
@@ -68,13 +68,17 @@ The most common failure direction is underestimating, because cooking oils, butt
 
 Not inherently — careful manual entry with a food scale beats any photo estimate. Photo scanning wins on speed and consistency: it lowers the effort enough that people actually keep logging. The best results come from combining methods: photos for cooked meals, barcodes for packaged foods, manual edits where precision matters.
 
+Want fast AI estimates that you can review and correct? SnapNutrition AI lets you scan a meal from a photo and edit portions before saving.
+
 [![Download SnapNutrition AI on the App Store](https://snapnutritionai.app/images/download-on-the-app-store.svg?v=2)](https://apps.apple.com/us/app/snapnutrition-ai/id6757797704)
 
 ## Related reading
 
-- [BYOK calorie tracker: use your own Gemini, OpenAI or Anthropic key](https://snapnutritionai.app/byok-calorie-tracker.html.md)
+- [BYOK calorie tracker: use your own Gemini, OpenAI, Anthropic, or OpenRouter key](https://snapnutritionai.app/byok-calorie-tracker.html.md)
 - [MyFitnessPal alternative for iPhone: honest comparison](https://snapnutritionai.app/myfitnesspal-alternative.html.md)
 - [Cal AI alternative: the same photo scanning without a subscription](https://snapnutritionai.app/cal-ai-alternative.html.md)
+- [Best free AI calorie tracker apps in 2026](https://snapnutritionai.app/best-free-ai-calorie-tracker-apps-2026.html.md)
+- [What makes an AI calorie tracker privacy-first?](https://snapnutritionai.app/privacy-first-ai-calorie-tracker.html.md)
 - [SnapNutrition AI homepage](https://snapnutritionai.app/index.html.md)
 
 SnapNutrition AI is for general food logging and wellness support. It is not medical advice and should not replace guidance from a doctor or registered dietitian.

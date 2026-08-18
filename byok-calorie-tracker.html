@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BYOK Calorie Tracker for iPhone: Use Your Own Gemini, OpenAI or Anthropic Key</title>
+    <title>BYOK Calorie Tracker: Gemini, OpenAI, Anthropic, and More</title>
     <meta name="description" content="What BYOK (Bring Your Own Key) means in a calorie tracker, what it costs per day, the privacy benefits and honest tradeoffs, and how SnapNutrition AI implements it on iPhone, iPad, and Apple Watch.">
     <meta name="robots" content="index, follow">
-    <link rel="stylesheet" href="styles.css?v=4">
-    <script>document.documentElement.setAttribute('data-theme',localStorage.getItem('snapnutrition_theme')||'system')</script>
+    <link rel="stylesheet" href="styles.css?v=5">
+    <script>try{document.documentElement.dataset.theme=localStorage.getItem('snapnutrition_theme')||'system'}catch(e){document.documentElement.dataset.theme='system'}</script>
     <link rel="canonical" href="https://snapnutritionai.app/byok-calorie-tracker.html">
     <link rel="alternate" type="text/markdown" href="https://snapnutritionai.app/byok-calorie-tracker.html.md" title="Markdown version for AI agents">
 
     <!-- Open Graph -->
-    <meta property="og:title" content="BYOK Calorie Tracker for iPhone: Use Your Own Gemini, OpenAI or Anthropic Key">
+    <meta property="og:title" content="BYOK Calorie Tracker for iPhone: Gemini, OpenAI, Anthropic, or OpenRouter">
     <meta property="og:description" content="What Bring Your Own Key means in a calorie tracker, what it costs per day, privacy benefits, and honest tradeoffs.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://snapnutritionai.app/byok-calorie-tracker.html">
@@ -29,32 +29,23 @@
     <link rel="icon" type="image/png" href="images/favicon.png?v=2">
     <link rel="apple-touch-icon" href="images/apple-touch-icon.png?v=2">
 
-    <!-- Google Analytics 4 with Consent Mode -->
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('consent', 'default', {
-        'analytics_storage': 'denied',
-        'ad_storage': 'denied',
-        'wait_for_update': 500
-    });
-    gtag('js', new Date());
-    gtag('config', 'G-JJFTFWZEQ2');
-    </script>
-
     <!-- JSON-LD Structured Data -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@graph": [
             {
-                "@type": "WebPage",
+                "@type": "Article",
                 "@id": "https://snapnutritionai.app/byok-calorie-tracker.html",
-                "name": "BYOK Calorie Tracker for iPhone: Use Your Own Gemini, OpenAI or Anthropic Key",
+                "headline": "BYOK Calorie Tracker for iPhone: Gemini, OpenAI, Anthropic, or OpenRouter",
                 "description": "What BYOK (Bring Your Own Key) means in a calorie tracker, what it costs per day, the privacy benefits and honest tradeoffs.",
                 "url": "https://snapnutritionai.app/byok-calorie-tracker.html",
                 "inLanguage": "en",
-                "dateModified": "2026-08-14",
+                "datePublished": "2026-07-03",
+                "dateModified": "2026-08-18",
+                "author": {"@type": "Organization", "name": "SnapNutrition AI", "url": "https://snapnutritionai.app/"},
+                "publisher": {"@type": "Organization", "name": "SnapNutrition AI", "url": "https://snapnutritionai.app/"},
+                "image": "https://snapnutritionai.app/images/og-image.png",
                 "isPartOf": {
                     "@type": "WebSite",
                     "name": "SnapNutrition AI",
@@ -121,7 +112,7 @@
                         "name": "Is Auto Mode required?",
                         "acceptedAnswer": {
                             "@type": "Answer",
-                            "text": "No. Auto Mode is an optional subscription ($2.99/month or $29.99/year with a 3-day free trial) for people who don't want to create or manage an API key. BYOK mode remains fully functional and free forever."
+                            "text": "No. Auto Mode is an optional subscription ($2.99/month or $29.99/year with a 3-day free trial) for people who don't want to create or manage an API key. BYOK mode remains fully functional without Auto Mode; the chosen provider may charge for API usage."
                         }
                     },
                     {
@@ -140,20 +131,34 @@
 </head>
 <body>
     <div class="theme-toggle">
-        <div class="theme-toggle-group" role="radiogroup" aria-label="Theme">
-            <button type="button" data-theme-value="light" role="radio" aria-checked="false" aria-label="Light theme"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg></button>
-            <button type="button" data-theme-value="dark" role="radio" aria-checked="false" aria-label="Dark theme"><svg viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button>
-            <button type="button" data-theme-value="system" role="radio" aria-checked="true" aria-label="System theme"><svg class="icon-desktop" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><path d="M8 21h8M12 17v4"/></svg><svg class="icon-mobile" viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><path d="M12 18h.01"/></svg></button>
-        </div>
+        <fieldset class="theme-toggle-group">
+            <legend class="visually-hidden">Theme</legend>
+            <label class="theme-option">
+                <input type="radio" name="theme" data-theme-value="light">
+                <svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+                <span class="visually-hidden">Light theme</span>
+            </label>
+            <label class="theme-option">
+                <input type="radio" name="theme" data-theme-value="dark">
+                <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                <span class="visually-hidden">Dark theme</span>
+            </label>
+            <label class="theme-option">
+                <input type="radio" name="theme" data-theme-value="system">
+                <svg aria-hidden="true" class="icon-desktop" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><path d="M8 21h8M12 17v4"/></svg>
+                <svg aria-hidden="true" class="icon-mobile" viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><path d="M12 18h.01"/></svg>
+                <span class="visually-hidden">System theme</span>
+            </label>
+        </fieldset>
     </div>
 
     <!-- Cookie Consent Banner -->
-    <div id="cookie-banner" class="cookie-banner" style="display: none;">
+    <div id="cookie-banner" class="cookie-banner" role="dialog" aria-label="Analytics preferences" aria-hidden="true" style="display: none;">
         <div class="cookie-content">
-            <p>We use cookies for analytics to improve your experience. No personal data is collected.</p>
+            <p id="cookie-message">Help us understand site usage with Google Analytics. Rejecting keeps analytics off.</p>
             <div class="cookie-buttons">
-                <button id="cookie-accept" class="cookie-btn accept">Accept</button>
-                <button id="cookie-reject" class="cookie-btn reject">Reject</button>
+                <button type="button" id="cookie-accept" class="cookie-btn accept">Accept</button>
+                <button type="button" id="cookie-reject" class="cookie-btn reject">Reject</button>
             </div>
         </div>
     </div>
@@ -163,14 +168,18 @@
 
         <h1>BYOK Calorie Tracker for iPhone</h1>
         <p class="subtitle">What "Bring Your Own Key" means in a calorie tracker, what it actually costs, and the honest tradeoffs.</p>
-        <p class="last-updated">Last updated: August 14, 2026</p>
+        <p class="last-updated">Last updated: August 18, 2026</p>
+
+        <div class="answer-box">
+            <p><strong>Short answer:</strong> a BYOK calorie tracker lets an iPhone user connect a personal AI API key instead of paying a mandatory app subscription. SnapNutrition AI supports Gemini, OpenAI, Anthropic, and OpenRouter. The provider may offer a free tier or charge for usage; optional Auto Mode is available for people who prefer not to manage a key.</p>
+        </div>
 
         <h2>What does BYOK mean in a calorie tracker?</h2>
         <p>BYOK stands for <strong>Bring Your Own Key</strong>. Instead of paying the app a monthly subscription that covers its AI costs (plus margin), you create your own API key with an AI provider — Google Gemini, OpenAI, Anthropic, or OpenRouter — and paste it into the app once. Every food scan then runs on your own key, and you pay the provider directly for exactly what you use. On a provider with a free tier, that can be nothing at all.</p>
         <p>In practice: you take a photo of your meal, the app sends it straight from your iPhone to the AI provider using your key, and the provider returns calorie and macro estimates. The app developer is not in the middle of that transaction.</p>
 
         <h2>Why BYOK can be cheaper than a subscription</h2>
-        <p>A photo food scan typically costs about <strong>$0.01–0.03 in API usage</strong>, depending on the model. Logging three meals a day works out to roughly $0.03–0.09 per day — about <strong>$1–3 per month</strong>. Compare that to typical calorie tracker subscriptions of $5–20 per month (MyFitnessPal Premium, for example, is $19.99/month or $79.99/year as of July 2026).</p>
+        <p>A photo food scan typically costs about <strong>$0.01–0.03 in API usage</strong>, depending on the model. Logging three meals a day works out to roughly $0.03–0.09 per day — about <strong>$1–3 per month</strong>. Compare that to typical calorie tracker subscriptions of $5–20 per month (MyFitnessPal Premium, for example, is $19.99/month or $79.99/year as of August 2026).</p>
         <p>OpenAI and Anthropic use prepaid credits for personal accounts, so a small $5 top-up usually lasts months. If you stop tracking for a while, you pay nothing — there is no subscription quietly renewing in the background.</p>
         <p><strong>And it can be genuinely free.</strong> Google Gemini and OpenRouter both offer a free API tier. Create a key, paste it in, and scan without ever entering payment details. Free tiers come with rate limits — a cap on requests per minute and per day — which is why they suit food logging so well: three or four meals a day is nowhere near the ceiling. SnapNutrition AI marks which providers have a free tier while you're picking one, so you don't need to research it first.</p>
         <p>One honest caveat: API prices and free-tier limits are set by the providers and can change. The pennies-per-scan range above reflects mainstream vision models in mid-2026, and free tiers are a commercial decision the providers can revise.</p>
@@ -178,7 +187,7 @@
         <h2>The privacy angle</h2>
         <p>BYOK is not just about cost. Because your key lives on your device and requests go directly to the provider, a BYOK calorie tracker doesn't need an account system, a user database, or a backend that sees your food photos. In SnapNutrition AI's BYOK mode:</p>
         <ul>
-            <li>No account or registration — there is nothing to sign up for</li>
+            <li>No SnapNutrition account or registration — the API provider may require its own account</li>
             <li>Your API key is stored only in the iOS Keychain, with hardware-level encryption</li>
             <li>Food photos and descriptions go from your device to whichever provider you configured — we operate no backend and never see your data</li>
             <li>Meal history stays on your device, with optional sync through your personal iCloud, and exports to JSON or CSV whenever you want it</li>
@@ -197,12 +206,12 @@
         <p>If none of that appeals to you, the honest answer is that a conventional subscription app — or SnapNutrition AI's optional Auto Mode — will feel simpler.</p>
 
         <h2>How SnapNutrition AI implements BYOK</h2>
-        <p>SnapNutrition AI is a free AI calorie tracker for <strong>iPhone, iPad, and Apple Watch</strong> built around the BYOK model:</p>
+        <p>SnapNutrition AI is an AI calorie tracker for <strong>iPhone, iPad, and Apple Watch</strong> built around the BYOK model:</p>
         <ul>
             <li>Works with <strong>Google Gemini, OpenAI, Anthropic, and OpenRouter</strong> keys — your choice, switchable at any time, and each provider's key is stored in its own Keychain slot so swapping doesn't lose the others</li>
             <li>Log food by <strong>photo, barcode, voice, text, or manual entry</strong> — or share a photo in from another app; edit portions and ingredients after any scan</li>
             <li>Apple Watch app plus Home Screen, Lock Screen, and Control Center widgets</li>
-            <li>No ads, no account, no mandatory subscription</li>
+            <li>No ads, no SnapNutrition account, no mandatory subscription</li>
             <li>Optional <strong>Auto Mode</strong> ($2.99/month or $29.99/year, 3-day free trial) for people who don't want to manage an API key</li>
         </ul>
         <p>BYOK is a small but growing pattern — a handful of other trackers (such as Fud AI and MacroPhase) have adopted it too, which we take as a good sign: it means the model works and users want it. SnapNutrition AI's angle is combining BYOK with multi-input logging (photo, barcode, voice, text), Apple Watch support, and a no-account, privacy-first design.</p>
@@ -227,7 +236,7 @@
             </details>
             <details class="faq-item">
                 <summary>Is Auto Mode required?</summary>
-                <p>No. Auto Mode is an optional subscription ($2.99/month or $29.99/year with a 3-day free trial) for people who don't want to create or manage an API key. BYOK mode is fully functional and free forever.</p>
+                <p>No. Auto Mode is an optional subscription ($2.99/month or $29.99/year with a 3-day free trial) for people who don't want to create or manage an API key. BYOK mode is fully functional without Auto Mode; the selected provider may charge for API usage.</p>
             </details>
             <details class="faq-item">
                 <summary>Does SnapNutrition AI see my food photos?</summary>
@@ -235,7 +244,17 @@
             </details>
         </div>
 
+        <h2>Official provider sources</h2>
+        <ul class="source-list">
+            <li><a href="https://ai.google.dev/gemini-api/docs/pricing" target="_blank" rel="noopener">Google Gemini API pricing and free-tier terms</a></li>
+            <li><a href="https://openai.com/api/pricing/" target="_blank" rel="noopener">OpenAI API pricing</a></li>
+            <li><a href="https://docs.anthropic.com/en/docs/about-claude/pricing" target="_blank" rel="noopener">Anthropic API pricing</a></li>
+            <li><a href="https://openrouter.ai/docs/faq" target="_blank" rel="noopener">OpenRouter pricing, free models, and rate-limit FAQ</a></li>
+            <li><a href="privacy.html">SnapNutrition AI data-flow and retention details</a></li>
+        </ul>
+
         <div class="cta-block">
+            <p>Ready to use your own Gemini, OpenAI, Anthropic, or OpenRouter key? Download SnapNutrition AI and connect it in Settings.</p>
             <a href="https://apps.apple.com/us/app/snapnutrition-ai/id6757797704" class="app-store-badge" aria-label="Download SnapNutrition AI on the App Store">
                 <img src="images/download-on-the-app-store.svg?v=2" alt="Download SnapNutrition AI on the App Store">
             </a>
@@ -246,6 +265,8 @@
             <li><a href="ai-calorie-counter-accuracy.html">How accurate are AI calorie counters?</a></li>
             <li><a href="myfitnesspal-alternative.html">MyFitnessPal alternative for iPhone: honest comparison</a></li>
             <li><a href="cal-ai-alternative.html">Cal AI alternative: the same photo scanning without a subscription</a></li>
+            <li><a href="privacy-first-ai-calorie-tracker.html">What makes an AI calorie tracker privacy-first?</a></li>
+            <li><a href="best-free-ai-calorie-tracker-apps-2026.html">Best free AI calorie tracker apps in 2026</a></li>
             <li><a href="index.html">SnapNutrition AI homepage</a></li>
         </ul>
 
@@ -263,107 +284,6 @@
         <p class="powered-by">Powered by <a href="https://unibrix.com" target="_blank" rel="noopener">Unibrix</a></p>
     </footer>
 
-    <script>
-    (function() {
-        var THEME_KEY = 'snapnutrition_theme';
-        var html = document.documentElement;
-        var buttons = document.querySelectorAll('.theme-toggle-group button');
-
-        function applyTheme(theme) {
-            html.setAttribute('data-theme', theme);
-            buttons.forEach(function(btn) {
-                var isActive = btn.getAttribute('data-theme-value') === theme;
-                btn.classList.toggle('active', isActive);
-                btn.setAttribute('aria-checked', isActive ? 'true' : 'false');
-            });
-        }
-
-        var saved = localStorage.getItem(THEME_KEY) || 'system';
-        applyTheme(saved);
-
-        buttons.forEach(function(btn) {
-            btn.addEventListener('click', function() {
-                var theme = btn.getAttribute('data-theme-value');
-                localStorage.setItem(THEME_KEY, theme);
-                applyTheme(theme);
-            });
-        });
-    })();
-    </script>
-
-    <!-- Cookie Consent & Analytics Script -->
-    <script>
-    (function() {
-        const CONSENT_KEY = 'snapnutrition_cookie_consent';
-        const GA_ID = 'G-JJFTFWZEQ2';
-
-        function getConsent() {
-            return localStorage.getItem(CONSENT_KEY);
-        }
-
-        function setConsent(status) {
-            localStorage.setItem(CONSENT_KEY, status);
-        }
-
-        function loadGA() {
-            if (document.getElementById('ga-script')) return;
-            const script = document.createElement('script');
-            script.id = 'ga-script';
-            script.async = true;
-            script.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
-            document.head.appendChild(script);
-        }
-
-        function updateConsent(granted) {
-            if (granted) {
-                gtag('consent', 'update', { 'analytics_storage': 'granted' });
-                loadGA();
-            } else {
-                gtag('consent', 'update', { 'analytics_storage': 'denied' });
-            }
-        }
-
-        function showBanner(show) {
-            document.getElementById('cookie-banner').style.display = show ? 'flex' : 'none';
-        }
-
-        function init() {
-            const consent = getConsent();
-            if (consent === null) {
-                showBanner(true);
-            } else if (consent === 'accepted') {
-                updateConsent(true);
-            }
-        }
-
-        document.getElementById('cookie-accept').addEventListener('click', function() {
-            setConsent('accepted');
-            updateConsent(true);
-            showBanner(false);
-        });
-
-        document.getElementById('cookie-reject').addEventListener('click', function() {
-            setConsent('rejected');
-            updateConsent(false);
-            showBanner(false);
-        });
-
-        document.getElementById('cookie-settings').addEventListener('click', function(e) {
-            e.preventDefault();
-            showBanner(true);
-        });
-
-        document.getElementById('year').textContent = new Date().getFullYear();
-
-        // App Store clicks -> GA4 event (mark "app_store_click" as a key event in GA4 admin)
-        document.querySelectorAll('a[href*="apps.apple.com"]').forEach(function(link) {
-            link.addEventListener('click', function() {
-                gtag('event', 'app_store_click', { 'link_url': link.href });
-            });
-        });
-
-        init();
-    })();
-    </script>
+    <script src="site.js?v=1"></script>
 </body>
 </html>

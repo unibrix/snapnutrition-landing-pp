@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - SnapNutrition AI | Free Calorie Tracker</title>
-    <meta name="description" content="Privacy Policy for SnapNutrition AI. BYOK mode operates with no backend; optional Auto Mode subscription uses a minimal Cloudflare proxy with no food-photo storage. No account required.">
-    <link rel="stylesheet" href="styles.css">
-    <script>document.documentElement.setAttribute('data-theme',localStorage.getItem('snapnutrition_theme')||'system')</script>
+    <title>Privacy Policy | SnapNutrition AI</title>
+    <meta name="description" content="Privacy Policy for SnapNutrition AI. BYOK mode operates with no backend; optional Auto Mode uses a minimal Cloudflare proxy. No SnapNutrition account is required, and website analytics is consent-only.">
+    <link rel="stylesheet" href="styles.css?v=5">
+    <script>try{document.documentElement.dataset.theme=localStorage.getItem('snapnutrition_theme')||'system'}catch(e){document.documentElement.dataset.theme='system'}</script>
     <link rel="canonical" href="https://snapnutritionai.app/privacy.html">
     <link rel="alternate" type="text/markdown" href="https://snapnutritionai.app/privacy.html.md" title="Markdown version for AI agents">
 
@@ -21,19 +21,6 @@
     <link rel="icon" type="image/png" href="images/favicon.png">
     <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
 
-    <!-- Google Analytics 4 with Consent Mode -->
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('consent', 'default', {
-        'analytics_storage': 'denied',
-        'ad_storage': 'denied',
-        'wait_for_update': 500
-    });
-    gtag('js', new Date());
-    gtag('config', 'G-JJFTFWZEQ2'); // Replace with your GA4 Measurement ID
-    </script>
-
     <!-- JSON-LD Structured Data -->
     <script type="application/ld+json">
     {
@@ -42,6 +29,7 @@
         "name": "Privacy Policy - SnapNutrition AI",
         "description": "Privacy Policy for SnapNutrition AI app",
         "url": "https://snapnutritionai.app/privacy.html",
+        "dateModified": "2026-08-18",
         "inLanguage": "en",
         "isPartOf": {
             "@type": "WebSite",
@@ -75,20 +63,34 @@
 </head>
 <body>
     <div class="theme-toggle">
-        <div class="theme-toggle-group" role="radiogroup" aria-label="Theme">
-            <button type="button" data-theme-value="light" role="radio" aria-checked="false" aria-label="Light theme"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg></button>
-            <button type="button" data-theme-value="dark" role="radio" aria-checked="false" aria-label="Dark theme"><svg viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button>
-            <button type="button" data-theme-value="system" role="radio" aria-checked="true" aria-label="System theme"><svg class="icon-desktop" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><path d="M8 21h8M12 17v4"/></svg><svg class="icon-mobile" viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><path d="M12 18h.01"/></svg></button>
-        </div>
+        <fieldset class="theme-toggle-group">
+            <legend class="visually-hidden">Theme</legend>
+            <label class="theme-option">
+                <input type="radio" name="theme" data-theme-value="light">
+                <svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+                <span class="visually-hidden">Light theme</span>
+            </label>
+            <label class="theme-option">
+                <input type="radio" name="theme" data-theme-value="dark">
+                <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                <span class="visually-hidden">Dark theme</span>
+            </label>
+            <label class="theme-option">
+                <input type="radio" name="theme" data-theme-value="system">
+                <svg aria-hidden="true" class="icon-desktop" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><path d="M8 21h8M12 17v4"/></svg>
+                <svg aria-hidden="true" class="icon-mobile" viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><path d="M12 18h.01"/></svg>
+                <span class="visually-hidden">System theme</span>
+            </label>
+        </fieldset>
     </div>
 
     <!-- Cookie Consent Banner -->
-    <div id="cookie-banner" class="cookie-banner" style="display: none;">
+    <div id="cookie-banner" class="cookie-banner" role="dialog" aria-label="Analytics preferences" aria-hidden="true" style="display: none;">
         <div class="cookie-content">
-            <p>We use cookies for analytics to improve your experience. No personal data is collected.</p>
+            <p id="cookie-message">Help us understand site usage with Google Analytics. Rejecting keeps analytics off.</p>
             <div class="cookie-buttons">
-                <button id="cookie-accept" class="cookie-btn accept">Accept</button>
-                <button id="cookie-reject" class="cookie-btn reject">Reject</button>
+                <button type="button" id="cookie-accept" class="cookie-btn accept">Accept</button>
+                <button type="button" id="cookie-reject" class="cookie-btn reject">Reject</button>
             </div>
         </div>
     </div>
@@ -97,7 +99,7 @@
         <a href="index.html" class="back-link">&larr; Back to Home</a>
 
         <h1>Privacy Policy</h1>
-        <p class="last-updated">Last updated: August 14, 2026</p>
+        <p class="last-updated">Last updated: August 18, 2026</p>
 
         <p>SnapNutrition AI ("we", "our", or "the app") is committed to protecting your privacy. This Privacy Policy explains what information we and our service providers handle when you use our iOS application, the snapnutritionai.app website, and related services.</p>
 
@@ -105,7 +107,7 @@
         <p>SnapNutrition AI offers two ways to use the app. Your data flow differs between them, so this policy describes both:</p>
         <ul>
             <li><strong>BYOK (Bring Your Own Key)</strong> — the free, default option. You provide your own API key for one of four AI providers — Google Gemini, OpenAI, Anthropic, or OpenRouter — which is stored only on your device. Scan requests go directly from your device to the AI provider; we operate no backend and never see your data.</li>
-            <li><strong>Auto Mode</strong> — an optional auto-renewing subscription ($2.99/month or $29.99/year, billed by Apple, includes a 3-day free trial). Scan requests pass through a minimal Cloudflare-hosted proxy we operate, which verifies your Apple subscription, runs an Apple App Attest device-integrity check, applies a fair-use daily scan limit, and forwards the request to OpenAI. We never store your food photos. We do log a small amount of anonymized telemetry per scan (see "Auto Mode Telemetry" below).</li>
+            <li><strong>Auto Mode</strong> — an optional auto-renewing subscription ($2.99/month or $29.99/year, billed by Apple, includes a 3-day free trial). Scan requests pass through a minimal Cloudflare-hosted proxy we operate, which verifies your Apple subscription, runs an Apple App Attest device-integrity check, applies a fair-use daily scan limit, and forwards the request to OpenAI. We never store your food photos. We log a small amount of pseudonymous operational telemetry per scan (see "Auto Mode Telemetry" below).</li>
         </ul>
 
         <h2>Information We Collect</h2>
@@ -143,14 +145,14 @@
         </ul>
 
         <h2>Auto Mode — Telemetry</h2>
-        <p>For each Auto Mode scan request, we log one anonymized data point to Cloudflare Workers Analytics Engine (a time-series telemetry service) for rate-limit enforcement and operational health monitoring:</p>
+        <p>For each Auto Mode scan request, we log one pseudonymous data point to Cloudflare Workers Analytics Engine (a time-series telemetry service) for rate-limit enforcement and operational health monitoring:</p>
         <ul>
             <li>The pseudonymous user identifier ("appAccountToken" — a UUID generated on your device, not linked to any personal information)</li>
             <li>The scan type (photo, voice, text, or barcode)</li>
             <li>The lifecycle state (trial / paid)</li>
             <li>The current daily scan count and the request latency</li>
         </ul>
-        <p>This telemetry does not contain food content, food photos, request bodies, API responses, or any data you provided. It is automatically purged from Cloudflare after 90 days. It is used solely to operate the rate-limit cap and to detect abuse patterns (e.g. unusual scan rates from a single account).</p>
+        <p>This telemetry does not contain food content, food photos, request bodies, API responses, your name, or your email address. It is automatically purged from Cloudflare after 90 days. It is used solely to operate the rate-limit cap and to detect abuse patterns (e.g. unusual scan rates from a single account).</p>
 
         <h2>Subscription Billing</h2>
         <p>If you subscribe to Auto Mode, all payment processing is handled by Apple via the App Store. Apple charges your Apple ID, deducts its standard commission, and pays us net revenue. We never receive your credit-card number, billing address, or other Apple ID account details. Apple's handling of this data is governed by the <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple Privacy Policy</a>.</p>
@@ -169,8 +171,13 @@
             <li><strong>Cloudflare</strong> — Auto Mode proxy and telemetry (sub-processor we operate; data subject to <a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener">Cloudflare's Privacy Policy</a>)</li>
             <li><strong>Apple</strong> — App Store subscription billing, App Attest device integrity, optional iCloud sync — <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Privacy Policy</a></li>
             <li><strong>Open Food Facts</strong> — barcode → nutrition lookup — <a href="https://world.openfoodfacts.org/privacy-policy" target="_blank" rel="noopener">Privacy Policy</a></li>
-            <li><strong>Google Analytics</strong> — website analytics on this site only (not in the app); requires your cookie consent and respects "Do Not Track"</li>
+            <li><strong>Google Analytics</strong> — optional website analytics on this site only (not in the app) — <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a></li>
         </ul>
+
+        <h2>Website Analytics and Consent</h2>
+        <p>Google Analytics is not loaded until you select “Accept” in the analytics banner. If your browser sends a Do Not Track signal, analytics remains disabled regardless of any earlier choice. Your preference is stored in your browser's local storage under <code>snapnutrition_cookie_consent</code>.</p>
+        <p>When you consent, Google Analytics may process the page viewed, referring page, timestamp, browser and device characteristics, screen size, approximate location derived from the network request, and clicks on App Store download links. We do not send Google Analytics your name, email address, food diary, food photos, or SnapNutrition app identifier.</p>
+        <p>You can change your choice through “Cookie Settings” in the footer. Rejecting after a previous acceptance immediately disables future analytics events and reloads the page without the Google Analytics script.</p>
 
         <h2>Data We Do Not Collect</h2>
         <ul>
@@ -192,7 +199,7 @@
         <p>For Auto Mode infrastructure data: the App Attest public key and per-user rate-limit counter persist as long as your subscription is active and are automatically purged within 90 days after cancellation. Analytics Engine telemetry is automatically purged 90 days after creation.</p>
 
         <h2>European Users (GDPR)</h2>
-        <p>If you are in the European Economic Area, United Kingdom, or Switzerland, you have the following rights under the General Data Protection Regulation regarding personal data we process about you (limited to Auto Mode infrastructure data; BYOK mode involves no processing by us):</p>
+        <p>If you are in the European Economic Area, United Kingdom, or Switzerland, you have the following rights under the General Data Protection Regulation regarding personal data we process about you (limited to Auto Mode infrastructure data and website analytics you consent to; BYOK app mode involves no processing by us):</p>
         <ul>
             <li><strong>Right of access</strong> — request a copy of the data we hold</li>
             <li><strong>Right to rectification</strong> — request correction of inaccurate data</li>
@@ -201,7 +208,7 @@
             <li><strong>Right to data portability</strong></li>
             <li><strong>Right to lodge a complaint</strong> with your national data-protection authority</li>
         </ul>
-        <p>The legal basis for our Auto Mode processing is the performance of a contract (Apple StoreKit subscription) under GDPR Article 6(1)(b). To exercise any right above, email <a href="mailto:privacy@snapnutritionai.app">privacy@snapnutritionai.app</a> with your appAccountToken (visible in the app's Settings) — we'll respond within 30 days.</p>
+        <p>The legal basis for Auto Mode processing is the performance of a contract (Apple StoreKit subscription) under GDPR Article 6(1)(b). The legal basis for optional website analytics is your consent under GDPR Article 6(1)(a), which you can withdraw at any time through Cookie Settings. To exercise any right above, email <a href="mailto:privacy@snapnutritionai.app">privacy@snapnutritionai.app</a>; include your appAccountToken (visible in the app's Settings) only when your request concerns Auto Mode — we'll respond within 30 days.</p>
 
         <h2>California Users (CCPA / CPRA)</h2>
         <p>If you are a California resident, you have the following rights under the California Consumer Privacy Act and California Privacy Rights Act regarding personal information we process:</p>
@@ -240,73 +247,6 @@
         <p class="powered-by">Powered by <a href="https://unibrix.com" target="_blank" rel="noopener">Unibrix</a></p>
     </footer>
 
-    <script src="theme.js"></script>
-
-    <!-- Cookie Consent & Analytics Script -->
-    <script>
-    (function() {
-        const CONSENT_KEY = 'snapnutrition_cookie_consent';
-        const GA_ID = 'G-JJFTFWZEQ2'; // Replace with your GA4 Measurement ID
-
-        function getConsent() {
-            return localStorage.getItem(CONSENT_KEY);
-        }
-
-        function setConsent(status) {
-            localStorage.setItem(CONSENT_KEY, status);
-        }
-
-        function loadGA() {
-            if (document.getElementById('ga-script')) return;
-            const script = document.createElement('script');
-            script.id = 'ga-script';
-            script.async = true;
-            script.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
-            document.head.appendChild(script);
-        }
-
-        function updateConsent(granted) {
-            if (granted) {
-                gtag('consent', 'update', { 'analytics_storage': 'granted' });
-                loadGA();
-            } else {
-                gtag('consent', 'update', { 'analytics_storage': 'denied' });
-            }
-        }
-
-        function showBanner(show) {
-            document.getElementById('cookie-banner').style.display = show ? 'flex' : 'none';
-        }
-
-        function init() {
-            const consent = getConsent();
-            if (consent === null) {
-                showBanner(true);
-            } else if (consent === 'accepted') {
-                updateConsent(true);
-            }
-        }
-
-        document.getElementById('cookie-accept').addEventListener('click', function() {
-            setConsent('accepted');
-            updateConsent(true);
-            showBanner(false);
-        });
-
-        document.getElementById('cookie-reject').addEventListener('click', function() {
-            setConsent('rejected');
-            updateConsent(false);
-            showBanner(false);
-        });
-
-        document.getElementById('cookie-settings').addEventListener('click', function(e) {
-            e.preventDefault();
-            showBanner(true);
-        });
-
-        document.getElementById('year').textContent = new Date().getFullYear();
-        init();
-    })();
-    </script>
+    <script src="site.js?v=1"></script>
 </body>
 </html>

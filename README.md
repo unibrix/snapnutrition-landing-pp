@@ -1,6 +1,6 @@
 # SnapNutrition AI
 
-The best free AI calorie tracker for iPhone, iPad, and Apple Watch. No subscription, no ads, no limits. BYOK (Bring Your Own Key) — use your own Anthropic or OpenAI API key and pay only for what you use.
+An AI calorie tracker for iPhone, iPad, and Apple Watch with no mandatory subscription or ads. BYOK (Bring Your Own Key) supports Google Gemini, OpenAI, Anthropic, and OpenRouter; optional Auto Mode is available for people who prefer not to manage an API key.
 
 <p align="center">
   <a href="https://apps.apple.com/us/app/snapnutrition-ai/id6757797704">
@@ -12,7 +12,7 @@ The best free AI calorie tracker for iPhone, iPad, and Apple Watch. No subscript
 
 SnapNutrition AI lets you track calories and nutrition instantly using AI. Simply snap a photo of your food, scan a barcode, type, or speak — and get instant calorie and macro estimates. Log calories from your wrist with the Apple Watch app, or track at a glance with Home Screen, Lock Screen, and Control Center widgets.
 
-**Completely free.** You bring your own API key (Anthropic Claude or OpenAI GPT) and pay only for what you use — typically just pennies per scan.
+The app has no mandatory subscription. In BYOK mode, you connect your own Google Gemini, OpenAI, Anthropic, or OpenRouter key. Gemini and OpenRouter offer free tiers; paid providers bill you directly for usage. Optional Auto Mode costs $2.99/month or $29.99/year after a 3-day trial.
 
 ## Features
 
@@ -26,8 +26,8 @@ SnapNutrition AI lets you track calories and nutrition instantly using AI. Simpl
 - **Apple Watch App** — Voice logging, daily calorie summary, macro rings, and complications
 - **Widgets** — Home Screen, Lock Screen, and Control Center quick actions for calorie tracking at a glance
 - **iCloud Sync** — Seamless sync across all Apple devices
-- **8 Languages** — English, Ukrainian, Polish, French, Spanish, German, Czech, Italian
-- **Privacy First** — No account required, no backend servers, all data stays on your device
+- **11 Languages** — English, Ukrainian, Polish, French, Spanish, German, Czech, Italian, Finnish, Danish, Dutch
+- **Privacy First** — No SnapNutrition account; BYOK has no SnapNutrition backend, while Auto Mode uses a minimal proxy and never stores food photos
 
 ## Screenshots
 
@@ -39,16 +39,18 @@ SnapNutrition AI lets you track calories and nutrition instantly using AI. Simpl
 
 ## Download
 
-<a href="https://apps.apple.com/us/app/snapnutrition-ai/id6757797704">Download SnapNutrition AI on the App Store</a> — requires iOS 17.0+ / watchOS 10.0+.
+<a href="https://apps.apple.com/us/app/snapnutrition-ai/id6757797704">Download SnapNutrition AI on the App Store</a> — requires iOS 17.6+ / watchOS 10.0+.
 
 ## Links
 
 - **Website:** [snapnutritionai.app](https://snapnutritionai.app)
 - **Privacy Policy:** [snapnutritionai.app/privacy](https://snapnutritionai.app/privacy.html)
+- **AI tracker comparison:** [Best Free AI Calorie Tracker Apps in 2026](https://snapnutritionai.app/best-free-ai-calorie-tracker-apps-2026.html)
+- **Privacy-first guide:** [What makes an AI calorie tracker privacy-first?](https://snapnutritionai.app/privacy-first-ai-calorie-tracker.html)
 
-## Why Free?
+## Cost Model
 
-Unlike other calorie trackers that charge $5–15/month, SnapNutrition AI has no subscription fees. You use your own AI API key (Anthropic or OpenAI) and pay only for actual usage — a few cents per day for most users.
+BYOK mode has no SnapNutrition subscription fee. You use your own Google Gemini, OpenAI, Anthropic, or OpenRouter API key and pay that provider directly, if its free tier does not cover your usage. Auto Mode is an optional convenience subscription and is never required for core tracking.
 
 ---
 

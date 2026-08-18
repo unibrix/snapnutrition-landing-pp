@@ -1,4 +1,4 @@
-<!-- AUTO-GENERATED from cal-ai-alternative.html. Do not edit by hand; edit the HTML and let .github/workflows/markdown-mirror.yml regenerate this. -->
+<!-- AUTO-GENERATED from cal-ai-alternative.html. Do not edit by hand; edit the HTML and run python scripts/html_to_md.py. -->
 
 > **Markdown version** of [https://snapnutritionai.app/cal-ai-alternative.html](https://snapnutritionai.app/cal-ai-alternative.html) — a clean, agent-friendly mirror of the HTML page.
 
@@ -6,7 +6,9 @@
 
 Both apps scan your meal from a photo. The difference is what happens when the trial ends.
 
-Last updated: August 14, 2026 · Pricing verified August 2026
+Last updated: August 18, 2026 · Pricing verified August 2026
+
+**Short answer:** SnapNutrition AI is a Cal AI alternative for iPhone users who want photo calorie tracking without a mandatory app subscription. Cal AI's App Store listing says food-scanning results require a subscription; SnapNutrition AI instead supports BYOK provider keys and offers optional Auto Mode.
 
 Cal AI popularised a genuinely good idea: point your camera at a plate and get calories and macros back in a couple of seconds, with none of the searching and portion-picking that made older trackers a chore. If you are reading this, you probably already believe in that idea — you tried it, it worked, and then you hit the paywall.
 
@@ -16,14 +18,14 @@ This page is about what else can do the same job. It is written by the people wh
 
 Cal AI is a subscription app: the AI scanning is the product, and an active subscription is what turns it on. SnapNutrition AI does the same scanning but connects to an AI provider using [your own API key](https://snapnutritionai.app/byok-calorie-tracker.html.md). You pay the AI provider for what you use — usually a couple of dollars a month, and **nothing at all** if you use a provider with a free tier.
 
-That single architectural difference produces most of the others: no account to create, no ads, no company server holding your food history, and no renewal date.
+That architectural difference produces most of the others: no SnapNutrition account to create, no ads, no company server holding your food history, and no renewal date. The provider that issues your API key may require its own account.
 
 ## The comparison
 
-|  | SnapNutrition AI | Cal AI |
+| Feature | SnapNutrition AI | Cal AI |
 | --- | --- | --- |
 | AI photo scanning | Yes — the core feature | Yes — the core feature |
-| Cost to keep using it | Free with your own API key. $0 on a free-tier key (Google Gemini, OpenRouter), otherwise roughly $1–3/month in API usage. Optional Auto Mode $2.99/mo or $29.99/yr if you'd rather not handle a key. | Subscription required. Listed around $29.99/year with a short trial, but the paywall is dynamically priced — weekly offers near $2.99/week are commonly reported. |
+| Cost to keep using it | Free with your own API key. $0 on a free-tier key (Google Gemini, OpenRouter), otherwise roughly $1–3/month in API usage. Optional Auto Mode $2.99/mo or $29.99/yr if you'd rather not handle a key. | Subscription required for food-scanning results. Available offers and in-app purchase prices vary; check the current App Store storefront and in-app offer. |
 | Works after the trial without paying | Yes | No |
 | Account required | No | No traditional account, but an active subscription is |
 | Other input methods | Barcode, voice, text, manual entry, and sharing a photo in from any other app | Photo-first; barcode and text available |
@@ -36,7 +38,7 @@ That single architectural difference produces most of the others: no account to 
 | Platforms | iPhone, iPad, Apple Watch | iOS and Android |
 | Ads | No | No |
 
-Cal AI details checked August 2026 from its public App Store listing and pricing pages. Cal AI A/B-tests its paywall, so the price you are shown may differ from any figure quoted here or anywhere else — check the offer in the App Store before subscribing.
+Cal AI details checked August 2026 from its public App Store listing, privacy notice, and terms. App Store storefronts and in-app offers can show different purchase options, so check the actual offer before subscribing.
 
 ## Why "bring your own key" makes it free
 
@@ -67,11 +69,11 @@ A comparison page you can trust has to include this part:
 
 ### Is there a free alternative to Cal AI?
 
-Yes. SnapNutrition AI does the same core thing — photograph a meal, get calories and macros back — without a mandatory subscription. It runs on your own AI API key, and on a free-tier key from Google Gemini or OpenRouter that costs nothing at all. No account, no ads.
+Yes. SnapNutrition AI does the same core thing — photograph a meal, get calories and macros back — without a mandatory subscription. It runs on your own AI API key, and a free-tier key from Google Gemini or OpenRouter can make AI usage cost nothing. There is no SnapNutrition account and no ads; an API provider may require its own account.
 
 ### How much does Cal AI cost?
 
-Its list price is around $29.99/year with a short free trial, but it uses dynamic paywall pricing — different users see different offers, and weekly plans near $2.99/week are commonly reported, which is far more over a year. Check the actual offer in the App Store rather than trusting any quoted figure, including this one.
+Food-scanning results require a subscription according to Cal AI's App Store listing. Available in-app purchase prices and offers vary by storefront and purchase flow, so check the actual offer instead of relying on a single quoted figure.
 
 ### What does Cal AI do better?
 
@@ -85,13 +87,24 @@ In SnapNutrition AI, yes — the whole diary exports to JSON or CSV at any time,
 
 Any photo estimate is an approximation, typically within about 10–30% depending on portion size, hidden oils, and mixed dishes. That applies to Cal AI, SnapNutrition AI, and every other photo-based tracker equally. What matters more is being able to correct an estimate afterwards, and logging consistently enough for the trend to mean something.
 
+## Sources
+
+- [Cal AI US App Store listing](https://apps.apple.com/us/app/cal-ai-calorie-tracker/id6480417616)
+- [Cal AI Privacy Notice](https://www.calai.app/privacy)
+- [Cal AI Terms of Service](https://www.calai.app/tos)
+- [SnapNutrition AI App Store listing](https://apps.apple.com/us/app/snapnutrition-ai/id6757797704)
+
+Want photo calorie tracking without making a subscription the only path? Try SnapNutrition AI with BYOK or optional Auto Mode.
+
 [![Download SnapNutrition AI on the App Store](https://snapnutritionai.app/images/download-on-the-app-store.svg?v=2)](https://apps.apple.com/us/app/snapnutrition-ai/id6757797704)
 
 ## Related reading
 
-- [BYOK calorie tracker: use your own Gemini, OpenAI or Anthropic key](https://snapnutritionai.app/byok-calorie-tracker.html.md)
+- [BYOK calorie tracker: use your own Gemini, OpenAI, Anthropic, or OpenRouter key](https://snapnutritionai.app/byok-calorie-tracker.html.md)
 - [How accurate are AI calorie counters?](https://snapnutritionai.app/ai-calorie-counter-accuracy.html.md)
 - [MyFitnessPal alternative for iPhone: honest comparison](https://snapnutritionai.app/myfitnesspal-alternative.html.md)
+- [SnapCalorie alternative for iPhone](https://snapnutritionai.app/snapcalorie-alternative.html.md)
+- [Best free AI calorie tracker apps in 2026](https://snapnutritionai.app/best-free-ai-calorie-tracker-apps-2026.html.md)
 - [SnapNutrition AI homepage](https://snapnutritionai.app/index.html.md)
 
 SnapNutrition AI is for general food logging and wellness support. It is not medical advice and should not replace guidance from a doctor or registered dietitian.

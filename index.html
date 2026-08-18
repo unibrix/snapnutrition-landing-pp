@@ -1,44 +1,45 @@
 <!DOCTYPE html>
-<!-- Asset cache version: v=2  (bump this number and search-replace when updating assets) -->
+<!-- CSS cache version: v=5; image assets use independent cache versions. -->
 <html lang="en" data-theme="system">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SnapNutrition AI - Best Free AI Calorie Tracker App 2026 | Bring Your Own Key</title>
-    <meta name="description" content="Best free AI calorie tracker 2026. Snap a photo to count calories instantly. Bring your own API key from Google Gemini, OpenAI, Anthropic or OpenRouter — free tiers available, so scanning can cost nothing. No ads, no account.">
-    <meta name="keywords" content="free calorie tracker 2026, best calorie app 2026, AI calorie counter, food scanner app, photo calorie counter, macro tracker, best free calorie app, nutrition tracker, barcode food scanner, voice calorie tracking, calorie tracker app 2026, apple watch calorie tracker, calorie widget, lock screen calorie widget, calorie counter apple watch">
+    <title>SnapNutrition AI — Flexible AI Calorie Tracking for iPhone</title>
+    <meta name="description" content="AI calorie tracking for iPhone, iPad, and Apple Watch without a mandatory subscription. Use your own Gemini, OpenAI, Anthropic, or OpenRouter key—or choose optional Auto Mode. No ads or SnapNutrition account.">
     <meta name="robots" content="index, follow">
-    <link rel="stylesheet" href="styles.css?v=4" media="print" onload="this.media='all'">
-    <noscript><link rel="stylesheet" href="styles.css?v=4"></noscript>
+    <link rel="stylesheet" href="styles.css?v=5" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="styles.css?v=5"></noscript>
     <style>
     /* Critical CSS — hero & above-fold layout */
     :root{color-scheme:light;--green-primary:#34C759;--gradient-start:#197e42;--gradient-end:#7c4f9e;--text-dark:#1a1a1a;--text-muted:#666;--bg-light:#f8f9fa;--bg-white:#fff;--card-bg:#fff;--card-shadow:0 4px 20px rgba(0,0,0,.08)}
     html[data-theme="dark"]{--green-primary:#30D158;--gradient-start:#0d4c32;--gradient-end:#402a55;--text-dark:#f0f0f0;--text-muted:#a0a0a0;--bg-light:#1c1c1e;--bg-white:#2c2c2e;--card-bg:#2c2c2e;--card-shadow:0 4px 20px rgba(0,0,0,.3);color-scheme:dark}
     @media(prefers-color-scheme:dark){html[data-theme="system"]{--green-primary:#30D158;--gradient-start:#0d4c32;--gradient-end:#402a55;--text-dark:#f0f0f0;--text-muted:#a0a0a0;--bg-light:#1c1c1e;--bg-white:#2c2c2e;--card-bg:#2c2c2e;--card-shadow:0 4px 20px rgba(0,0,0,.3);color-scheme:dark}}
-    *{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,sans-serif;color:var(--text-dark);line-height:1.6;overflow-x:hidden}img{max-width:100%;height:auto}
+    *{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,sans-serif;color:var(--text-dark);background:var(--bg-white);line-height:1.6;overflow-x:hidden}img{max-width:100%;height:auto}
     .hero{min-height:100vh;background:linear-gradient(135deg,var(--gradient-start) 0%,var(--gradient-end) 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:2rem;color:#fff;position:relative;overflow:hidden}
     .hero h1{font-size:3.5rem;font-weight:700;margin-bottom:.5rem;letter-spacing:-.02em;position:relative;z-index:1}
     .hero .tagline{font-size:1.5rem;opacity:.9;margin-bottom:.5rem;font-weight:300;position:relative;z-index:1}
     .hero .hero-subtitle{font-size:1.1rem;opacity:.8;margin-bottom:1.5rem;font-weight:400;position:relative;z-index:1}
     .app-store-badge{margin-top:1.5rem;position:relative;z-index:1}.app-store-badge img{height:54px}
     .theme-toggle{position:fixed;top:.75rem;right:.75rem;z-index:100}
-    .theme-toggle-group{display:inline-flex;background:rgba(0,0,0,.25);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-radius:999px;padding:2px;gap:2px}
-    .theme-toggle-group button{background:none;border:none;padding:5px 7px;border-radius:999px;cursor:pointer;display:flex;align-items:center;justify-content:center;opacity:.4}
-    .theme-toggle-group button.active{background:rgba(255,255,255,.15);opacity:1}
-    .theme-toggle-group svg{width:14px;height:14px;fill:none;stroke:#f0f0f0;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+    .visually-hidden{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+    .theme-toggle-group{display:inline-flex;background:rgba(0,0,0,.25);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-radius:999px;padding:2px;gap:2px;border:0;margin:0;min-inline-size:0}
+    .theme-option{position:relative;background:none;padding:10px;min-width:44px;min-height:44px;border-radius:999px;cursor:pointer;display:flex;align-items:center;justify-content:center;opacity:.68}
+    .theme-option input{position:absolute;inset:0;width:100%;height:100%;margin:0;opacity:0;cursor:pointer}
+    .theme-option.active{background:rgba(255,255,255,.15);opacity:1}
+    .theme-option svg{width:18px;height:18px;fill:none;stroke:#f0f0f0;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}.theme-option .icon-mobile{display:none}
     .flying-emojis{position:absolute;top:0;left:0;width:100%;height:100%;pointer-events:none;overflow:hidden;z-index:0}
     .flying-emoji{position:absolute;animation-timing-function:linear;animation-iteration-count:infinite;will-change:transform}
-    @media(max-width:768px){.hero{min-height:auto;padding:4rem 1.5rem}.hero h1{font-size:2.2rem}.hero .tagline{font-size:1.1rem}.hero .hero-subtitle{font-size:.95rem}}
-    @media(max-width:480px){.hero{padding:3rem 1rem}.hero h1{font-size:1.8rem}.hero .tagline{font-size:1rem}.app-store-badge img{height:44px}}
+    @media(max-width:768px){.theme-option .icon-desktop{display:none}.theme-option .icon-mobile{display:block}.hero{min-height:auto;padding:4rem 1.5rem}.hero h1{font-size:2.2rem}.hero .tagline{font-size:1.1rem}.hero .hero-subtitle{font-size:.95rem}}
+    @media(max-width:480px){.hero{padding:4.5rem 1rem 3rem}.hero h1{font-size:1.8rem}.hero .tagline{font-size:1rem}.app-store-badge img{height:44px}}
     </style>
-    <script>document.documentElement.setAttribute('data-theme',localStorage.getItem('snapnutrition_theme')||'system')</script>
+    <script>try{document.documentElement.dataset.theme=localStorage.getItem('snapnutrition_theme')||'system'}catch(e){document.documentElement.dataset.theme='system'}</script>
     <link rel="preload" as="image" type="image/webp" href="images/screenshot-1.webp?v=2">
     <link rel="canonical" href="https://snapnutritionai.app/">
     <link rel="alternate" type="text/markdown" href="https://snapnutritionai.app/index.html.md" title="Markdown version for AI agents">
 
     <!-- Open Graph -->
-    <meta property="og:title" content="SnapNutrition AI - Best Free AI Calorie Tracker 2026">
-    <meta property="og:description" content="The best free AI calorie tracker in 2026. Snap a photo to count calories instantly. Free with your own API key, optional Auto Mode subscription, no ads.">
+    <meta property="og:title" content="SnapNutrition AI — AI Calorie Tracking Without a Mandatory Subscription">
+    <meta property="og:description" content="Snap a photo to estimate calories and macros. Use your own AI key or optional Auto Mode. No ads or SnapNutrition account.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://snapnutritionai.app/">
     <meta property="og:image" content="https://snapnutritionai.app/images/og-image.png">
@@ -47,8 +48,8 @@
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="SnapNutrition AI - Best Free AI Calorie Tracker 2026">
-    <meta name="twitter:description" content="The best free AI food scanner in 2026. Snap a photo to count calories instantly. Free with your own API key, no ads.">
+    <meta name="twitter:title" content="SnapNutrition AI — AI Calorie Tracking for iPhone">
+    <meta name="twitter:description" content="Photo, barcode, voice, and text calorie tracking with your own AI key or optional Auto Mode. No ads.">
     <meta name="twitter:image" content="https://snapnutritionai.app/images/og-image.png">
 
     <!-- Apple Smart App Banner (update with real app ID when available) -->
@@ -57,20 +58,6 @@
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="images/favicon.png?v=2">
     <link rel="apple-touch-icon" href="images/apple-touch-icon.png?v=2">
-
-    <!-- Google Analytics 4 with Consent Mode -->
-    <script>
-    // Set default consent to denied (GDPR compliant)
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('consent', 'default', {
-        'analytics_storage': 'denied',
-        'ad_storage': 'denied',
-        'wait_for_update': 500
-    });
-    gtag('js', new Date());
-    gtag('config', 'G-JJFTFWZEQ2'); // Replace with your GA4 Measurement ID
-    </script>
 
     <!-- JSON-LD Structured Data -->
     <script type="application/ld+json">
@@ -109,7 +96,7 @@
                 "@type": "MobileApplication",
                 "@id": "https://snapnutritionai.app/#app",
                 "name": "SnapNutrition AI",
-                "description": "Free AI calorie tracker app for iPhone and iPad. Snap a photo to count calories instantly. Track macros, protein, carbs, and fat. Free forever with BYOK (Bring Your Own Key) using Google Gemini, OpenAI, Anthropic, or OpenRouter — Gemini and OpenRouter both offer a free tier, so scanning can cost nothing at all. An optional Auto Mode subscription ($2.99/month or $29.99/year, with a 3-day free trial) skips the setup.",
+                "description": "AI calorie tracker for iPhone, iPad, and Apple Watch. Track food by photo, barcode, voice, text, or manual entry. Use a personal Gemini, OpenAI, Anthropic, or OpenRouter key, or choose the optional Auto Mode subscription. Provider prices and free-tier availability can change.",
                 "applicationCategory": "HealthApplication",
                 "applicationSubCategory": "Nutrition Tracking",
                 "operatingSystem": "iOS 17.6+, watchOS 10.0+",
@@ -144,7 +131,7 @@
                     "iCloud sync across Apple devices",
                     "Multilingual support (11 languages)",
                     "Metric and imperial units",
-                    "No account required",
+                    "No SnapNutrition account required",
                     "BYOK mode keeps data on-device — no backend touch",
                     "BYOK (Bring Your Own Key) — use your own AI API key",
                     "Four AI providers: Google Gemini, OpenAI, Anthropic, OpenRouter",
@@ -183,10 +170,10 @@
                 "mainEntity": [
                     {
                         "@type": "Question",
-                        "name": "Is SnapNutrition AI really free?",
+                        "name": "What does SnapNutrition AI cost?",
                         "acceptedAnswer": {
                             "@type": "Answer",
-                            "text": "Yes, SnapNutrition AI is free with no mandatory subscription. Bring your own API key from Google Gemini, OpenAI, Anthropic, or OpenRouter and pay only for the AI calls you make (typically pennies per scan — tracking 3 meals per day costs roughly $0.03-0.09). Gemini and OpenRouter both offer a free tier, so many users pay nothing at all. There is also an optional Auto Mode subscription ($2.99/month or $29.99/year) for users who'd rather skip API-key setup, but it is never required."
+                            "text": "The app has no mandatory subscription. In BYOK mode, Gemini and OpenRouter offer free tiers; paid providers bill you directly for AI usage. Optional Auto Mode costs $2.99/month or $29.99/year after a 3-day trial. Provider pricing and free-tier availability can change."
                         }
                     },
                     {
@@ -195,14 +182,6 @@
                         "acceptedAnswer": {
                             "@type": "Answer",
                             "text": "Take a photo of your food, and the AI analyzes the image to identify ingredients and estimate calories, protein, carbs, and fat. You can also scan barcodes for packaged foods, type a description for homemade meals, use voice input for hands-free tracking, share a photo into the app from your camera roll or any other app, or enter a meal manually. The AI uses advanced vision models from Google Gemini, OpenAI, Anthropic, or OpenRouter — whichever provider you choose."
-                        }
-                    },
-                    {
-                        "@type": "Question",
-                        "name": "What is the best free calorie tracker app in 2026?",
-                        "acceptedAnswer": {
-                            "@type": "Answer",
-                            "text": "SnapNutrition AI is the best free AI calorie tracker in 2026 because it offers AI-powered food tracking with no mandatory subscription. Unlike MyFitnessPal, Lose It!, and Yazio which charge $5-20 per month for AI features, SnapNutrition AI uses a BYOK (Bring Your Own Key) model where you pay only for actual AI usage — typically just a few cents per day. An optional Auto Mode subscription ($2.99/month or $29.99/year) is also available for users who'd rather skip API-key setup."
                         }
                     },
                     {
@@ -218,7 +197,7 @@
                         "name": "Is my data private with SnapNutrition AI?",
                         "acceptedAnswer": {
                             "@type": "Answer",
-                            "text": "Yes. SnapNutrition AI requires no account, and your meal data stays on your device (with optional iCloud sync). In BYOK mode, food images go directly from your device to whichever provider you configured — Google, OpenAI, Anthropic, or OpenRouter — and we operate no backend and never see your data. In the optional Auto Mode subscription, requests pass through a minimal Cloudflare-hosted proxy that verifies your subscription and forwards the photo to OpenAI; we never store food photos. You can also export your whole diary as JSON or CSV at any time. See our Privacy Policy for full details."
+                            "text": "Yes. SnapNutrition AI requires no SnapNutrition account, and your meal data stays on your device (with optional iCloud sync). In BYOK mode, food images go directly from your device to whichever provider you configured — Google, OpenAI, Anthropic, or OpenRouter — and we operate no backend and never see your data. In the optional Auto Mode subscription, requests pass through a minimal Cloudflare-hosted proxy that verifies your subscription and forwards the photo to OpenAI; we never store food photos. You can also export your whole diary as JSON or CSV at any time. See our Privacy Policy for full details."
                         }
                     },
                     {
@@ -231,42 +210,10 @@
                     },
                     {
                         "@type": "Question",
-                        "name": "Is SnapNutrition AI good for weight loss?",
-                        "acceptedAnswer": {
-                            "@type": "Answer",
-                            "text": "Yes, SnapNutrition AI is excellent for weight loss. Set a daily calorie goal, track every meal with the AI food scanner, and monitor your calorie intake vs. your target. Studies show that food logging is one of the most effective strategies for weight management. The AI scanner makes logging fast enough that you'll actually stick with it."
-                        }
-                    },
-                    {
-                        "@type": "Question",
-                        "name": "How does SnapNutrition AI compare to MyFitnessPal?",
-                        "acceptedAnswer": {
-                            "@type": "Answer",
-                            "text": "SnapNutrition AI is free with no mandatory subscription (BYOK with your own API key), while MyFitnessPal Premium costs $19.99/month or $79.99/year. SnapNutrition AI offers AI photo scanning, requires no account, and has no ads. MyFitnessPal has a larger food database (20M+ foods) and exercise tracking, but locks AI features behind a paywall."
-                        }
-                    },
-                    {
-                        "@type": "Question",
-                        "name": "Is there a free alternative to Cal AI?",
-                        "acceptedAnswer": {
-                            "@type": "Answer",
-                            "text": "Yes — SnapNutrition AI does the same thing Cal AI does (photograph a meal, get calories and macros back) without a mandatory subscription. Cal AI requires an active subscription to scan at all, officially $29.99/year though its paywall is dynamically priced. SnapNutrition AI runs on your own API key instead, and on a free-tier key from Google Gemini or OpenRouter it costs nothing. It also adds barcode, voice, text and manual entry, an Apple Watch app, widgets, and JSON/CSV export."
-                        }
-                    },
-                    {
-                        "@type": "Question",
                         "name": "What is BYOK (Bring Your Own Key)?",
                         "acceptedAnswer": {
                             "@type": "Answer",
                             "text": "BYOK stands for Bring Your Own Key. Rather than requiring a subscription, SnapNutrition AI lets you use your own API key from Google Gemini, OpenAI, Anthropic, or OpenRouter. You pay the AI provider directly for usage — typically $0.01-0.03 per food scan, or nothing at all on Gemini's or OpenRouter's free tier. This model makes the app free to use while giving you access to the latest AI models. An optional Auto Mode subscription is also available for users who'd rather skip the API-key setup."
-                        }
-                    },
-                    {
-                        "@type": "Question",
-                        "name": "Does SnapNutrition AI work for keto, vegan, or other diets?",
-                        "acceptedAnswer": {
-                            "@type": "Answer",
-                            "text": "Yes, SnapNutrition AI tracks all macronutrients (protein, carbs, fat) and total calories, making it compatible with any diet — keto, low-carb, vegan, Mediterranean, paleo, IIFYM, or any other approach. The AI identifies foods regardless of dietary style."
                         }
                     },
                     {
@@ -283,14 +230,14 @@
                 "@type": "HowTo",
                 "@id": "https://snapnutritionai.app/#howto",
                 "name": "How to Track Calories with SnapNutrition AI",
-                "description": "Track calories for free using AI in 3 simple steps with SnapNutrition AI.",
+                "description": "Track calories using AI in 3 simple steps with SnapNutrition AI.",
                 "totalTime": "PT2M",
                 "step": [
                     {
                         "@type": "HowToStep",
                         "position": 1,
                         "name": "Add Your API Key",
-                        "text": "Get a free API key from Anthropic (console.anthropic.com) or OpenAI (platform.openai.com). Paste it into the SnapNutrition AI app settings. No subscription required — you only pay for what you use. (Prefer not to manage an API key? An optional Auto Mode subscription is also available.)",
+                        "text": "Choose Google Gemini, OpenAI, Anthropic, or OpenRouter and paste your API key into SnapNutrition AI. Gemini and OpenRouter offer free tiers, while paid providers bill you directly for usage. Optional Auto Mode is available if you prefer not to manage a key.",
                         "image": "https://snapnutritionai.app/images/screenshot-1.png"
                     },
                     {
@@ -327,20 +274,34 @@
 </head>
 <body>
     <div class="theme-toggle">
-        <div class="theme-toggle-group" role="radiogroup" aria-label="Theme">
-            <button type="button" data-theme-value="light" role="radio" aria-checked="false" aria-label="Light theme"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg></button>
-            <button type="button" data-theme-value="dark" role="radio" aria-checked="false" aria-label="Dark theme"><svg viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button>
-            <button type="button" data-theme-value="system" role="radio" aria-checked="true" aria-label="System theme"><svg class="icon-desktop" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><path d="M8 21h8M12 17v4"/></svg><svg class="icon-mobile" viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><path d="M12 18h.01"/></svg></button>
-        </div>
+        <fieldset class="theme-toggle-group">
+            <legend class="visually-hidden">Theme</legend>
+            <label class="theme-option">
+                <input type="radio" name="theme" data-theme-value="light">
+                <svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+                <span class="visually-hidden">Light theme</span>
+            </label>
+            <label class="theme-option">
+                <input type="radio" name="theme" data-theme-value="dark">
+                <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                <span class="visually-hidden">Dark theme</span>
+            </label>
+            <label class="theme-option">
+                <input type="radio" name="theme" data-theme-value="system">
+                <svg aria-hidden="true" class="icon-desktop" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><path d="M8 21h8M12 17v4"/></svg>
+                <svg aria-hidden="true" class="icon-mobile" viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><path d="M12 18h.01"/></svg>
+                <span class="visually-hidden">System theme</span>
+            </label>
+        </fieldset>
     </div>
 
     <!-- Cookie Consent Banner -->
-    <div id="cookie-banner" class="cookie-banner" style="display: none;">
+    <div id="cookie-banner" class="cookie-banner" role="dialog" aria-label="Analytics preferences" aria-hidden="true" style="display: none;">
         <div class="cookie-content">
-            <p>We use cookies for analytics to improve your experience. No personal data is collected.</p>
+            <p id="cookie-message">Help us understand site usage with Google Analytics. Rejecting keeps analytics off.</p>
             <div class="cookie-buttons">
-                <button id="cookie-accept" class="cookie-btn accept">Accept</button>
-                <button id="cookie-reject" class="cookie-btn reject">Reject</button>
+                <button type="button" id="cookie-accept" class="cookie-btn accept">Accept</button>
+                <button type="button" id="cookie-reject" class="cookie-btn reject">Reject</button>
             </div>
         </div>
     </div>
@@ -368,12 +329,12 @@
             <span class="flying-emoji from-bottom e14"></span>
         </div>
 
-        <h1>SnapNutrition AI — Free AI Calorie Tracker & Food Diary</h1>
-        <p class="tagline">Snap a Photo. Count Calories Instantly. 100% Free.</p>
-        <p class="hero-subtitle">No mandatory subscription. No ads. No account needed. Track calories, macros, and nutrition with AI.</p>
+        <h1>SnapNutrition AI — AI Calorie Tracking Without a Mandatory Subscription</h1>
+        <p class="tagline">Snap a photo. Get calories and macros in seconds.</p>
+        <p class="hero-subtitle">Use your own AI key or choose optional Auto Mode. No ads. No SnapNutrition account.</p>
 
         <a href="https://apps.apple.com/us/app/snapnutrition-ai/id6757797704" class="app-store-badge" aria-label="Download SnapNutrition AI on the App Store">
-            <img src="images/download-on-the-app-store.svg?v=2" alt="Download SnapNutrition AI - Best Free Calorie Counter on the App Store">
+            <img src="images/download-on-the-app-store.svg?v=2" alt="Download SnapNutrition AI on the App Store">
         </a>
     </section>
 
@@ -404,12 +365,13 @@
 
     <!-- Intro Section -->
     <section class="intro">
-        <p>Looking for a <strong>free calorie tracker</strong> that doesn't lock features behind a subscription? SnapNutrition AI is a <strong>free AI food diary and calorie counter app</strong> for <strong>iPhone, iPad, and Apple Watch</strong>. Snap a photo, scan a barcode, speak, or type — and get instant calorie, protein, carb, and fat estimates powered by AI. Log calories from your wrist with the <strong>Apple Watch app</strong>, or track at a glance with <strong>Home Screen, Lock Screen, and Control Center widgets</strong>. No mandatory monthly fee. No ads. No account required. Perfect for <strong>weight loss</strong>, muscle gain, or simply eating healthier in 2026. Unlike apps like MyFitnessPal, Lose It! or <a href="cal-ai-alternative.html">Cal AI</a> that charge $5–15/month for AI features, SnapNutrition AI lets you bring your own API key and pay only pennies per scan — or nothing at all on a free-tier key. <a href="byok-calorie-tracker.html">BYOK (Bring Your Own Key)</a> simply means you use your own key from <strong>Google Gemini, OpenAI, Anthropic, or OpenRouter</strong>, so SnapNutrition AI needs no account system and no mandatory AI subscription. Gemini and OpenRouter both have a free tier, so plenty of people run the app without ever paying anyone. If you'd rather not deal with API keys at all, the optional <strong>Auto Mode</strong> subscription ($2.99/month or $29.99/year) handles it for you. This is the <strong>best free diet app</strong> and <strong>food tracker</strong> for iOS users who value privacy and flexibility.</p>
+        <p>SnapNutrition AI is a food diary for <strong>iPhone, iPad, and Apple Watch</strong>. Log a meal by photo, barcode, voice, text, or manual entry, then track calories and macros across your Apple devices.</p>
+        <p>In free <a href="byok-calorie-tracker.html">BYOK mode</a>, you connect your own Google Gemini, OpenAI, Anthropic, or OpenRouter key. Gemini and OpenRouter offer free tiers; paid providers charge you directly for usage. If you prefer no API-key setup, optional <strong>Auto Mode</strong> costs $2.99/month or $29.99/year. No SnapNutrition account is required, though creating an API key may require an account with that provider.</p>
     </section>
 
     <!-- Screenshots Section -->
     <section class="screenshots">
-        <h2>See the Best Free Calorie Counter in Action</h2>
+        <h2>See SnapNutrition AI in Action</h2>
         <div class="screenshot-container">
             <img src="images/screenshot-1.webp?v=2" alt="SnapNutrition AI home screen - AI-powered calorie tracking app with scan, photo, barcode, voice, and text input" width="560" height="1213" fetchpriority="high">
             <img src="images/screenshot-2.webp?v=3" alt="SnapNutrition AI camera view - Point, shoot, track - AI identifies food and calculates calories instantly" width="560" height="1216" loading="lazy">
@@ -420,76 +382,58 @@
         </div>
     </section>
 
+    <div class="section-cta on-light">
+        <p>Try every core tracking feature without a mandatory subscription.</p>
+        <a href="https://apps.apple.com/us/app/snapnutrition-ai/id6757797704" class="app-store-badge" aria-label="Download SnapNutrition AI on the App Store">
+            <img src="images/download-on-the-app-store.svg?v=2" alt="Download SnapNutrition AI on the App Store">
+        </a>
+    </div>
+
     <!-- Features Section -->
     <section class="features">
-        <h2>Free AI Food Scanner — Multiple Ways to Track</h2>
+        <h2>Log Food Your Way</h2>
         <div class="features-grid">
             <div class="feature-card">
                 <div class="icon">📸</div>
-                <h3>Photo Calorie Counter</h3>
-                <p>Take a photo of any meal, snack, or ingredient and the AI food recognition instantly identifies what you're eating and calculates calories, protein, carbs, and fat. Works for restaurant meals, homemade dishes, and everything in between.</p>
-            </div>
-            <div class="feature-card">
-                <div class="icon">🖼️</div>
-                <h3>Gallery Import</h3>
-                <p>Select existing photos from your gallery to analyze meals you've already captured with the free AI scanner</p>
+                <h3>Photo &amp; Gallery Scanning</h3>
+                <p>Take a new food photo or choose one from your library to estimate calories, protein, carbs, and fat.</p>
             </div>
             <div class="feature-card">
                 <div class="icon">🏷️</div>
-                <h3>Barcode Food Scanner</h3>
-                <p>Scan product barcodes for instant nutrition facts on packaged foods. Works like a free food database scanner — just point your iPhone camera at any barcode.</p>
-            </div>
-            <div class="feature-card">
-                <div class="icon">⌨️</div>
-                <h3>Text Input</h3>
-                <p>Type what you ate and AI will estimate the calories and macros — great for homemade meals and restaurant dishes</p>
+                <h3>Barcode &amp; Manual Entry</h3>
+                <p>Look up packaged foods by barcode, or enter known nutrition values by hand without making an AI request.</p>
             </div>
             <div class="feature-card">
                 <div class="icon">🎤</div>
-                <h3>Voice Calorie Tracking</h3>
-                <p>Say "I had a chicken salad and a glass of orange juice" and AI logs it instantly. Hands-free voice calorie tracking — perfect while cooking or on the go.</p>
-            </div>
-            <div class="feature-card">
-                <div class="icon">📤</div>
-                <h3>Share From Any App</h3>
-                <p>Found a photo of your meal in Messages, Instagram, or your camera roll? Share it straight into SnapNutrition AI from the iOS share sheet and it scans without you switching apps.</p>
-            </div>
-            <div class="feature-card">
-                <div class="icon">✍️</div>
-                <h3>Manual Entry</h3>
-                <p>Already know the numbers? Enter a meal by hand — no AI call, no network needed. Ideal for the foods you eat every week.</p>
-            </div>
-            <div class="feature-card">
-                <div class="icon">🗣️</div>
-                <h3>Siri Shortcuts</h3>
-                <p>Log a meal or check your remaining calories with a Siri phrase, or wire SnapNutrition AI into your own Shortcuts automations.</p>
+                <h3>Voice, Text &amp; Share Sheet</h3>
+                <p>Describe a meal, speak it aloud, or share a food photo from another app. Siri Shortcuts cover common hands-free actions.</p>
             </div>
             <div class="feature-card">
                 <div class="icon">📈</div>
-                <h3>Macro Tracker & Statistics</h3>
-                <p>Track your daily, weekly, and all-time calorie and macro progress with beautiful charts</p>
+                <h3>Goals &amp; Progress</h3>
+                <p>Set calorie and macro targets, import profile details from Apple Health, and review daily, weekly, or all-time trends.</p>
             </div>
             <div class="feature-card">
                 <div class="icon">⌚</div>
-                <h3>Apple Watch App</h3>
-                <p>Log calories straight from your wrist with voice input. See your daily calorie summary, macro rings, and goal progress — all on Apple Watch with complications.</p>
+                <h3>Watch, Widgets &amp; Shortcuts</h3>
+                <p>Log from Apple Watch and check progress through Home Screen, Lock Screen, Control Center, and Watch complications.</p>
             </div>
             <div class="feature-card">
-                <div class="icon">🧩</div>
-                <h3>Home & Lock Screen Widgets</h3>
-                <p>Track at a glance without opening the app. Calorie goal progress on your Home Screen, Lock Screen, and Control Center quick actions for instant scanning.</p>
+                <div class="icon">💾</div>
+                <h3>Sync &amp; Export</h3>
+                <p>Sync through your personal iCloud account and export your diary as JSON or CSV whenever you want.</p>
             </div>
         </div>
     </section>
 
     <!-- How It Works -->
     <section class="how-it-works">
-        <h2>How the Free AI Calorie Tracker Works</h2>
+        <h2>How It Works</h2>
         <div class="steps">
             <div class="step">
                 <div class="step-number">1</div>
                 <h3>Add Your API Key</h3>
-                <p>Pick from Google Gemini, OpenAI, Anthropic, or OpenRouter and paste in your own key. Gemini and OpenRouter have a free tier, so you can start without paying anyone — otherwise it's pennies per scan. No subscription required.</p>
+                <p>Choose Google Gemini, OpenAI, Anthropic, or OpenRouter. Free tiers are available, while paid usage is billed by the provider.</p>
             </div>
             <div class="step">
                 <div class="step-number">2</div>
@@ -499,44 +443,29 @@
             <div class="step">
                 <div class="step-number">3</div>
                 <h3>Track Progress</h3>
-                <p>Set your daily calorie goal and watch your macro progress on the free statistics dashboard.</p>
+                <p>Set a daily goal and follow your calorie and macro trends over time.</p>
             </div>
         </div>
     </section>
 
-    <!-- Why Free Section -->
+    <!-- Benefits Section -->
     <section class="features">
-        <h2>Why SnapNutrition AI is the Best Free Calorie App</h2>
+        <h2>Flexible by Design</h2>
         <div class="features-grid">
             <div class="feature-card">
-                <div class="icon">🆓</div>
-                <h3>Free Forever with BYOK</h3>
-                <p>Bring your own key from Google Gemini, OpenAI, Anthropic, or OpenRouter and pay only for actual usage — or nothing at all, since Gemini and OpenRouter both have a free tier. No mandatory subscription, no ads. (Auto Mode is an optional convenience plan — never required.)</p>
+                <div class="icon">🔑</div>
+                <h3>Choose How AI Is Paid For</h3>
+                <p>Use a free-tier or paid BYOK provider, or choose Auto Mode for a simpler setup. Core tracking is not locked behind Auto Mode.</p>
             </div>
             <div class="feature-card">
-                <div class="icon">🎯</div>
-                <h3>Daily Goal Calculator</h3>
-                <p>Work out your daily calorie target from your height, weight, age, and activity level — or import your profile straight from Apple Health instead of typing it in.</p>
-            </div>
-            <div class="feature-card">
-                <div class="icon">☁️</div>
-                <h3>iCloud Sync</h3>
-                <p>Your calorie data syncs seamlessly across all your Apple devices via your personal iCloud.</p>
-            </div>
-            <div class="feature-card">
-                <div class="icon">💾</div>
-                <h3>Your Data, Exportable</h3>
-                <p>Export your entire food diary as JSON or CSV whenever you like. Nothing is locked in — it's your diary, in a format any spreadsheet or app can read.</p>
+                <div class="icon">🔒</div>
+                <h3>No SnapNutrition Account</h3>
+                <p>Your diary stays on your device or in your personal iCloud. BYOK requests go directly to the provider you choose.</p>
             </div>
             <div class="feature-card">
                 <div class="icon">🌍</div>
-                <h3>11 Languages</h3>
-                <p>Use the free calorie tracker in English, Ukrainian, Polish, French, Spanish, German, Czech, Italian, Finnish, Danish, or Dutch — fully localized, not machine-translated menus.</p>
-            </div>
-            <div class="feature-card">
-                <div class="icon">📏</div>
-                <h3>Metric & Imperial</h3>
-                <p>Switch between measurement systems based on your preference — grams or ounces, your choice.</p>
+                <h3>Made for Different Routines</h3>
+                <p>Choose metric or imperial units and use the app in any of 11 supported languages.</p>
             </div>
         </div>
     </section>
@@ -552,16 +481,12 @@
         <h2>Frequently Asked Questions</h2>
         <div class="faq-list">
             <details class="faq-item">
-                <summary>Is SnapNutrition AI really free?</summary>
-                <p>Yes, SnapNutrition AI is free with no mandatory subscription, no ads, and no hidden costs. Bring your own API key from Google Gemini, OpenAI, Anthropic, or OpenRouter and pay only for the AI calls you make (typically pennies per scan). Gemini and OpenRouter both offer a free tier, so many people never pay anything. An optional Auto Mode subscription ($2.99/month or $29.99/year, with a 3-day free trial) is available for users who'd rather skip API-key setup, but it is never required.</p>
+                <summary>What does SnapNutrition AI cost?</summary>
+                <p>The app has no mandatory subscription. In BYOK mode, Gemini and OpenRouter offer free tiers; paid providers bill you directly for AI usage. Optional Auto Mode costs $2.99/month or $29.99/year after a 3-day trial. Provider pricing and free-tier availability can change.</p>
             </details>
             <details class="faq-item">
                 <summary>How does the AI food scanner work?</summary>
                 <p>Simply take a photo of your food, and the AI analyzes the image to identify ingredients and estimate calories, protein, carbs, and fat. You can also scan barcodes, type a description, use voice input for hands-free tracking, share a photo in from another app, or enter a meal manually when you already know the numbers.</p>
-            </details>
-            <details class="faq-item">
-                <summary>What is the best free calorie tracker app in 2026?</summary>
-                <p>SnapNutrition AI is the best free AI calorie tracker in 2026 because it offers AI-powered tracking with no mandatory subscription. Unlike other apps that charge $5-15 per month, you can bring your own API key and pay only for actual AI usage (a few cents per day). For users who'd rather skip the API-key setup, an optional Auto Mode subscription ($2.99/month or $29.99/year) is also available.</p>
             </details>
             <details class="faq-item">
                 <summary>How accurate is AI calorie counting?</summary>
@@ -576,24 +501,8 @@
                 <p>Any of four: Google Gemini, OpenAI, Anthropic (Claude), or OpenRouter. Gemini is the easiest starting point because it has a free tier — create a key at aistudio.google.com, paste it in, and you can scan without paying anyone. OpenRouter also has a free tier. The app marks which providers are free while you're choosing, so you don't have to research it first.</p>
             </details>
             <details class="faq-item">
-                <summary>Is SnapNutrition AI good for weight loss?</summary>
-                <p>Yes, SnapNutrition AI is excellent for weight loss. Set a daily calorie goal, track every meal with the AI food scanner, and monitor your calorie intake vs. your target. Studies show that food logging is one of the most effective strategies for weight management. The AI scanner makes logging fast enough that you'll actually stick with it.</p>
-            </details>
-            <details class="faq-item">
-                <summary>How does SnapNutrition AI compare to MyFitnessPal?</summary>
-                <p>SnapNutrition AI is free with no mandatory subscription (BYOK with your own API key), while MyFitnessPal Premium costs $19.99/month or $79.99/year. SnapNutrition AI offers AI photo scanning, requires no account, and has no ads. MyFitnessPal has a larger food database (20M+ foods) and exercise tracking, but locks AI features behind a paywall. See our full <a href="myfitnesspal-alternative.html">MyFitnessPal alternative comparison</a>.</p>
-            </details>
-            <details class="faq-item">
-                <summary>Is there a free alternative to Cal AI?</summary>
-                <p>Yes — SnapNutrition AI does the same thing Cal AI does (photograph a meal, get calories and macros back) without a mandatory subscription. Cal AI requires an active subscription to scan at all; SnapNutrition AI runs on your own API key, and on a free-tier key from Google Gemini or OpenRouter that costs nothing. See the full <a href="cal-ai-alternative.html">Cal AI alternative comparison</a>.</p>
-            </details>
-            <details class="faq-item">
                 <summary>What is BYOK (Bring Your Own Key)?</summary>
                 <p>BYOK stands for Bring Your Own Key. Rather than requiring a subscription, SnapNutrition AI lets you use your own API key from Google Gemini, OpenAI, Anthropic, or OpenRouter. You pay the AI provider directly for usage — typically $0.01-0.03 per food scan, or nothing at all on Gemini's or OpenRouter's free tier. This model makes the app free to use while giving you access to the latest AI models. (For users who'd rather skip the API-key setup, an optional Auto Mode subscription is also available.) Read our full guide to the <a href="byok-calorie-tracker.html">BYOK calorie tracker</a> model.</p>
-            </details>
-            <details class="faq-item">
-                <summary>Does SnapNutrition AI work for keto, vegan, or other diets?</summary>
-                <p>Yes, SnapNutrition AI tracks all macronutrients (protein, carbs, fat) and total calories, making it compatible with any diet — keto, low-carb, vegan, Mediterranean, paleo, IIFYM, or any other approach. The AI identifies foods regardless of dietary style.</p>
             </details>
             <details class="faq-item">
                 <summary>Can I use SnapNutrition AI on iPhone, iPad, and Apple Watch?</summary>
@@ -602,10 +511,21 @@
         </div>
     </section>
 
+    <div class="section-cta">
+        <p>Ready to try faster food logging on your Apple devices?</p>
+        <a href="https://apps.apple.com/us/app/snapnutrition-ai/id6757797704" class="app-store-badge" aria-label="Download SnapNutrition AI on the App Store">
+            <img src="images/download-on-the-app-store.svg?v=2" alt="Download SnapNutrition AI on the App Store">
+        </a>
+    </div>
+
     <!-- Learn More / Internal Links -->
     <section class="learn-more">
         <h2>Learn More About AI Calorie Tracking</h2>
         <div class="learn-more-grid">
+            <a class="learn-more-card" href="best-free-ai-calorie-tracker-apps-2026.html">
+                <h3>Best Free AI Calorie Trackers</h3>
+                <p>What “free” actually means across SnapNutrition AI, SnapCalorie, Cal AI, and MyFitnessPal in 2026.</p>
+            </a>
             <a class="learn-more-card" href="byok-calorie-tracker.html">
                 <h3>BYOK Calorie Tracker</h3>
                 <p>What Bring Your Own Key means, what it costs per day, and why it can beat subscriptions.</p>
@@ -622,15 +542,23 @@
                 <h3>Cal AI Alternative</h3>
                 <p>Both scan food by photo. One needs a subscription to work at all — here's the honest difference.</p>
             </a>
+            <a class="learn-more-card" href="snapcalorie-alternative.html">
+                <h3>SnapCalorie Alternative</h3>
+                <p>Compare free daily scans with BYOK, local diary storage, export, and Apple Watch support.</p>
+            </a>
+            <a class="learn-more-card" href="privacy-first-ai-calorie-tracker.html">
+                <h3>Privacy-First AI Tracking</h3>
+                <p>Follow the path of food photos, account data, local storage, AI providers, and analytics.</p>
+            </a>
         </div>
     </section>
 
     <!-- Privacy Highlight -->
     <section class="privacy-highlight">
         <h2>Your Privacy Matters</h2>
-        <p>No account required. Your meal logs, goals, and history stay on your device and sync only through your personal iCloud account.</p>
+        <p>No SnapNutrition account is required. Your meal logs, goals, and history stay on your device and sync only through your personal iCloud account.</p>
         <p><strong>BYOK mode:</strong> Food images and text descriptions go directly from your device to your chosen AI provider (Google Gemini, OpenAI, Anthropic, or OpenRouter) using your own API key. No proxy, no backend touch — we never see or store your data. Your diary exports to JSON or CSV whenever you want it.</p>
-        <p><strong>Auto Mode (optional subscription, $2.99/month or $29.99/year with a 3-day free trial):</strong> Requests pass through a minimal Cloudflare-hosted proxy that verifies your Apple subscription, runs Apple App Attest for device integrity, and enforces a fair-use daily scan limit. Food photos are forwarded to OpenAI for analysis and not stored on our side. We log anonymized per-scan telemetry (timestamp, scan type, daily count) for rate-limit enforcement only — no personal identifiers, no food content.</p>
+        <p><strong>Auto Mode (optional subscription, $2.99/month or $29.99/year with a 3-day free trial):</strong> Requests pass through a minimal Cloudflare-hosted proxy that verifies your Apple subscription, runs Apple App Attest for device integrity, and enforces a fair-use daily scan limit. Food photos are forwarded to OpenAI for analysis and not stored on our side. We retain limited pseudonymous operational telemetry for rate limiting and abuse prevention; it contains no food content, name, or email address.</p>
         <p>Full details in our <a href="privacy.html">Privacy Policy</a>.</p>
     </section>
 
@@ -651,126 +579,6 @@
         <p class="powered-by">Powered by <a href="https://unibrix.com" target="_blank" rel="noopener">Unibrix</a></p>
     </footer>
 
-    <script>
-    (function() {
-        var THEME_KEY = 'snapnutrition_theme';
-        var html = document.documentElement;
-        var buttons = document.querySelectorAll('.theme-toggle-group button');
-
-        function applyTheme(theme) {
-            html.setAttribute('data-theme', theme);
-            buttons.forEach(function(btn) {
-                var isActive = btn.getAttribute('data-theme-value') === theme;
-                btn.classList.toggle('active', isActive);
-                btn.setAttribute('aria-checked', isActive ? 'true' : 'false');
-            });
-        }
-
-        var saved = localStorage.getItem(THEME_KEY) || 'system';
-        applyTheme(saved);
-
-        buttons.forEach(function(btn) {
-            btn.addEventListener('click', function() {
-                var theme = btn.getAttribute('data-theme-value');
-                localStorage.setItem(THEME_KEY, theme);
-                applyTheme(theme);
-            });
-        });
-    })();
-    </script>
-
-    <!-- Cookie Consent & Analytics Script -->
-    <script>
-    (function() {
-        const CONSENT_KEY = 'snapnutrition_cookie_consent';
-        const GA_ID = 'G-JJFTFWZEQ2'; // Replace with your GA4 Measurement ID
-
-        // Get consent status from localStorage
-        function getConsent() {
-            return localStorage.getItem(CONSENT_KEY);
-        }
-
-        // Save consent status
-        function setConsent(status) {
-            localStorage.setItem(CONSENT_KEY, status);
-        }
-
-        // Load GA4 script
-        function loadGA() {
-            if (document.getElementById('ga-script')) return;
-            const script = document.createElement('script');
-            script.id = 'ga-script';
-            script.async = true;
-            script.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
-            document.head.appendChild(script);
-        }
-
-        // Update consent state and load/block GA
-        function updateConsent(granted) {
-            if (granted) {
-                gtag('consent', 'update', {
-                    'analytics_storage': 'granted'
-                });
-                loadGA();
-            } else {
-                gtag('consent', 'update', {
-                    'analytics_storage': 'denied'
-                });
-            }
-        }
-
-        // Show/hide banner
-        function showBanner(show) {
-            document.getElementById('cookie-banner').style.display = show ? 'flex' : 'none';
-        }
-
-        // Initialize on page load
-        function init() {
-            const consent = getConsent();
-
-            if (consent === null) {
-                // No choice made yet - show banner
-                showBanner(true);
-            } else if (consent === 'accepted') {
-                // User accepted - load GA
-                updateConsent(true);
-            }
-            // If rejected, do nothing (GA stays blocked)
-        }
-
-        // Handle accept click
-        document.getElementById('cookie-accept').addEventListener('click', function() {
-            setConsent('accepted');
-            updateConsent(true);
-            showBanner(false);
-        });
-
-        // Handle reject click
-        document.getElementById('cookie-reject').addEventListener('click', function() {
-            setConsent('rejected');
-            updateConsent(false);
-            showBanner(false);
-        });
-
-        // Handle cookie settings click (re-show banner)
-        document.getElementById('cookie-settings').addEventListener('click', function(e) {
-            e.preventDefault();
-            showBanner(true);
-        });
-
-        // Set footer year
-        document.getElementById('year').textContent = new Date().getFullYear();
-
-        // App Store clicks -> GA4 event (mark "app_store_click" as a key event in GA4 admin)
-        document.querySelectorAll('a[href*="apps.apple.com"]').forEach(function(link) {
-            link.addEventListener('click', function() {
-                gtag('event', 'app_store_click', { 'link_url': link.href });
-            });
-        });
-
-        // Initialize
-        init();
-    })();
-    </script>
+    <script src="site.js?v=1"></script>
 </body>
 </html>
