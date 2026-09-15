@@ -1,6 +1,6 @@
 # SnapNutrition AI
 
-An AI calorie tracker for iPhone, iPad, and Apple Watch with no mandatory subscription or ads. BYOK (Bring Your Own Key) supports Google Gemini, OpenAI, Anthropic, and OpenRouter; optional Auto Mode is available for people who prefer not to manage an API key.
+An AI calorie tracker for iPhone, iPad, and Apple Watch with no mandatory subscription or ads. Currently shipping v1.5. BYOK (Bring Your Own Key) supports Google Gemini, OpenAI, Anthropic, and OpenRouter; optional Auto Mode is available for people who prefer not to manage an API key.
 
 <p align="center">
   <a href="https://apps.apple.com/us/app/snapnutrition-ai/id6757797704">
@@ -10,7 +10,7 @@ An AI calorie tracker for iPhone, iPad, and Apple Watch with no mandatory subscr
 
 ## What is SnapNutrition AI?
 
-SnapNutrition AI lets you track calories and nutrition instantly using AI. Simply snap a photo of your food, scan a barcode, type, or speak — and get instant calorie and macro estimates. Log calories from your wrist with the Apple Watch app, or track at a glance with Home Screen, Lock Screen, and Control Center widgets.
+SnapNutrition AI lets you track calories and nutrition instantly using AI. Snap a photo of your food, pick one from your library, scan a barcode, speak, type, or enter the numbers by hand — and get instant calorie and macro estimates. Log calories from your wrist with the Apple Watch app, or track at a glance with Home Screen, Lock Screen, and Control Center widgets.
 
 The app has no mandatory subscription. In BYOK mode, you connect your own Google Gemini, OpenAI, Anthropic, or OpenRouter key. Gemini and OpenRouter offer free tiers; paid providers bill you directly for usage. Optional Auto Mode costs $2.99/month or $29.99/year after a 3-day trial.
 
@@ -20,13 +20,15 @@ The app has no mandatory subscription. In BYOK mode, you connect your own Google
 - **Barcode Scanner** — Scan packaged foods for accurate data
 - **Voice Input** — Speak what you ate, hands-free
 - **Text Input** — Type a description for AI analysis
+- **Manual Entry** — Enter calories and macros by hand. No AI request, works offline, and you can backdate any meal
+- **Share to Log** — Share a food photo in from Photos, Messages, or any other app
 - **Macro Tracking** — Track protein, carbs, and fat
-- **Daily Goals** — Set and monitor calorie targets
-- **Statistics** — View daily, weekly, and all-time progress
+- **Daily Goals** — A calorie target from your own profile or Apple Health, with protein, carb and fat goals shown as rings beside it
+- **Statistics** — Daily, weekly and all-time charts with a goal line, a 7-day average, and how many logged days landed within goal
 - **Apple Watch App** — Voice logging, daily calorie summary, macro rings, and complications
 - **Widgets** — Home Screen, Lock Screen, and Control Center quick actions for calorie tracking at a glance
 - **iCloud Sync** — Seamless sync across all Apple devices
-- **11 Languages** — English, Ukrainian, Polish, French, Spanish, German, Czech, Italian, Finnish, Danish, Dutch
+- **14 Languages** — English, Ukrainian, Polish, French, Spanish, German, Czech, Italian, Finnish, Danish, Dutch, Swedish, Norwegian, Icelandic
 - **Privacy First** — No SnapNutrition account; BYOK has no SnapNutrition backend, while Auto Mode uses a minimal proxy and never stores food photos
 
 ## Screenshots

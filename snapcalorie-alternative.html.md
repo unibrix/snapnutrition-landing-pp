@@ -6,7 +6,7 @@
 
 Both apps turn food photos into nutrition estimates. The main differences are free usage, account architecture, Apple-device features, and where your diary lives.
 
-Published by SnapNutrition AI · Last verified August 18, 2026
+Published by SnapNutrition AI · Last updated September 15, 2026 · Competitor details verified August 2026
 
 **Short answer:** SnapNutrition AI is a practical SnapCalorie alternative for iPhone users who want no mandatory app subscription, no SnapNutrition account, Apple Watch support, and a diary stored locally with optional iCloud sync. SnapCalorie is the simpler fit if its three free daily AI logs are enough and you prefer not to configure an API key.
 
@@ -21,7 +21,7 @@ This comparison is written by the makers of SnapNutrition AI. It uses SnapCalori
 | Provider choice | Gemini, OpenAI, Anthropic, or OpenRouter | Managed by SnapCalorie |
 | SnapNutrition/SnapCalorie account | No SnapNutrition account | Its privacy policy describes account registration and account information |
 | Diary storage | On device, with optional personal iCloud sync | Cloud service associated with the user's account |
-| Apple Watch | Yes: voice logging, daily summary, complications | Not listed as supported on its current US App Store page |
+| Apple Watch | Yes: voice logging, daily calorie and macro rings, per-macro charts, complications | Not listed as supported on its current US App Store page |
 | Input methods | Photo, gallery, barcode, voice, text, manual entry, and Share Sheet | Photo and voice are highlighted in its current App Store listing |
 | Nutrient depth | Calories and core macros | Its listing advertises calories, macros, and 100+ nutrients |
 | Export | JSON or CSV | Not evaluated for this guide |

@@ -6,7 +6,7 @@
 
 What "Bring Your Own Key" means in a calorie tracker, what it actually costs, and the honest tradeoffs.
 
-Last updated: August 18, 2026
+Last updated: September 15, 2026
 
 **Short answer:** a BYOK calorie tracker lets an iPhone user connect a personal AI API key instead of paying a mandatory app subscription. SnapNutrition AI supports Gemini, OpenAI, Anthropic, and OpenRouter. The provider may offer a free tier or charge for usage; optional Auto Mode is available for people who prefer not to manage a key.
 
@@ -55,11 +55,11 @@ SnapNutrition AI is an AI calorie tracker for **iPhone, iPad, and Apple Watch** 
 
 - Works with **Google Gemini, OpenAI, Anthropic, and OpenRouter** keys — your choice, switchable at any time, and each provider's key is stored in its own Keychain slot so swapping doesn't lose the others
 - Log food by **photo, barcode, voice, text, or manual entry** — or share a photo in from another app; edit portions and ingredients after any scan
-- Apple Watch app plus Home Screen, Lock Screen, and Control Center widgets
+- Apple Watch app with calorie and macro rings, plus Home Screen, Lock Screen, and Control Center widgets and Siri Shortcuts
 - No ads, no SnapNutrition account, no mandatory subscription
 - Optional **Auto Mode** ($2.99/month or $29.99/year, 3-day free trial) for people who don't want to manage an API key
 
-BYOK is a small but growing pattern — a handful of other trackers (such as Fud AI and MacroPhase) have adopted it too, which we take as a good sign: it means the model works and users want it. SnapNutrition AI's angle is combining BYOK with multi-input logging (photo, barcode, voice, text), Apple Watch support, and a no-account, privacy-first design.
+BYOK is a small but growing pattern — a handful of other trackers (such as Fud AI and MacroPhase) have adopted it too, which we take as a good sign: it means the model works and users want it. SnapNutrition AI's angle is combining BYOK with multi-input logging (photo, photo library, barcode, voice, text, and manual entry), Apple Watch support, and a no-account, privacy-first design.
 
 ## Frequently Asked Questions
 

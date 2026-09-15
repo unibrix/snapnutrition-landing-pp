@@ -6,7 +6,7 @@
 
 An honest comparison of SnapNutrition AI, MyFitnessPal, Cronometer, Lose It!, and Cal AI — including where each one wins.
 
-Last updated: August 18, 2026 · Prices verified August 2026
+Last updated: September 15, 2026 · Competitor prices verified August 2026
 
 ## Why people look for MyFitnessPal alternatives
 
@@ -24,7 +24,7 @@ Five popular iPhone calorie trackers, compared on the things people actually ask
 
 | App | AI photo scan | Price model (August 2026) | Account required | Ads | Barcode scanner | Apple Watch | Privacy / BYOK | Best for |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| SnapNutrition AI | Yes — photo, plus voice and text | Free with your own API key (~$1–3/mo in API usage, or $0 on a free-tier key); optional Auto Mode $2.99/mo or $29.99/yr | No | No | Yes, free | Yes, incl. voice logging | BYOK — no SnapNutrition account, no backend in BYOK mode, data on device/iCloud | iPhone users who want AI logging without a subscription, and privacy-minded trackers |
+| SnapNutrition AI | Yes — photo and photo library, plus barcode, voice, text, and manual entry | Free with your own API key (~$1–3/mo in API usage, or $0 on a free-tier key); optional Auto Mode $2.99/mo or $29.99/yr | No | No | Yes, free | Yes — voice logging, calorie and macro rings, complications | BYOK — no SnapNutrition account, no backend in BYOK mode, data on device/iCloud | iPhone users who want AI logging without a subscription, and privacy-minded trackers |
 | MyFitnessPal | Premium only (meal scan) | Free tier with ads; Premium $19.99/mo or $79.99/yr; Premium+ $24.99/mo or $99.99/yr | Yes | Yes (free tier) | Premium only | Yes | Account-based; data tied to your profile | Largest food database (20M+), exercise and community features, Android support |
 | Cronometer | No — focused on verified database entries | Free tier with ads; Gold $10.99/mo or $59.88/yr | Yes | Yes (free tier) | Yes, free | Yes | Account-based | Micronutrient depth and data accuracy — the dietitian's favorite |
 | Lose It! | Yes (Snap It) | Free tier; Premium ~$39.99/yr | Yes | Yes (free tier) | Yes (some features Premium) | Yes | Account-based | Cheapest conventional premium; simple weight-loss focus |
@@ -36,10 +36,10 @@ Prices and feature tiers checked August 2026 from public pricing pages. Subscrip
 
 [SnapNutrition AI](https://snapnutritionai.app/index.html.md) takes a different approach from every app in the table: instead of a subscription that covers AI costs plus margin, it uses [BYOK (Bring Your Own Key)](https://snapnutritionai.app/byok-calorie-tracker.html.md) — you plug in your own API key from Google Gemini, OpenAI, Anthropic, or OpenRouter and pay the provider directly, typically $0.01–0.03 per scan — or nothing on a free-tier key. That means:
 
-- **No mandatory subscription** — AI photo, voice, and text logging are free with your key
+- **No mandatory subscription** — AI photo, barcode, voice, and text logging are free with your key, and manual entry needs no key at all
 - **No ads, no SnapNutrition account** — API providers may require their own account to issue a key
 - **Privacy by architecture** — in BYOK mode your photos go from your device straight to the AI provider; there is no app backend
-- **Apple Watch app and widgets** — log by voice from your wrist, see progress on your Lock Screen
+- **Apple Watch app and widgets** — log by voice from your wrist, read calorie and macro rings there, and see progress on your Lock Screen
 - **Optional Auto Mode** ($2.99/month or $29.99/year, 3-day trial) if you'd rather skip API-key setup — still cheaper than every premium tier in the table
 
 ## Honest tradeoffs — when you should NOT switch

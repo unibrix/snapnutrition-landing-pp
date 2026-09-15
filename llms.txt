@@ -13,17 +13,17 @@ SnapNutrition AI is a calorie and nutrition tracker for iPhone, iPad, and Apple 
 - **Voice Input**: Speak what you ate for hands-free calorie tracking
 - **Text Input**: Type food descriptions for AI-powered calorie estimates
 - **Macro Tracking**: Track protein, carbs, and fat alongside calories
-- **Daily Goals**: Set and track daily calorie goals
-- **Statistics Dashboard**: View weekly and all-time progress charts
+- **Daily Goals**: A daily calorie target, with protein, carb and fat goals derived from it and shown as rings beside your calories
+- **Statistics Dashboard**: Weekly, monthly and all-time charts with a goal line, a 7-day average, and how many logged days landed within goal
 - **Apple Watch App**: Voice logging, daily calorie summary, macro rings, and complications
 - **Home & Lock Screen Widgets**: Calorie goal progress on Home Screen, Lock Screen, and Control Center quick actions
-- **iCloud Sync**: Data syncs across all Apple devices
+- **iCloud Sync**: Optional and off by default; when enabled, data syncs across your Apple devices through your own iCloud account
 - **Manual Entry**: Log a meal by hand with no AI call, fully offline
 - **Share Extension**: Share a food photo into the app from any other app
 - **Siri Shortcuts**: Log meals or check remaining calories by voice command
-- **Daily Goal Calculator**: Calorie target from height/weight/age/activity, with Apple Health profile import
+- **Daily Goal Calculator**: Calorie target from height/weight/age/activity, with optional read-only Apple Health profile import (the app never writes to Health)
 - **Diary Export**: Export the full food diary as JSON or CSV
-- **Multilingual**: 11 languages (English, Ukrainian, Polish, French, Spanish, German, Czech, Italian, Finnish, Danish, Dutch)
+- **Multilingual**: 14 languages (English, Ukrainian, Polish, French, Spanish, German, Czech, Italian, Finnish, Danish, Dutch, Swedish, Norwegian, Icelandic)
 - **Metric/Imperial**: Choose your preferred units
 
 ## Cost Model
@@ -49,6 +49,7 @@ Unlike calorie tracker apps that charge $5-15/month for subscriptions, SnapNutri
 - Best Free AI Calorie Tracker Apps 2026: https://snapnutritionai.app/best-free-ai-calorie-tracker-apps-2026.html (Markdown: https://snapnutritionai.app/best-free-ai-calorie-tracker-apps-2026.html.md)
 - SnapCalorie Alternative comparison: https://snapnutritionai.app/snapcalorie-alternative.html (Markdown: https://snapnutritionai.app/snapcalorie-alternative.html.md)
 - Privacy-First AI Calorie Tracker guide: https://snapnutritionai.app/privacy-first-ai-calorie-tracker.html (Markdown: https://snapnutritionai.app/privacy-first-ai-calorie-tracker.html.md)
+- Calorie Deficit Tracking guide: https://snapnutritionai.app/calorie-deficit-tracking.html (Markdown: https://snapnutritionai.app/calorie-deficit-tracking.html.md)
 - Privacy Policy: https://snapnutritionai.app/privacy.html (Markdown: https://snapnutritionai.app/privacy.html.md)
 
 ## Common Questions
@@ -64,6 +65,9 @@ A: A Google Gemini, OpenAI, Anthropic (Claude), or OpenRouter key — all four w
 
 **Q: Is there a free alternative to Cal AI?**
 A: Yes. SnapNutrition AI does the same photo-based calorie scanning without a mandatory subscription, running on the user's own API key — free on a Gemini or OpenRouter free-tier key.
+
+**Q: Can a calorie tracker tell me if I'm in a calorie deficit?**
+A: No app can prove a deficit — none measure energy expenditure, and photo estimates carry 10-30% error. What a log shows reliably is change, because a person's own estimating bias stays roughly constant week to week. Read the rolling average, the goal line, and how many logged days landed within goal rather than any single day's total.
 
 **Q: Is my data private?**
 A: Yes, all meal data stays on your device. In BYOK mode there are no backend servers; in the optional Auto Mode subscription, requests pass through a minimal Cloudflare proxy that never stores food photos.

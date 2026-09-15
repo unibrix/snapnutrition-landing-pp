@@ -415,6 +415,69 @@ img {
     transform: scale(1.02);
 }
 
+/* iPad + Apple Watch row */
+.device-shots-title {
+    text-align: center;
+    font-size: 1.6rem;
+    margin: 2.5rem 0 0.35rem;
+    color: var(--text-dark);
+}
+
+.device-shots-sub {
+    text-align: center;
+    margin: 0 auto 1.75rem;
+    max-width: 38rem;
+    color: var(--text-muted, #6b7280);
+    padding: 0 1rem;
+}
+
+.device-shots {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1.5rem;
+    max-width: 100%;
+    margin: 0 auto;
+    overflow-x: auto;
+    padding: 0 2rem 2rem;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.device-shots::-webkit-scrollbar {
+    display: none;
+}
+
+.device-shots img {
+    flex-shrink: 0;
+    height: auto;
+    border-radius: 18px;
+    box-shadow: var(--card-shadow);
+    transition: transform 0.3s ease;
+    scroll-snap-align: center;
+}
+
+.device-shots img.pad {
+    width: 340px;
+}
+
+.device-shots img.watch {
+    width: 190px;
+    border-radius: 28px;
+}
+
+.device-shots img:hover {
+    transform: scale(1.02);
+}
+
+@media (max-width: 640px) {
+    .device-shots img.pad { width: 260px; }
+    .device-shots img.watch { width: 150px; }
+    .device-shots-title { font-size: 1.35rem; }
+}
+
 /* Features Section */
 .features {
     padding: 5rem 2rem;

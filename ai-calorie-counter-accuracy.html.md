@@ -6,7 +6,7 @@
 
 What photo food scanners can and can't do — an honest guide from an app that makes one.
 
-Last updated: August 18, 2026
+Last updated: September 15, 2026
 
 ## The short answer
 
@@ -33,13 +33,13 @@ Used well, an AI tracker gets you most of the accuracy at a fraction of the effo
 2. **Add oils, sauces, and dressings manually.** If you cooked with oil or added dressing, log it — this single habit removes the largest systematic bias.
 3. **Use barcode scanning for packaged foods.** A barcode gives you the label's actual numbers; there is no reason to photo-estimate a wrapped product.
 4. **Weigh when precision matters.** For calorie-dense staples (nuts, rice, pasta, oils), an occasional food-scale check calibrates your eye.
-5. **Track trends, not single meals.** Random errors largely cancel out over a week. Judge your intake by the weekly average and the direction of your weight trend, not one lunch.
+5. **Track trends, not single meals.** Random errors largely cancel out over a week — a consistent bias does not. Judge your intake by the weekly average and the direction of your weight trend, not one lunch, and see [how to read your own log](https://snapnutritionai.app/calorie-deficit-tracking.html.md) for what a week of numbers can and cannot show.
 
 ## How SnapNutrition AI handles this
 
 [SnapNutrition AI](https://snapnutritionai.app/index.html.md) is designed around these limitations rather than in denial of them:
 
-- Four input methods — **photo, barcode, voice, and text** — so you can pick the most accurate one for each food
+- Six input methods — **photo, photo library, barcode, voice, text, and manual entry** — so you can pick the most accurate one for each food. Manual entry makes no AI request at all, so when you already have the numbers from a label, a food scale, or a recipe you cook often, you can enter them directly with no estimation in the loop. You can also share a photo in from Photos, Messages, or any other app.
 - Every scan is **editable**: adjust portions and ingredients after the AI's first pass
 - An in-app accuracy disclaimer, because we would rather set expectations honestly than overpromise
 - Statistics that emphasize daily and weekly trends over single-meal precision
@@ -77,6 +77,7 @@ Want fast AI estimates that you can review and correct? SnapNutrition AI lets yo
 - [BYOK calorie tracker: use your own Gemini, OpenAI, Anthropic, or OpenRouter key](https://snapnutritionai.app/byok-calorie-tracker.html.md)
 - [MyFitnessPal alternative for iPhone: honest comparison](https://snapnutritionai.app/myfitnesspal-alternative.html.md)
 - [Cal AI alternative: the same photo scanning without a subscription](https://snapnutritionai.app/cal-ai-alternative.html.md)
+- [Am I actually in a calorie deficit? How to read your own log](https://snapnutritionai.app/calorie-deficit-tracking.html.md)
 - [Best free AI calorie tracker apps in 2026](https://snapnutritionai.app/best-free-ai-calorie-tracker-apps-2026.html.md)
 - [What makes an AI calorie tracker privacy-first?](https://snapnutritionai.app/privacy-first-ai-calorie-tracker.html.md)
 - [SnapNutrition AI homepage](https://snapnutritionai.app/index.html.md)

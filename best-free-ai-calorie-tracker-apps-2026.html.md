@@ -6,7 +6,7 @@
 
 “Free” can mean a free download, three scans a day, a free API tier, or no photo scanning at all. Here is the practical difference.
 
-Published by SnapNutrition AI · Last verified August 18, 2026
+Published by SnapNutrition AI · Last updated September 15, 2026 · Competitor details verified August 2026
 
 **Short answer:** there is no single best option for everyone. SnapNutrition AI is the strongest fit if you want AI photo tracking without a mandatory app subscription and do not mind connecting an API key. SnapCalorie offers up to three free AI logs per day. Cal AI and MyFitnessPal require a paid plan for their core photo-scanning features.
 
@@ -65,5 +65,6 @@ Want AI food tracking without a mandatory app subscription? Try SnapNutrition AI
 - [SnapCalorie alternative for iPhone](https://snapnutritionai.app/snapcalorie-alternative.html.md)
 - [What makes an AI calorie tracker privacy-first?](https://snapnutritionai.app/privacy-first-ai-calorie-tracker.html.md)
 - [How accurate are AI calorie counters?](https://snapnutritionai.app/ai-calorie-counter-accuracy.html.md)
+- [Am I actually in a calorie deficit?](https://snapnutritionai.app/calorie-deficit-tracking.html.md)
 
 SnapNutrition AI is for general food logging and wellness support. It is not medical advice and should not replace guidance from a doctor or registered dietitian.

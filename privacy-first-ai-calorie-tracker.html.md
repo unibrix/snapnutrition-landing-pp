@@ -6,7 +6,7 @@
 
 A food photo can reveal routines, location clues, dietary restrictions, and health goals. “We value privacy” is not enough—follow the data flow.
 
-Published by SnapNutrition AI · Last updated August 18, 2026
+Published by SnapNutrition AI · Last updated September 15, 2026
 
 **Short answer:** a privacy-first AI calorie tracker should minimize accounts and identifiers, explain exactly where photos are processed, keep the diary locally when possible, provide clear retention rules, avoid advertising profiles, and let users export or delete their data. AI analysis is rarely fully offline, so the important question is who receives each request and what they do with it.
 
@@ -77,5 +77,6 @@ Want a local-first diary with a documented BYOK data path? Try SnapNutrition AI 
 - [Best free AI calorie tracker apps in 2026](https://snapnutritionai.app/best-free-ai-calorie-tracker-apps-2026.html.md)
 - [SnapCalorie alternative](https://snapnutritionai.app/snapcalorie-alternative.html.md)
 - [Cal AI alternative](https://snapnutritionai.app/cal-ai-alternative.html.md)
+- [Am I actually in a calorie deficit?](https://snapnutritionai.app/calorie-deficit-tracking.html.md)
 
 This guide explains product architecture and published policies; it is not legal, medical, or security advice.

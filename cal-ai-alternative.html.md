@@ -6,7 +6,7 @@
 
 Both apps scan your meal from a photo. The difference is what happens when the trial ends.
 
-Last updated: August 18, 2026 · Pricing verified August 2026
+Last updated: September 15, 2026 · Pricing verified August 2026
 
 **Short answer:** SnapNutrition AI is a Cal AI alternative for iPhone users who want photo calorie tracking without a mandatory app subscription. Cal AI's App Store listing says food-scanning results require a subscription; SnapNutrition AI instead supports BYOK provider keys and offers optional Auto Mode.
 
@@ -34,7 +34,7 @@ That architectural difference produces most of the others: no SnapNutrition acco
 | Export your diary | Yes — JSON or CSV, any time | Limited |
 | Apple Watch | Yes, including voice logging and complications | Yes |
 | Widgets | Home Screen, Lock Screen, Control Center | Yes |
-| Languages | 11 | Multiple |
+| Languages | 14 | Multiple |
 | Platforms | iPhone, iPad, Apple Watch | iOS and Android |
 | Ads | No | No |
 
@@ -50,11 +50,11 @@ Two honest caveats. Free tiers are a commercial decision the providers can chang
 
 ## What you get beyond the photo scan
 
-- **Five ways in.** Photo, barcode, voice, text, and manual entry for the meals you already know by heart. You can also share a photo into the app from Messages, your camera roll, or anywhere else with a share sheet.
+- **Six ways in.** Photo, photo library, barcode, voice, text, and manual entry for the meals you already know by heart. You can also share a photo into the app from Messages, your camera roll, or anywhere else with a share sheet.
 - **A goal that's calculated, not guessed.** The daily calorie target comes from your height, weight, age and activity level, and can import your profile from Apple Health instead of asking you to type it.
 - **Your diary stays yours.** Export everything to JSON or CSV whenever you want. Nothing is trapped behind a subscription you have to keep paying to read your own history.
 - **Watch and widgets.** Log by voice from your wrist; see goal progress on the Home Screen, Lock Screen, and Control Center.
-- **Eleven languages**, fully localised.
+- **Fourteen languages**, fully localised.
 
 ## Honest tradeoffs — when you should NOT switch
 

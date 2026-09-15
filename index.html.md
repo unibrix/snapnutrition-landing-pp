@@ -16,12 +16,23 @@ In free [BYOK mode](https://snapnutritionai.app/byok-calorie-tracker.html.md), y
 
 ## See SnapNutrition AI in Action
 
-![SnapNutrition AI home screen - AI-powered calorie tracking app with scan, photo, barcode, voice, and text input](https://snapnutritionai.app/images/screenshot-1.webp?v=2)
-![SnapNutrition AI camera view - Point, shoot, track - AI identifies food and calculates calories instantly](https://snapnutritionai.app/images/screenshot-2.webp?v=3)
-![SnapNutrition AI history screen - Your complete food diary with daily calorie totals](https://snapnutritionai.app/images/screenshot-3.webp?v=2)
-![SnapNutrition AI statistics - Track your progress with daily goals, weekly trends, and macro breakdown](https://snapnutritionai.app/images/screenshot-4.webp?v=2)
-![SnapNutrition AI meal detail - Fine-tune every meal with adjustable portions for accurate tracking](https://snapnutritionai.app/images/screenshot-5.webp?v=2)
-![SnapNutrition AI widgets - Always within reach, track at a glance from your home screen](https://snapnutritionai.app/images/screenshot-6.webp?v=2)
+![SnapNutrition AI home screen - AI-powered calorie tracking app with scan, photo, barcode, voice, text, and manual entry](https://snapnutritionai.app/images/screenshot-1.webp?v=4)
+![SnapNutrition AI camera view - Point, shoot, track - AI identifies food and calculates calories instantly](https://snapnutritionai.app/images/screenshot-2.webp?v=4)
+![SnapNutrition AI history screen - Your complete food diary, meals grouped by day with a daily calorie total](https://snapnutritionai.app/images/screenshot-3.webp?v=4)
+![SnapNutrition AI statistics - Calorie and macro goal rings, a goal line on the chart, and days within goal](https://snapnutritionai.app/images/screenshot-4.webp?v=4)
+![SnapNutrition AI meal detail - Fine-tune every meal by adjusting each component's portion](https://snapnutritionai.app/images/screenshot-5.webp?v=4)
+![SnapNutrition AI widgets - Home Screen widgets showing calorie progress and one-tap photo, text, voice, and barcode logging](https://snapnutritionai.app/images/screenshot-6.webp?v=4)
+
+### On iPad and Apple Watch, too
+
+One app, one setup, the same diary on every device you already own — including calorie and macro rings on your wrist and per-macro charts you can switch between.
+
+![SnapNutrition AI on iPad - the home screen with scan, photo, barcode, and manual entry](https://snapnutritionai.app/images/screenshot-ipad-1.webp?v=1)
+![SnapNutrition AI on iPad - the food diary, meals grouped by day with a daily calorie total](https://snapnutritionai.app/images/screenshot-ipad-2.webp?v=1)
+![SnapNutrition AI on iPad - statistics with calorie and macro rings and a weekly chart](https://snapnutritionai.app/images/screenshot-ipad-3.webp?v=1)
+![SnapNutrition AI on Apple Watch - tap to speak and log a meal by voice from your wrist](https://snapnutritionai.app/images/screenshot-watch-1.webp?v=1)
+![SnapNutrition AI on Apple Watch - today's calorie ring with protein, carb, and fat progress](https://snapnutritionai.app/images/screenshot-watch-2.webp?v=1)
+![SnapNutrition AI on Apple Watch - the all-time calorie chart with the goal line, switchable to protein, carbs, or fat](https://snapnutritionai.app/images/screenshot-watch-3.webp?v=2)
 
 Try every core tracking feature without a mandatory subscription.
 
@@ -43,7 +54,7 @@ Describe a meal, speak it aloud, or share a food photo from another app. Siri Sh
 
 ### 📈 Goals & Progress
 
-Set calorie and macro targets, import profile details from Apple Health, and review daily, weekly, or all-time trends.
+Get a daily calorie target from your own profile, or import it from Apple Health. Protein, carb, and fat goals follow from it and sit as rings beside your calories. Charts carry a goal line and a 7-day average, and show how many logged days landed within goal.
 
 ### ⌚ Watch, Widgets & Shortcuts
 
@@ -79,7 +90,7 @@ Your diary stays on your device or in your personal iCloud. BYOK requests go dir
 
 ### 🌍 Made for Different Routines
 
-Choose metric or imperial units and use the app in any of 11 supported languages.
+Choose metric or imperial units and use the app in any of 14 supported languages.
 
 ## A Note on Accuracy
 
@@ -101,7 +112,7 @@ AI calorie estimates are typically within 10-30% accuracy depending on portion s
 
 ### Is my data private?
 
-Yes. Your meal data stays on your device (with optional iCloud sync). In BYOK mode, food images go directly from your device to whichever provider you picked — Google, OpenAI, Anthropic, or OpenRouter — and we operate no backend and never see your data. In the optional Auto Mode subscription, requests pass through a minimal Cloudflare-hosted proxy that verifies your subscription and forwards the photo to OpenAI; we never store food photos. You can export your whole diary as JSON or CSV at any time. See our [Privacy Policy](https://snapnutritionai.app/privacy.html.md) for full details.
+Yes. Your meal data stays on your device, and syncs through your own iCloud only if you turn that on. In BYOK mode, food images go straight from your device to the provider you picked — Google, OpenAI, Anthropic, or OpenRouter — and we operate no backend at all. In optional Auto Mode, photos pass through our proxy on the way to the AI and are not stored. You can export your whole diary as JSON or CSV at any time. See our [Privacy Policy](https://snapnutritionai.app/privacy.html.md) for full details.
 
 ### What API key do I need?
 
@@ -130,6 +141,9 @@ What Bring Your Own Key means, what it costs per day, and why it can beat subscr
 [### AI Calorie Counter Accuracy
 
 What photo food scanners can and can't do — common failure modes and how to get better results.](https://snapnutritionai.app/ai-calorie-counter-accuracy.html.md)
+[### Calorie Deficit Tracking
+
+Random error cancels over a week; bias never does. How to read a goal line, an average, and a gap.](https://snapnutritionai.app/calorie-deficit-tracking.html.md)
 [### MyFitnessPal Alternative
 
 An honest comparison of SnapNutrition AI, MyFitnessPal, Cronometer, Lose It!, and Cal AI.](https://snapnutritionai.app/myfitnesspal-alternative.html.md)
@@ -149,7 +163,7 @@ No SnapNutrition account is required. Your meal logs, goals, and history stay on
 
 **BYOK mode:** Food images and text descriptions go directly from your device to your chosen AI provider (Google Gemini, OpenAI, Anthropic, or OpenRouter) using your own API key. No proxy, no backend touch — we never see or store your data. Your diary exports to JSON or CSV whenever you want it.
 
-**Auto Mode (optional subscription, $2.99/month or $29.99/year with a 3-day free trial):** Requests pass through a minimal Cloudflare-hosted proxy that verifies your Apple subscription, runs Apple App Attest for device integrity, and enforces a fair-use daily scan limit. Food photos are forwarded to OpenAI for analysis and not stored on our side. We retain limited pseudonymous operational telemetry for rate limiting and abuse prevention; it contains no food content, name, or email address.
+**Auto Mode (optional, $2.99/month or $29.99/year, 3-day free trial):** Photos pass through our own proxy on the way to the AI, so you never touch an API key. We do not store them. Nothing we keep contains your food, your name, or your email address.
 
 Full details in our [Privacy Policy](https://snapnutritionai.app/privacy.html.md).
 

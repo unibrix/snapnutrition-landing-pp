@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="system">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calorie Deficit Tracking: How to Read Your Own Log</title>
+    <meta name="description" content="Am I actually in a calorie deficit? Why random logging error cancels over a week but bias never does, and how to read a goal line, a rolling average, and days within goal. Verified September 2026.">
+    <meta name="robots" content="index, follow">
+    <link rel="stylesheet" href="styles.css?v=5">
+    <script>try{document.documentElement.dataset.theme=localStorage.getItem('snapnutrition_theme')||'system'}catch(e){document.documentElement.dataset.theme='system'}</script>
+    <link rel="canonical" href="https://snapnutritionai.app/calorie-deficit-tracking.html">
+    <link rel="alternate" type="text/markdown" href="https://snapnutritionai.app/calorie-deficit-tracking.html.md" title="Markdown version for AI agents">
+
+    <meta property="og:title" content="Am I Actually in a Calorie Deficit? How to Read Your Own Log">
+    <meta property="og:description" content="No tracker can prove a deficit. Here is what a week of noisy logged numbers can actually tell you.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://snapnutritionai.app/calorie-deficit-tracking.html">
+    <meta property="og:image" content="https://snapnutritionai.app/images/og-image.png">
+    <meta property="og:site_name" content="SnapNutrition AI">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Am I Actually in a Calorie Deficit?">
+    <meta name="twitter:description" content="Random error cancels over a week. Bias does not. Read your log against itself.">
+    <meta name="twitter:image" content="https://snapnutritionai.app/images/og-image.png">
+    <link rel="icon" type="image/png" href="images/favicon.png?v=2">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png?v=2">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "Article",
+                "@id": "https://snapnutritionai.app/calorie-deficit-tracking.html#article",
+                "headline": "Am I Actually in a Calorie Deficit? How to Read Your Own Log",
+                "description": "Why random logging error cancels over a week while systematic bias does not, and how to read a goal line, a rolling average, days within goal, and a weekday versus weekend split.",
+                "url": "https://snapnutritionai.app/calorie-deficit-tracking.html",
+                "datePublished": "2026-09-15",
+                "dateModified": "2026-09-15",
+                "inLanguage": "en",
+                "author": {"@type": "Organization", "name": "SnapNutrition AI", "url": "https://snapnutritionai.app/"},
+                "publisher": {"@type": "Organization", "name": "SnapNutrition AI", "url": "https://snapnutritionai.app/"},
+                "image": "https://snapnutritionai.app/images/og-image.png",
+                "about": {"@id": "https://snapnutritionai.app/#app"},
+                "mainEntityOfPage": "https://snapnutritionai.app/calorie-deficit-tracking.html"
+            },
+            {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://snapnutritionai.app/"},
+                    {"@type": "ListItem", "position": 2, "name": "Calorie Deficit Tracking", "item": "https://snapnutritionai.app/calorie-deficit-tracking.html"}
+                ]
+            },
+            {
+                "@type": "FAQPage",
+                "mainEntity": [
+                    {
+                        "@type": "Question",
+                        "name": "Do calorie tracking errors average out over a week?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Random error largely does. Scan-to-scan wobble is about as likely to run high as low, so a week of days sits much closer to its own mean than any single day. Systematic error does not average out at all. If you habitually miss the cooking oil or read portions low, thirty days of logging gives you a very precise version of the same undercount. More logging buys precision, not accuracy."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Can a calorie tracker tell me whether I am in a deficit?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "No. A deficit is intake minus expenditure, and a food log measures neither of those directly. It measures what you wrote down, with 10-30% estimation error on photo scans, and it never measures what you burned. What a log can show is change over time, because your own estimating bias stays roughly constant from week to week. Whether that change is producing the result you want is a question for a bathroom scale and, where it matters, a clinician."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Should I look at daily calories or the weekly average?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "The average. A single day carries both real variation in what you ate and the estimation error of each scan, so it is the least informative number on the screen. In SnapNutrition AI the daily bars are deliberately faded to a backdrop and the rolling average is drawn as a line on top, because daily intake is noise and the trend is the signal."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "How many days do I need to log before the statistics mean anything?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "In SnapNutrition AI the chart refuses to draw a trend line until you have three logged days, and the summary cards - Within goal, Daily Average, and the weekday and weekend pair - stay hidden until you have seven. A chart with one bar is not a trend, and an adherence card reading 1 of 1 is noise dressed as insight. The rings for today never wait; they are meaningful from the first scan."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Does a day I forgot to log count as zero calories?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Not in SnapNutrition AI. A day with no logged meal is treated as a gap and skipped, not counted as a zero, so that a week off does not look identical to a week of eating less. The honest consequence is that your average only describes the days you logged, and the days people skip tend not to be their quietest ones. Read the denominator on the Within goal card as carefully as the numerator."
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+    </script>
+</head>
+<body>
+    <div class="theme-toggle"><fieldset class="theme-toggle-group"><legend class="visually-hidden">Theme</legend><label class="theme-option"><input type="radio" name="theme" data-theme-value="light"><svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg><span class="visually-hidden">Light theme</span></label><label class="theme-option"><input type="radio" name="theme" data-theme-value="dark"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg><span class="visually-hidden">Dark theme</span></label><label class="theme-option"><input type="radio" name="theme" data-theme-value="system"><svg aria-hidden="true" class="icon-desktop" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><path d="M8 21h8M12 17v4"/></svg><svg aria-hidden="true" class="icon-mobile" viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><path d="M12 18h.01"/></svg><span class="visually-hidden">System theme</span></label></fieldset></div>
+    <div id="cookie-banner" class="cookie-banner" role="dialog" aria-label="Analytics preferences" aria-hidden="true" style="display: none;"><div class="cookie-content"><p id="cookie-message">Help us understand site usage with Google Analytics. Rejecting keeps analytics off.</p><div class="cookie-buttons"><button type="button" id="cookie-accept" class="cookie-btn accept">Accept</button><button type="button" id="cookie-reject" class="cookie-btn reject">Reject</button></div></div></div>
+
+    <main class="article-page">
+        <a href="index.html" class="back-link">&larr; Back to Home</a>
+        <article>
+            <h1>Am I Actually in a Calorie Deficit?</h1>
+            <p class="subtitle">A food log measures what you wrote down. It never measures what you burned — so the useful question is not whether the number is true, but whether it is moving.</p>
+            <p class="article-meta">Published by SnapNutrition AI · Last updated September 15, 2026</p>
+
+            <div class="answer-box"><p><strong>Short answer:</strong> no calorie tracker can prove you are in a deficit. None of them measure energy expenditure, and a photo estimate of a meal carries 10–30% error on its own. What a log <em>can</em> show is change, because your personal estimating bias stays roughly constant from week to week: a rolling average that falls is real movement even while the absolute number stays uncertain. Read the average, the goal line, and how many logged days landed within goal — never yesterday's total.</p></div>
+
+            <p>This guide is published by the team behind SnapNutrition AI, so it is not an independent review. The method applies to any food log; where it describes a specific screen, that screen is ours. It also starts where our <a href="ai-calorie-counter-accuracy.html">honest breakdown of AI calorie counter accuracy</a> stops: that page covers why individual scans are wrong — portions, hidden oils, mixed dishes, restaurant cooking — and this one covers what to do with a week of the resulting numbers. The ±30% wobble is taken as given here, not re-argued.</p>
+
+            <h2>Two kinds of error, and only one of them averages out</h2>
+            <p>Every logged day carries two different mistakes, and they behave nothing alike.</p>
+            <ul>
+                <li><strong>Random error</strong> is the scan-to-scan wobble: the angle of the photo, the depth of the bowl, the model's own variability. It is about as likely to run high as low, so it partly cancels. A week of days sits much closer to its own mean than any single day does.</li>
+                <li><strong>Systematic error</strong> is bias: the tablespoon of oil you never think to log, the portions you consistently read small, the handful of nuts that is not a meal so never becomes an entry. It does not cancel, because it always points the same way.</li>
+            </ul>
+            <p>The consequence is worth sitting with. Averaging thirty days of a habitual undercount does not remove the undercount — it gives you a very precise version of it. More logging buys <em>precision</em>, never <em>accuracy</em>. No amount of diligence makes the absolute number trustworthy enough to prove a deficit, because the thing you would be comparing it against is an expenditure figure no phone can measure either.</p>
+
+            <h2>Read your log against itself, not against the truth</h2>
+            <p>That same stubbornness is what makes a log useful. Bias travels with you. If you under-log by some amount this week, you probably under-log by roughly the same amount next week, so the <em>difference</em> between the two weeks survives even though neither figure is correct on its own.</p>
+            <p>So treat your first ordinary week as a baseline rather than a verdict. Log the way you normally eat, change nothing, and let that average be the line every later week is read against. A move of a few hundred calories in the rolling average means something. The number the average sits at means considerably less.</p>
+            <p>Four things break the assumption that your bias is constant, and all four are worth knowing about before you read a change as real:</p>
+            <ul>
+                <li><strong>You changed input method.</strong> Barcodes and manual entry take their numbers from a label rather than from a photo estimate. Moving packaged foods onto barcodes usually makes your logged total go up — that is better measurement, not more eating.</li>
+                <li><strong>You started logging more completely.</strong> Capturing the snacks you used to skip raises the number for the same behaviour. A rise in week two is as often improved logging as it is a worse week.</li>
+                <li><strong>You changed what you eat, not just how much.</strong> Photo estimation is weaker on mixed dishes and restaurant food than on a plate of recognisable components, so a shift in cuisine shifts the size of the bias.</li>
+                <li><strong>You started skipping days.</strong> This one is large enough to have its own section below.</li>
+            </ul>
+
+            <h2>Four numbers worth reading</h2>
+            <p>SnapNutrition AI's Statistics screen — one tap from the main screen — plots calories, protein, carbs, or fat over 7 days, 30 days, or all time. The daily bars are drawn faded to a backdrop and the rolling average is a line on top of them, because daily intake is the noise and the trend is the signal. You can drag across the chart to read any single bin, and the callout clears itself a moment after you lift your finger.</p>
+            <div class="comparison-table-wrap">
+                <table class="comparison-table">
+                    <thead><tr><th scope="col">Reading</th><th scope="col">What it answers</th><th scope="col">What it cannot tell you</th></tr></thead>
+                    <tbody>
+                        <tr><th scope="row">Goal line</th><td>Where each logged day sat relative to the target you set, as a dashed line across the chart.</td><td>Whether that target is the right one for you. It is an estimate you can overwrite.</td></tr>
+                        <tr><th scope="row">Rolling average</th><td>Which direction intake is moving once single-day noise is smoothed out. On the daily view the window is your last seven logged days.</td><td>The true level of your intake. The bias inside it is still there, unchanged.</td></tr>
+                        <tr><th scope="row">Within goal</th><td>How many of your logged days landed at or under the calorie goal, as “x of y”.</td><td>Anything at all about the days you did not log. They are not in either number.</td></tr>
+                        <tr><th scope="row">Weekdays vs weekends</th><td>Whether one part of the week runs heavier than the other, as two averages side by side.</td><td>Why it does, or whether the gap is intake or just patchier weekend logging.</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <p><strong>“Within goal” is a calorie reading.</strong> The card follows whichever nutrient the chart is showing, but <em>at or under</em> is the right test for a ceiling and most people treat protein as a floor. Read adherence on calories; read the macros from the chart and the average instead.</p>
+            <p>Why at-or-under rather than a band around the goal? Because the goal ring drawn directly above those cards has always gone green under the goal, and a ±10% band would count an over-goal day as a success while failing a well-under one — the opposite of the ring, on the same screen. It also reads the low days correctly for a food scanner: a 200-calorie day is almost always partial logging rather than a 200-calorie day, and treating that as a failure would punish you for not finishing your data entry.</p>
+            <p class="note-box">Three of these four readings are hidden in your first week, on purpose. The chart will not draw a trend line until three days are logged — it says “Keep logging to see your trend” instead — and Within goal, Daily Average and the weekday/weekend pair all stay hidden until seven days are logged. A chart with one bar is not a trend, and an adherence card reading “1 of 1” is noise dressed as insight. Today's rings never wait; they are meaningful from the first scan.</p>
+
+            <h2>Your average is only as honest as the days you logged</h2>
+            <p>A day with no logged meal is treated as a gap, not a zero. The chart skips it and the summary cards skip it, so the divisor everywhere is logged days rather than calendar days. The reason is that counting a blank day as zero would make “stopped logging” look identical to “ate much less”, which is by far the more damaging of the two mistakes to make.</p>
+            <p>The honest cost of that choice is a second bias, and it does not cancel either. The days you skip are not a random sample of your life. They skew toward the days that were busiest, least planned, eaten out, or simply worst — exactly the days you would least want dropped from an average. So a logged-days-only average is quietly flattering, and the metric rewards nobody for not logging.</p>
+            <p>The practical version: read the denominator as carefully as the numerator. “5 of 7” over a calendar week is a different statement from “5 of 7” when five weekdays never got an entry. If a week looks unusually good, check how many days it is actually made of before you believe it.</p>
+
+            <h2>The weekend arithmetic</h2>
+            <p>The Weekdays and Weekends cards are two averages, computed over logged days on each side. They only appear when both sides exist, so a Saturday-to-Monday window does not report a weekday figure it cannot support, and the weekend value turns orange when it is the higher of the two.</p>
+            <p>The arithmetic matters more than most people expect. Two days out of seven is nearly a third of the week's weight, so a pair of heavy weekend days pulls the seven-day average up much harder than a single indulgent Tuesday does. And weekends are also the days most commonly missing from a log, which means weekend drift can show up twice: once as a higher weekend average, and once as an absence in the denominator next to it.</p>
+            <p>The app does not send an alert about this and does not draw a conclusion from it. It puts the two numbers next to each other; you read your weekend average against your weekday average and decide whether it is a problem.</p>
+
+            <h2>Where the calorie goal itself comes from</h2>
+            <p>A goal line is only as good as the goal. SnapNutrition AI works yours out with the Mifflin-St Jeor equation: an estimated resting expenditure from sex, age, height and weight, multiplied by an activity level to give a daily expenditure estimate, then adjusted by a percentage you choose — up to 30% in either direction, with 0% meaning maintain. It is a percentage of your own estimate rather than a flat number, and every part of it is editable; there is a “Set your own goal” option for people who already know their number.</p>
+            <p>You can type the profile in, or import it from Apple Health. That import is read-only — sex, date of birth, height and body mass come in, and the app never writes anything back to Health.</p>
+            <p>Protein, carb and fat goals are derived from that calorie target and your profile, and shown as rings beside calories, on the phone and on the Apple Watch. The app deliberately does not assert a macro split, because a split is a dietary opinion; in its own words, the goals are “calculated from your weight, activity level and daily target. Protein rises with body weight and while losing weight; carbs take whatever energy is left.” The percentages are an output of that, not a recommendation.</p>
+            <p class="note-box">The calculator is for adults 18 and over. Estimates are not intended for use during pregnancy or breastfeeding — consult a qualified clinician for personal advice. Mifflin-St Jeor is a population equation with coarse activity bands, so your true expenditure can differ from its estimate by a meaningful margin.</p>
+
+            <h2>When a weekly average is the wrong tool</h2>
+            <p>This method is for someone building an ordinary habit around ordinary food. It is a poor fit, or the wrong tool entirely, in four situations:</p>
+            <ul>
+                <li><strong>Clinically supervised nutrition.</strong> If intake is being managed for a medical reason, follow the measurement protocol you were given. Estimates and trend lines do not substitute for it.</li>
+                <li><strong>Competition preparation.</strong> The last weeks of a physique or weight-class prep are exactly where a 10–30% band is too wide to work with. That is a food-scale context.</li>
+                <li><strong>A history of disordered eating.</strong> An adherence percentage is not a neutral number for everyone. If counting has ever been a problem for you rather than a tool, this is a conversation to have with a professional before it is a screen to read.</li>
+                <li><strong>The numbers look fine and nothing is changing.</strong> Stay on the data before reaching for physiology. The goal line may simply be wrong — it came from a population equation and an activity band you picked yourself. The denominator may be short: a good-looking week made of four logged days is not a good week. And your bias may have shifted for one of the reasons above.</li>
+            </ul>
+            <p>Once you have checked those three things and the picture still does not add up, the log has told you everything it can. This is where a food diary stops and a bathroom scale, a doctor, or a registered dietitian begins. The app does not track body weight, does not estimate your expenditure from your results, and is not trying to.</p>
+
+            <h2>When you need more than a chart, take the data with you</h2>
+            <p>Four summary cards are not a research tool, and they are not meant to be. Your diary exports as JSON or CSV — today, this week, this month, or all time — so you can put it in a spreadsheet, work out an average over whatever window you actually care about, or hand a real history to a dietitian instead of describing it from memory. In the app's own words: your meal history as a file you own, where JSON keeps full detail and CSV opens in any spreadsheet.</p>
+            <p>That matters for a second reason. A diary that can leave is a diary you can check independently, and it keeps a log from becoming something you are locked into. The diary itself stays on the device, with iCloud sync optional and off by default — the full data path is in our <a href="privacy-first-ai-calorie-tracker.html">privacy-first tracking guide</a>.</p>
+
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-list">
+                <details class="faq-item">
+                    <summary>Do calorie tracking errors average out over a week?</summary>
+                    <p>Random error largely does. Scan-to-scan wobble is about as likely to run high as low, so a week of days sits much closer to its own mean than any single day. Systematic error does not average out at all. If you habitually miss the cooking oil or read portions low, thirty days of logging gives you a very precise version of the same undercount. More logging buys precision, not accuracy.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>Can a calorie tracker tell me whether I am in a deficit?</summary>
+                    <p>No. A deficit is intake minus expenditure, and a food log measures neither directly. It measures what you wrote down — with 10–30% estimation error on photo scans — and never what you burned. What it can show is change over time, because your own estimating bias stays roughly constant from week to week. Whether that change is producing the result you want is a question for a bathroom scale and, where it matters, a clinician.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>Should I look at daily calories or the weekly average?</summary>
+                    <p>The average. A single day carries both real variation in what you ate and the estimation error of each scan, so it is the least informative number on the screen. In SnapNutrition AI the daily bars are deliberately faded to a backdrop and the rolling average is drawn on top, because daily intake is the noise and the trend is the signal.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>How many days do I need to log before the statistics mean anything?</summary>
+                    <p>The chart refuses to draw a trend line until three days are logged, and the summary cards — Within goal, Daily Average, and the weekday/weekend pair — stay hidden until seven. A chart with one bar is not a trend, and an adherence card reading “1 of 1” is noise dressed as insight. Today's rings never wait; they are meaningful from the first scan.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>Does a day I forgot to log count as zero calories?</summary>
+                    <p>No. A day with no logged meal is treated as a gap and skipped, not counted as a zero, so a week off does not look identical to a week of eating less. The honest consequence is that your average only describes the days you logged, and the days people skip tend not to be their quietest ones. Read the denominator on the Within goal card as carefully as the numerator.</p>
+                </details>
+            </div>
+
+            <h2>Sources</h2>
+            <ul class="source-list">
+                <li><a href="https://pubmed.ncbi.nlm.nih.gov/2305711/" target="_blank" rel="noopener">Mifflin MD, St Jeor ST, et al. “A new predictive equation for resting energy expenditure in healthy individuals.” Am J Clin Nutr, 1990</a></li>
+                <li><a href="https://apps.apple.com/us/app/snapnutrition-ai/id6757797704" target="_blank" rel="noopener">SnapNutrition AI App Store listing</a> — requires iOS 17.6+ / watchOS 10.0+</li>
+                <li><a href="ai-calorie-counter-accuracy.html">How accurate are AI calorie counters?</a> — the 10–30% range and where it comes from</li>
+                <li><a href="privacy.html">SnapNutrition AI Privacy Policy</a></li>
+            </ul>
+
+            <div class="cta-block">
+                <p>Want a goal line, a rolling average, and an honest denominator on your own log? <a href="index.html">SnapNutrition AI</a> runs on your own provider key or an optional subscription.</p>
+                <a href="https://apps.apple.com/us/app/snapnutrition-ai/id6757797704" class="app-store-badge" aria-label="Download SnapNutrition AI on the App Store"><img src="images/download-on-the-app-store.svg?v=2" alt="Download SnapNutrition AI on the App Store"></a>
+            </div>
+
+            <h2>Related reading</h2>
+            <ul>
+                <li><a href="ai-calorie-counter-accuracy.html">How accurate are AI calorie counters?</a></li>
+                <li><a href="byok-calorie-tracker.html">BYOK calorie tracker for iPhone</a></li>
+                <li><a href="privacy-first-ai-calorie-tracker.html">What makes an AI calorie tracker privacy-first?</a></li>
+                <li><a href="best-free-ai-calorie-tracker-apps-2026.html">Best free AI calorie tracker apps in 2026</a></li>
+                <li><a href="index.html">SnapNutrition AI homepage</a></li>
+            </ul>
+            <p class="note-box">SnapNutrition AI is for general food logging and wellness support. It is not medical advice and should not replace guidance from a doctor or registered dietitian.</p>
+        </article>
+    </main>
+
+    <footer><div class="links"><a href="index.html">Home</a><a href="privacy.html">Privacy Policy</a><a href="#" id="cookie-settings">Cookie Settings</a></div><p class="copyright">&copy; <span id="year"></span> SnapNutrition AI. All rights reserved.</p><p class="powered-by">Powered by <a href="https://unibrix.com" target="_blank" rel="noopener">Unibrix</a></p></footer>
+    <script src="site.js?v=1"></script>
+</body>
+</html>

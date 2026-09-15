@@ -4,7 +4,7 @@
 
 # Privacy Policy
 
-Last updated: August 18, 2026
+Last updated: September 15, 2026
 
 SnapNutrition AI ("we", "our", or "the app") is committed to protecting your privacy. This Privacy Policy explains what information we and our service providers handle when you use our iOS application, the snapnutritionai.app website, and related services.
 
@@ -13,7 +13,7 @@ SnapNutrition AI ("we", "our", or "the app") is committed to protecting your pri
 SnapNutrition AI offers two ways to use the app. Your data flow differs between them, so this policy describes both:
 
 - **BYOK (Bring Your Own Key)** — the free, default option. You provide your own API key for one of four AI providers — Google Gemini, OpenAI, Anthropic, or OpenRouter — which is stored only on your device. Scan requests go directly from your device to the AI provider; we operate no backend and never see your data.
-- **Auto Mode** — an optional auto-renewing subscription ($2.99/month or $29.99/year, billed by Apple, includes a 3-day free trial). Scan requests pass through a minimal Cloudflare-hosted proxy we operate, which verifies your Apple subscription, runs an Apple App Attest device-integrity check, applies a fair-use daily scan limit, and forwards the request to OpenAI. We never store your food photos. We log a small amount of pseudonymous operational telemetry per scan (see "Auto Mode Telemetry" below).
+- **Auto Mode** — an optional auto-renewing subscription ($2.99/month or $29.99/year, billed by Apple, includes a 3-day free trial). Scan requests pass through a proxy we operate, which checks your subscription and that the request came from a genuine copy of the app, applies a fair-use daily scan limit, and forwards the request to OpenAI. We never store your food photos. We log a small pseudonymous data point per scan (see "Auto Mode Telemetry" below).
 
 ## Information We Collect
 
@@ -23,11 +23,22 @@ SnapNutrition AI does not require account registration or login.
 
 - Food scan history and meal logs
 - Daily calorie goals and macro targets
+- Your Daily Goal profile — biological sex, age, height, weight, activity level and goal — whether you type it in or import it from Apple Health
 - App settings (language, measurement units, theme)
 - In BYOK mode: your API key for each AI provider you have configured (stored in the iOS Keychain with hardware-level encryption)
 - In Auto Mode: a randomly generated user identifier ("appAccountToken") used by Apple StoreKit and by our proxy to verify your subscription
 
 **Stored in your personal iCloud (only if you enable iCloud sync):** the same scan history, goals, and settings, synced across your Apple devices via Apple's CloudKit. This sync is operated by Apple, not by us, and is subject to [Apple's Privacy Policy](https://www.apple.com/legal/privacy/).
+
+## Apple Health
+
+SnapNutrition AI can read four values from Apple Health to prefill the Daily Goal calculator: **biological sex, date of birth, height, and body mass**. That is the whole list.
+
+- **It is optional and off until you ask for it.** Nothing is read until you turn on the Apple Health toggle on the Daily Goal screen and grant permission in Apple's own prompt. You can decline and type the same values in by hand.
+- **Read only. The app never writes to Apple Health** — it requests no write permission at all, so it cannot add, change, or delete anything in your Health data.
+- **Used for one purpose:** calculating a suggested daily calorie target. The imported values are stored in the app on your device alongside the rest of your settings, and are synced only if you have enabled iCloud sync.
+- **Health data is never sent to an AI provider, to our proxy, or to us.** It is not part of any scan request in either usage mode.
+- You can revoke access at any time in the Health app, under Sharing, and turn the toggle off in SnapNutrition AI.
 
 ## BYOK Mode — Data Processing
 
@@ -40,25 +51,23 @@ When you scan food in BYOK mode:
 
 ## Auto Mode — Data Processing
 
-When you scan food in Auto Mode, the following occurs:
+In Auto Mode your scan goes through a proxy we operate, which checks that your
+subscription is active and that the request came from a genuine copy of the app, applies a
+fair-use daily scan limit, and forwards the photo or description to OpenAI for analysis.
 
-- Your device sends the scan request to our Cloudflare Workers proxy at `api.snapnutritionai.app`.
-- The proxy verifies your active Apple subscription using a cryptographically signed receipt (JWS) issued by Apple StoreKit. We do not store the receipt content beyond the request lifetime.
-- The proxy verifies your device's authenticity using Apple App Attest. To enable this, your device's App Attest public key (one per install) is stored in our Cloudflare KV store. We never receive your device's private key.
-- The proxy applies a daily fair-use scan limit using a per-user counter (stored in a Cloudflare Durable Object, reset every 24 hours UTC).
-- The proxy forwards your food photo or text description to OpenAI's GPT-4 vision model for analysis. The photo passes through the proxy in memory; we do not write food photos to disk or persist them in any store.
-- The proxy returns OpenAI's response to your device.
+Your food photo passes through in memory only. We do not write it to disk or keep it
+anywhere. Apple's subscription receipt is checked and discarded within the request.
 
 ## Auto Mode — Telemetry
 
-For each Auto Mode scan request, we log one pseudonymous data point to Cloudflare Workers Analytics Engine (a time-series telemetry service) for rate-limit enforcement and operational health monitoring:
+For each Auto Mode scan we record one pseudonymous data point, used only to enforce the
+daily limit and to spot abuse:
 
-- The pseudonymous user identifier ("appAccountToken" — a UUID generated on your device, not linked to any personal information)
-- The scan type (photo, voice, text, or barcode)
-- The lifecycle state (trial / paid)
-- The current daily scan count and the request latency
+- A random identifier generated on your device, not linked to you
+- The scan type, whether the subscription is in trial or paid, the running daily count, and how long the request took
 
-This telemetry does not contain food content, food photos, request bodies, API responses, your name, or your email address. It is automatically purged from Cloudflare after 90 days. It is used solely to operate the rate-limit cap and to detect abuse patterns (e.g. unusual scan rates from a single account).
+It contains no food content, no photos, no name and no email address, and is purged
+automatically after 90 days.
 
 ## Subscription Billing
 
@@ -85,7 +94,8 @@ Depending on the mode you use, the following third parties may process your data
 
 ## Website Analytics and Consent
 
-Google Analytics is not loaded until you select “Accept” in the analytics banner. If your browser sends a Do Not Track signal, analytics remains disabled regardless of any earlier choice. Your preference is stored in your browser's local storage under `snapnutrition_cookie_consent`.
+Google Analytics is not loaded until you select “Accept” in the analytics banner, and stays
+disabled if your browser sends a Do Not Track signal. Your choice is stored in your browser.
 
 When you consent, Google Analytics may process the page viewed, referring page, timestamp, browser and device characteristics, screen size, approximate location derived from the network request, and clicks on App Store download links. We do not send Google Analytics your name, email address, food diary, food photos, or SnapNutrition app identifier.
 
@@ -108,7 +118,7 @@ All meal data is stored locally on your device and/or in your personal iCloud ac
 - Clearing all app data through iOS Settings
 - Uninstalling the app
 
-For Auto Mode infrastructure data: the App Attest public key and per-user rate-limit counter persist as long as your subscription is active and are automatically purged within 90 days after cancellation. Analytics Engine telemetry is automatically purged 90 days after creation.
+For Auto Mode: the device-verification key and your scan counter persist while your subscription is active and are purged within 90 days of cancellation. Telemetry is purged 90 days after it is created.
 
 ## European Users (GDPR)
 
@@ -137,7 +147,7 @@ To exercise these rights, email [privacy@snapnutritionai.app](mailto:privacy@sna
 
 ## Data Security
 
-API keys are stored in the iOS Keychain with hardware-level encryption. All communications with AI service providers and our proxy are encrypted using HTTPS/TLS. The Cloudflare proxy stores App Attest public keys and rate-limit counters in Cloudflare-hosted, encrypted-at-rest storage. We never have access to your device's App Attest private key, your Apple ID payment details, or your iCloud-synced data.
+API keys are stored in the iOS Keychain with hardware-level encryption. Traffic to AI providers and to our proxy is encrypted with HTTPS/TLS, and what the proxy keeps is encrypted at rest. We have no access to your Apple ID payment details or your iCloud-synced data.
 
 ## Children's Privacy
 
