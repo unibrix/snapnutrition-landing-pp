@@ -1,0 +1,100 @@
+/* ============================================================
+   THEME SCHEMA
+   Every theme file defines all of these tokens, once for light
+   and once for dark (the dark block is repeated for the explicit
+   html[data-theme="dark"] case and the system-preference case).
+   Layout CSS in styles.css only ever reads these.
+
+   Surfaces   --paper (page)  --surface (panels)  --surface-2  --line (hairlines)  --hero-bg
+   Text       --ink  --muted
+   Accent     --accent (controls, ui green)  --accent-ink (links on paper)  --accent-soft (tint)  --focus
+   Buttons    --cta-bg  --cta-ink
+   Type       --font-display  --font-body  --display-weight  --display-tracking
+   Shape      --radius (images, inputs)  --radius-lg (panels)
+   Depth      --phone-shadow
+   Rhythm     --section (vertical space between sections)
+   Sky        --sky-opacity (page-wide drifting food emoji; 0 hides them)
+   ============================================================ */
+/* Theme: Forest. Mint page, deep green ink, rounder and heavier. The shipped theme. */
+
+@font-face {
+    font-family: "Instrument Sans";
+    font-style: normal;
+    font-weight: 400 700;
+    font-display: swap;
+    src: url("../fonts/instrument-sans-latin.woff2") format("woff2");
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+    font-family: "Instrument Sans";
+    font-style: normal;
+    font-weight: 400 700;
+    font-display: swap;
+    src: url("../fonts/instrument-sans-latin-ext.woff2") format("woff2");
+    unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+:root {
+    color-scheme: light;
+    --paper: #f4f9f5;
+    --surface: #e7f1ea;
+    --surface-2: #d9e8de;
+    --line: #cfe0d5;
+    --hero-bg: #e7f1ea;
+    --ink: #0f3d2b;
+    --muted: #4c6a5a;
+    --accent: #2fb457;
+    --accent-ink: #136b3a;
+    --accent-soft: #d3eddb;
+    --focus: #005fcc;
+    --cta-bg: #136b3a;
+    --cta-ink: #ffffff;
+    --phone-shadow: drop-shadow(0 30px 40px rgba(15, 61, 43, 0.30));
+    --font-display: "Instrument Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    --font-body: "Instrument Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    --display-weight: 700;
+    --display-tracking: -0.03em;
+    --radius: 16px;
+    --radius-lg: 28px;
+    --sky-opacity: 0.10;
+    --section: clamp(4.5rem, 3rem + 5vw, 7.5rem);
+}
+
+html[data-theme="dark"] {
+    color-scheme: dark;
+    --paper: #0b1f16;
+    --surface: #123023;
+    --surface-2: #183d2d;
+    --line: #1f4a37;
+    --hero-bg: #0e281c;
+    --ink: #e6f4ea;
+    --muted: #9fbfab;
+    --accent: #3ddc6f;
+    --accent-ink: #6fe393;
+    --accent-soft: #174a31;
+    --focus: #ffd60a;
+    --cta-bg: #3ddc6f;
+    --cta-ink: #062b19;
+    --phone-shadow: drop-shadow(0 30px 40px rgba(0, 0, 0, 0.6));
+}
+
+@media (prefers-color-scheme: dark) {
+    html[data-theme="system"] {
+        color-scheme: dark;
+        --paper: #0b1f16;
+        --surface: #123023;
+        --surface-2: #183d2d;
+        --line: #1f4a37;
+        --hero-bg: #0e281c;
+        --ink: #e6f4ea;
+        --muted: #9fbfab;
+        --accent: #3ddc6f;
+        --accent-ink: #6fe393;
+        --accent-soft: #174a31;
+        --focus: #ffd60a;
+        --cta-bg: #3ddc6f;
+        --cta-ink: #062b19;
+        --phone-shadow: drop-shadow(0 30px 40px rgba(0, 0, 0, 0.6));
+    }
+}

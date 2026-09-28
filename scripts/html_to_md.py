@@ -38,6 +38,7 @@ STRIP_SELECTORS = [
     "[aria-hidden='true']",
     ".flying-emojis",
     ".back-link",
+    ".skip-link",
     "header",
     "footer",
     "nav",
@@ -136,7 +137,7 @@ def convert(html_path: Path, base: str) -> str:
 
 def main(argv: list[str]) -> int:
     base = site_base()
-    targets = [ROOT / a for a in argv] if argv else sorted(ROOT.glob("*.html"))
+    targets = [ROOT / a for a in argv] if argv else sorted(p for p in ROOT.glob("*.html") if p.name != "404.html")
     if not targets:
         print("No HTML files found.")
         return 1

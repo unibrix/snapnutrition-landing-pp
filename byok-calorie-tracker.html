@@ -3,10 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#f4f9f5" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#0b1f16" media="(prefers-color-scheme: dark)">
     <title>BYOK Calorie Tracker: Gemini, OpenAI, Anthropic, and More</title>
     <meta name="description" content="What BYOK (Bring Your Own Key) means in a calorie tracker, what it costs per day, the privacy benefits and honest tradeoffs, and how SnapNutrition AI implements it on iPhone, iPad, and Apple Watch.">
     <meta name="robots" content="index, follow">
-    <link rel="stylesheet" href="styles.css?v=7">
+    <link rel="preload" href="fonts/instrument-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="themes/forest.css?v=1">
+    <link rel="stylesheet" href="styles.css?v=9">
     <script>try{document.documentElement.dataset.theme=localStorage.getItem('snapnutrition_theme')||'system'}catch(e){document.documentElement.dataset.theme='system'}</script>
     <link rel="canonical" href="https://snapnutritionai.app/byok-calorie-tracker.html">
     <link rel="alternate" type="text/markdown" href="https://snapnutritionai.app/byok-calorie-tracker.html.md" title="Markdown version for AI agents">
@@ -16,14 +20,16 @@
     <meta property="og:description" content="What Bring Your Own Key means in a calorie tracker, what it costs per day, privacy benefits, and honest tradeoffs.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://snapnutritionai.app/byok-calorie-tracker.html">
-    <meta property="og:image" content="https://snapnutritionai.app/images/og-image.png">
+    <meta property="og:image" content="https://snapnutritionai.app/images/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
     <meta property="og:site_name" content="SnapNutrition AI">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="BYOK Calorie Tracker for iPhone">
     <meta name="twitter:description" content="What Bring Your Own Key means in a calorie tracker, what it costs per day, and the honest tradeoffs.">
-    <meta name="twitter:image" content="https://snapnutritionai.app/images/og-image.png">
+    <meta name="twitter:image" content="https://snapnutritionai.app/images/og-image.jpg">
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="images/favicon.png?v=2">
@@ -45,7 +51,7 @@
                 "dateModified": "2026-09-15",
                 "author": {"@type": "Organization", "name": "SnapNutrition AI", "url": "https://snapnutritionai.app/"},
                 "publisher": {"@type": "Organization", "name": "SnapNutrition AI", "url": "https://snapnutritionai.app/"},
-                "image": "https://snapnutritionai.app/images/og-image.png",
+                "image": "https://snapnutritionai.app/images/og-image.jpg",
                 "isPartOf": {
                     "@type": "WebSite",
                     "name": "SnapNutrition AI",
@@ -130,15 +136,16 @@
     </script>
 </head>
 <body>
-    <header class="site-header">
+    <a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
     <div class="site-header-inner">
         <a class="brand" href="index.html">SnapNutrition AI</a>
         <nav class="site-nav" aria-label="Main">
             <a href="index.html#features">Features</a>
-            <a href="index.html#how-it-works">How it works</a>
-            <a href="best-free-ai-calorie-tracker-apps-2026.html">Compare</a>
+            <a href="index.html#how">How it works</a>
+            <a href="index.html#pricing">Pricing</a>
+            <a href="index.html#compare">Compare</a>
             <a href="byok-calorie-tracker.html">BYOK</a>
-            <a href="privacy.html">Privacy</a>
             <a class="nav-cta" href="https://apps.apple.com/us/app/snapnutrition-ai/id6757797704">Get the app</a>
         </nav>
         <div class="theme-toggle">
@@ -176,10 +183,10 @@
         </div>
     </div>
 
-    <main class="article-page">
-        <a href="index.html" class="back-link">&larr; Back to Home</a>
+    <main id="main" class="article-page">
 
-        <h1>BYOK Calorie Tracker for iPhone</h1>
+        <a href="index.html" class="back-link">Back to home</a>
+    <h1>BYOK Calorie Tracker for iPhone</h1>
         <p class="subtitle">What "Bring Your Own Key" means in a calorie tracker, what it actually costs, and the honest tradeoffs.</p>
         <p class="last-updated">Last updated: September 15, 2026</p>
 
@@ -269,7 +276,7 @@
         <div class="cta-block">
             <p>Ready to use your own Gemini, OpenAI, Anthropic, or OpenRouter key? Download SnapNutrition AI and connect it in Settings.</p>
             <a href="https://apps.apple.com/us/app/snapnutrition-ai/id6757797704" class="app-store-badge" aria-label="Download SnapNutrition AI on the App Store">
-                <img src="images/download-on-the-app-store.svg?v=2" alt="Download SnapNutrition AI on the App Store">
+                <img src="images/download-on-the-app-store.svg?v=2" alt="Download SnapNutrition AI on the App Store" width="156" height="52">
             </a>
         </div>
 
@@ -325,6 +332,6 @@
     <p class="copyright">&copy; <span id="year"></span> SnapNutrition AI. All rights reserved.</p>
 </footer>
 
-    <script src="site.js?v=3"></script>
+    <script src="site.js?v=5"></script>
 </body>
 </html>

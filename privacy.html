@@ -3,9 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#f4f9f5" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#0b1f16" media="(prefers-color-scheme: dark)">
     <title>Privacy Policy | SnapNutrition AI</title>
     <meta name="description" content="Privacy Policy for SnapNutrition AI. No account is required. With your own AI key there is no backend at all; optional Auto Mode uses a proxy that never stores food photos. Website analytics is consent-only.">
-    <link rel="stylesheet" href="styles.css?v=7">
+    <link rel="preload" href="fonts/instrument-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="themes/forest.css?v=1">
+    <link rel="stylesheet" href="styles.css?v=9">
     <script>try{document.documentElement.dataset.theme=localStorage.getItem('snapnutrition_theme')||'system'}catch(e){document.documentElement.dataset.theme='system'}</script>
     <link rel="canonical" href="https://snapnutritionai.app/privacy.html">
     <link rel="alternate" type="text/markdown" href="https://snapnutritionai.app/privacy.html.md" title="Markdown version for AI agents">
@@ -62,15 +66,16 @@
     </script>
 </head>
 <body>
-    <header class="site-header">
+    <a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
     <div class="site-header-inner">
         <a class="brand" href="index.html">SnapNutrition AI</a>
         <nav class="site-nav" aria-label="Main">
             <a href="index.html#features">Features</a>
-            <a href="index.html#how-it-works">How it works</a>
-            <a href="best-free-ai-calorie-tracker-apps-2026.html">Compare</a>
+            <a href="index.html#how">How it works</a>
+            <a href="index.html#pricing">Pricing</a>
+            <a href="index.html#compare">Compare</a>
             <a href="byok-calorie-tracker.html">BYOK</a>
-            <a href="privacy.html">Privacy</a>
             <a class="nav-cta" href="https://apps.apple.com/us/app/snapnutrition-ai/id6757797704">Get the app</a>
         </nav>
         <div class="theme-toggle">
@@ -108,10 +113,10 @@
         </div>
     </div>
 
-    <div class="privacy-page">
-        <a href="index.html" class="back-link">&larr; Back to Home</a>
+    <main id="main" class="privacy-page">
 
-        <h1>Privacy Policy</h1>
+        <a href="index.html" class="back-link">Back to home</a>
+    <h1>Privacy Policy</h1>
         <p class="last-updated">Last updated: September 28, 2026</p>
 
         <p>SnapNutrition AI ("we", "our", or "the app") is committed to protecting your privacy. This Privacy Policy explains what information we and our service providers handle when you use our iOS application, the snapnutritionai.app website, and related services.</p>
@@ -257,7 +262,7 @@
         <p><a href="mailto:privacy@snapnutritionai.app">privacy@snapnutritionai.app</a></p>
         <p>For product or billing questions, see our general support address:</p>
         <p><a href="mailto:support@snapnutritionai.app">support@snapnutritionai.app</a></p>
-    </div>
+    </main>
 
     <footer class="site-footer">
     <div class="footer-grid">
@@ -297,6 +302,6 @@
     <p class="copyright">&copy; <span id="year"></span> SnapNutrition AI. All rights reserved.</p>
 </footer>
 
-    <script src="site.js?v=3"></script>
+    <script src="site.js?v=5"></script>
 </body>
 </html>

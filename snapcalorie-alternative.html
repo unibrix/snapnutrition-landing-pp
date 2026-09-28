@@ -3,10 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#f4f9f5" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#0b1f16" media="(prefers-color-scheme: dark)">
     <title>SnapCalorie Alternative: SnapNutrition AI vs SnapCalorie</title>
     <meta name="description" content="Is SnapCalorie free? Up to 3 AI logs a day, per its FAQ. SnapNutrition AI vs SnapCalorie on free scans, accounts, accuracy claims, Apple Watch, privacy, and export.">
     <meta name="robots" content="index, follow">
-    <link rel="stylesheet" href="styles.css?v=7">
+    <link rel="preload" href="fonts/instrument-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="themes/forest.css?v=1">
+    <link rel="stylesheet" href="styles.css?v=9">
     <script>try{document.documentElement.dataset.theme=localStorage.getItem('snapnutrition_theme')||'system'}catch(e){document.documentElement.dataset.theme='system'}</script>
     <link rel="canonical" href="https://snapnutritionai.app/snapcalorie-alternative.html">
     <link rel="alternate" type="text/markdown" href="https://snapnutritionai.app/snapcalorie-alternative.html.md" title="Markdown version for AI agents">
@@ -14,12 +18,14 @@
     <meta property="og:description" content="Two photo-first calorie trackers compared by cost model, setup, privacy, Apple-device support, and control of your diary.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://snapnutritionai.app/snapcalorie-alternative.html">
-    <meta property="og:image" content="https://snapnutritionai.app/images/og-image.png">
+    <meta property="og:image" content="https://snapnutritionai.app/images/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
     <meta property="og:site_name" content="SnapNutrition AI">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="SnapCalorie Alternative for iPhone">
     <meta name="twitter:description" content="SnapNutrition AI versus SnapCalorie: free access, BYOK, privacy, and platform tradeoffs.">
-    <meta name="twitter:image" content="https://snapnutritionai.app/images/og-image.png">
+    <meta name="twitter:image" content="https://snapnutritionai.app/images/og-image.jpg">
     <link rel="icon" type="image/png" href="images/favicon.png?v=2">
     <link rel="apple-touch-icon" href="images/apple-touch-icon.png?v=2">
     <script type="application/ld+json">
@@ -37,7 +43,7 @@
                 "inLanguage": "en",
                 "author": {"@type": "Organization", "name": "SnapNutrition AI", "url": "https://snapnutritionai.app/"},
                 "publisher": {"@type": "Organization", "name": "SnapNutrition AI", "url": "https://snapnutritionai.app/"},
-                "image": "https://snapnutritionai.app/images/og-image.png"
+                "image": "https://snapnutritionai.app/images/og-image.jpg"
             },
                         {
                 "@type": "FAQPage",
@@ -81,15 +87,16 @@
     </script>
 </head>
 <body>
-    <header class="site-header">
+    <a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
     <div class="site-header-inner">
         <a class="brand" href="index.html">SnapNutrition AI</a>
         <nav class="site-nav" aria-label="Main">
             <a href="index.html#features">Features</a>
-            <a href="index.html#how-it-works">How it works</a>
-            <a href="best-free-ai-calorie-tracker-apps-2026.html">Compare</a>
+            <a href="index.html#how">How it works</a>
+            <a href="index.html#pricing">Pricing</a>
+            <a href="index.html#compare">Compare</a>
             <a href="byok-calorie-tracker.html">BYOK</a>
-            <a href="privacy.html">Privacy</a>
             <a class="nav-cta" href="https://apps.apple.com/us/app/snapnutrition-ai/id6757797704">Get the app</a>
         </nav>
         <div class="theme-toggle"><fieldset class="theme-toggle-group"><legend class="visually-hidden">Theme</legend><label class="theme-option"><input type="radio" name="theme" data-theme-value="light"><svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg><span class="visually-hidden">Light theme</span></label><label class="theme-option"><input type="radio" name="theme" data-theme-value="dark"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg><span class="visually-hidden">Dark theme</span></label><label class="theme-option"><input type="radio" name="theme" data-theme-value="system"><svg aria-hidden="true" class="icon-desktop" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><path d="M8 21h8M12 17v4"/></svg><svg aria-hidden="true" class="icon-mobile" viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><path d="M12 18h.01"/></svg><span class="visually-hidden">System theme</span></label></fieldset></div>
@@ -97,9 +104,9 @@
 </header>
     <div id="cookie-banner" class="cookie-banner" role="dialog" aria-label="Analytics preferences" aria-hidden="true" style="display: none;"><div class="cookie-content"><p id="cookie-message">Help us understand site usage with Google Analytics. Rejecting keeps analytics off.</p><div class="cookie-buttons"><button type="button" id="cookie-accept" class="cookie-btn accept">Accept</button><button type="button" id="cookie-reject" class="cookie-btn reject">Reject</button></div></div></div>
 
-    <main class="article-page">
-        <a href="index.html" class="back-link">&larr; Back to Home</a>
-        <article>
+    <main id="main" class="article-page">
+        <a href="index.html" class="back-link">Back to home</a>
+    <article>
             <h1>SnapCalorie Alternative for iPhone: SnapNutrition AI vs SnapCalorie</h1>
             <p class="subtitle">Both apps turn food photos into nutrition estimates. The main differences are free usage, account architecture, Apple-device features, and where your diary lives.</p>
             <p class="article-meta">Published by SnapNutrition AI · Last updated September 27, 2026 · SnapCalorie FAQ re-checked September 27, 2026</p>
@@ -178,7 +185,7 @@
 
             <div class="cta-block">
                 <p>Want provider choice, Apple Watch support, and no mandatory app subscription? Try SnapNutrition AI.</p>
-                <a href="https://apps.apple.com/us/app/snapnutrition-ai/id6757797704" class="app-store-badge" aria-label="Download SnapNutrition AI on the App Store"><img src="images/download-on-the-app-store.svg?v=2" alt="Download SnapNutrition AI on the App Store"></a>
+                <a href="https://apps.apple.com/us/app/snapnutrition-ai/id6757797704" class="app-store-badge" aria-label="Download SnapNutrition AI on the App Store"><img src="images/download-on-the-app-store.svg?v=2" alt="Download SnapNutrition AI on the App Store" width="156" height="52"></a>
             </div>
 
             <h2>Related reading</h2>
@@ -229,6 +236,6 @@
     </div>
     <p class="copyright">&copy; <span id="year"></span> SnapNutrition AI. All rights reserved.</p>
 </footer>
-    <script src="site.js?v=3"></script>
+    <script src="site.js?v=5"></script>
 </body>
 </html>

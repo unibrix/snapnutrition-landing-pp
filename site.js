@@ -281,9 +281,60 @@
         if (year) year.textContent = new Date().getFullYear();
     }
 
+    // Faint food emoji drifting behind the page (homepage). Purely decorative;
+    // the layer is aria-hidden and disappears under prefers-reduced-motion.
+    function setupSky() {
+        var slots = document.querySelectorAll(".sky span");
+        if (!slots.length) return;
+        var food = ["🍎","🍐","🍊","🍋","🍌","🍉","🍇","🍓","🫐","🍒","🍑","🥭","🍍","🥝","🍅","🥑","🥦","🥬","🥒","🌽","🥕","🍕","🍔","🥪","🌮","🥙","🥚","🍳","🥘","🍲","🥣","🍜","🍝","🍛","🍣","🍱","🥟","🍤","🍙","🍞","🥐","🥨","🧇","🍰","🧁","🍩","🍪","🍫","🥛","🧀","🥗","🥜"];
+        var pick = function () { return food[Math.floor(Math.random() * food.length)]; };
+        slots.forEach(function (el) {
+            el.textContent = pick();
+            el.addEventListener("animationiteration", function () { el.textContent = pick(); });
+        });
+    }
+
+    // Endless screenshot strip: clone the single group until the clones cover the
+    // strip, so the CSS loop is seamless at any viewport while the gap stays fixed.
+    // Skipped under reduced motion, which leaves a plain swipeable strip.
+    function setupMarquee() {
+        var strip = document.querySelector(".marquee");
+        if (!strip) return;
+        var group = strip.querySelector(".marquee-group");
+        var reduce = window.matchMedia("(prefers-reduced-motion: reduce)");
+        var timer = null;
+        function fill() {
+            strip.querySelectorAll('.marquee-group[aria-hidden="true"]').forEach(function (g) { g.remove(); });
+            strip.classList.remove("is-live");
+            if (reduce.matches) return;
+            var gap = parseFloat(getComputedStyle(strip).columnGap) || 0;
+            var unit = group.getBoundingClientRect().width + gap;
+            if (!unit) return;
+            var clones = Math.ceil(strip.clientWidth / unit);
+            for (var i = 0; i < clones; i++) {
+                var c = group.cloneNode(true);
+                c.setAttribute("aria-hidden", "true");
+                c.querySelectorAll("img").forEach(function (img) { img.alt = ""; });
+                strip.appendChild(c);
+            }
+            strip.style.setProperty("--marquee-duration", Math.round(unit / 22) + "s");
+            strip.classList.add("is-live");
+        }
+        fill();
+        if ("IntersectionObserver" in window) {
+            new IntersectionObserver(function (entries) {
+                strip.classList.toggle("is-offscreen", !entries[0].isIntersecting);
+            }, { rootMargin: "200px 0px" }).observe(strip);
+        }
+        window.addEventListener("resize", function () { clearTimeout(timer); timer = setTimeout(fill, 150); });
+        if (reduce.addEventListener) reduce.addEventListener("change", fill);
+    }
+
     setupTheme();
     setupConsent();
     loadCloudflareBeacon();
     setupAnalyticsEvents();
     setFooterYear();
+    setupSky();
+    setupMarquee();
 })();
