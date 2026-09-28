@@ -185,18 +185,18 @@
         // notice elsewhere.
         function renderBanner() {
             if (doNotTrackEnabled()) {
-                message.textContent = "Your browser's Do Not Track setting is on, so site analytics is disabled.";
+                message.textContent = "Do Not Track is on, so cookies are off.";
                 accept.hidden = true;
                 reject.textContent = "Close";
                 return true;
             }
             accept.hidden = false;
             if (inEurope) {
-                message.textContent = "Help us understand site usage with Google Analytics. Rejecting keeps analytics off.";
+                message.textContent = "We use cookies for analytics to improve your experience";
                 accept.textContent = "Accept";
                 reject.textContent = "Reject";
             } else {
-                message.textContent = "This site counts visits with Google Analytics. You can turn that off here at any time.";
+                message.textContent = "We use cookies for analytics to improve your experience";
                 accept.textContent = "OK";
                 reject.textContent = "Turn off";
             }
