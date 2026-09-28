@@ -4,7 +4,7 @@
 
 # Privacy Policy
 
-Last updated: September 15, 2026
+Last updated: September 28, 2026
 
 SnapNutrition AI ("we", "our", or "the app") is committed to protecting your privacy. This Privacy Policy explains what information we and our service providers handle when you use our iOS application, the snapnutritionai.app website, and related services.
 
@@ -91,15 +91,17 @@ Depending on the mode you use, the following third parties may process your data
 - **Apple** — App Store subscription billing, App Attest device integrity, optional iCloud sync — [Privacy Policy](https://www.apple.com/legal/privacy/)
 - **Open Food Facts** — barcode → nutrition lookup — [Privacy Policy](https://world.openfoodfacts.org/privacy-policy)
 - **Google Analytics** — optional website analytics on this site only (not in the app) — [Google Privacy Policy](https://policies.google.com/privacy)
+- **Cloudflare Web Analytics** — cookieless, aggregate page-view counts on this site only (not in the app); it sets no cookies, stores nothing in your browser, and does not identify or track you across sites — [Cloudflare Web Analytics](https://www.cloudflare.com/web-analytics/)
 
 ## Website Analytics and Consent
 
-Google Analytics is not loaded until you select “Accept” in the analytics banner, and stays
-disabled if your browser sends a Do Not Track signal. Your choice is stored in your browser.
+Whether Google Analytics runs before you make a choice depends on where you are. For visitors in the European Economic Area, the United Kingdom, and Switzerland, Google Analytics is not loaded until you select “Accept” in the analytics banner. Elsewhere, Google Analytics runs from your first page view and the banner lets you turn it off. Either way your choice is stored in your browser and applies to later visits, and analytics stays disabled in every region if your browser sends a Do Not Track signal. We determine the region from your device’s time zone and language settings, treating unclear cases as European, and Google’s Consent Mode additionally applies the European default based on your network location.
 
 When you consent, Google Analytics may process the page viewed, referring page, timestamp, browser and device characteristics, screen size, approximate location derived from the network request, and clicks on App Store download links. We do not send Google Analytics your name, email address, food diary, food photos, or SnapNutrition app identifier.
 
-You can change your choice through “Cookie Settings” in the footer. Rejecting after a previous acceptance immediately disables future analytics events and reloads the page without the Google Analytics script.
+You can change your choice through “Cookie Settings” in the footer. Turning analytics off after it was running immediately disables future analytics events and reloads the page without the Google Analytics script.
+
+Separately from Google Analytics, this website counts page views with Cloudflare Web Analytics. It runs without the banner because it uses no cookies, stores nothing on your device, and does not build a profile of you: Cloudflare receives the page viewed, the referring page, and coarse browser and country information, and reports them to us only as aggregate totals. It is not loaded if your browser sends a Do Not Track signal.
 
 ## Data We Do Not Collect
 
@@ -131,7 +133,7 @@ If you are in the European Economic Area, United Kingdom, or Switzerland, you ha
 - **Right to data portability**
 - **Right to lodge a complaint** with your national data-protection authority
 
-The legal basis for Auto Mode processing is the performance of a contract (Apple StoreKit subscription) under GDPR Article 6(1)(b). The legal basis for optional website analytics is your consent under GDPR Article 6(1)(a), which you can withdraw at any time through Cookie Settings. To exercise any right above, email [privacy@snapnutritionai.app](mailto:privacy@snapnutritionai.app); include your appAccountToken (visible in the app's Settings) only when your request concerns Auto Mode — we'll respond within 30 days.
+The legal basis for Auto Mode processing is the performance of a contract (Apple StoreKit subscription) under GDPR Article 6(1)(b). The legal basis for cookieless aggregate page-view counting with Cloudflare Web Analytics is our legitimate interest in knowing how many people read this site (GDPR Article 6(1)(f)); it involves no cookies or identifiers. The legal basis for optional Google Analytics is your consent under GDPR Article 6(1)(a), which you can withdraw at any time through Cookie Settings. To exercise any right above, email [privacy@snapnutritionai.app](mailto:privacy@snapnutritionai.app); include your appAccountToken (visible in the app's Settings) only when your request concerns Auto Mode — we'll respond within 30 days.
 
 ## California Users (CCPA / CPRA)
 

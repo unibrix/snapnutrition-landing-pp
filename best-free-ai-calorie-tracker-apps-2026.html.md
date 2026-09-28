@@ -6,9 +6,9 @@
 
 “Free” can mean a free download, three scans a day, a free API tier, or no photo scanning at all. Here is the practical difference.
 
-Published by SnapNutrition AI · Last updated September 15, 2026 · Competitor details verified August 2026
+Published by SnapNutrition AI · Last updated September 27, 2026 · Competitor details verified August 2026, SnapCalorie FAQ re-checked September 27, 2026
 
-**Short answer:** there is no single best option for everyone. SnapNutrition AI is the strongest fit if you want AI photo tracking without a mandatory app subscription and do not mind connecting an API key. SnapCalorie offers up to three free AI logs per day. Cal AI and MyFitnessPal require a paid plan for their core photo-scanning features.
+**Short answer:** two of the four are genuinely usable for free. SnapNutrition AI is free with your own AI key and sets no scan cap of its own. SnapCalorie is free for up to three AI logs per day. Cal AI and MyFitnessPal keep photo scanning behind a paid plan. If you want free AI photo logging without a mandatory app subscription, SnapNutrition AI is the strongest fit. If three scans a day are enough and you would rather not set up a key, SnapCalorie is.
 
 This guide is published by the team behind SnapNutrition AI, so it is not an independent review. To keep it useful, the table relies on public product pages, App Store listings, and help documentation, and it states where another app is the better fit. Prices, free allowances, and features can change; follow the source links before choosing.
 
@@ -20,6 +20,19 @@ This guide is published by the team behind SnapNutrition AI, so it is not an ind
 | SnapCalorie | Up to three AI logs per day according to its official FAQ; premium plans are available for more usage. | A small daily free allowance and a nutrition-focused service | More than three daily AI logs requires premium |
 | Cal AI | No. Its App Store listing states that food-scanning analysis requires a subscription. | A polished subscription-first experience with minimal setup | The core scan is behind a subscription |
 | MyFitnessPal | No for Meal Scan. Basic logging has a free tier, but official help lists Meal Scan under Premium and Premium+. | A large established food database and broader fitness ecosystem | AI Meal Scan is not included in Free |
+
+## What you pay beyond the free tier
+
+| App | Free photo scans | Beyond free |
+| --- | --- | --- |
+| SnapNutrition AI | No cap from the app when you use your own key. Only your provider's limits apply, and Gemini and OpenRouter offer free tiers. | Nothing, or optional Auto Mode at $2.99/month or $29.99/year if you would rather not manage a key. |
+| SnapCalorie | Up to 3 AI logs per day, per its official FAQ. | A premium subscription. Its FAQ does not list the price. |
+| Cal AI | None without a subscription. | About $29.99/year on its official listing as of August 2026. Cal AI tests different offers in-app, so check the live price. |
+| MyFitnessPal | None. Meal Scan is a Premium feature. | Premium at $19.99/month or $79.99/year as of August 2026. |
+
+Free AI photo logging with no mandatory subscription, on iPhone, iPad, and Apple Watch.
+
+[![Download SnapNutrition AI on the App Store](https://snapnutritionai.app/images/download-on-the-app-store.svg?v=2)](https://apps.apple.com/us/app/snapnutrition-ai/id6757797704)
 
 ## Best for no mandatory subscription: SnapNutrition AI
 
@@ -46,6 +59,24 @@ If you are comparing the two directly, read the full [SnapCalorie alternative gu
 3. Read where food photos and diary history are processed and stored.
 4. Look for editing and export, because AI estimates will sometimes be wrong.
 5. Choose the workflow you will actually keep using: photo, barcode, voice, text, or manual entry.
+
+## Frequently asked questions
+
+### Is there a completely free AI calorie tracker?
+
+Yes, with a condition. SnapNutrition AI is free when you connect your own AI key, and Google Gemini and OpenRouter offer free API tiers, so photo scanning can cost nothing. SnapCalorie is free for up to three AI logs per day. Both free paths have limits set by someone else: your provider's rate limits, or SnapCalorie's daily cap.
+
+### Is SnapCalorie free?
+
+Partly. SnapCalorie's official FAQ says it is free for up to 3 AI logs per day. Logging more meals with AI needs its premium subscription, whose price the FAQ does not list.
+
+### Is Cal AI free to use?
+
+No. Cal AI's App Store listing states that its food-scanning analysis requires a subscription, so the core photo scan is not available on a free plan.
+
+### Does MyFitnessPal scan food for free?
+
+No. MyFitnessPal's free tier covers manual logging and its food database. Its help center lists Meal Scan under Premium and Premium+, and Premium costs $19.99 a month or $79.99 a year as of August 2026.
 
 ## Sources
 

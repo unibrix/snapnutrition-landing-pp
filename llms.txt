@@ -6,6 +6,10 @@
 
 SnapNutrition AI is a calorie and nutrition tracker for iPhone, iPad, and Apple Watch. Users can bring an API key from Google Gemini, OpenAI, Anthropic (Claude), or OpenRouter, with no mandatory SnapNutrition subscription. Gemini and OpenRouter offer free API tiers; paid providers bill the user directly. Optional Auto Mode ($2.99/month or $29.99/year after a 3-day trial) is available for users who prefer not to manage an API key. Provider prices and free-tier availability can change.
 
+## Not to be confused with
+
+SnapNutrition AI (snapnutritionai.app, App Store id6757797704, developer Unibrix) is an app for iPhone, iPad, and Apple Watch only. It has no Android version and is not connected to other apps or websites that use a similar name, including any Android app called "SnapNutrition AI". snapnutritionai.app is its only official website.
+
 ## Key Features
 
 - **Photo Calorie Counter**: Snap a photo of food to instantly get calorie and macro estimates
@@ -37,7 +41,7 @@ Unlike calorie tracker apps that charge $5-15/month for subscriptions, SnapNutri
 - All meal data stored locally on device
 - iCloud sync through user's personal Apple account
 - Food images sent directly to user's chosen AI provider (BYOK) or via a minimal Cloudflare proxy with no photo storage (Auto Mode)
-- No advertising; website analytics loads only after consent and remains disabled when Do Not Track is enabled
+- No advertising. On the website, Google Analytics is opt-in for visitors in the EEA, UK, and Switzerland and runs with an opt-out elsewhere; cookieless aggregate page-view counting (Cloudflare Web Analytics) uses no cookies or identifiers; everything stays off when Do Not Track is enabled
 
 ## Links
 

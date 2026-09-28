@@ -59,7 +59,7 @@ SnapNutrition AI is an AI calorie tracker for **iPhone, iPad, and Apple Watch** 
 - No ads, no SnapNutrition account, no mandatory subscription
 - Optional **Auto Mode** ($2.99/month or $29.99/year, 3-day free trial) for people who don't want to manage an API key
 
-BYOK is a small but growing pattern — a handful of other trackers (such as Fud AI and MacroPhase) have adopted it too, which we take as a good sign: it means the model works and users want it. SnapNutrition AI's angle is combining BYOK with multi-input logging (photo, photo library, barcode, voice, text, and manual entry), Apple Watch support, and a no-account, privacy-first design.
+BYOK is a small but growing pattern — a handful of other trackers have adopted it too, which we take as a good sign: it means the model works and users want it. SnapNutrition AI's angle is combining BYOK with multi-input logging (photo, photo library, barcode, voice, text, and manual entry), Apple Watch support, and a no-account, privacy-first design.
 
 ## Frequently Asked Questions
 

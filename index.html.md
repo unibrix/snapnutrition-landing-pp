@@ -14,6 +14,32 @@ SnapNutrition AI is a food diary for **iPhone, iPad, and Apple Watch**. Log a me
 
 In free [BYOK mode](https://snapnutritionai.app/byok-calorie-tracker.html.md), you connect your own Google Gemini, OpenAI, Anthropic, or OpenRouter key. Gemini and OpenRouter offer free tiers; paid providers charge you directly for usage. If you prefer no API-key setup, optional **Auto Mode** costs $2.99/month or $29.99/year. No SnapNutrition account is required, though creating an API key may require an account with that provider.
 
+## SnapNutrition AI at a glance
+
+What it is
+:   An AI calorie tracker and food diary for iPhone, iPad, and Apple Watch.
+
+Made by
+:   Unibrix. This is the official website.
+
+Where to get it
+:   The [App Store](https://apps.apple.com/us/app/snapnutrition-ai/id6757797704), iOS 17.6 or later. There is no Android version.
+
+Price
+:   Free with your own Google Gemini, OpenAI, Anthropic, or OpenRouter key. Optional Auto Mode is $2.99 a month or $29.99 a year.
+
+Account
+:   None. Your diary stays on your device, with optional iCloud sync.
+
+Ways to log
+:   Photo, photo library, barcode, voice, text, manual entry, and the iOS share sheet.
+
+Languages
+:   14, including English, Spanish, German, French, Polish, and Ukrainian.
+
+Similar names
+:   SnapNutrition AI is not connected to other apps or websites that use a similar name.
+
 ## See SnapNutrition AI in Action
 
 ![SnapNutrition AI home screen - AI-powered calorie tracking app with scan, photo, barcode, voice, text, and manual entry](https://snapnutritionai.app/images/screenshot-1.webp?v=4)
@@ -124,7 +150,19 @@ BYOK stands for Bring Your Own Key. Rather than requiring a subscription, SnapNu
 
 ### Can I use SnapNutrition AI on iPhone, iPad, and Apple Watch?
 
-Yes, SnapNutrition AI is available on iPhone, iPad, and Apple Watch with iCloud sync across all your Apple devices. The Watch app lets you log calories by voice and view your daily progress right from your wrist. An Android version is not yet available.
+Yes, SnapNutrition AI is available on iPhone, iPad, and Apple Watch with iCloud sync across all your Apple devices. The Watch app lets you log calories by voice and view your daily progress right from your wrist. There is no Android version.
+
+### Is SnapNutrition AI on the App Store?
+
+Yes. SnapNutrition AI is on the [App Store](https://apps.apple.com/us/app/snapnutrition-ai/id6757797704) for iPhone and iPad, with a companion Apple Watch app, and needs iOS 17.6 or later. It is made by Unibrix, and there is no Android version.
+
+### Is SnapNutrition AI the same as other apps called SnapNutrition?
+
+No. Several unrelated apps and websites use a similar name, including an Android app. SnapNutrition AI is a separate app for Apple devices, made by Unibrix, and snapnutritionai.app is its only official website.
+
+### How does SnapNutrition AI compare to SnapCalorie?
+
+Both estimate calories from food photos. SnapCalorie's FAQ says it is free for up to three AI logs per day, with a premium subscription beyond that, and it runs on a SnapCalorie account. SnapNutrition AI sets no scan cap of its own in BYOK mode, only your provider's limits apply, and it needs no account: the diary stays on your device. Read the full [SnapCalorie comparison](https://snapnutritionai.app/snapcalorie-alternative.html.md).
 
 Ready to try faster food logging on your Apple devices?
 

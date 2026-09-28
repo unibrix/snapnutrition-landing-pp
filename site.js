@@ -4,7 +4,61 @@
     var THEME_KEY = "snapnutrition_theme";
     var CONSENT_KEY = "snapnutrition_cookie_consent";
     var GA_ID = "G-JJFTFWZEQ2";
+    // Cloudflare Web Analytics: cookieless, aggregate page-view counts that do
+    // not depend on the consent banner. Paste the site token from the Cloudflare
+    // dashboard (Web Analytics -> Add a site -> JS snippet) to switch it on; an
+    // empty string keeps it off. Still skipped when Do Not Track is enabled.
+    var CF_BEACON_TOKEN = "";
     var sessionConsent = null;
+
+    // Regional consent (Google Consent Mode v2).
+    // Inside the EEA, the UK and Switzerland analytics is opt-in: nothing from
+    // Google loads until "Accept". Everywhere else it runs from the first page
+    // view and the banner is an opt-out notice. The region is guessed from the
+    // device time zone and languages, erring towards "European" when unsure.
+    // Google's own region-scoped consent default, resolved from the network
+    // location, denies analytics storage in those regions as a second guard.
+    var EUROPEAN_REGIONS = [
+        "AT", "BE", "BG", "HR", "CY", "CZ", "DK", "EE", "FI", "FR", "DE", "GR", "HU", "IE", "IT",
+        "LV", "LT", "LU", "MT", "NL", "PL", "PT", "RO", "SK", "SI", "ES", "SE",
+        "IS", "LI", "NO", "GB", "CH"
+    ];
+    var EUROPEAN_LANGUAGES = [
+        "de", "fr", "it", "nl", "pl", "sv", "da", "fi", "nb", "nn", "no", "cs", "sk", "hu", "ro",
+        "bg", "el", "hr", "sl", "et", "lv", "lt", "mt", "ga", "is", "lb", "rm", "fo", "eu", "ca",
+        "gl", "cy", "gd"
+    ];
+    var EUROPEAN_TIME_ZONES = [
+        "Europe/", "Atlantic/Reykjavik", "Atlantic/Canary", "Atlantic/Madeira", "Atlantic/Azores",
+        "Atlantic/Faroe", "Atlantic/Faeroe", "Atlantic/Jan_Mayen", "Arctic/Longyearbyen",
+        "Indian/Reunion", "Indian/Mayotte", "America/Martinique", "America/Guadeloupe",
+        "America/Cayenne", "America/Marigot", "America/St_Barthelemy", "America/Miquelon"
+    ];
+
+    function likelyEuropean() {
+        var timeZone = "";
+        try {
+            timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone || "";
+        } catch (error) {
+            return true;
+        }
+        if (!timeZone) return true;
+        for (var i = 0; i < EUROPEAN_TIME_ZONES.length; i++) {
+            if (timeZone.indexOf(EUROPEAN_TIME_ZONES[i]) === 0) return true;
+        }
+        var languages = (navigator.languages && navigator.languages.length)
+            ? navigator.languages
+            : [navigator.language || ""];
+        for (var j = 0; j < languages.length; j++) {
+            var parts = String(languages[j]).toLowerCase().split("-");
+            var region = parts.length > 1 ? parts[parts.length - 1].toUpperCase() : "";
+            if (region.length === 2 && EUROPEAN_REGIONS.indexOf(region) !== -1) return true;
+            if (parts.length === 1 && EUROPEAN_LANGUAGES.indexOf(parts[0]) !== -1) return true;
+        }
+        return false;
+    }
+
+    var inEurope = likelyEuropean();
 
     function readPreference(key) {
         try {
@@ -63,30 +117,44 @@
         writePreference(CONSENT_KEY, status);
     }
 
-    function analyticsAllowed() {
-        return !doNotTrackEnabled() && getConsent() === "accepted";
+    // Whether Google Analytics may run right now: never under Do Not Track, an
+    // explicit choice always wins, and with no choice yet it is on outside
+    // Europe and off inside.
+    function analyticsActive() {
+        if (doNotTrackEnabled()) return false;
+        var consent = getConsent();
+        if (consent === "accepted") return true;
+        if (consent === "rejected") return false;
+        return !inEurope;
+    }
+
+    function consentState(analytics) {
+        return {
+            analytics_storage: analytics,
+            ad_storage: "denied",
+            ad_user_data: "denied",
+            ad_personalization: "denied"
+        };
     }
 
     function loadAnalytics() {
-        if (!analyticsAllowed() || document.getElementById("ga-script")) return;
+        if (!analyticsActive() || document.getElementById("ga-script")) return;
 
         window.dataLayer = window.dataLayer || [];
         window.gtag = window.gtag || function () {
             window.dataLayer.push(arguments);
         };
 
-        window.gtag("consent", "default", {
-            analytics_storage: "denied",
-            ad_storage: "denied",
-            ad_user_data: "denied",
-            ad_personalization: "denied"
-        });
-        window.gtag("consent", "update", {
-            analytics_storage: "granted",
-            ad_storage: "denied",
-            ad_user_data: "denied",
-            ad_personalization: "denied"
-        });
+        // Defaults must be queued before the tag loads. Analytics on, ads off,
+        // everywhere; then the European regions denied until an explicit Accept,
+        // which Google applies from the visitor's network location.
+        window.gtag("consent", "default", consentState("granted"));
+        var europeanDefault = consentState("denied");
+        europeanDefault.region = EUROPEAN_REGIONS;
+        window.gtag("consent", "default", europeanDefault);
+        if (getConsent() === "accepted") {
+            window.gtag("consent", "update", consentState("granted"));
+        }
         window.gtag("js", new Date());
         window.gtag("config", GA_ID);
 
@@ -105,8 +173,6 @@
         var settings = document.getElementById("cookie-settings");
         if (!banner || !message || !accept || !reject || !settings) return;
 
-        var defaultMessage = message.textContent;
-
         function showBanner(show, focusButton) {
             banner.style.display = show ? "flex" : "none";
             banner.setAttribute("aria-hidden", show ? "false" : "true");
@@ -115,14 +181,26 @@
             }
         }
 
-        function reflectDoNotTrack() {
-            var enabled = doNotTrackEnabled();
-            message.textContent = enabled
-                ? "Your browser's Do Not Track setting is on, so site analytics is disabled."
-                : defaultMessage;
-            accept.hidden = enabled;
-            reject.textContent = enabled ? "Close" : "Reject";
-            return enabled;
+        // Three banner variants: Do Not Track notice, European opt-in, opt-out
+        // notice elsewhere.
+        function renderBanner() {
+            if (doNotTrackEnabled()) {
+                message.textContent = "Your browser's Do Not Track setting is on, so site analytics is disabled.";
+                accept.hidden = true;
+                reject.textContent = "Close";
+                return true;
+            }
+            accept.hidden = false;
+            if (inEurope) {
+                message.textContent = "Help us understand site usage with Google Analytics. Rejecting keeps analytics off.";
+                accept.textContent = "Accept";
+                reject.textContent = "Reject";
+            } else {
+                message.textContent = "This site counts visits with Google Analytics. You can turn that off here at any time.";
+                accept.textContent = "OK";
+                reject.textContent = "Turn off";
+            }
+            return false;
         }
 
         accept.addEventListener("click", function () {
@@ -132,6 +210,9 @@
             }
             setConsent("accepted");
             loadAnalytics();
+            if (typeof window.gtag === "function") {
+                window.gtag("consent", "update", consentState("granted"));
+            }
             showBanner(false, false);
         });
 
@@ -146,19 +227,14 @@
             showBanner(false, false);
 
             if (analyticsWasLoaded) {
-                window.gtag("consent", "update", {
-                    analytics_storage: "denied",
-                    ad_storage: "denied",
-                    ad_user_data: "denied",
-                    ad_personalization: "denied"
-                });
+                window.gtag("consent", "update", consentState("denied"));
                 window.location.reload();
             }
         });
 
         settings.addEventListener("click", function (event) {
             event.preventDefault();
-            reflectDoNotTrack();
+            renderBanner();
             showBanner(true, true);
         });
 
@@ -166,20 +242,34 @@
             if (event.key === "Escape") showBanner(false, false);
         });
 
-        reflectDoNotTrack();
-        if (doNotTrackEnabled()) {
+        var dnt = renderBanner();
+        var consent = getConsent();
+        if (dnt) {
             showBanner(false, false);
-        } else if (getConsent() === "accepted") {
+        } else if (consent === "accepted") {
             loadAnalytics();
-        } else if (getConsent() === null) {
+        } else if (consent === null) {
+            // No choice yet: outside Europe analytics starts now and the banner
+            // offers the opt-out; inside Europe it waits for Accept.
+            if (!inEurope) loadAnalytics();
             showBanner(true, false);
         }
+    }
+
+    function loadCloudflareBeacon() {
+        if (!CF_BEACON_TOKEN || doNotTrackEnabled() || document.getElementById("cf-beacon")) return;
+        var script = document.createElement("script");
+        script.id = "cf-beacon";
+        script.defer = true;
+        script.src = "https://static.cloudflareinsights.com/beacon.min.js";
+        script.setAttribute("data-cf-beacon", JSON.stringify({ token: CF_BEACON_TOKEN }));
+        document.head.appendChild(script);
     }
 
     function setupAnalyticsEvents() {
         document.querySelectorAll('a[href*="apps.apple.com"]').forEach(function (link) {
             link.addEventListener("click", function () {
-                if (analyticsAllowed() && typeof window.gtag === "function") {
+                if (analyticsActive() && typeof window.gtag === "function") {
                     window.gtag("event", "app_store_click", { link_url: link.href });
                 }
             });
@@ -193,6 +283,7 @@
 
     setupTheme();
     setupConsent();
+    loadCloudflareBeacon();
     setupAnalyticsEvents();
     setFooterYear();
 })();
