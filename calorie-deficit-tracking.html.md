@@ -6,7 +6,7 @@
 
 A food log measures what you wrote down. It never measures what you burned — so the useful question is not whether the number is true, but whether it is moving.
 
-Published by SnapNutrition AI · Last updated September 15, 2026
+Published by SnapNutrition AI · Last updated October 2, 2026
 
 **Short answer:** no calorie tracker can prove you are in a deficit. None of them measure energy expenditure, and a photo estimate of a meal carries 10–30% error on its own. What a log *can* show is change, because your personal estimating bias stays roughly constant from week to week: a rolling average that falls is real movement even while the absolute number stays uncertain. Read the average, the goal line, and how many logged days landed within goal — never yesterday's total.
 
@@ -120,10 +120,12 @@ No. A day with no logged meal is treated as a gap and skipped, not counted as a 
 
 - [Mifflin MD, St Jeor ST, et al. “A new predictive equation for resting energy expenditure in healthy individuals.” Am J Clin Nutr, 1990](https://pubmed.ncbi.nlm.nih.gov/2305711/)
 - [SnapNutrition AI App Store listing](https://apps.apple.com/us/app/snapnutrition-ai/id6757797704) — requires iOS 17.6+ / watchOS 10.0+
-- [How accurate are AI calorie counters?](https://snapnutritionai.app/ai-calorie-counter-accuracy.html.md) — the 10–30% range and where it comes from
+- [Thames Q, Karpur A, Norris W, et al. “Nutrition5k: Towards Automatic Nutritional Understanding of Generic Food.” CVPR, 2021](https://openaccess.thecvf.com/content/CVPR2021/html/Thames_Nutrition5k_Towards_Automatic_Nutritional_Understanding_of_Generic_Food_CVPR_2021_paper.html) — 26.1% calorie error from a single photo
+- [Charles O, Hengist A, et al. Photo-based calorie tracking apps tested on 102 meals. NUTRITION 2026](https://www.newswise.com/articles/photo-based-calorie-tracking-apps-may-underestimate-energy-in-meals) — four popular apps undercounted meals by about a third
+- [How accurate are AI calorie counters?](https://snapnutritionai.app/ai-calorie-counter-accuracy.html.md) — what these tests mean for everyday logging
 - [SnapNutrition AI Privacy Policy](https://snapnutritionai.app/privacy.html.md)
 
-Want a goal line, a rolling average, and an honest denominator on your own log? [SnapNutrition AI](https://snapnutritionai.app/index.html.md) runs on your own provider key or an optional subscription.
+Want a goal line, a rolling average, and an honest denominator on your own log? [SnapNutrition AI](https://snapnutritionai.app/) runs on your own provider key or an optional subscription.
 
 [![Download SnapNutrition AI on the App Store](https://snapnutritionai.app/images/download-on-the-app-store.svg?v=2)](https://apps.apple.com/us/app/snapnutrition-ai/id6757797704)
 
@@ -133,6 +135,6 @@ Want a goal line, a rolling average, and an honest denominator on your own log? 
 - [BYOK calorie tracker for iPhone](https://snapnutritionai.app/byok-calorie-tracker.html.md)
 - [What makes an AI calorie tracker privacy-first?](https://snapnutritionai.app/privacy-first-ai-calorie-tracker.html.md)
 - [Best free AI calorie tracker apps in 2026](https://snapnutritionai.app/best-free-ai-calorie-tracker-apps-2026.html.md)
-- [SnapNutrition AI homepage](https://snapnutritionai.app/index.html.md)
+- [SnapNutrition AI homepage](https://snapnutritionai.app/)
 
 SnapNutrition AI is for general food logging and wellness support. It is not medical advice and should not replace guidance from a doctor or registered dietitian.

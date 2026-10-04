@@ -106,6 +106,6 @@ Ready to use your own Gemini, OpenAI, Anthropic, or OpenRouter key? Download Sna
 - [Cal AI alternative: the same photo scanning without a subscription](https://snapnutritionai.app/cal-ai-alternative.html.md)
 - [What makes an AI calorie tracker privacy-first?](https://snapnutritionai.app/privacy-first-ai-calorie-tracker.html.md)
 - [Best free AI calorie tracker apps in 2026](https://snapnutritionai.app/best-free-ai-calorie-tracker-apps-2026.html.md)
-- [SnapNutrition AI homepage](https://snapnutritionai.app/index.html.md)
+- [SnapNutrition AI homepage](https://snapnutritionai.app/)
 
 SnapNutrition AI is for general food logging and wellness support. It is not medical advice and should not replace guidance from a doctor or registered dietitian.

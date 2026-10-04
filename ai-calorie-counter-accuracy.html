@@ -6,7 +6,7 @@
     <meta name="theme-color" content="#f4f9f5" media="(prefers-color-scheme: light)">
     <meta name="theme-color" content="#0b1f16" media="(prefers-color-scheme: dark)">
     <title>AI Calorie Counter Accuracy: Limits and Better Results</title>
-    <meta name="description" content="An honest look at AI calorie counter accuracy: typical error ranges, where photo food scanners fail (portions, hidden oils, mixed dishes), and how to get reliable results anyway.">
+    <meta name="description" content="How accurate are AI calorie counters? Typical error ranges from published tests, where photo scanners miss (portions, hidden fat), and how to correct for it.">
     <meta name="robots" content="index, follow">
     <link rel="preload" href="fonts/instrument-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="themes/forest.css?v=1">
@@ -41,6 +41,20 @@
         "@context": "https://schema.org",
         "@graph": [
             {
+                "@type": "Organization",
+                "@id": "https://snapnutritionai.app/#organization",
+                "name": "SnapNutrition AI",
+                "url": "https://snapnutritionai.app",
+                "logo": {"@type": "ImageObject", "url": "https://snapnutritionai.app/images/logo.webp", "width": 512, "height": 512}
+            },
+            {
+                "@type": "WebSite",
+                "@id": "https://snapnutritionai.app/#website",
+                "url": "https://snapnutritionai.app",
+                "name": "SnapNutrition AI",
+                "publisher": {"@id": "https://snapnutritionai.app/#organization"}
+            },
+            {
                 "@type": "Article",
                 "@id": "https://snapnutritionai.app/ai-calorie-counter-accuracy.html#article",
                 "headline": "How Accurate Are AI Calorie Counters? What Photo Food Scanners Can and Can't Do",
@@ -48,25 +62,18 @@
                 "url": "https://snapnutritionai.app/ai-calorie-counter-accuracy.html",
                 "inLanguage": "en",
                 "datePublished": "2026-07-03",
-                "dateModified": "2026-09-15",
-                "author": {
-                    "@id": "https://snapnutritionai.app/#organization"
-                },
-                "publisher": {
-                    "@id": "https://snapnutritionai.app/#organization"
-                },
+                "dateModified": "2026-10-02",
+                "author": {"@id": "https://snapnutritionai.app/#organization"},
+                "publisher": {"@id": "https://snapnutritionai.app/#organization"},
                 "image": "https://snapnutritionai.app/images/og-image.jpg",
-                "mainEntityOfPage": "https://snapnutritionai.app/ai-calorie-counter-accuracy.html"
+                "mainEntityOfPage": "https://snapnutritionai.app/ai-calorie-counter-accuracy.html",
+                "isPartOf": {"@id": "https://snapnutritionai.app/#website"}
             },
             {
                 "@type": "BreadcrumbList",
+                "@id": "https://snapnutritionai.app/ai-calorie-counter-accuracy.html#breadcrumb",
                 "itemListElement": [
-                    {
-                        "@type": "ListItem",
-                        "position": 1,
-                        "name": "Home",
-                        "item": "https://snapnutritionai.app/"
-                    },
+                    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://snapnutritionai.app/"},
                     {
                         "@type": "ListItem",
                         "position": 2,
@@ -77,6 +84,7 @@
             },
             {
                 "@type": "FAQPage",
+                "@id": "https://snapnutritionai.app/ai-calorie-counter-accuracy.html#faq",
                 "mainEntity": [
                     {
                         "@type": "Question",
@@ -120,12 +128,12 @@
     <a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header">
     <div class="site-header-inner">
-        <a class="brand" href="index.html">SnapNutrition AI</a>
+        <a class="brand" href="/">SnapNutrition AI</a>
         <nav class="site-nav" aria-label="Main">
-            <a href="index.html#features">Features</a>
-            <a href="index.html#how">How it works</a>
-            <a href="index.html#pricing">Pricing</a>
-            <a href="index.html#compare">Compare</a>
+            <a href="/#features">Features</a>
+            <a href="/#how">How it works</a>
+            <a href="/#pricing">Pricing</a>
+            <a href="/#compare">Compare</a>
             <a href="byok-calorie-tracker.html">BYOK</a>
             <a class="nav-cta" href="https://apps.apple.com/us/app/snapnutrition-ai/id6757797704">Get the app</a>
         </nav>
@@ -166,14 +174,18 @@
 
     <main id="main" class="article-page">
 
-        <a href="index.html" class="back-link">Back to home</a>
+        <a href="/" class="back-link">Back to home</a>
     <h1>How Accurate Are AI Calorie Counters?</h1>
         <p class="subtitle">What photo food scanners can and can't do — an honest guide from an app that makes one.</p>
-        <p class="last-updated">Last updated: September 15, 2026</p>
+        <p class="last-updated">Last updated: October 2, 2026</p>
 
         <h2>The short answer</h2>
         <p>AI calorie estimates from a food photo are typically within <strong>10–30% of the true value</strong>, depending on the dish, the portion, and how much is hidden from the camera. That makes them excellent for <strong>fast, consistent food logging</strong> — and unsuitable as laboratory-grade nutrition measurement.</p>
         <p>That distinction matters more than it sounds. Research on food diaries consistently shows the main reason tracking fails is that people stop logging, not that their numbers are slightly off. A tool that turns logging into a two-second photo dramatically improves consistency, which is what actually drives results. But nobody should pretend a photo can tell you whether your curry was cooked with one tablespoon of oil or three.</p>
+
+        <h2>What the research measured</h2>
+        <p>Two published tests frame that range. In <strong>Nutrition5k</strong> (Google Research, CVPR 2021), a model that read calories straight from a single overhead photo of about 5,000 weighed cafeteria dishes missed by <strong>26% on average</strong>; adding a depth camera to judge portion size brought that down to about 17%. The same paper found that when people estimated the mass of a plate by eye, even nutritionists were off by 41% on average.</p>
+        <p>Consumer apps can do worse. In a 2026 test by researchers at the <strong>National Institutes of Health (NIDDK)</strong>, four popular photo-based tracking apps were given standardized photos of 102 meals prepared in a metabolic kitchen, with every ingredient weighed to 0.1 g. All four <strong>undercounted calories by about a third</strong>, 250 to 345 kcal per meal on average, and underestimated fat by about 30 g, mostly fat they could not see in the photo: butter, oil, cheese, cream and sauces. SnapNutrition AI was not part of that test, and nothing on this page claims it would score better. The lesson applies to every photo tracker: the camera misses fat, so add it yourself.</p>
 
         <h2>Where AI calorie estimates go wrong</h2>
         <p>The failure modes are well understood, and they are mostly physics, not model quality:</p>
@@ -197,7 +209,7 @@
         </ol>
 
         <h2>How SnapNutrition AI handles this</h2>
-        <p><a href="index.html">SnapNutrition AI</a> is designed around these limitations rather than in denial of them:</p>
+        <p><a href="/">SnapNutrition AI</a> is designed around these limitations rather than in denial of them:</p>
         <ul>
             <li>Six input methods — <strong>photo, photo library, barcode, voice, text, and manual entry</strong> — so you can pick the most accurate one for each food. Manual entry makes no AI request at all, so when you already have the numbers from a label, a food scale, or a recipe you cook often, you can enter them directly with no estimation in the loop. You can also share a photo in from Photos, Messages, or any other app.</li>
             <li>Every scan is <strong>editable</strong>: adjust portions and ingredients after the AI's first pass</li>
@@ -236,6 +248,12 @@
             </a>
         </div>
 
+        <h2>Sources</h2>
+        <ul class="source-list">
+            <li><a href="https://openaccess.thecvf.com/content/CVPR2021/html/Thames_Nutrition5k_Towards_Automatic_Nutritional_Understanding_of_Generic_Food_CVPR_2021_paper.html" target="_blank" rel="noopener">Thames Q, Karpur A, Norris W, et al. “Nutrition5k: Towards Automatic Nutritional Understanding of Generic Food.” CVPR, 2021</a> — calorie error of 26.1% from a single photo, 16.5% with depth (Table 3)</li>
+            <li><a href="https://www.newswise.com/articles/photo-based-calorie-tracking-apps-may-underestimate-energy-in-meals" target="_blank" rel="noopener">Charles O, Hengist A, et al. Photo-based calorie tracking apps tested on 102 meals. Presented at NUTRITION 2026, American Society for Nutrition, July 2026</a> — conference presentation; summary via the American Society for Nutrition</li>
+        </ul>
+
         <h2>Related reading</h2>
         <ul>
             <li><a href="byok-calorie-tracker.html">BYOK calorie tracker: use your own Gemini, OpenAI, Anthropic, or OpenRouter key</a></li>
@@ -244,7 +262,7 @@
             <li><a href="calorie-deficit-tracking.html">Am I actually in a calorie deficit? How to read your own log</a></li>
             <li><a href="best-free-ai-calorie-tracker-apps-2026.html">Best free AI calorie tracker apps in 2026</a></li>
             <li><a href="privacy-first-ai-calorie-tracker.html">What makes an AI calorie tracker privacy-first?</a></li>
-            <li><a href="index.html">SnapNutrition AI homepage</a></li>
+            <li><a href="/">SnapNutrition AI homepage</a></li>
         </ul>
 
         <p class="note-box">SnapNutrition AI is for general food logging and wellness support. It is not medical advice and should not replace guidance from a doctor or registered dietitian.</p>
@@ -255,7 +273,7 @@
     <div class="footer-grid">
         <div class="footer-about">
             <p class="footer-heading">SnapNutrition AI</p>
-            <p>An AI calorie tracker for iPhone, iPad, and Apple Watch, made by Unibrix. No mandatory subscription and no SnapNutrition account.</p>
+            <p>An AI calorie tracker for iPhone, iPad, and Apple Watch, made by Unibrix. No mandatory subscription and no SnapNutrition account. Not affiliated with other apps or websites that use a similar name.</p>
             <a href="https://apps.apple.com/us/app/snapnutrition-ai/id6757797704">Download on the App Store</a>
         </div>
         <nav aria-label="Compare">

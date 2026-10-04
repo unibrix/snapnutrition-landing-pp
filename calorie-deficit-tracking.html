@@ -6,7 +6,7 @@
     <meta name="theme-color" content="#f4f9f5" media="(prefers-color-scheme: light)">
     <meta name="theme-color" content="#0b1f16" media="(prefers-color-scheme: dark)">
     <title>Calorie Deficit Tracking: How to Read Your Own Log</title>
-    <meta name="description" content="Am I actually in a calorie deficit? Why random logging error cancels over a week but bias never does, and how to read a goal line, a rolling average, and days within goal. Verified September 2026.">
+    <meta name="description" content="Am I actually in a calorie deficit? Why random logging error cancels over a week but bias does not, and how to read a goal line, rolling average, and trend.">
     <meta name="robots" content="index, follow">
     <link rel="preload" href="fonts/instrument-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="themes/forest.css?v=1">
@@ -35,29 +35,51 @@
         "@context": "https://schema.org",
         "@graph": [
             {
+                "@type": "Organization",
+                "@id": "https://snapnutritionai.app/#organization",
+                "name": "SnapNutrition AI",
+                "url": "https://snapnutritionai.app",
+                "logo": {"@type": "ImageObject", "url": "https://snapnutritionai.app/images/logo.webp", "width": 512, "height": 512}
+            },
+            {
+                "@type": "WebSite",
+                "@id": "https://snapnutritionai.app/#website",
+                "url": "https://snapnutritionai.app",
+                "name": "SnapNutrition AI",
+                "publisher": {"@id": "https://snapnutritionai.app/#organization"}
+            },
+            {
                 "@type": "Article",
                 "@id": "https://snapnutritionai.app/calorie-deficit-tracking.html#article",
                 "headline": "Am I Actually in a Calorie Deficit? How to Read Your Own Log",
                 "description": "Why random logging error cancels over a week while systematic bias does not, and how to read a goal line, a rolling average, days within goal, and a weekday versus weekend split.",
                 "url": "https://snapnutritionai.app/calorie-deficit-tracking.html",
                 "datePublished": "2026-09-15",
-                "dateModified": "2026-09-15",
+                "dateModified": "2026-10-02",
                 "inLanguage": "en",
-                "author": {"@type": "Organization", "name": "SnapNutrition AI", "url": "https://snapnutritionai.app/"},
-                "publisher": {"@type": "Organization", "name": "SnapNutrition AI", "url": "https://snapnutritionai.app/"},
+                "author": {"@id": "https://snapnutritionai.app/#organization"},
+                "publisher": {"@id": "https://snapnutritionai.app/#organization"},
                 "image": "https://snapnutritionai.app/images/og-image.jpg",
                 "about": {"@id": "https://snapnutritionai.app/#app"},
-                "mainEntityOfPage": "https://snapnutritionai.app/calorie-deficit-tracking.html"
+                "mainEntityOfPage": "https://snapnutritionai.app/calorie-deficit-tracking.html",
+                "isPartOf": {"@id": "https://snapnutritionai.app/#website"}
             },
             {
                 "@type": "BreadcrumbList",
+                "@id": "https://snapnutritionai.app/calorie-deficit-tracking.html#breadcrumb",
                 "itemListElement": [
                     {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://snapnutritionai.app/"},
-                    {"@type": "ListItem", "position": 2, "name": "Calorie Deficit Tracking", "item": "https://snapnutritionai.app/calorie-deficit-tracking.html"}
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Calorie Deficit Tracking",
+                        "item": "https://snapnutritionai.app/calorie-deficit-tracking.html"
+                    }
                 ]
             },
             {
                 "@type": "FAQPage",
+                "@id": "https://snapnutritionai.app/calorie-deficit-tracking.html#faq",
                 "mainEntity": [
                     {
                         "@type": "Question",
@@ -109,12 +131,12 @@
     <a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header">
     <div class="site-header-inner">
-        <a class="brand" href="index.html">SnapNutrition AI</a>
+        <a class="brand" href="/">SnapNutrition AI</a>
         <nav class="site-nav" aria-label="Main">
-            <a href="index.html#features">Features</a>
-            <a href="index.html#how">How it works</a>
-            <a href="index.html#pricing">Pricing</a>
-            <a href="index.html#compare">Compare</a>
+            <a href="/#features">Features</a>
+            <a href="/#how">How it works</a>
+            <a href="/#pricing">Pricing</a>
+            <a href="/#compare">Compare</a>
             <a href="byok-calorie-tracker.html">BYOK</a>
             <a class="nav-cta" href="https://apps.apple.com/us/app/snapnutrition-ai/id6757797704">Get the app</a>
         </nav>
@@ -124,11 +146,11 @@
     <div id="cookie-banner" class="cookie-banner" role="dialog" aria-label="Analytics preferences" aria-hidden="true" style="display: none;"><div class="cookie-content"><p id="cookie-message">We use cookies for analytics to improve your experience</p><div class="cookie-buttons"><button type="button" id="cookie-accept" class="cookie-btn accept">Accept</button><button type="button" id="cookie-reject" class="cookie-btn reject">Reject</button></div></div></div>
 
     <main id="main" class="article-page">
-        <a href="index.html" class="back-link">Back to home</a>
+        <a href="/" class="back-link">Back to home</a>
     <article>
             <h1>Am I Actually in a Calorie Deficit?</h1>
             <p class="subtitle">A food log measures what you wrote down. It never measures what you burned — so the useful question is not whether the number is true, but whether it is moving.</p>
-            <p class="article-meta">Published by SnapNutrition AI · Last updated September 15, 2026</p>
+            <p class="article-meta">Published by SnapNutrition AI · Last updated October 2, 2026</p>
 
             <div class="answer-box"><p><strong>Short answer:</strong> no calorie tracker can prove you are in a deficit. None of them measure energy expenditure, and a photo estimate of a meal carries 10–30% error on its own. What a log <em>can</em> show is change, because your personal estimating bias stays roughly constant from week to week: a rolling average that falls is real movement even while the absolute number stays uncertain. Read the average, the goal line, and how many logged days landed within goal — never yesterday's total.</p></div>
 
@@ -228,12 +250,14 @@
             <ul class="source-list">
                 <li><a href="https://pubmed.ncbi.nlm.nih.gov/2305711/" target="_blank" rel="noopener">Mifflin MD, St Jeor ST, et al. “A new predictive equation for resting energy expenditure in healthy individuals.” Am J Clin Nutr, 1990</a></li>
                 <li><a href="https://apps.apple.com/us/app/snapnutrition-ai/id6757797704" target="_blank" rel="noopener">SnapNutrition AI App Store listing</a> — requires iOS 17.6+ / watchOS 10.0+</li>
-                <li><a href="ai-calorie-counter-accuracy.html">How accurate are AI calorie counters?</a> — the 10–30% range and where it comes from</li>
+                <li><a href="https://openaccess.thecvf.com/content/CVPR2021/html/Thames_Nutrition5k_Towards_Automatic_Nutritional_Understanding_of_Generic_Food_CVPR_2021_paper.html" target="_blank" rel="noopener">Thames Q, Karpur A, Norris W, et al. “Nutrition5k: Towards Automatic Nutritional Understanding of Generic Food.” CVPR, 2021</a> — 26.1% calorie error from a single photo</li>
+                <li><a href="https://www.newswise.com/articles/photo-based-calorie-tracking-apps-may-underestimate-energy-in-meals" target="_blank" rel="noopener">Charles O, Hengist A, et al. Photo-based calorie tracking apps tested on 102 meals. NUTRITION 2026</a> — four popular apps undercounted meals by about a third</li>
+                <li><a href="ai-calorie-counter-accuracy.html">How accurate are AI calorie counters?</a> — what these tests mean for everyday logging</li>
                 <li><a href="privacy.html">SnapNutrition AI Privacy Policy</a></li>
             </ul>
 
             <div class="cta-block">
-                <p>Want a goal line, a rolling average, and an honest denominator on your own log? <a href="index.html">SnapNutrition AI</a> runs on your own provider key or an optional subscription.</p>
+                <p>Want a goal line, a rolling average, and an honest denominator on your own log? <a href="/">SnapNutrition AI</a> runs on your own provider key or an optional subscription.</p>
                 <a href="https://apps.apple.com/us/app/snapnutrition-ai/id6757797704" class="app-store-badge" aria-label="Download SnapNutrition AI on the App Store"><img src="images/download-on-the-app-store.svg?v=2" alt="Download SnapNutrition AI on the App Store" width="156" height="52"></a>
             </div>
 
@@ -243,7 +267,7 @@
                 <li><a href="byok-calorie-tracker.html">BYOK calorie tracker for iPhone</a></li>
                 <li><a href="privacy-first-ai-calorie-tracker.html">What makes an AI calorie tracker privacy-first?</a></li>
                 <li><a href="best-free-ai-calorie-tracker-apps-2026.html">Best free AI calorie tracker apps in 2026</a></li>
-                <li><a href="index.html">SnapNutrition AI homepage</a></li>
+                <li><a href="/">SnapNutrition AI homepage</a></li>
             </ul>
             <p class="note-box">SnapNutrition AI is for general food logging and wellness support. It is not medical advice and should not replace guidance from a doctor or registered dietitian.</p>
         </article>
@@ -253,7 +277,7 @@
     <div class="footer-grid">
         <div class="footer-about">
             <p class="footer-heading">SnapNutrition AI</p>
-            <p>An AI calorie tracker for iPhone, iPad, and Apple Watch, made by Unibrix. No mandatory subscription and no SnapNutrition account.</p>
+            <p>An AI calorie tracker for iPhone, iPad, and Apple Watch, made by Unibrix. No mandatory subscription and no SnapNutrition account. Not affiliated with other apps or websites that use a similar name.</p>
             <a href="https://apps.apple.com/us/app/snapnutrition-ai/id6757797704">Download on the App Store</a>
         </div>
         <nav aria-label="Compare">

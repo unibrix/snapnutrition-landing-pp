@@ -105,6 +105,6 @@ Want photo calorie tracking without making a subscription the only path? Try Sna
 - [MyFitnessPal alternative for iPhone: honest comparison](https://snapnutritionai.app/myfitnesspal-alternative.html.md)
 - [SnapCalorie alternative for iPhone](https://snapnutritionai.app/snapcalorie-alternative.html.md)
 - [Best free AI calorie tracker apps in 2026](https://snapnutritionai.app/best-free-ai-calorie-tracker-apps-2026.html.md)
-- [SnapNutrition AI homepage](https://snapnutritionai.app/index.html.md)
+- [SnapNutrition AI homepage](https://snapnutritionai.app/)
 
 SnapNutrition AI is for general food logging and wellness support. It is not medical advice and should not replace guidance from a doctor or registered dietitian.

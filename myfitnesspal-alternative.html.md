@@ -34,7 +34,7 @@ Prices and feature tiers checked August 2026 from public pricing pages. Subscrip
 
 ## Where SnapNutrition AI fits
 
-[SnapNutrition AI](https://snapnutritionai.app/index.html.md) takes a different approach from every app in the table: instead of a subscription that covers AI costs plus margin, it uses [BYOK (Bring Your Own Key)](https://snapnutritionai.app/byok-calorie-tracker.html.md) — you plug in your own API key from Google Gemini, OpenAI, Anthropic, or OpenRouter and pay the provider directly, typically $0.01–0.03 per scan — or nothing on a free-tier key. That means:
+[SnapNutrition AI](https://snapnutritionai.app/) takes a different approach from every app in the table: instead of a subscription that covers AI costs plus margin, it uses [BYOK (Bring Your Own Key)](https://snapnutritionai.app/byok-calorie-tracker.html.md) — you plug in your own API key from Google Gemini, OpenAI, Anthropic, or OpenRouter and pay the provider directly, typically $0.01–0.03 per scan — or nothing on a free-tier key. That means:
 
 - **No mandatory subscription** — AI photo, barcode, voice, and text logging are free with your key, and manual entry needs no key at all
 - **No ads, no SnapNutrition account** — API providers may require their own account to issue a key
@@ -91,6 +91,6 @@ Prefer fast AI logging, no SnapNutrition account, and an exportable local diary?
 - [Cal AI alternative: the same photo scanning without a subscription](https://snapnutritionai.app/cal-ai-alternative.html.md)
 - [SnapCalorie alternative for iPhone](https://snapnutritionai.app/snapcalorie-alternative.html.md)
 - [Best free AI calorie tracker apps in 2026](https://snapnutritionai.app/best-free-ai-calorie-tracker-apps-2026.html.md)
-- [SnapNutrition AI homepage](https://snapnutritionai.app/index.html.md)
+- [SnapNutrition AI homepage](https://snapnutritionai.app/)
 
 SnapNutrition AI is for general food logging and wellness support. It is not medical advice and should not replace guidance from a doctor or registered dietitian.

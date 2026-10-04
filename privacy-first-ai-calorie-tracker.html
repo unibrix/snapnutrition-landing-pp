@@ -6,7 +6,7 @@
     <meta name="theme-color" content="#f4f9f5" media="(prefers-color-scheme: light)">
     <meta name="theme-color" content="#0b1f16" media="(prefers-color-scheme: dark)">
     <title>Privacy-First AI Calorie Tracker: What to Look For</title>
-    <meta name="description" content="What makes an AI calorie tracker privacy-first? Follow the path of food photos, account data, diary storage, AI providers, analytics, retention, and export before choosing an app.">
+    <meta name="description" content="What makes an AI calorie tracker privacy-first? Follow food photos, account data, diary storage, AI providers, analytics, and export before choosing an app.">
     <meta name="robots" content="index, follow">
     <link rel="preload" href="fonts/instrument-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="themes/forest.css?v=1">
@@ -33,6 +33,20 @@
         "@context": "https://schema.org",
         "@graph": [
             {
+                "@type": "Organization",
+                "@id": "https://snapnutritionai.app/#organization",
+                "name": "SnapNutrition AI",
+                "url": "https://snapnutritionai.app",
+                "logo": {"@type": "ImageObject", "url": "https://snapnutritionai.app/images/logo.webp", "width": 512, "height": 512}
+            },
+            {
+                "@type": "WebSite",
+                "@id": "https://snapnutritionai.app/#website",
+                "url": "https://snapnutritionai.app",
+                "name": "SnapNutrition AI",
+                "publisher": {"@id": "https://snapnutritionai.app/#organization"}
+            },
+            {
                 "@type": "Article",
                 "@id": "https://snapnutritionai.app/privacy-first-ai-calorie-tracker.html#article",
                 "headline": "Privacy-First AI Calorie Tracker: What to Look For",
@@ -41,15 +55,23 @@
                 "datePublished": "2026-08-18",
                 "dateModified": "2026-09-15",
                 "inLanguage": "en",
-                "author": {"@type": "Organization", "name": "SnapNutrition AI", "url": "https://snapnutritionai.app/"},
-                "publisher": {"@type": "Organization", "name": "SnapNutrition AI", "url": "https://snapnutritionai.app/"},
-                "image": "https://snapnutritionai.app/images/og-image.jpg"
+                "author": {"@id": "https://snapnutritionai.app/#organization"},
+                "publisher": {"@id": "https://snapnutritionai.app/#organization"},
+                "image": "https://snapnutritionai.app/images/og-image.jpg",
+                "isPartOf": {"@id": "https://snapnutritionai.app/#website"},
+                "mainEntityOfPage": "https://snapnutritionai.app/privacy-first-ai-calorie-tracker.html"
             },
             {
                 "@type": "BreadcrumbList",
+                "@id": "https://snapnutritionai.app/privacy-first-ai-calorie-tracker.html#breadcrumb",
                 "itemListElement": [
                     {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://snapnutritionai.app/"},
-                    {"@type": "ListItem", "position": 2, "name": "Privacy-First AI Calorie Tracker", "item": "https://snapnutritionai.app/privacy-first-ai-calorie-tracker.html"}
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Privacy-First AI Calorie Tracker",
+                        "item": "https://snapnutritionai.app/privacy-first-ai-calorie-tracker.html"
+                    }
                 ]
             }
         ]
@@ -60,12 +82,12 @@
     <a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header">
     <div class="site-header-inner">
-        <a class="brand" href="index.html">SnapNutrition AI</a>
+        <a class="brand" href="/">SnapNutrition AI</a>
         <nav class="site-nav" aria-label="Main">
-            <a href="index.html#features">Features</a>
-            <a href="index.html#how">How it works</a>
-            <a href="index.html#pricing">Pricing</a>
-            <a href="index.html#compare">Compare</a>
+            <a href="/#features">Features</a>
+            <a href="/#how">How it works</a>
+            <a href="/#pricing">Pricing</a>
+            <a href="/#compare">Compare</a>
             <a href="byok-calorie-tracker.html">BYOK</a>
             <a class="nav-cta" href="https://apps.apple.com/us/app/snapnutrition-ai/id6757797704">Get the app</a>
         </nav>
@@ -75,7 +97,7 @@
     <div id="cookie-banner" class="cookie-banner" role="dialog" aria-label="Analytics preferences" aria-hidden="true" style="display: none;"><div class="cookie-content"><p id="cookie-message">We use cookies for analytics to improve your experience</p><div class="cookie-buttons"><button type="button" id="cookie-accept" class="cookie-btn accept">Accept</button><button type="button" id="cookie-reject" class="cookie-btn reject">Reject</button></div></div></div>
 
     <main id="main" class="article-page">
-        <a href="index.html" class="back-link">Back to home</a>
+        <a href="/" class="back-link">Back to home</a>
     <article>
             <h1>What Makes an AI Calorie Tracker Privacy-First?</h1>
             <p class="subtitle">A food photo can reveal routines, location clues, dietary restrictions, and health goals. “We value privacy” is not enough—follow the data flow.</p>
@@ -165,7 +187,7 @@
     <div class="footer-grid">
         <div class="footer-about">
             <p class="footer-heading">SnapNutrition AI</p>
-            <p>An AI calorie tracker for iPhone, iPad, and Apple Watch, made by Unibrix. No mandatory subscription and no SnapNutrition account.</p>
+            <p>An AI calorie tracker for iPhone, iPad, and Apple Watch, made by Unibrix. No mandatory subscription and no SnapNutrition account. Not affiliated with other apps or websites that use a similar name.</p>
             <a href="https://apps.apple.com/us/app/snapnutrition-ai/id6757797704">Download on the App Store</a>
         </div>
         <nav aria-label="Compare">

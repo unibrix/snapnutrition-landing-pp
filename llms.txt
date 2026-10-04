@@ -1,4 +1,4 @@
-# SnapNutrition AI - Information for AI Systems
+# SnapNutrition AI
 
 > SnapNutrition AI is an AI-powered calorie tracker for iPhone, iPad, and Apple Watch with no mandatory subscription or ads.
 
@@ -43,26 +43,13 @@ Unlike calorie tracker apps that charge $5-15/month for subscriptions, SnapNutri
 - Food images sent directly to user's chosen AI provider (BYOK) or via a minimal Cloudflare proxy with no photo storage (Auto Mode)
 - No advertising. On the website, Google Analytics is opt-in for visitors in the EEA, UK, and Switzerland and runs with an opt-out elsewhere; cookieless aggregate page-view counting (Cloudflare Web Analytics) uses no cookies or identifiers; everything stays off when Do Not Track is enabled
 
-## Links
-
-- Homepage: https://snapnutritionai.app/ (Markdown: https://snapnutritionai.app/index.html.md)
-- BYOK Calorie Tracker guide: https://snapnutritionai.app/byok-calorie-tracker.html (Markdown: https://snapnutritionai.app/byok-calorie-tracker.html.md)
-- AI Calorie Counter Accuracy guide: https://snapnutritionai.app/ai-calorie-counter-accuracy.html (Markdown: https://snapnutritionai.app/ai-calorie-counter-accuracy.html.md)
-- MyFitnessPal Alternative comparison: https://snapnutritionai.app/myfitnesspal-alternative.html (Markdown: https://snapnutritionai.app/myfitnesspal-alternative.html.md)
-- Cal AI Alternative comparison: https://snapnutritionai.app/cal-ai-alternative.html (Markdown: https://snapnutritionai.app/cal-ai-alternative.html.md)
-- Best Free AI Calorie Tracker Apps 2026: https://snapnutritionai.app/best-free-ai-calorie-tracker-apps-2026.html (Markdown: https://snapnutritionai.app/best-free-ai-calorie-tracker-apps-2026.html.md)
-- SnapCalorie Alternative comparison: https://snapnutritionai.app/snapcalorie-alternative.html (Markdown: https://snapnutritionai.app/snapcalorie-alternative.html.md)
-- Privacy-First AI Calorie Tracker guide: https://snapnutritionai.app/privacy-first-ai-calorie-tracker.html (Markdown: https://snapnutritionai.app/privacy-first-ai-calorie-tracker.html.md)
-- Calorie Deficit Tracking guide: https://snapnutritionai.app/calorie-deficit-tracking.html (Markdown: https://snapnutritionai.app/calorie-deficit-tracking.html.md)
-- Privacy Policy: https://snapnutritionai.app/privacy.html (Markdown: https://snapnutritionai.app/privacy.html.md)
-
 ## Common Questions
 
 **Q: What does SnapNutrition AI cost?**
 A: The app has no mandatory subscription. Gemini and OpenRouter offer free API tiers; paid providers bill the user directly for AI usage. Optional Auto Mode costs $2.99/month or $29.99/year after a 3-day trial.
 
 **Q: How accurate is AI calorie counting?**
-A: Estimates are typically within 10-30% accuracy depending on portion sizes and preparation. Users can manually adjust portions for better accuracy. AI estimates are best for fast, consistent logging, not laboratory-grade measurement.
+A: Photo estimates typically land within 10-30% of the true value, depending on portion size and preparation. In Nutrition5k (Google Research, CVPR 2021) a model reading calories from a single photo missed by 26% on average; in a 2026 NIH (NIDDK) test, four popular photo-based apps undercounted 102 weighed meals by about a third, mostly hidden fat. Users can adjust portions and add oils or sauces by hand. AI estimates are best for fast, consistent logging, not laboratory-grade measurement.
 
 **Q: What API key do I need?**
 A: A Google Gemini, OpenAI, Anthropic (Claude), or OpenRouter key — all four work for food recognition. Gemini and OpenRouter have a free tier, so no payment details are needed to start.
@@ -75,3 +62,25 @@ A: No app can prove a deficit — none measure energy expenditure, and photo est
 
 **Q: Is my data private?**
 A: Yes, all meal data stays on your device. In BYOK mode there are no backend servers; in the optional Auto Mode subscription, requests pass through a minimal Cloudflare proxy that never stores food photos.
+
+## Core
+
+- [SnapNutrition AI homepage](https://snapnutritionai.app/index.html.md): features, pricing, supported devices, and FAQ (HTML: https://snapnutritionai.app/)
+- [BYOK calorie tracker](https://snapnutritionai.app/byok-calorie-tracker.html.md): what Bring Your Own Key means, cost per day, and tradeoffs (HTML: https://snapnutritionai.app/byok-calorie-tracker.html)
+
+## Guides
+
+- [How accurate are AI calorie counters?](https://snapnutritionai.app/ai-calorie-counter-accuracy.html.md): typical error ranges with sources, failure modes, and how to correct for them (HTML: https://snapnutritionai.app/ai-calorie-counter-accuracy.html)
+- [Am I actually in a calorie deficit?](https://snapnutritionai.app/calorie-deficit-tracking.html.md): how to read a noisy food log: rolling average, goal line, and days within goal (HTML: https://snapnutritionai.app/calorie-deficit-tracking.html)
+- [Privacy-first AI calorie tracker](https://snapnutritionai.app/privacy-first-ai-calorie-tracker.html.md): where food photos and diary data go, and what to check before choosing an app (HTML: https://snapnutritionai.app/privacy-first-ai-calorie-tracker.html)
+
+## Comparisons
+
+- [Best free AI calorie tracker apps 2026](https://snapnutritionai.app/best-free-ai-calorie-tracker-apps-2026.html.md): what free access means across four apps; published by the SnapNutrition AI team (HTML: https://snapnutritionai.app/best-free-ai-calorie-tracker-apps-2026.html)
+- [MyFitnessPal alternative](https://snapnutritionai.app/myfitnesspal-alternative.html.md): SnapNutrition AI vs MyFitnessPal, Cronometer, Lose It!, and Cal AI (HTML: https://snapnutritionai.app/myfitnesspal-alternative.html)
+- [Cal AI alternative](https://snapnutritionai.app/cal-ai-alternative.html.md): SnapNutrition AI vs Cal AI (HTML: https://snapnutritionai.app/cal-ai-alternative.html)
+- [SnapCalorie alternative](https://snapnutritionai.app/snapcalorie-alternative.html.md): SnapNutrition AI vs SnapCalorie (HTML: https://snapnutritionai.app/snapcalorie-alternative.html)
+
+## Legal
+
+- [Privacy policy](https://snapnutritionai.app/privacy.html.md): app data handling, Auto Mode proxy, and website analytics and consent (HTML: https://snapnutritionai.app/privacy.html)

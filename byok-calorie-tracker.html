@@ -6,7 +6,7 @@
     <meta name="theme-color" content="#f4f9f5" media="(prefers-color-scheme: light)">
     <meta name="theme-color" content="#0b1f16" media="(prefers-color-scheme: dark)">
     <title>BYOK Calorie Tracker: Gemini, OpenAI, Anthropic, and More</title>
-    <meta name="description" content="What BYOK (Bring Your Own Key) means in a calorie tracker, what it costs per day, the privacy benefits and honest tradeoffs, and how SnapNutrition AI implements it on iPhone, iPad, and Apple Watch.">
+    <meta name="description" content="What BYOK (Bring Your Own Key) means in a calorie tracker: cost per day, privacy benefits, tradeoffs, and how it works in SnapNutrition AI for iPhone.">
     <meta name="robots" content="index, follow">
     <link rel="preload" href="fonts/instrument-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="themes/forest.css?v=1">
@@ -41,35 +41,40 @@
         "@context": "https://schema.org",
         "@graph": [
             {
+                "@type": "Organization",
+                "@id": "https://snapnutritionai.app/#organization",
+                "name": "SnapNutrition AI",
+                "url": "https://snapnutritionai.app",
+                "logo": {"@type": "ImageObject", "url": "https://snapnutritionai.app/images/logo.webp", "width": 512, "height": 512}
+            },
+            {
+                "@type": "WebSite",
+                "@id": "https://snapnutritionai.app/#website",
+                "url": "https://snapnutritionai.app",
+                "name": "SnapNutrition AI",
+                "publisher": {"@id": "https://snapnutritionai.app/#organization"}
+            },
+            {
                 "@type": "Article",
-                "@id": "https://snapnutritionai.app/byok-calorie-tracker.html",
+                "@id": "https://snapnutritionai.app/byok-calorie-tracker.html#article",
                 "headline": "BYOK Calorie Tracker for iPhone: Gemini, OpenAI, Anthropic, or OpenRouter",
                 "description": "What BYOK (Bring Your Own Key) means in a calorie tracker, what it costs per day, the privacy benefits and honest tradeoffs.",
                 "url": "https://snapnutritionai.app/byok-calorie-tracker.html",
                 "inLanguage": "en",
                 "datePublished": "2026-07-03",
                 "dateModified": "2026-09-15",
-                "author": {"@type": "Organization", "name": "SnapNutrition AI", "url": "https://snapnutritionai.app/"},
-                "publisher": {"@type": "Organization", "name": "SnapNutrition AI", "url": "https://snapnutritionai.app/"},
+                "author": {"@id": "https://snapnutritionai.app/#organization"},
+                "publisher": {"@id": "https://snapnutritionai.app/#organization"},
                 "image": "https://snapnutritionai.app/images/og-image.jpg",
-                "isPartOf": {
-                    "@type": "WebSite",
-                    "name": "SnapNutrition AI",
-                    "url": "https://snapnutritionai.app"
-                },
-                "about": {
-                    "@id": "https://snapnutritionai.app/#app"
-                }
+                "isPartOf": {"@id": "https://snapnutritionai.app/#website"},
+                "about": {"@id": "https://snapnutritionai.app/#app"},
+                "mainEntityOfPage": "https://snapnutritionai.app/byok-calorie-tracker.html"
             },
             {
                 "@type": "BreadcrumbList",
+                "@id": "https://snapnutritionai.app/byok-calorie-tracker.html#breadcrumb",
                 "itemListElement": [
-                    {
-                        "@type": "ListItem",
-                        "position": 1,
-                        "name": "Home",
-                        "item": "https://snapnutritionai.app/"
-                    },
+                    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://snapnutritionai.app/"},
                     {
                         "@type": "ListItem",
                         "position": 2,
@@ -80,6 +85,7 @@
             },
             {
                 "@type": "FAQPage",
+                "@id": "https://snapnutritionai.app/byok-calorie-tracker.html#faq",
                 "mainEntity": [
                     {
                         "@type": "Question",
@@ -91,7 +97,7 @@
                     },
                     {
                         "@type": "Question",
-                        "name": "Which API keys work with SnapNutrition AI?",
+                        "name": "Which API keys work?",
                         "acceptedAnswer": {
                             "@type": "Answer",
                             "text": "Four providers: Google Gemini (aistudio.google.com), OpenAI (platform.openai.com), Anthropic (console.anthropic.com), and OpenRouter (openrouter.ai). Gemini and OpenRouter offer a free tier, so you can start without entering payment details. OpenAI and Anthropic use prepaid credits, where a small $5 top-up typically lasts for months of food scans."
@@ -107,7 +113,7 @@
                     },
                     {
                         "@type": "Question",
-                        "name": "How much does BYOK calorie tracking cost per day?",
+                        "name": "How much does BYOK cost per day?",
                         "acceptedAnswer": {
                             "@type": "Answer",
                             "text": "A photo food scan typically costs about $0.01-0.03 in API usage depending on the model. Logging three meals a day usually works out to roughly $0.03-0.09 per day, or about $1-3 per month — compared to $5-20 per month for typical calorie tracker subscriptions. Provider prices change, so check current API pricing."
@@ -139,12 +145,12 @@
     <a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header">
     <div class="site-header-inner">
-        <a class="brand" href="index.html">SnapNutrition AI</a>
+        <a class="brand" href="/">SnapNutrition AI</a>
         <nav class="site-nav" aria-label="Main">
-            <a href="index.html#features">Features</a>
-            <a href="index.html#how">How it works</a>
-            <a href="index.html#pricing">Pricing</a>
-            <a href="index.html#compare">Compare</a>
+            <a href="/#features">Features</a>
+            <a href="/#how">How it works</a>
+            <a href="/#pricing">Pricing</a>
+            <a href="/#compare">Compare</a>
             <a href="byok-calorie-tracker.html">BYOK</a>
             <a class="nav-cta" href="https://apps.apple.com/us/app/snapnutrition-ai/id6757797704">Get the app</a>
         </nav>
@@ -185,7 +191,7 @@
 
     <main id="main" class="article-page">
 
-        <a href="index.html" class="back-link">Back to home</a>
+        <a href="/" class="back-link">Back to home</a>
     <h1>BYOK Calorie Tracker for iPhone</h1>
         <p class="subtitle">What "Bring Your Own Key" means in a calorie tracker, what it actually costs, and the honest tradeoffs.</p>
         <p class="last-updated">Last updated: September 15, 2026</p>
@@ -287,7 +293,7 @@
             <li><a href="cal-ai-alternative.html">Cal AI alternative: the same photo scanning without a subscription</a></li>
             <li><a href="privacy-first-ai-calorie-tracker.html">What makes an AI calorie tracker privacy-first?</a></li>
             <li><a href="best-free-ai-calorie-tracker-apps-2026.html">Best free AI calorie tracker apps in 2026</a></li>
-            <li><a href="index.html">SnapNutrition AI homepage</a></li>
+            <li><a href="/">SnapNutrition AI homepage</a></li>
         </ul>
 
         <p class="note-box">SnapNutrition AI is for general food logging and wellness support. It is not medical advice and should not replace guidance from a doctor or registered dietitian.</p>
@@ -298,7 +304,7 @@
     <div class="footer-grid">
         <div class="footer-about">
             <p class="footer-heading">SnapNutrition AI</p>
-            <p>An AI calorie tracker for iPhone, iPad, and Apple Watch, made by Unibrix. No mandatory subscription and no SnapNutrition account.</p>
+            <p>An AI calorie tracker for iPhone, iPad, and Apple Watch, made by Unibrix. No mandatory subscription and no SnapNutrition account. Not affiliated with other apps or websites that use a similar name.</p>
             <a href="https://apps.apple.com/us/app/snapnutrition-ai/id6757797704">Download on the App Store</a>
         </div>
         <nav aria-label="Compare">

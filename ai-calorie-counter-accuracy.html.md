@@ -6,13 +6,19 @@
 
 What photo food scanners can and can't do — an honest guide from an app that makes one.
 
-Last updated: September 15, 2026
+Last updated: October 2, 2026
 
 ## The short answer
 
 AI calorie estimates from a food photo are typically within **10–30% of the true value**, depending on the dish, the portion, and how much is hidden from the camera. That makes them excellent for **fast, consistent food logging** — and unsuitable as laboratory-grade nutrition measurement.
 
 That distinction matters more than it sounds. Research on food diaries consistently shows the main reason tracking fails is that people stop logging, not that their numbers are slightly off. A tool that turns logging into a two-second photo dramatically improves consistency, which is what actually drives results. But nobody should pretend a photo can tell you whether your curry was cooked with one tablespoon of oil or three.
+
+## What the research measured
+
+Two published tests frame that range. In **Nutrition5k** (Google Research, CVPR 2021), a model that read calories straight from a single overhead photo of about 5,000 weighed cafeteria dishes missed by **26% on average**; adding a depth camera to judge portion size brought that down to about 17%. The same paper found that when people estimated the mass of a plate by eye, even nutritionists were off by 41% on average.
+
+Consumer apps can do worse. In a 2026 test by researchers at the **National Institutes of Health (NIDDK)**, four popular photo-based tracking apps were given standardized photos of 102 meals prepared in a metabolic kitchen, with every ingredient weighed to 0.1 g. All four **undercounted calories by about a third**, 250 to 345 kcal per meal on average, and underestimated fat by about 30 g, mostly fat they could not see in the photo: butter, oil, cheese, cream and sauces. SnapNutrition AI was not part of that test, and nothing on this page claims it would score better. The lesson applies to every photo tracker: the camera misses fat, so add it yourself.
 
 ## Where AI calorie estimates go wrong
 
@@ -37,7 +43,7 @@ Used well, an AI tracker gets you most of the accuracy at a fraction of the effo
 
 ## How SnapNutrition AI handles this
 
-[SnapNutrition AI](https://snapnutritionai.app/index.html.md) is designed around these limitations rather than in denial of them:
+[SnapNutrition AI](https://snapnutritionai.app/) is designed around these limitations rather than in denial of them:
 
 - Six input methods — **photo, photo library, barcode, voice, text, and manual entry** — so you can pick the most accurate one for each food. Manual entry makes no AI request at all, so when you already have the numbers from a label, a food scale, or a recipe you cook often, you can enter them directly with no estimation in the loop. You can also share a photo in from Photos, Messages, or any other app.
 - Every scan is **editable**: adjust portions and ingredients after the AI's first pass
@@ -72,6 +78,11 @@ Want fast AI estimates that you can review and correct? SnapNutrition AI lets yo
 
 [![Download SnapNutrition AI on the App Store](https://snapnutritionai.app/images/download-on-the-app-store.svg?v=2)](https://apps.apple.com/us/app/snapnutrition-ai/id6757797704)
 
+## Sources
+
+- [Thames Q, Karpur A, Norris W, et al. “Nutrition5k: Towards Automatic Nutritional Understanding of Generic Food.” CVPR, 2021](https://openaccess.thecvf.com/content/CVPR2021/html/Thames_Nutrition5k_Towards_Automatic_Nutritional_Understanding_of_Generic_Food_CVPR_2021_paper.html) — calorie error of 26.1% from a single photo, 16.5% with depth (Table 3)
+- [Charles O, Hengist A, et al. Photo-based calorie tracking apps tested on 102 meals. Presented at NUTRITION 2026, American Society for Nutrition, July 2026](https://www.newswise.com/articles/photo-based-calorie-tracking-apps-may-underestimate-energy-in-meals) — conference presentation; summary via the American Society for Nutrition
+
 ## Related reading
 
 - [BYOK calorie tracker: use your own Gemini, OpenAI, Anthropic, or OpenRouter key](https://snapnutritionai.app/byok-calorie-tracker.html.md)
@@ -80,6 +91,6 @@ Want fast AI estimates that you can review and correct? SnapNutrition AI lets yo
 - [Am I actually in a calorie deficit? How to read your own log](https://snapnutritionai.app/calorie-deficit-tracking.html.md)
 - [Best free AI calorie tracker apps in 2026](https://snapnutritionai.app/best-free-ai-calorie-tracker-apps-2026.html.md)
 - [What makes an AI calorie tracker privacy-first?](https://snapnutritionai.app/privacy-first-ai-calorie-tracker.html.md)
-- [SnapNutrition AI homepage](https://snapnutritionai.app/index.html.md)
+- [SnapNutrition AI homepage](https://snapnutritionai.app/)
 
 SnapNutrition AI is for general food logging and wellness support. It is not medical advice and should not replace guidance from a doctor or registered dietitian.
