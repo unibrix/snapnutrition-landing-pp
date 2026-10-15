@@ -221,10 +221,17 @@ img.phone__frame { width: 100%; height: 100%; max-width: none; border-radius: 0;
   .day figure { max-width: none; display: grid; grid-template-columns: 34vw 1fr; gap: 1.1rem; align-items: center; }
   .day figcaption h3 { margin-top: 0; }
   .phone--still { --pw: 34vw; }
-  .close__bowl { width: 78vw; right: 11vw; top: 8svh; translate: none; }
-  .close__phone { width: 30vw; --pw: 30vw; right: auto; left: var(--sc-gutter); top: 9svh; translate: none; }
-  .close__bowl { width: 60vw; right: 5vw; top: 11svh; }
-  .close__copy { top: auto; bottom: 6svh; translate: none; width: auto; right: var(--sc-gutter); }
+  /* phones: the close is a plain flow block, not a pinned stage. A fixed-height
+     stage with the copy pinned to its bottom let the copy (taller than the room
+     left on a real iPhone) ride up over the phone and the bowl. */
+  .close-act { height: auto !important; }
+  .close-act .sc-stage { position: relative; top: auto; height: auto; overflow: visible;
+    display: grid; grid-template-columns: 30vw 1fr; gap: 1.5rem 4vw; align-items: center;
+    padding: 2.5rem var(--sc-gutter) 3rem; }
+  .close__phone, .close__bowl, .close__copy { position: relative; left: auto; right: auto; top: auto; bottom: auto; translate: none; }
+  .close__phone { width: 30vw; --pw: 30vw; }
+  .close__bowl { width: 100%; }
+  .close__copy { grid-column: 1 / -1; width: auto; }
 }
 
 /* the information part of the page keeps the site's own components */
