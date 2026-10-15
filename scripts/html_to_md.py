@@ -31,6 +31,7 @@ CONTENT_SELECTORS = ["main", ".privacy-page", "article", ".content", "body"]
 # Elements removed from the content root before conversion (chrome / decoration
 # that may live *inside* the content root).
 STRIP_SELECTORS = [
+    ".ruler",  # the homepage slider: live readouts, not copy
     "script",
     "style",
     "noscript",

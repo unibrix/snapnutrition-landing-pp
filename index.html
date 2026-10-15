@@ -6,13 +6,15 @@
     <meta name="theme-color" content="#f4f9f5" media="(prefers-color-scheme: light)">
     <meta name="theme-color" content="#0b1f16" media="(prefers-color-scheme: dark)">
     <link rel="preload" href="fonts/instrument-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" as="image" type="image/webp" href="images/device-meal.webp?v=2" fetchpriority="high">
+    <link rel="preload" as="image" type="image/webp" href="images/iphone17-sage.webp" fetchpriority="high">
     <link rel="stylesheet" href="themes/forest.css?v=1">
     <link rel="stylesheet" href="styles.css?v=9">
+    <link rel="stylesheet" href="scrollcraft.css?v=1">
+    <link rel="stylesheet" href="landing.css?v=1">
     <title>SnapNutrition AI, Official Site: AI Calorie Tracker for iPhone</title>
     <meta name="description" content="Official SnapNutrition AI site: AI calorie tracker for iPhone, iPad, and Apple Watch with no mandatory subscription. Snap a meal, get calories and macros.">
     <meta name="robots" content="index, follow">
-    <noscript></noscript>
+    <noscript><style>[data-sc-cue],[data-sc-in],[data-sc-stagger]>*{opacity:1!important;transform:none!important}.table-act,.day-act,.rail-act,.close-act{height:auto!important}.table-act :is(.scene>.bowl,.scene>.phone,.callouts),.close-act :is(.close__bowl,.close__phone){display:none!important}.hero-copy,.peak-copy,.close__copy{position:static!important;translate:none!important;width:auto!important;padding:1rem var(--sc-gutter)!important}.found{position:static!important;width:auto!important;height:auto!important;clip:auto!important;white-space:normal!important}</style></noscript>
     <script>try{document.documentElement.dataset.theme=localStorage.getItem('snapnutrition_theme')||'system'}catch(e){document.documentElement.dataset.theme='system'}</script>
     <link rel="canonical" href="https://snapnutritionai.app/">
     <link rel="alternate" type="text/markdown" href="https://snapnutritionai.app/index.html.md" title="Markdown version for AI agents">
@@ -38,8 +40,8 @@
     <meta name="apple-itunes-app" content="app-id=6757797704">
 
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="images/favicon.png?v=2">
-    <link rel="apple-touch-icon" href="images/apple-touch-icon.png?v=2">
+    <link rel="icon" type="image/png" href="images/favicon.png?v=3">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png?v=3">
 
     <!-- JSON-LD Structured Data -->
     <script type="application/ld+json">
@@ -390,14 +392,35 @@
 </div>
 
 <main id="main">
-    <section class="hero">
-        <div class="wrap hero-grid">
-            <div class="hero-copy">
-                <h1>AI calorie tracking for iPhone, without the subscription.</h1>
+    <section class="table-act" data-sc-act="pin" data-sc-span="4.4" aria-labelledby="hero-title">
+        <div data-sc-stage class="scene">
+            <div class="scene__ground" aria-hidden="true"></div>
+            <div class="bowl" aria-hidden="true"><img src="images/bowl.webp" width="1400" height="1400" alt="" fetchpriority="high"></div>
+
+            <ol class="callouts" aria-hidden="true">
+                <li class="callout" data-x="0.222" data-y="0.310"><i class="callout__dot"></i><i class="callout__n" aria-hidden="true">1</i><i class="callout__line"></i><span class="callout__label"><strong>Boiled egg</strong><span>50 g · 70 kcal</span></span></li>
+                <li class="callout" data-x="0.388" data-y="0.624"><i class="callout__dot"></i><i class="callout__n" aria-hidden="true">2</i><i class="callout__line"></i><span class="callout__label"><strong>Ramen noodles</strong><span>200 g · 280 kcal</span></span></li>
+                <li class="callout" data-x="0.184" data-y="0.716"><i class="callout__dot"></i><i class="callout__n" aria-hidden="true">3</i><i class="callout__line"></i><span class="callout__label"><strong>2 smaller components</strong><span>7 kcal</span></span></li>
+            </ol>
+
+            <!-- The phone never moves, tilts or scales (Apple's product-image rules):
+                 the table moves under it. .phone__screen is the screen slot; the
+                 frame on top is a neutral stand-in until Apple's bezel PNG is in. -->
+            <div class="phone" aria-hidden="true">
+                <div class="phone__screen">
+                    <div class="lens"><div class="lens__ground"></div><div class="bowl"><img src="images/bowl.webp" width="1400" height="1400" alt=""></div></div>
+                    <img class="viewfinder" src="images/camera-chrome.webp" width="900" height="1957" alt="">
+                    <img class="phone__result" src="images/screen-result.webp?v=2" width="804" height="1748" alt="">
+                    <div class="flash"></div>
+                </div>
+                <img class="phone__frame" src="images/iphone17-sage.webp" width="675" height="1380" alt="" aria-hidden="true" fetchpriority="high">
+            </div>
+
+            <div class="hero-copy" data-sc-cue="0 0.36 0 0.16">
+                <h1 id="hero-title">AI calorie tracking for iPhone, without the subscription.</h1>
                 <p class="lead">SnapNutrition AI turns a photo, a barcode, a voice note, or a typed line into calories and macros, and keeps the diary on your iPhone, iPad, and Apple Watch. Bring your own Gemini, OpenAI, Anthropic, or OpenRouter key and the app costs nothing. Or turn on Auto Mode for $2.99 a month and never touch a key.</p>
                 <div class="hero-actions">
-                    <a href="https://apps.apple.com/us/app/snapnutrition-ai/id6757797704" class="app-store-badge" aria-label="Download SnapNutrition AI on the App Store"><img src="images/download-on-the-app-store.svg?v=2" alt="Download SnapNutrition AI on the App Store" width="156" height="52"></a>
-                    <a class="text-link" href="byok-calorie-tracker.html">How bring-your-own-key works</a>
+                    <a href="https://apps.apple.com/us/app/snapnutrition-ai/id6757797704" class="app-store-badge" aria-label="Download SnapNutrition AI on the App Store"><img src="images/download-on-the-app-store.svg" alt="Download SnapNutrition AI on the App Store" width="156" height="52"></a>
                 </div>
                 <ul class="hero-facts">
                     <li>No account</li>
@@ -406,36 +429,79 @@
                     <li>iOS 17.6 or later</li>
                 </ul>
             </div>
-            <div class="hero-visual">
-                <img src="images/device-meal.webp?v=2" width="900" height="1762" alt="SnapNutrition AI meal screen: a bowl of ramen with egg, 357 kcal, 14 g protein, 52 g carbs, 11 g fat, and an editable list of components" fetchpriority="high">
+
+            <div class="peak-copy" data-sc-cue="0.56 1 0.08 0.02">
+                <h2>Every part, named and weighed.</h2>
+                <p class="total"><strong>357 kcal</strong> · 14 g protein · 52 g carbs · 11 g fat</p>
+                <ol class="found" aria-label="What the app found in this example meal">
+                    <li>Boiled egg, 50 g: <span>70 kcal</span></li>
+                    <li>Ramen noodles, 200 g: <span>280 kcal</span></li>
+                    <li>2 smaller components: <span>7 kcal</span></li>
+                </ol>
+                <span class="tag-example">Example: SnapNutrition AI's estimate for a photo of ramen with egg.</span>
             </div>
         </div>
     </section>
 
-    <section class="section" id="how">
-        <div class="wrap">
-            <div class="section-head">
-                <h2>One meal, one day, every day since</h2>
-                <p>Every scan comes back as components you can correct. Meals group into days with a total, and the days build a chart with a goal line and a 7-day average.</p>
+    <section class="adjust" data-sc-act="flow">
+        <div class="wrap adjust__grid">
+            <div data-sc-in data-sc-stagger="70">
+                <h2>The app guessed 200 grams of noodles. You know better.</h2>
+                <p>Every component comes back editable. Drag the weight and the calories follow, using the app's own estimate for these noodles. Change a portion, remove an item, add one, then save.</p>
             </div>
-            <div class="trio">
-                <figure>
-                    <div class="shot"><img src="images/device-meal.webp?v=2" width="900" height="1762" alt="Meal detail: ramen with egg, 357 kcal, with each component's weight and macros" loading="lazy"></div>
-                    <figcaption><h3>A meal</h3><p>Photo, barcode, voice, or text. The estimate arrives as a list of components; change a portion, remove an item, add one, then save.</p></figcaption>
-                </figure>
-                <figure>
-                    <div class="shot"><img src="images/device-diary.webp?v=2" width="900" height="1762" alt="Food diary: meals grouped by day with a calorie total for each day" loading="lazy"></div>
-                    <figcaption><h3>A day</h3><p>Meals grouped by day with the day's total. Favourites log again in one tap, manual entries can be backdated, and the whole diary exports as JSON or CSV.</p></figcaption>
-                </figure>
-                <figure>
-                    <div class="shot"><img src="images/device-stats.webp?v=2" width="900" height="1762" alt="Statistics: calorie and macro rings, a daily chart with the goal line, days within goal and the daily average" loading="lazy"></div>
-                    <figcaption><h3>Every day since</h3><p>Calorie and macro rings, a goal line on the chart, a 7-day average, and how many logged days landed within goal.</p></figcaption>
-                </figure>
+            <div class="ruler" data-grams="200" data-kcal="280" data-meal="357" data-sc-in>
+                <p class="ruler__g"><span data-g>200</span> g</p>
+                <p class="ruler__k">Ramen noodles · <span data-k>280</span> kcal</p>
+                <div class="ruler__track"><span class="ruler__pin"></span><div class="ruler__ticks" aria-hidden="true"></div></div>
+                <label class="visually-hidden" for="noodles">Weight of the ramen noodles, in grams</label>
+                <input type="range" id="noodles" min="50" max="350" step="5" value="200">
+                <p class="ruler__meal">Meal total <strong><span data-meal>357</span> kcal</strong></p>
             </div>
         </div>
     </section>
 
-    <section class="section" id="features">
+    <section class="day-intro" id="how">
+        <div class="wrap day__copy" data-sc-in data-sc-stagger="70">
+            <h2>One meal, one day, every day since</h2>
+            <p>Every scan comes back as components you can correct. Meals group into days with a total, and the days build a chart with a goal line and a 7-day average.</p>
+        </div>
+    </section>
+
+    <!-- One phone, three screens: the phone never moves (Apple product-image
+         rules); only the screen cross-fades and the matching caption lights up. -->
+    <section class="day-act" data-sc-act="pin" data-sc-span="3.2" aria-label="One meal, one day, every day since">
+        <div data-sc-stage class="day-stage">
+            <div class="wrap day-stage__grid">
+                <ol class="day-steps">
+                    <li class="day-step"><h3>A meal</h3><p>Photo, barcode, voice, or text. The estimate arrives as a list of components; change a portion, remove an item, add one, then save.</p></li>
+                    <li class="day-step"><h3>A day</h3><p>Meals grouped by day with the day's total. Favourites log again in one tap, manual entries can be backdated, and the whole diary exports as JSON or CSV.</p></li>
+                    <li class="day-step"><h3>Every day since</h3><p>Calorie and macro rings, a goal line on the chart, a 7-day average, and how many logged days landed within goal.</p></li>
+                </ol>
+                <div class="phone phone--still day-phone"><div class="phone__screen"><img class="phone__result day-screen" src="images/screen-result.webp?v=2" width="804" height="1748" alt="Meal detail: ramen with egg, 357 kcal, with each component's weight and macros" loading="lazy"><img class="phone__result day-screen" src="images/screen-history.webp?v=2" width="804" height="1748" alt="Food diary: meals grouped by day with a calorie total for each day" loading="lazy"><img class="phone__result day-screen" src="images/screen-stats.webp?v=2" width="804" height="1748" alt="Statistics: calorie and macro rings, a daily chart with the goal line, days within goal and the daily average" loading="lazy"></div><img class="phone__frame" src="images/iphone17-sage.webp" width="675" height="1380" alt="" aria-hidden="true" loading="lazy"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="rail-act" data-sc-act="pan" data-sc-span="4" aria-label="The app, screen by screen">
+        <div data-sc-stage>
+            <div class="rail" data-sc-pan="0.04">
+                <div class="rail__lead">
+                    <h2>The app, screen by screen</h2>
+                    <p>The six iPhone screens, as they appear on the App Store. The same diary runs on iPad, and the Apple Watch app logs by voice and shows the day's rings on your wrist.</p>
+                </div>
+                <figure><img src="images/screenshot-1.webp?v=5" width="560" height="1216" alt="SnapNutrition AI home screen with scan, photo, barcode, voice, text, and manual entry" loading="lazy"><figcaption>Six ways to log, right on the home screen.</figcaption></figure>
+                <figure><img src="images/screenshot-2.webp?v=5" width="560" height="1216" alt="Camera view pointed at a bowl of ramen" loading="lazy"><figcaption>Point the camera at the plate.</figcaption></figure>
+                <figure><img src="images/screenshot-3.webp?v=5" width="560" height="1216" alt="Food diary with meals grouped by day and a daily calorie total" loading="lazy"><figcaption>The diary, day by day.</figcaption></figure>
+                <figure><img src="images/screenshot-4.webp?v=5" width="560" height="1216" alt="Statistics with calorie and macro rings, a goal line, and days within goal" loading="lazy"><figcaption>Rings and a goal line.</figcaption></figure>
+                <figure><img src="images/screenshot-5.webp?v=5" width="560" height="1216" alt="Meal detail: editable portions for every component" loading="lazy"><figcaption>Every component editable.</figcaption></figure>
+                <figure><img src="images/screenshot-6.webp?v=5" width="560" height="1216" alt="Home Screen widgets for calorie progress and one-tap logging" loading="lazy"><figcaption>Widgets for one-tap logging.</figcaption></figure>
+                <p class="rail__end">On Apple Watch: say what you ate, see the day's rings, add a complication to the watch face.</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="info">
+<section class="section" id="features">
         <div class="wrap">
             <div class="section-head">
                 <h2>Log it the way the moment allows</h2>
@@ -483,18 +549,6 @@
                 </article>
             </div>
             <p class="price-note">Core tracking is never locked behind Auto Mode. Provider prices and free tiers are set by the providers and can change.</p>
-        </div>
-    </section>
-
-    <section class="section" id="screens">
-        <div class="wrap">
-            <div class="section-head">
-                <h2>The app, screen by screen</h2>
-                <p>The six iPhone screens, as they appear on the App Store. The same diary runs on iPad, and the Apple Watch app logs by voice and shows the day's rings on your wrist.</p>
-            </div>
-        </div>
-        <div class="marquee" aria-label="iPhone screenshots">
-            <div class="marquee-group"><img src="images/screenshot-1.webp?v=4" width="560" height="1216" alt="SnapNutrition AI home screen with scan, photo, barcode, voice, text, and manual entry" decoding="sync" fetchpriority="low"><img src="images/screenshot-2.webp?v=4" width="560" height="1216" alt="Camera view pointed at a bowl of ramen" decoding="sync" fetchpriority="low"><img src="images/screenshot-3.webp?v=4" width="560" height="1216" alt="Food diary with meals grouped by day and a daily calorie total" decoding="sync" fetchpriority="low"><img src="images/screenshot-4.webp?v=4" width="560" height="1216" alt="Statistics with calorie and macro rings, a goal line, and days within goal" decoding="sync" fetchpriority="low"><img src="images/screenshot-5.webp?v=4" width="560" height="1216" alt="Meal detail: editable portions for every component" decoding="sync" fetchpriority="low"><img src="images/screenshot-6.webp?v=4" width="560" height="1216" alt="Home Screen widgets for calorie progress and one-tap logging" decoding="sync" fetchpriority="low"></div>
         </div>
     </section>
 
@@ -624,16 +678,24 @@
         </div>
     </section>
 
-    <section class="cta-band">
-        <div class="wrap">
-            <h2>Try it with your own key. There is nothing to cancel.</h2>
-            <p class="lead">Free on the App Store for iPhone, iPad, and Apple Watch. Add a Gemini or OpenRouter key and the first scan costs nothing.</p>
-            <a href="https://apps.apple.com/us/app/snapnutrition-ai/id6757797704" class="app-store-badge" aria-label="Download SnapNutrition AI on the App Store"><img src="images/download-on-the-app-store.svg?v=2" alt="Download SnapNutrition AI on the App Store" width="156" height="52"></a>
-            <p class="muted" style="margin-top:1.5rem;font-size:.9375rem;max-width:66ch">SnapNutrition AI is for general food logging and wellness support. It is not medical advice and should not replace guidance from a doctor or registered dietitian.</p>
+        </div>
+
+    <section class="close-act" data-sc-act="pin" data-sc-span="1.3" aria-labelledby="close-title">
+        <div data-sc-stage>
+            <div class="close__bowl" aria-hidden="true"><img src="images/bowl.webp" width="1400" height="1400" alt="" loading="lazy"></div>
+            <div class="phone close__phone" aria-hidden="true">
+                <div class="phone__screen"><img class="phone__result" style="opacity:1" src="images/screen-result.webp?v=2" width="804" height="1748" alt="" loading="lazy"></div>
+                <img class="phone__frame" src="images/iphone17-sage.webp" width="675" height="1380" alt="" aria-hidden="true">
+            </div>
+            <div class="close__copy">
+                <h2 id="close-title">Try it with your own key. There is nothing to cancel.</h2>
+                <p>Free on the App Store for iPhone, iPad, and Apple Watch. Add a Gemini or OpenRouter key and the first scan costs nothing.</p>
+                <a href="https://apps.apple.com/us/app/snapnutrition-ai/id6757797704" class="app-store-badge" aria-label="Download SnapNutrition AI on the App Store" data-sc-magnet="0.25"><img src="images/download-on-the-app-store.svg" alt="Download SnapNutrition AI on the App Store" width="156" height="52"></a>
+                <p class="muted fine">SnapNutrition AI is for general food logging and wellness support. It is not medical advice and should not replace guidance from a doctor or registered dietitian.</p>
+            </div>
         </div>
     </section>
 </main>
-
 <footer class="site-footer">
     <div class="footer-grid">
         <div class="footer-about">
@@ -672,5 +734,12 @@
     <p class="copyright">&copy; <span id="year"></span> SnapNutrition AI. All rights reserved.</p>
 </footer>
 <script src="site.js?v=9"></script>
+<script src="scrollcraft.js?v=1"></script>
+<script>
+// phones: the hero is a flow section driven by landing.js; the engine must not pin it or cue its copy
+if (matchMedia('(max-width: 760px)').matches) { var h = document.querySelector('.table-act'); if (h) { h.removeAttribute('data-sc-act'); h.removeAttribute('data-sc-span'); h.classList.add('is-flow'); h.querySelectorAll('[data-sc-cue]').forEach(function (c) { c.removeAttribute('data-sc-cue'); }); } }
+ScrollCraft.mount(document.body);
+</script>
+<script src="landing.js?v=1"></script>
 </body>
 </html>

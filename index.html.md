@@ -6,37 +6,72 @@
 
 SnapNutrition AI turns a photo, a barcode, a voice note, or a typed line into calories and macros, and keeps the diary on your iPhone, iPad, and Apple Watch. Bring your own Gemini, OpenAI, Anthropic, or OpenRouter key and the app costs nothing. Or turn on Auto Mode for $2.99 a month and never touch a key.
 
-[![Download SnapNutrition AI on the App Store](https://snapnutritionai.app/images/download-on-the-app-store.svg?v=2)](https://apps.apple.com/us/app/snapnutrition-ai/id6757797704)
-[How bring-your-own-key works](https://snapnutritionai.app/byok-calorie-tracker.html.md)
+[![Download SnapNutrition AI on the App Store](https://snapnutritionai.app/images/download-on-the-app-store.svg)](https://apps.apple.com/us/app/snapnutrition-ai/id6757797704)
 
 - No account
 - Diary stays on your device
 - 14 languages
 - iOS 17.6 or later
 
-![SnapNutrition AI meal screen: a bowl of ramen with egg, 357 kcal, 14 g protein, 52 g carbs, 11 g fat, and an editable list of components](https://snapnutritionai.app/images/device-meal.webp?v=2)
+## Every part, named and weighed.
+
+**357 kcal** · 14 g protein · 52 g carbs · 11 g fat
+
+1. Boiled egg, 50 g: 70 kcal
+2. Ramen noodles, 200 g: 280 kcal
+3. 2 smaller components: 7 kcal
+
+Example: SnapNutrition AI's estimate for a photo of ramen with egg.
+
+## The app guessed 200 grams of noodles. You know better.
+
+Every component comes back editable. Drag the weight and the calories follow, using the app's own estimate for these noodles. Change a portion, remove an item, add one, then save.
 
 ## One meal, one day, every day since
 
 Every scan comes back as components you can correct. Meals group into days with a total, and the days build a chart with a goal line and a 7-day average.
 
-![Meal detail: ramen with egg, 357 kcal, with each component's weight and macros](https://snapnutritionai.app/images/device-meal.webp?v=2)
+1. ### A meal
 
-### A meal
+   Photo, barcode, voice, or text. The estimate arrives as a list of components; change a portion, remove an item, add one, then save.
+2. ### A day
 
-Photo, barcode, voice, or text. The estimate arrives as a list of components; change a portion, remove an item, add one, then save.
+   Meals grouped by day with the day's total. Favourites log again in one tap, manual entries can be backdated, and the whole diary exports as JSON or CSV.
+3. ### Every day since
 
-![Food diary: meals grouped by day with a calorie total for each day](https://snapnutritionai.app/images/device-diary.webp?v=2)
+   Calorie and macro rings, a goal line on the chart, a 7-day average, and how many logged days landed within goal.
 
-### A day
+![Meal detail: ramen with egg, 357 kcal, with each component's weight and macros](https://snapnutritionai.app/images/screen-result.webp?v=2)![Food diary: meals grouped by day with a calorie total for each day](https://snapnutritionai.app/images/screen-history.webp?v=2)![Statistics: calorie and macro rings, a daily chart with the goal line, days within goal and the daily average](https://snapnutritionai.app/images/screen-stats.webp?v=2)
 
-Meals grouped by day with the day's total. Favourites log again in one tap, manual entries can be backdated, and the whole diary exports as JSON or CSV.
+## The app, screen by screen
 
-![Statistics: calorie and macro rings, a daily chart with the goal line, days within goal and the daily average](https://snapnutritionai.app/images/device-stats.webp?v=2)
+The six iPhone screens, as they appear on the App Store. The same diary runs on iPad, and the Apple Watch app logs by voice and shows the day's rings on your wrist.
 
-### Every day since
+![SnapNutrition AI home screen with scan, photo, barcode, voice, text, and manual entry](https://snapnutritionai.app/images/screenshot-1.webp?v=5)
 
-Calorie and macro rings, a goal line on the chart, a 7-day average, and how many logged days landed within goal.
+Six ways to log, right on the home screen.
+
+![Camera view pointed at a bowl of ramen](https://snapnutritionai.app/images/screenshot-2.webp?v=5)
+
+Point the camera at the plate.
+
+![Food diary with meals grouped by day and a daily calorie total](https://snapnutritionai.app/images/screenshot-3.webp?v=5)
+
+The diary, day by day.
+
+![Statistics with calorie and macro rings, a goal line, and days within goal](https://snapnutritionai.app/images/screenshot-4.webp?v=5)
+
+Rings and a goal line.
+
+![Meal detail: editable portions for every component](https://snapnutritionai.app/images/screenshot-5.webp?v=5)
+
+Every component editable.
+
+![Home Screen widgets for calorie progress and one-tap logging](https://snapnutritionai.app/images/screenshot-6.webp?v=5)
+
+Widgets for one-tap logging.
+
+On Apple Watch: say what you ate, see the day's rings, add a complication to the watch face.
 
 ## Log it the way the moment allows
 
@@ -92,12 +127,6 @@ No key to create. Scans pass through our proxy, which never stores your photos, 
 - Turn it off and keep everything you logged
 
 Core tracking is never locked behind Auto Mode. Provider prices and free tiers are set by the providers and can change.
-
-## The app, screen by screen
-
-The six iPhone screens, as they appear on the App Store. The same diary runs on iPad, and the Apple Watch app logs by voice and shows the day's rings on your wrist.
-
-![SnapNutrition AI home screen with scan, photo, barcode, voice, text, and manual entry](https://snapnutritionai.app/images/screenshot-1.webp?v=4)![Camera view pointed at a bowl of ramen](https://snapnutritionai.app/images/screenshot-2.webp?v=4)![Food diary with meals grouped by day and a daily calorie total](https://snapnutritionai.app/images/screenshot-3.webp?v=4)![Statistics with calorie and macro rings, a goal line, and days within goal](https://snapnutritionai.app/images/screenshot-4.webp?v=4)![Meal detail: editable portions for every component](https://snapnutritionai.app/images/screenshot-5.webp?v=4)![Home Screen widgets for calorie progress and one-tap logging](https://snapnutritionai.app/images/screenshot-6.webp?v=4)
 
 ## Compared with the apps people switch from
 
@@ -234,6 +263,6 @@ Longer reads on cost, accuracy, and privacy, with sources.
 
 Free on the App Store for iPhone, iPad, and Apple Watch. Add a Gemini or OpenRouter key and the first scan costs nothing.
 
-[![Download SnapNutrition AI on the App Store](https://snapnutritionai.app/images/download-on-the-app-store.svg?v=2)](https://apps.apple.com/us/app/snapnutrition-ai/id6757797704)
+[![Download SnapNutrition AI on the App Store](https://snapnutritionai.app/images/download-on-the-app-store.svg)](https://apps.apple.com/us/app/snapnutrition-ai/id6757797704)
 
 SnapNutrition AI is for general food logging and wellness support. It is not medical advice and should not replace guidance from a doctor or registered dietitian.

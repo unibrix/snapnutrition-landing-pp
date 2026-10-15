@@ -1,0 +1,283 @@
+/* snap-scenes: page styles. The engine (scrollcraft.css) is themed from the
+   Forest tokens so light and dark mode both follow the site's theme file. */
+:root,
+html[data-theme] {
+  --sc-canvas: var(--paper);
+  --sc-surface: var(--surface);
+  --sc-ink: var(--ink);
+  --sc-ink-soft: var(--muted);
+  --sc-accent: var(--accent);
+  --sc-accent-ink: var(--cta-ink);
+  --sc-font-display: var(--font-display);
+  --sc-font-text: var(--font-body);
+  --sc-shadow-color: 152 60% 10%;
+  --ground: var(--paper);   /* one ground for the page, so the emoji sky reads through every scene */
+  --frame: #c9cfcc;
+  --frame-hi: #eef2f0;
+}
+body { background: var(--paper); color: var(--ink); font-family: var(--font-body); }
+
+/* The site header is sticky. Every pinned stage sits BELOW it, sized to the
+   space under it (page.js publishes --hdr on :root): no dead band on the first
+   screen and no scene starting hidden behind the header. */
+.sc-act--pinned .sc-stage { top: var(--hdr, 0px); height: calc(100vh - var(--hdr, 0px)); height: calc(100svh - var(--hdr, 0px)); }
+/* Leaving a scene: the stage slides up under the header with the next section
+   following, like any content under a sticky header. Fading it (tried Oct 15)
+   left a ghost or a blank screen between scenes; neither read as better. */
+/* Each pinned act's scroll length, reserved before the engine sets it (the
+   engine writes the same span * 100vh): the sections below do not jump when
+   the scripts arrive after first paint (measured CLS 0.93 without this). */
+.day-act { height: 320vh; }
+.rail-act { height: 400vh; }
+.close-act { height: 130vh; }
+@media (min-width: 761px) { .table-act { height: 440vh; } }
+html { scroll-behavior: auto; }
+
+/* ------------------------------------------------------------ the table -- */
+.table-act { position: relative; }
+.scene { background: transparent; isolation: isolate; }
+.scene__ground { display: none; }
+html[data-theme="dark"] .scene__ground { opacity: .35; }
+@media (prefers-color-scheme: dark) { html[data-theme="system"] .scene__ground { opacity: .35; } }
+
+.bowl {
+  position: absolute; left: 0; top: 0; z-index: 1;
+  width: 100px; height: 100px; /* real size set from JS, motion is transform only */
+  transform-origin: 0 0; will-change: transform; pointer-events: none;
+}
+/* page.js sizes and places the table's bowl, phone, lens and callouts; until it
+   has (.is-laid), nothing paints at a placeholder size that would then shift */
+.table-act :is(.scene > .bowl, .scene > .phone, .lens, .callouts) { visibility: hidden; }
+.table-act.is-laid :is(.scene > .bowl, .scene > .phone, .lens, .callouts) { visibility: visible; }
+.bowl img { width: 100%; height: 100%; max-width: none; }
+.bowl::before { /* contact shadow, travels with the bowl */
+  content: ""; position: absolute; inset: 4% 2% -3% 6%; border-radius: 50%;
+  background: radial-gradient(closest-side, hsl(var(--sc-shadow-color) / .30), transparent);
+  filter: blur(14px); transform: translate(3%, 4%); z-index: -1;
+}
+
+/* The phone: upright, still, no shadow (Apple product-image rules).
+   --sx/--sy/--sw/--sh place the screen inside the device box as fractions,
+   --sr is the screen corner radius as a fraction of the device width. The
+   stand-in frame is a plain band with no Apple-specific details; Apple's
+   bezel PNG is .phone__frame; the five numbers are measured from it. */
+.phone {
+  position: absolute; left: 0; top: 0; z-index: 3; pointer-events: none;
+  --sx: 0.05333; --sy: 0.025; --sw: 0.89333; --sh: 0.95; --sr: 0.139; /* Apple iPhone 17 bezel: screen 1206x2622 at 72,69 in 1350x2760 */
+}
+.phone__screen {
+  position: absolute; overflow: hidden; background: #000;
+  /* bleed 2px under the bezel's black ring on every side: an exact fit leaves a
+     hairline of page showing where both curved edges are antialiased */
+  --bleed: 2px;
+  left: calc(var(--sx) * 100% - var(--bleed)); top: calc(var(--sy) * 100% - var(--bleed));
+  width: calc(var(--sw) * 100% + 2 * var(--bleed)); height: calc(var(--sh) * 100% + 2 * var(--bleed));
+  border-radius: calc(var(--sr) * var(--pw, 280px) + var(--bleed));
+}
+.phone__frame {
+  position: absolute; inset: 0; pointer-events: none;
+  border-radius: calc(0.165 * var(--pw, 280px));
+  box-shadow: inset 0 0 0 calc(0.012 * var(--pw, 280px)) #3a3f3d,
+              inset 0 0 0 calc(0.046 * var(--pw, 280px)) #0b0c0c;
+}
+img.phone__frame { width: 100%; height: 100%; max-width: none; border-radius: 0; box-shadow: none; }
+.lens { position: absolute; left: 0; top: 0; transform-origin: 0 0; will-change: transform; filter: brightness(.86) contrast(1.08) saturate(1.1); }
+/* the camera feed, not a window: a real sensor image is darker at the edges. Screen content only; the bezel is used as is. */
+.phone__screen::after { content: ""; position: absolute; inset: 0; z-index: 2; pointer-events: none;
+  background: radial-gradient(120% 80% at 50% 45%, transparent 55%, rgb(0 0 0 / .32) 100%), linear-gradient(rgb(0 0 0 / .18), transparent 18%, transparent 80%, rgb(0 0 0 / .22)); }
+.phone--still .phone__screen::after, .close__phone .phone__screen::after { display: none; }
+.lens__ground { position: absolute; inset: -12%; background: var(--ground); }
+.lens .bowl { z-index: 1; }
+.lens .bowl::before { display: none; }
+.viewfinder { position: absolute; inset: 0; z-index: 4; width: 100%; height: 100%; max-width: none; object-fit: fill; pointer-events: none; }
+.flash { position: absolute; inset: 0; z-index: 5; background: #fff; opacity: 0; pointer-events: none; }
+.phone__result { position: absolute; inset: 0; z-index: 3; width: 100%; height: 100%; object-fit: fill; opacity: 0; max-width: none; } /* raw 1206x2622 screens: same shape as the slot */
+
+/* copy on the table: centred above the phone (the phone is sized into the
+   space the copy leaves, in page.js), then the peak copy right of it */
+.hero-copy {
+  position: absolute; z-index: 4; left: 50%; top: clamp(1rem, 2.5vh, 1.75rem); translate: -50% 0; /* the stage starts below the header on the first screen */
+  width: min(66rem, 92vw); text-align: center;
+  padding: 0; /* styles.css gives the old flow hero ~200px of padding; here the phone needs that room */
+}
+.hero-copy h1 { font-size: clamp(2.2rem, 1rem + 2.6vw, 3.4rem); line-height: 1.04; letter-spacing: -0.04em; margin-inline: auto; max-width: 20ch; }
+.hero-copy .lead { margin: .75rem auto 0; font-size: clamp(.98rem, .94rem + .18vw, 1.08rem); line-height: 1.5; color: var(--muted); max-width: 84ch; }
+.hero-copy .hero-actions { justify-content: center; margin-top: 1.1rem; }
+.hero-copy .hero-facts { justify-content: center; margin-top: .9rem; font-size: .875rem; }
+.peak-copy {
+  position: absolute; z-index: 4; left: auto; right: var(--sc-gutter); top: 50%; translate: 0 -40%;
+  width: min(24rem, 27vw);
+}
+.peak-copy h2 { font-size: clamp(1.8rem, 1.2rem + 1.8vw, 3rem); line-height: 1.04; letter-spacing: -0.035em; }
+.peak-copy .total { margin-top: .75rem; color: var(--muted); font-variant-numeric: tabular-nums; }
+.peak-copy .total strong { color: var(--ink); font-weight: 650; }
+.tag-example { display: inline-block; margin-top: .9rem; font-size: .8125rem; color: var(--muted); }
+
+/* callouts: a dot on the food, a hairline out past the rim, the label */
+.callouts { list-style: none; margin: 0; padding: 0; position: absolute; inset: 0; z-index: 2; pointer-events: none; }
+.callout { position: absolute; left: 0; top: 0; will-change: transform, opacity; opacity: 0; }
+.callout__dot {
+  position: absolute; left: -7px; top: -7px; width: 14px; height: 14px; border-radius: 50%;
+  background: #fff; box-shadow: 0 0 0 3px var(--accent), 0 2px 6px rgb(0 0 0 / .35);
+}
+.callout__line {
+  position: absolute; top: -0.5px; height: 1px; right: 0; width: var(--len, 120px);
+  background: var(--ink); box-shadow: 0 0 0 1px rgb(255 255 255 / .55); transform-origin: 100% 50%; transform: scaleX(var(--draw, 0));
+}
+.callout__label {
+  position: absolute; top: 0; right: calc(var(--len, 120px) + 10px); translate: 0 -50%;
+  text-align: right; white-space: nowrap; line-height: 1.25;
+}
+.callout__label strong { display: block; font-weight: 650; font-size: 1rem; }
+.callout__label span { font-size: .9rem; color: var(--muted); font-variant-numeric: tabular-nums; }
+.callout__n { display: none; }
+
+@media (max-width: 760px) {
+  /* phones: the copy sits at the top of the scene, in flow; the phone is placed under it by page.js */
+  .hero-copy { position: relative; left: auto; top: auto; translate: none; width: auto; padding: 1rem var(--sc-gutter) 0; }
+  .hero-copy h1 { font-size: 1.9rem; }
+  .hero-copy .lead { font-size: .94rem; line-height: 1.45; margin-top: .6rem; }
+  .hero-copy .hero-actions { margin-top: .8rem; gap: .6rem 1rem; }
+  .hero-copy .hero-facts { display: none; } /* phones: the facts block further down carries them */
+  .hero-copy h1 { font-size: clamp(2.3rem, 9.5vw, 3rem); }
+  .hero-copy p { max-width: 34ch; }
+  .hero-copy .app-store-badge { margin-top: 1.25rem; }
+  .peak-copy { left: var(--sc-gutter); right: var(--sc-gutter); top: 1rem; bottom: auto; translate: none; width: auto; text-align: center; }
+  .peak-copy .found { text-align: left; }
+  .callouts { display: none; }
+  .peak-copy h2 { font-size: 1.6rem; }
+  /* phones: numbered dots on the food, the list under the bowl */
+  .callout__line, .callout__label { display: none; }
+  .callout__n { display: block; position: absolute; left: -11px; top: -11px; width: 22px; height: 22px; border-radius: 50%;
+    background: var(--ink); color: var(--paper); font-size: .75rem; font-weight: 700; text-align: center; line-height: 22px; }
+  .callout__dot { display: none; }
+}
+.found { list-style: none; margin: .8rem 0 0; padding: 0; font-size: .92rem; counter-reset: part; }
+/* desktop shows the parts as labels on the food; the list stays for screen readers and the Markdown mirror */
+@media (min-width: 761px) { .found { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; } }
+.found li { display: flex; gap: .5rem; padding: .3rem 0; border-top: 1px solid var(--line); max-width: none; counter-increment: part; }
+.found li::before { content: counter(part); font-weight: 700; min-width: 1.1rem; font-variant-numeric: tabular-nums; }
+.found li b { font-variant-numeric: tabular-nums; min-width: 1.1rem; }
+.found li span { color: var(--muted); margin-left: auto; font-variant-numeric: tabular-nums; }
+
+/* ------------------------------------------------------------- adjust -- */
+.adjust { padding: var(--section) 0; }
+.adjust__grid { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: 3rem 5rem; align-items: center; }
+.adjust h2, .day h2, .rail__lead h2 { font-size: clamp(2rem, 1.3rem + 2.2vw, 3.4rem); line-height: 1.04; letter-spacing: -0.035em; }
+.adjust p, .day p { color: var(--muted); margin-top: 1rem; }
+.ruler { position: relative; padding: 2rem 0 1rem; text-align: center; user-select: none; }
+.ruler__g { display: block; font-size: clamp(3.5rem, 2rem + 5vw, 6.5rem); font-weight: 700; letter-spacing: -0.045em; line-height: 1; font-variant-numeric: tabular-nums; }
+.ruler__k { margin: .5rem auto 0; color: var(--muted); font-size: 1.15rem; font-variant-numeric: tabular-nums; }
+.ruler__track { position: relative; height: 84px; margin-top: 1.75rem; overflow: hidden;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 18%, #000 82%, transparent);
+          mask-image: linear-gradient(90deg, transparent, #000 18%, #000 82%, transparent); }
+.ruler__ticks { position: absolute; left: 50%; top: 0; height: 100%; will-change: transform; display: flex; align-items: flex-start; }
+.ruler__ticks i { flex: 0 0 auto; width: 10px; height: 26px; border-left: 1.5px solid color-mix(in oklab, var(--ink) 45%, transparent); }
+.ruler__ticks i.major { height: 46px; border-left-color: var(--ink); position: relative; }
+.ruler__ticks i.major::after { content: attr(data-v); position: absolute; top: 54px; left: 0; translate: -50% 0; font-size: .85rem; color: var(--muted); font-style: normal; font-variant-numeric: tabular-nums; }
+.ruler__pin { position: absolute; left: 50%; top: -6px; width: 3px; height: 58px; translate: -50% 0; background: var(--accent); border-radius: 2px; z-index: 1; }
+.ruler__pin::before { content: ""; position: absolute; left: 50%; top: -6px; translate: -50% 0; border: 8px solid transparent; border-top-color: var(--accent); }
+.ruler input { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0; cursor: ew-resize; margin: 0; }
+.ruler:has(input:focus-visible) .ruler__track { outline: 3px solid var(--focus); outline-offset: 4px; border-radius: 8px; }
+.ruler__meal { margin-top: 1.25rem; font-size: .95rem; color: var(--muted); font-variant-numeric: tabular-nums; }
+.ruler__meal strong { color: var(--ink); }
+
+/* ---------------------------------------------------------------- day -- */
+.day { padding: calc(var(--section) * .6) 0 var(--section); }
+.day__copy { max-width: 62ch; margin-bottom: clamp(2rem, 1.5rem + 2vw, 3.5rem); }
+.day__grid { display: grid; grid-template-columns: repeat(3, minmax(0, 15rem)); justify-content: space-between; gap: 2rem; }
+.day figcaption h3 { font-size: 1.05rem; margin-top: 1.1rem; }
+.day figcaption p { margin-top: .35rem; font-size: .95rem; color: var(--muted); }
+.day figure { margin: 0; }
+.phone--still { position: relative; left: auto; top: auto; width: 100%; aspect-ratio: 0.4891; --pw: 15rem; }
+.phone--still .phone__result { opacity: 1; }
+.day figure { max-width: 15rem; }
+.day figcaption { margin-top: 1rem; font-size: .95rem; color: var(--muted); }
+.day figcaption strong { color: var(--ink); display: block; }
+
+/* ------------------------------------------------------------- the rail -- */
+.rail-act .sc-stage { display: flex; align-items: center; background: transparent; }
+.rail { gap: 0.875rem; padding-inline: var(--sc-gutter); align-items: center; } /* 14px between screens: the strip gap settled on in Sept 2026 */
+.rail__lead { flex: 0 0 min(26rem, 80vw); margin-right: 1.75rem; }
+.rail__lead p { color: var(--muted); margin-top: 1rem; }
+.rail figure { flex: 0 0 auto; width: clamp(200px, 19vw, 290px); margin: 0; }
+.rail figure img { width: 100%; height: auto; border-radius: 22px; box-shadow: var(--sc-e2); }
+.rail figcaption { margin-top: .9rem; font-size: .95rem; line-height: 1.45; color: var(--muted); max-width: 24ch; min-height: 2.9em; } /* same height for one- and two-line captions, so every screen shares one top edge */
+.rail__end { flex: 0 0 min(22rem, 70vw); color: var(--muted); margin-left: 1.5rem; }
+
+/* ------------------------------------------------------------- close -- */
+.close-act .sc-stage { background: transparent; }
+.close__bowl { position: absolute; width: min(64vh, 52vw); aspect-ratio: 1; right: 4vw; top: 50%; translate: 0 -50%; }
+.close__bowl img { width: 100%; height: 100%; max-width: none; }
+.close__phone { position: absolute; left: auto; right: calc(4vw + min(64vh, 52vw) + 2vw); top: 50%; translate: 0 -50%; width: min(26vh, 17vw); aspect-ratio: 0.4891; height: auto; --pw: min(26vh, 17vw); }
+.close__copy { position: absolute; left: var(--sc-gutter); top: 50%; translate: 0 -50%; width: min(30rem, 31vw); z-index: 4; }
+.close__copy h2 { font-size: clamp(2rem, 1.2rem + 2vw, 3.2rem); line-height: 1.04; letter-spacing: -0.035em; }
+.close__copy p { margin-top: 1rem; color: color-mix(in oklab, var(--ink) 80%, var(--paper)); }
+.close__copy .app-store-badge { display: inline-block; margin-top: 1.75rem; }
+.close__copy .fine { font-size: .85rem; margin-top: 1.5rem; }
+@media (max-width: 760px) {
+  .adjust__grid { grid-template-columns: 1fr; }
+  .day__grid { grid-template-columns: 1fr; gap: 1.75rem; }
+  .day figure { max-width: none; display: grid; grid-template-columns: 34vw 1fr; gap: 1.1rem; align-items: center; }
+  .day figcaption h3 { margin-top: 0; }
+  .phone--still { --pw: 34vw; }
+  .close__bowl { width: 78vw; right: 11vw; top: 8svh; translate: none; }
+  .close__phone { width: 30vw; --pw: 30vw; right: auto; left: var(--sc-gutter); top: 9svh; translate: none; }
+  .close__bowl { width: 60vw; right: 5vw; top: 11svh; }
+  .close__copy { top: auto; bottom: 6svh; translate: none; width: auto; right: var(--sc-gutter); }
+}
+
+/* the information part of the page keeps the site's own components */
+.info .section:last-child { border-bottom: 0; }
+
+@media (prefers-reduced-motion: reduce) {
+  .callout__line { transform: none; }
+}
+
+
+
+/* -------------------------------------- one phone, three screens (#how) -- */
+.day-intro { padding: var(--section) 0 0; }
+.day-intro .day__copy { margin-bottom: 0; }
+.day-stage { display: flex; align-items: center; }
+.day-stage__grid { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 3rem 6rem; align-items: center; }
+.day-steps { list-style: none; margin: 0; padding: 0 0 0 1.75rem; position: relative; display: grid; gap: 2rem; max-width: 34rem; }
+.day-steps::before, .day-steps::after { content: ""; position: absolute; left: 0; top: .35rem; bottom: .35rem; width: 2px; border-radius: 2px; }
+.day-steps::before { background: var(--line); }
+.day-steps::after { background: var(--accent); transform-origin: 50% 0; transform: scaleY(var(--fill, 0)); }
+/* waiting captions step back (heading in the muted ink, text a little lighter)
+   but stay readable at 4.5:1 or better; the accent line and the phone's screen
+   carry the "which step" signal */
+.day-step { max-width: none; }
+.day-step h3 { transition: color 260ms var(--sc-ease-out); }
+.day-step p { transition: opacity 260ms var(--sc-ease-out); }
+.day-step:not(.is-on) h3 { color: var(--muted); }
+.day-step:not(.is-on) p { opacity: .85; }
+.day-step h3 { font-size: clamp(1.3rem, 1rem + 1vw, 1.75rem); letter-spacing: -0.025em; }
+.day-step p { margin-top: .5rem; color: var(--muted); font-size: 1.02rem; }
+.day-phone { width: auto; height: min(78vh, 660px); aspect-ratio: 0.4891; --pw: calc(min(78vh, 660px) * 0.4891); }
+.day-screen { opacity: 0; }
+.day-screen:first-child { opacity: 1; }
+@media (max-width: 760px) {
+  .day-stage { align-items: flex-start; } /* anchored to the top: the open caption changes height, the phone must not move */
+  .day-stage__grid { grid-template-columns: 1fr; gap: 1.25rem; justify-items: center; padding-top: 1rem; }
+  .day-phone { order: -1; height: 46svh; --pw: calc(46svh * 0.4891); }
+  .day-steps { gap: .9rem; }
+  .day-step p { display: none; }
+  .day-step.is-on p { display: block; }
+}
+
+/* phones: the hero is a FLOW section, not a pinned one (an inline script before
+   the engine mounts drops data-sc-act on narrow screens and adds .is-flow for
+   page.js). Copy on top, the still phone under it, the bowl behind the phone
+   shrinking into its screen as the block scrolls up, then the peak list under
+   the phone. Nothing fights the header, the cookie banner or a short screen.
+   Keyed to the media query, not the class, so the first paint already has this
+   layout and the phone its final size (page.js sets the same width). */
+@media (max-width: 760px) {
+  .table-act { height: auto !important; }
+  .table-act .scene { position: relative; height: auto; overflow: clip; display: flex; flex-direction: column; align-items: center; padding-bottom: 1.25rem; }
+  .table-act .hero-copy { order: -1; }
+  .table-act .scene > .phone { visibility: visible; position: relative; left: auto; top: auto; margin: 1.25rem auto 0; width: min(58vw, 260px); height: auto; aspect-ratio: 0.4891; }
+  .table-act .peak-copy { position: static; width: auto; margin-top: 1.5rem; padding: 0 var(--sc-gutter); text-align: center; translate: none; }
+}
