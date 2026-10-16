@@ -214,6 +214,28 @@ No. Several unrelated apps and websites use a similar name, including an Android
 
 Both estimate calories from food photos. SnapCalorie's FAQ says it is free for up to three AI logs per day, with a premium subscription beyond that, and it runs on a SnapCalorie account. SnapNutrition AI sets no scan cap of its own in BYOK mode, only your provider's limits apply, and it needs no account: the diary stays on your device. Read the full [SnapCalorie comparison](https://snapnutritionai.app/snapcalorie-alternative.html.md).
 
+## Calorie questions people ask
+
+Three questions that come up next to calorie trackers in search, answered briefly, with the longer reads linked.
+
+### Which is the best calorie tracker?
+
+There is no single best calorie tracker, because the apps are built for different habits. Database apps such as MyFitnessPal and Cronometer suit people who weigh ingredients and look them up. Photo-first apps such as Cal AI, SnapCalorie, and SnapNutrition AI trade some precision for speed: you point the camera, check the list of components, and fix a portion when it is wrong.
+
+Choose by how you will actually log every day, then by what free covers in each app and where your diary is stored. SnapNutrition AI is the pick if you want photo logging on your own AI key with no subscription, a diary that stays on your device, and an Apple Watch app. The [best free AI calorie tracker apps](https://snapnutritionai.app/best-free-ai-calorie-tracker-apps-2026.html.md) guide compares four of them line by line.
+
+### Is 1,200 calories a lot to eat in a day?
+
+No. For almost every adult, 1,200 calories a day is a steep cut, not a lot: resting needs alone run from roughly 1,100 to 1,900 calories a day before any activity, so a 1,200-calorie day almost always sits under what even a sedentary day burns, often far under. Those resting figures come from the Mifflin-St Jeor equation, a standard formula that uses height, weight, age, and sex, and the one SnapNutrition AI's goal calculator uses.
+
+[NICE](https://www.nice.org.uk/guidance/ng246), the UK's clinical guideline body, classes 800 to 1,200 calories a day as a low-energy diet and recommends it only inside a specialist weight-management program with long-term support. Under 800 calories a day is what NICE calls a very-low-energy diet, reserved for people under specialist care with a clinical need to lose weight quickly: at that level it is a treatment, not a self-set goal. The app's calculator caps a weight-loss cut at 30 percent of your estimated expenditure and can go as low as 1,000 calories, which is inside that low-energy range, so if your goal lands near 1,200, check it with a doctor or a dietitian before going lower.
+
+### Why can't I lose weight on 1,200 calories a day?
+
+Usually because you are eating more than 1,200 calories without realizing it. Logs run low, not high: cooking oil, butter, dressings, and the second helping go unlogged, and portions get read small. In a [2026 test by researchers at the National Institutes of Health (NIDDK)](https://snapnutritionai.app/ai-calorie-counter-accuracy.html.md), four popular photo-based tracking apps undercounted 102 weighed meals by about a third, worse than the 10 to 30 percent range quoted above and all in one direction, mostly fat the camera could not see. SnapNutrition AI was not in that test, but the lesson applies to it too: the camera misses fat, so add it yourself.
+
+What you burn is an estimate too, so a small deficit on paper can be no deficit at all. Scale weight also swings with water, salt, and glycogen (stored carbohydrate, which holds water), and that can hide a real loss for a couple of weeks. What helps: weigh the foods that carry the calories, log the oil, compare weeks rather than days, and read the 7-day average instead of one morning's number. The [calorie deficit guide](https://snapnutritionai.app/calorie-deficit-tracking.html.md) explains which logging errors average out and which never do. If a careful log and a flat average still disagree after a month, ask a doctor: some conditions and medicines change the picture.
+
 ## Guides and comparisons
 
 Longer reads on cost, accuracy, and privacy, with sources.

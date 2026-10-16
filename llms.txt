@@ -60,12 +60,18 @@ A: Yes. SnapNutrition AI does the same photo-based calorie scanning without a ma
 **Q: Can a calorie tracker tell me if I'm in a calorie deficit?**
 A: No app can prove a deficit — none measure energy expenditure, and photo estimates carry 10-30% error. What a log shows reliably is change, because a person's own estimating bias stays roughly constant week to week. Read the rolling average, the goal line, and how many logged days landed within goal rather than any single day's total.
 
+**Q: Is 1,200 calories a lot to eat in a day?**
+A: No. For most adults it is a steep cut: resting needs estimated with the Mifflin-St Jeor equation (the one in SnapNutrition AI's goal calculator) land between roughly 1,100 and 1,900 kcal/day before activity, and NICE (NG246, 2025) classes 800-1,200 kcal/day as a low-energy diet for specialist-supervised programs only. Under 800 kcal/day is a very-low-energy diet, a specialist treatment. SnapNutrition AI's calculator caps a weight-loss cut at 30% of estimated expenditure and can go as low as 1,000 kcal, inside that low-energy range, so a goal near 1,200 is worth checking with a doctor or dietitian before going lower.
+
+**Q: Why can't I lose weight on 1,200 calories a day?**
+A: Most often the log runs low (oil, dressings, portions; a 2026 NIH test found four photo apps undercounting weighed meals by about a third; SnapNutrition AI was not tested), expenditure is an estimate too, and water weight can hide fat loss for a couple of weeks. Weigh calorie-dense foods, log the oil, and compare weekly averages rather than single days; if a careful log still shows no change after a month, ask a doctor.
+
 **Q: Is my data private?**
 A: Yes, all meal data stays on your device. In BYOK mode there are no backend servers; in the optional Auto Mode subscription, requests pass through a minimal Cloudflare proxy that never stores food photos.
 
 ## Core
 
-- [SnapNutrition AI homepage](https://snapnutritionai.app/index.html.md): features, pricing, supported devices, and FAQ (HTML: https://snapnutritionai.app/)
+- [SnapNutrition AI homepage](https://snapnutritionai.app/index.html.md): features, pricing, supported devices, FAQ, and short answers to common calorie questions (HTML: https://snapnutritionai.app/)
 - [BYOK calorie tracker](https://snapnutritionai.app/byok-calorie-tracker.html.md): what Bring Your Own Key means, cost per day, and tradeoffs (HTML: https://snapnutritionai.app/byok-calorie-tracker.html)
 
 ## Guides
