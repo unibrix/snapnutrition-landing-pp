@@ -77,6 +77,7 @@ A: Yes, all meal data stays on your device. In BYOK mode there are no backend se
 ## Guides
 
 - [How accurate are AI calorie counters?](https://snapnutritionai.app/ai-calorie-counter-accuracy.html.md): typical error ranges with sources, failure modes, and how to correct for them (HTML: https://snapnutritionai.app/ai-calorie-counter-accuracy.html)
+- [Is 1,200 calories a day too little?](https://snapnutritionai.app/1200-calories-a-day.html.md): resting needs by the Mifflin-St Jeor equation, NICE's low-energy and very-low-energy diet classes, the eat-1,200-burn-500 arithmetic, and why the scale stalls (HTML: https://snapnutritionai.app/1200-calories-a-day.html)
 - [Am I actually in a calorie deficit?](https://snapnutritionai.app/calorie-deficit-tracking.html.md): how to read a noisy food log: rolling average, goal line, and days within goal (HTML: https://snapnutritionai.app/calorie-deficit-tracking.html)
 - [Privacy-first AI calorie tracker](https://snapnutritionai.app/privacy-first-ai-calorie-tracker.html.md): where food photos and diary data go, and what to check before choosing an app (HTML: https://snapnutritionai.app/privacy-first-ai-calorie-tracker.html)
 

@@ -89,6 +89,7 @@ Want fast AI estimates that you can review and correct? SnapNutrition AI lets yo
 - [MyFitnessPal alternative for iPhone: honest comparison](https://snapnutritionai.app/myfitnesspal-alternative.html.md)
 - [Cal AI alternative: the same photo scanning without a subscription](https://snapnutritionai.app/cal-ai-alternative.html.md)
 - [Am I actually in a calorie deficit? How to read your own log](https://snapnutritionai.app/calorie-deficit-tracking.html.md)
+- [Is 1,200 calories a day too little?](https://snapnutritionai.app/1200-calories-a-day.html.md)
 - [Best free AI calorie tracker apps in 2026](https://snapnutritionai.app/best-free-ai-calorie-tracker-apps-2026.html.md)
 - [What makes an AI calorie tracker privacy-first?](https://snapnutritionai.app/privacy-first-ai-calorie-tracker.html.md)
 - [SnapNutrition AI homepage](https://snapnutritionai.app/)
