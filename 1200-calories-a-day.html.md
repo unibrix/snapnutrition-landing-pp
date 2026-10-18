@@ -47,7 +47,7 @@ A practical reading for an app user: a goal that sits under your own resting fig
 
 Eating 1,200 and burning 500 would mean fast weight loss on paper, but the exercise figure is often off by 20 percent or more and the intake figure is self-reported. For every profile in the table, 1,200 already sits under daily expenditure; subtract 500 calories of exercise and the net intake lands around 700, in very-low-energy territory. Three cautions before you believe the paper.
 
-1. **The 500 is probably not 500.** When Stanford researchers tested seven wrist-worn devices in 2017, [no device estimated energy expenditure within 20 percent](https://pubmed.ncbi.nlm.nih.gov/28538708/); the Apple Watch had the lowest overall error of the seven. Treat a workout's calorie figure as a rough order of magnitude.
+1. **The 500 is probably not 500.** When Stanford researchers tested seven wrist-worn devices in 2017, [no device estimated energy expenditure within 20 percent](https://pubmed.ncbi.nlm.nih.gov/28538708/); the Apple Watch had the lowest overall error of the seven. Treat a workout's calorie figure as a rough order of magnitude; the [10,000 steps guide](https://snapnutritionai.app/10000-steps-calories.html.md) shows how much of a walk's total is extra.
 2. **Part of it is already counted.** The activity band in a calorie goal assumes some movement. Adding a workout's full burn on top of a "lightly active" goal counts the same walk twice.
 3. **Both numbers are self-reported.** The 1992 study described below measured people who reported exactly this pattern and found both figures badly off, the activity one by half.
 
@@ -128,6 +128,7 @@ Want a goal built from your own numbers, editable scans, and a 7-day average to 
 ## Related reading
 
 - [Am I actually in a calorie deficit?](https://snapnutritionai.app/calorie-deficit-tracking.html.md)
+- [Can 10,000 steps burn 400 calories?](https://snapnutritionai.app/10000-steps-calories.html.md)
 - [How accurate are AI calorie counters?](https://snapnutritionai.app/ai-calorie-counter-accuracy.html.md)
 - [BYOK calorie tracker for iPhone](https://snapnutritionai.app/byok-calorie-tracker.html.md)
 - [Best free AI calorie tracker apps in 2026](https://snapnutritionai.app/best-free-ai-calorie-tracker-apps-2026.html.md)

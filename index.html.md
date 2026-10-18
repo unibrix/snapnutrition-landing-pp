@@ -222,7 +222,7 @@ Three questions that come up next to calorie trackers in search, answered briefl
 
 There is no single best calorie tracker, because the apps are built for different habits. Database apps such as MyFitnessPal and Cronometer suit people who weigh ingredients and look them up. Photo-first apps such as Cal AI, SnapCalorie, and SnapNutrition AI trade some precision for speed: you point the camera, check the list of components, and fix a portion when it is wrong.
 
-Choose by how you will actually log every day, then by what free covers in each app and where your diary is stored. SnapNutrition AI is the pick if you want photo logging on your own AI key with no subscription, a diary that stays on your device, and an Apple Watch app. The [best free AI calorie tracker apps](https://snapnutritionai.app/best-free-ai-calorie-tracker-apps-2026.html.md) guide compares four of them line by line.
+Choose by how you will actually log every day, then by what free covers in each app and where your diary is stored. SnapNutrition AI is the pick if you want photo logging on your own AI key with no subscription, a diary that stays on your device, and an Apple Watch app. The [best free AI calorie tracker apps](https://snapnutritionai.app/best-free-ai-calorie-tracker-apps-2026.html.md) guide compares four of them line by line, and [MyFitnessPal vs Lose It](https://snapnutritionai.app/myfitnesspal-vs-lose-it.html.md) puts the two biggest head to head.
 
 ### Is 1,200 calories a lot to eat in a day?
 
@@ -240,6 +240,16 @@ What you burn is an estimate too, so a small deficit on paper can be no deficit 
 
 Longer reads on cost, accuracy, and privacy, with sources.
 
+- [Is MyFitnessPal or Lose It better?](https://snapnutritionai.app/myfitnesspal-vs-lose-it.html.md)
+
+  What the free tiers cover, what Premium costs, where the barcode scanner went, and what "number one" means.
+
+  October 2026
+- [Can 10,000 steps burn 400 calories?](https://snapnutritionai.app/10000-steps-calories.html.md)
+
+  Total and extra calories for 10,000 steps by body weight, what a 3,000-calorie day means, and the real signs of fat loss.
+
+  October 2026
 - [Is 1,200 calories a day too little?](https://snapnutritionai.app/1200-calories-a-day.html.md)
 
   Where 1,200 sits against what you burn at rest, what NICE calls that level, and why the scale stalls on it.

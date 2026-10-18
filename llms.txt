@@ -78,6 +78,7 @@ A: Yes, all meal data stays on your device. In BYOK mode there are no backend se
 
 - [How accurate are AI calorie counters?](https://snapnutritionai.app/ai-calorie-counter-accuracy.html.md): typical error ranges with sources, failure modes, and how to correct for them (HTML: https://snapnutritionai.app/ai-calorie-counter-accuracy.html)
 - [Is 1,200 calories a day too little?](https://snapnutritionai.app/1200-calories-a-day.html.md): resting needs by the Mifflin-St Jeor equation, NICE's low-energy and very-low-energy diet classes, the eat-1,200-burn-500 arithmetic, and why the scale stalls (HTML: https://snapnutritionai.app/1200-calories-a-day.html)
+- [Can 10,000 steps burn 400 calories?](https://snapnutritionai.app/10000-steps-calories.html.md): total and extra calories for 10,000 steps by body weight from Compendium MET values, where the 10,000 figure came from, what a 3,000-calorie day means by body size, and why fat loss has no felt signs (HTML: https://snapnutritionai.app/10000-steps-calories.html)
 - [Am I actually in a calorie deficit?](https://snapnutritionai.app/calorie-deficit-tracking.html.md): how to read a noisy food log: rolling average, goal line, and days within goal (HTML: https://snapnutritionai.app/calorie-deficit-tracking.html)
 - [Privacy-first AI calorie tracker](https://snapnutritionai.app/privacy-first-ai-calorie-tracker.html.md): where food photos and diary data go, and what to check before choosing an app (HTML: https://snapnutritionai.app/privacy-first-ai-calorie-tracker.html)
 
@@ -85,6 +86,7 @@ A: Yes, all meal data stays on your device. In BYOK mode there are no backend se
 
 - [Best free AI calorie tracker apps 2026](https://snapnutritionai.app/best-free-ai-calorie-tracker-apps-2026.html.md): what free access means across four apps; published by the SnapNutrition AI team (HTML: https://snapnutritionai.app/best-free-ai-calorie-tracker-apps-2026.html)
 - [MyFitnessPal alternative](https://snapnutritionai.app/myfitnesspal-alternative.html.md): SnapNutrition AI vs MyFitnessPal, Cronometer, Lose It!, and Cal AI (HTML: https://snapnutritionai.app/myfitnesspal-alternative.html)
+- [Is MyFitnessPal or Lose It better?](https://snapnutritionai.app/myfitnesspal-vs-lose-it.html.md): MyFitnessPal vs Lose It! on free tiers, Premium prices, barcode and photo logging, and App Store ratings as of October 2026 (HTML: https://snapnutritionai.app/myfitnesspal-vs-lose-it.html)
 - [Cal AI alternative](https://snapnutritionai.app/cal-ai-alternative.html.md): SnapNutrition AI vs Cal AI (HTML: https://snapnutritionai.app/cal-ai-alternative.html)
 - [SnapCalorie alternative](https://snapnutritionai.app/snapcalorie-alternative.html.md): SnapNutrition AI vs SnapCalorie (HTML: https://snapnutritionai.app/snapcalorie-alternative.html)
 

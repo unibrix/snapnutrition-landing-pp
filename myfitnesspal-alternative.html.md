@@ -91,6 +91,7 @@ Prefer fast AI logging, no SnapNutrition account, and an exportable local diary?
 - [Cal AI alternative: the same photo scanning without a subscription](https://snapnutritionai.app/cal-ai-alternative.html.md)
 - [SnapCalorie alternative for iPhone](https://snapnutritionai.app/snapcalorie-alternative.html.md)
 - [Best free AI calorie tracker apps in 2026](https://snapnutritionai.app/best-free-ai-calorie-tracker-apps-2026.html.md)
+- [Is MyFitnessPal or Lose It better?](https://snapnutritionai.app/myfitnesspal-vs-lose-it.html.md)
 - [SnapNutrition AI homepage](https://snapnutritionai.app/)
 
 SnapNutrition AI is for general food logging and wellness support. It is not medical advice and should not replace guidance from a doctor or registered dietitian.

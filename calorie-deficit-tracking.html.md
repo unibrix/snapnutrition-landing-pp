@@ -133,6 +133,7 @@ Want a goal line, a rolling average, and an honest denominator on your own log? 
 
 - [How accurate are AI calorie counters?](https://snapnutritionai.app/ai-calorie-counter-accuracy.html.md)
 - [Is 1,200 calories a day too little?](https://snapnutritionai.app/1200-calories-a-day.html.md)
+- [Can 10,000 steps burn 400 calories?](https://snapnutritionai.app/10000-steps-calories.html.md)
 - [BYOK calorie tracker for iPhone](https://snapnutritionai.app/byok-calorie-tracker.html.md)
 - [What makes an AI calorie tracker privacy-first?](https://snapnutritionai.app/privacy-first-ai-calorie-tracker.html.md)
 - [Best free AI calorie tracker apps in 2026](https://snapnutritionai.app/best-free-ai-calorie-tracker-apps-2026.html.md)

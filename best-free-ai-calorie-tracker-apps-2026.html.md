@@ -97,5 +97,6 @@ Want AI food tracking without a mandatory app subscription? Try SnapNutrition AI
 - [What makes an AI calorie tracker privacy-first?](https://snapnutritionai.app/privacy-first-ai-calorie-tracker.html.md)
 - [How accurate are AI calorie counters?](https://snapnutritionai.app/ai-calorie-counter-accuracy.html.md)
 - [Am I actually in a calorie deficit?](https://snapnutritionai.app/calorie-deficit-tracking.html.md)
+- [Is MyFitnessPal or Lose It better?](https://snapnutritionai.app/myfitnesspal-vs-lose-it.html.md)
 
 SnapNutrition AI is for general food logging and wellness support. It is not medical advice and should not replace guidance from a doctor or registered dietitian.
