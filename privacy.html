@@ -50,7 +50,7 @@
                 "name": "Privacy Policy - SnapNutrition AI",
                 "description": "Privacy Policy for SnapNutrition AI app",
                 "url": "https://snapnutritionai.app/privacy.html",
-                "dateModified": "2026-09-28",
+                "dateModified": "2026-10-22",
                 "inLanguage": "en",
                 "isPartOf": {"@id": "https://snapnutritionai.app/#website"},
                 "about": {"@id": "https://snapnutritionai.app/#app"},
@@ -120,7 +120,7 @@
 
         <a href="/" class="back-link">Back to home</a>
     <h1>Privacy Policy</h1>
-        <p class="last-updated">Last updated: September 28, 2026</p>
+        <p class="last-updated">Last updated: October 22, 2026</p>
 
         <p>SnapNutrition AI ("we", "our", or "the app") is committed to protecting your privacy. This Privacy Policy explains what information we and our service providers handle when you use our iOS application, the snapnutritionai.app website, and related services.</p>
 
@@ -147,13 +147,28 @@
         <p><strong>Stored in your personal iCloud (only if you enable iCloud sync):</strong> the same scan history, goals, and settings, synced across your Apple devices via Apple's CloudKit. This sync is operated by Apple, not by us, and is subject to <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple's Privacy Policy</a>.</p>
 
         <h2>Apple Health</h2>
-        <p>SnapNutrition AI can read four values from Apple Health to prefill the Daily Goal calculator: <strong>biological sex, date of birth, height, and body mass</strong>. That is the whole list.</p>
+        <p>SnapNutrition AI works with Apple Health in two separate ways. Both are optional, each has its own switch and Apple's own permission prompt, and neither does anything until you turn it on.</p>
+
+        <h3>Reading your profile for the Daily Goal</h3>
+        <p>The app can read four values from Apple Health to prefill the Daily Goal calculator: <strong>biological sex, date of birth, height, and body mass</strong>. That is the whole list.</p>
         <ul>
-            <li><strong>It is optional and off until you ask for it.</strong> Nothing is read until you turn on the Apple Health toggle on the Daily Goal screen and grant permission in Apple's own prompt. You can decline and type the same values in by hand.</li>
-            <li><strong>Read only. The app never writes to Apple Health</strong> — it requests no write permission at all, so it cannot add, change, or delete anything in your Health data.</li>
+            <li><strong>Off until you ask for it.</strong> Nothing is read until you turn on the Apple Health toggle on the Daily Goal screen and grant permission. You can decline and type the same values in by hand.</li>
             <li><strong>Used for one purpose:</strong> calculating a suggested daily calorie target. The imported values are stored in the app on your device alongside the rest of your settings, and are synced only if you have enabled iCloud sync.</li>
-            <li><strong>Health data is never sent to an AI provider, to our proxy, or to us.</strong> It is not part of any scan request in either usage mode.</li>
-            <li>You can revoke access at any time in the Health app, under Sharing, and turn the toggle off in SnapNutrition AI.</li>
+        </ul>
+
+        <h3>Saving your meals to Apple Health</h3>
+        <p>From version 1.6, the app can also save the meals you log to Apple Health. Each meal becomes four nutrition entries, <strong>dietary energy (calories), protein, carbohydrates, and fat</strong>, dated when you ate it and labeled with the meal's name.</p>
+        <ul>
+            <li><strong>Off until you turn it on.</strong> Nothing is written until you switch on Save Meals to Apple Health, in Settings under Data &amp; Sync or when the app first offers it, and allow it in Apple's prompt. The app asks to write those four types only, and asks to read none of them.</li>
+            <li><strong>Health stays in step with your diary.</strong> When you edit a meal, its entries are updated; when you delete it, they are removed. Each entry carries the meal's identifier so the app can find its own entries again. The app cannot see entries made by other apps.</li>
+            <li>Meals logged before you turned it on reach Health only if you choose Copy Earlier Meals, or edit one of them.</li>
+            <li>Turning the switch off stops new entries. Deleting a meal still removes what the app wrote for it, and you can delete the entries yourself in the Health app at any time.</li>
+        </ul>
+
+        <h3>For both</h3>
+        <ul>
+            <li><strong>Health data is never sent to an AI provider, to our proxy, or to us.</strong> It is not part of any scan request in either usage mode, and it is never used for advertising or marketing.</li>
+            <li>You can revoke either permission at any time in the Health app, under Sharing, and turn each switch off in SnapNutrition AI.</li>
         </ul>
 
         <h2>BYOK Mode — Data Processing</h2>
