@@ -4,7 +4,7 @@
 
 # Privacy Policy
 
-Last updated: October 22, 2026
+Last updated: October 24, 2026
 
 SnapNutrition AI ("we", "our", or "the app") is committed to protecting your privacy. This Privacy Policy explains what information we and our service providers handle when you use our iOS application, the snapnutritionai.app website, and related services.
 
@@ -106,17 +106,24 @@ Depending on the mode you use, the following third parties may process your data
 - **Apple** — App Store subscription billing, App Attest device integrity, optional iCloud sync — [Privacy Policy](https://www.apple.com/legal/privacy/)
 - **Open Food Facts** — barcode → nutrition lookup — [Privacy Policy](https://world.openfoodfacts.org/privacy-policy)
 - **Google Analytics** — optional website analytics on this site only (not in the app) — [Google Privacy Policy](https://policies.google.com/privacy)
+- **OpenAI (ChatGPT Ads measurement pixel)** — optional measurement of visits from our ads in ChatGPT, on this site only (not in the app); it runs under the same analytics choice as Google Analytics — [OpenAI Privacy Policy](https://openai.com/policies/privacy-policy/)
 - **Cloudflare Web Analytics** — cookieless, aggregate page-view counts on this site only (not in the app); it sets no cookies, stores nothing in your browser, and does not identify or track you across sites — [Cloudflare Web Analytics](https://www.cloudflare.com/web-analytics/)
 
 ## Website Analytics and Consent
 
-Whether Google Analytics runs before you make a choice depends on where you are. For visitors in the European Economic Area, the United Kingdom, and Switzerland, Google Analytics is not loaded until you select “Accept” in the analytics banner. Elsewhere, Google Analytics runs from your first page view and the banner lets you turn it off. Either way your choice is stored in your browser and applies to later visits, and analytics stays disabled in every region if your browser sends a Do Not Track signal. We determine the region from your device’s time zone and language settings, treating unclear cases as European, and Google’s Consent Mode additionally applies the European default based on your network location.
+This website uses two optional measurement tools. Google Analytics tells us how the site is used. The ChatGPT Ads measurement pixel from OpenAI tells us whether visits that started from an ad we run in ChatGPT reach this site and lead to clicks on the App Store link. Whether each runs before you make a choice depends on where you are:
 
-When you consent, Google Analytics may process the page viewed, referring page, timestamp, browser and device characteristics, screen size, approximate location derived from the network request, and clicks on App Store download links. We do not send Google Analytics your name, email address, food diary, food photos, or SnapNutrition app identifier.
+- **European Economic Area:** neither tool is loaded until you select “Accept” in the banner.
+- **United Kingdom:** Google Analytics runs from your first page view to produce aggregate statistics that help us improve the site, as UK law permits, with Google Signals and ad personalisation switched off. The OpenAI pixel is not loaded until you select “Accept”. “Reject all” turns both off.
+- **Switzerland and everywhere else:** both tools run from your first page view, and the banner lets you turn them off.
 
-You can change your choice through “Cookie Settings” in the footer. Turning analytics off after it was running immediately disables future analytics events and reloads the page without the Google Analytics script.
+Your choice is stored in your browser, covers both tools, and applies to later visits. We determine the region from your device’s time zone and language settings, treating unclear European cases under the European Economic Area rules, and Google’s Consent Mode additionally applies the European Economic Area default based on your network location. This website does not change its behavior in response to browser Do Not Track signals; use “Cookie Settings” instead.
 
-Separately from Google Analytics, this website counts page views with Cloudflare Web Analytics. It runs without the banner because it uses no cookies, stores nothing on your device, and does not build a profile of you: Cloudflare receives the page viewed, the referring page, and coarse browser and country information, and reports them to us only as aggregate totals. It is not loaded if your browser sends a Do Not Track signal.
+When it runs, Google Analytics may process the page viewed, referring page, timestamp, browser and device characteristics, screen size, approximate location derived from the network request, and clicks on App Store download links. When it runs, the OpenAI pixel sets first-party cookies holding an ad click reference and sends OpenAI the page viewed, its title and address, a timestamp, clicks on App Store download links, and the browser data and network address that accompany any web request. Neither tool receives your name, email address, food diary, food photos, or SnapNutrition app identifier. We do not show ads on this site or in the app.
+
+You can change your choice at any time through “Cookie Settings” in the footer. Turning measurement off after it was running immediately disables future analytics and ad measurement events, removes the measurement pixel’s cookies, and reloads the page without the Google Analytics and OpenAI scripts.
+
+Separately from these tools, this website counts page views with Cloudflare Web Analytics. It runs without the banner because it uses no cookies, stores nothing on your device, and does not build a profile of you: Cloudflare receives the page viewed, the referring page, and coarse browser and country information, and reports them to us only as aggregate totals.
 
 ## Data We Do Not Collect
 
@@ -139,7 +146,7 @@ For Auto Mode: the device-verification key and your scan counter persist while y
 
 ## European Users (GDPR)
 
-If you are in the European Economic Area, United Kingdom, or Switzerland, you have the following rights under the General Data Protection Regulation regarding personal data we process about you (limited to Auto Mode infrastructure data and website analytics you consent to; BYOK app mode involves no processing by us):
+If you are in the European Economic Area, United Kingdom, or Switzerland, you have the following rights under the General Data Protection Regulation regarding personal data we process about you (limited to Auto Mode infrastructure data and the website measurement described above; BYOK app mode involves no processing by us):
 
 - **Right of access** — request a copy of the data we hold
 - **Right to rectification** — request correction of inaccurate data
@@ -148,7 +155,7 @@ If you are in the European Economic Area, United Kingdom, or Switzerland, you ha
 - **Right to data portability**
 - **Right to lodge a complaint** with your national data-protection authority
 
-The legal basis for Auto Mode processing is the performance of a contract (Apple StoreKit subscription) under GDPR Article 6(1)(b). The legal basis for cookieless aggregate page-view counting with Cloudflare Web Analytics is our legitimate interest in knowing how many people read this site (GDPR Article 6(1)(f)); it involves no cookies or identifiers. The legal basis for optional Google Analytics is your consent under GDPR Article 6(1)(a), which you can withdraw at any time through Cookie Settings. To exercise any right above, email [privacy@snapnutritionai.app](mailto:privacy@snapnutritionai.app); include your appAccountToken (visible in the app's Settings) only when your request concerns Auto Mode — we'll respond within 30 days.
+The legal basis for Auto Mode processing is the performance of a contract (Apple StoreKit subscription) under GDPR Article 6(1)(b). The legal basis for cookieless aggregate page-view counting with Cloudflare Web Analytics is our legitimate interest in knowing how many people read this site (GDPR Article 6(1)(f)); it involves no cookies or identifiers. In the European Economic Area, the legal basis for Google Analytics and the ChatGPT Ads measurement pixel is your consent under GDPR Article 6(1)(a), which you can withdraw at any time through Cookie Settings. In the United Kingdom, the legal basis for Google Analytics is our legitimate interest in understanding how the site is used so we can improve it, and the legal basis for the measurement pixel is your consent. In Switzerland and elsewhere, both run on our legitimate interest in measuring the site and our advertising, and you can object at any time through Cookie Settings. To exercise any right above, email [privacy@snapnutritionai.app](mailto:privacy@snapnutritionai.app); include your appAccountToken (visible in the app's Settings) only when your request concerns Auto Mode — we'll respond within 30 days.
 
 ## California Users (CCPA / CPRA)
 

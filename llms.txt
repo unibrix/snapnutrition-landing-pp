@@ -41,7 +41,7 @@ Unlike calorie tracker apps that charge $5-15/month for subscriptions, SnapNutri
 - All meal data stored locally on device
 - iCloud sync through user's personal Apple account
 - Food images sent directly to user's chosen AI provider (BYOK) or via a minimal Cloudflare proxy with no photo storage (Auto Mode)
-- No advertising. On the website, Google Analytics is opt-in for visitors in the EEA, UK, and Switzerland and runs with an opt-out elsewhere; cookieless aggregate page-view counting (Cloudflare Web Analytics) uses no cookies or identifiers; everything stays off when Do Not Track is enabled
+- No advertising. On the website, Google Analytics and the ChatGPT Ads measurement pixel from OpenAI are opt-in in the EEA; in the UK, Google Analytics runs for aggregate statistics with an opt-out and the pixel is opt-in; in Switzerland and elsewhere both run with an opt-out. Cookieless aggregate page-view counting (Cloudflare Web Analytics) uses no cookies or identifiers
 
 ## Common Questions
 
