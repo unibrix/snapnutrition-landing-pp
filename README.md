@@ -9,9 +9,9 @@
 Snap a photo of your meal and get calories, protein, carbs and fat in seconds. SnapNutrition AI is an AI calorie tracker for iPhone, iPad and Apple Watch with no ads and no account. Bring your own Google Gemini, OpenAI, Anthropic or OpenRouter API key and pay no subscription, or choose the optional Auto Mode if you'd rather not manage a key. This repository is the source of [snapnutritionai.app](https://snapnutritionai.app).
 
 <p align="center">
-  <img src="images/screenshot-1.webp" width="250" alt="SnapNutrition AI: AI-powered calorie tracking with scan, photo, barcode, voice, and text input">
-  <img src="images/screenshot-3.webp" width="250" alt="SnapNutrition AI: complete food diary with daily calorie totals">
-  <img src="images/screenshot-4.webp" width="250" alt="SnapNutrition AI: track progress with daily goals, weekly trends, and macro breakdown">
+  <img src="images/screenshot-1.webp" width="260" alt="SnapNutrition AI: AI-powered calorie tracking: snap, scan, speak or type">
+  <img src="images/screenshot-2.webp" width="260" alt="SnapNutrition AI: Point, shoot, track: the AI identifies the food and its calories">
+  <img src="images/screenshot-3.webp" width="260" alt="SnapNutrition AI: Complete food diary with daily calorie totals">
 </p>
 
 <p align="center">
