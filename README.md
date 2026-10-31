@@ -1,6 +1,18 @@
-# SnapNutrition AI
+# SnapNutrition AI: AI Calorie Counter for iPhone, iPad and Apple Watch
 
-An AI calorie tracker for iPhone, iPad, and Apple Watch with no mandatory subscription or ads. Currently shipping v1.5. BYOK (Bring Your Own Key) supports Google Gemini, OpenAI, Anthropic, and OpenRouter; optional Auto Mode is available for people who prefer not to manage an API key.
+[![Download on the App Store](https://img.shields.io/badge/App_Store-Download-0D96F6?logo=appstore&logoColor=white)](https://apps.apple.com/us/app/snapnutrition-ai/id6757797704)
+[![Website](https://img.shields.io/badge/website-snapnutritionai.app-2E7D32)](https://snapnutritionai.app)
+![iOS 17.6+](https://img.shields.io/badge/iOS-17.6%2B-000000?logo=apple&logoColor=white)
+![watchOS 10+](https://img.shields.io/badge/watchOS-10%2B-000000?logo=apple&logoColor=white)
+![14 languages](https://img.shields.io/badge/languages-14-blue)
+
+Snap a photo of your meal and get calories, protein, carbs and fat in seconds. SnapNutrition AI is an AI calorie tracker for iPhone, iPad and Apple Watch with no ads and no account. Bring your own Google Gemini, OpenAI, Anthropic or OpenRouter API key and pay no subscription, or choose the optional Auto Mode if you'd rather not manage a key. This repository is the source of [snapnutritionai.app](https://snapnutritionai.app).
+
+<p align="center">
+  <img src="images/screenshot-1.webp" width="250" alt="SnapNutrition AI: AI-powered calorie tracking with scan, photo, barcode, voice, and text input">
+  <img src="images/screenshot-3.webp" width="250" alt="SnapNutrition AI: complete food diary with daily calorie totals">
+  <img src="images/screenshot-4.webp" width="250" alt="SnapNutrition AI: track progress with daily goals, weekly trends, and macro breakdown">
+</p>
 
 <p align="center">
   <a href="https://apps.apple.com/us/app/snapnutrition-ai/id6757797704">
@@ -30,14 +42,6 @@ The app has no mandatory subscription. In BYOK mode, you connect your own Google
 - **iCloud Sync** — Seamless sync across all Apple devices
 - **14 Languages** — English, Ukrainian, Polish, French, Spanish, German, Czech, Italian, Finnish, Danish, Dutch, Swedish, Norwegian, Icelandic
 - **Privacy First** — No SnapNutrition account; BYOK has no SnapNutrition backend, while Auto Mode uses a minimal proxy and never stores food photos
-
-## Screenshots
-
-<p align="center">
-  <img src="images/screenshot-1.webp" width="250" alt="SnapNutrition AI — AI-powered calorie tracking with scan, photo, barcode, voice, and text input">
-  <img src="images/screenshot-3.webp" width="250" alt="SnapNutrition AI — Complete food diary with daily calorie totals">
-  <img src="images/screenshot-4.webp" width="250" alt="SnapNutrition AI — Track progress with daily goals, weekly trends, and macro breakdown">
-</p>
 
 ## Download
 
